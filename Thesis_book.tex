@@ -1,0 +1,212 @@
+\documentclass[openany, 12pt]{book}
+
+\input{preamble}
+
+\begin{document}
+	
+	\thispagestyle{empty}
+	\begin{titlepage}
+		{\sffamily\selectfont
+			\begin{center}
+				\vspace*{0.5cm}
+				\begin{figure}
+					\centering
+					\includegraphics[width=0.5\linewidth]{assets/college-logo.png}
+					\label{fig:College Logo}
+				\end{figure}
+				
+				{\Huge \textbf{Graduation Project 2025-2026}}
+				
+				\vspace{0.5cm}
+				
+				\rule{\textwidth}{1pt}
+				
+				\vspace{0.5cm}
+				
+				{\LARGE \textbf{X-Fed NeuroScan}}
+				
+				\vspace{0.2cm}
+				
+				
+				{\large Federated Learning with Explainable AI} \\
+				{\large for Medical Image Classification}
+				
+				\vspace{0.2cm}
+				
+				\rule{\textwidth}{1pt}
+				
+				\vspace{1cm}
+				
+				{\Large \textbf{Team members}}
+				
+				\vspace{0.1cm}
+				\textls[100]{
+					{\fontfamily{qpl}\selectfont
+						\begingroup
+						\renewcommand{\arraystretch}{1.5}
+						\begin{tabular}{ c c }
+							Abdelrahman Mamdouh & Abdelrahman Wahid \\
+							Goda Saber Goda & Hana Ahmed Nabhan \\
+							Mahmoud Ahmed Mahmoud & Ziad Ahmed Mohamed 
+						\end{tabular}
+						\endgroup
+					}
+				}
+				
+				\vspace{0.1cm}
+				
+				{\Large \textbf{Supervised by}} \\
+				\vspace{0.2cm}
+				{\large \textbf{Prof. Shaimaa Yousry}\\
+					\large \textbf{Prof. Walaa Gouda}}
+				
+				\vfill
+				
+				{\small This project is submitted as a partial fulfillment of the requirements of the degree of Bachelor of Science in Electrical Engineering (Computer Systems Engineering)}
+				
+			\end{center}
+		}
+	\end{titlepage}
+	%Full Title Page
+	\vspace*{\fill} % Pushes content down from the top
+	\thispagestyle{empty}
+	\begin{center} % Centers content horizontally
+		\begin{minipage}{0.8\textwidth} % Creates a box for your text, adjust width as needed
+			\centering % Centers text within the minipage
+			{\fontsize{30pt}{20pt}\sffamily\bfseries\selectfont
+				X-Fed NeuroScan: 
+				\\[20pt]Federated Learning with 
+				\\[10pt]Explainable AI for
+				\\[10pt] Medical Image
+				\\[10pt] Classification
+			}
+		\end{minipage}
+	\end{center}
+	\vfill % Pushes content up from the bottom (equivalent to \vspace{\fill})
+	\newpage
+	
+	
+	% Blank Page
+	\vspace*{\fill} % Pushes content down from the top
+	\thispagestyle{empty}
+	\begin{center} % Centers content horizontally
+		\begin{minipage}{0.8\textwidth} % Creates a box for your text, adjust width as needed
+			\centering % Centers text within the minipage
+			\textbf{This Page is Intentionally Left Blank}
+		\end{minipage}
+	\end{center}
+	\vfill % Pushes content up from the bottom (equivalent to \vspace{\fill})
+	\newpage
+	
+	
+	% Acknowledgement Page
+	\pagestyle{style1}
+	{\titleformat{\chapter}[block]
+		{\normalfont\Huge\bfseries\centering\color{RoyalBlue}}{\thechapter}{1em}{}
+		\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+		\pagenumbering{Roman}
+		
+		\setcounter{page}{1}
+		\chapter*{Acknowledgments}
+		\addcontentsline{toc}{section}{Acknowledgments}
+		We would like to express our sincere gratitude to our professors and academic supervisors for their continuous guidance, valuable feedback, and constructive insights throughout the course of this project. Their expertise and support were instrumental in shaping the direction and quality of this work.
+		
+		We also wish to acknowledge our families for their unwavering encouragement, patience, and unconditional support during the development of this project. Their understanding and motivation provided a constant source of strength and inspiration.
+		
+		\chapter*{Abstract}
+		\addcontentsline{toc}{section}{Abstract}
+			Medical image analysis plays a critical role in the early detection and diagnosis of various diseases. However, manual interpretation of radiographic images is time-consuming and subject to inter-observer variability. This project presents an end-to-end deep learning–based system for the automated detection of chest diseases and bone fractures from X-ray images. The proposed solution integrates multiple transfer learning models within a unified diagnostic framework, enabling efficient and scalable analysis of heterogeneous medical images.
+			
+			The system architecture consists of a deep learning pipeline that includes image preprocessing, feature extraction using pre-trained convolutional neural networks, an intelligent medical image routing model, and task-specific diagnostic models. ResNet50 is employed as a core feature extractor due to its residual learning mechanism and suitability for medical image analysis, while YOLOv8 is utilized for bone fracture detection using a one-stage object detection approach. The chest disease detection task is addressed using a dedicated classification model optimized for thoracic imaging.
+			
+			Preliminary experimental results demonstrate the feasibility of the proposed approach and indicate promising performance in detecting both bone fractures and chest-related conditions. The modular design of the system allows for extensibility and supports the integration of additional diagnostic tasks. This work highlights the potential of deep learning and transfer learning techniques to assist clinical decision-making and improve the efficiency of medical image diagnosis.
+		
+	}
+	\newpage
+	\tableofcontents
+	\newpage
+	\listoftables
+	\addcontentsline{toc}{section}{List of Tables}
+	\newpage
+	\listoffigures
+	\addcontentsline{toc}{section}{List of Figures}
+	\newpage
+	
+	% Chapter 1 Title Page
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	\vspace*{\fill} % Pushes content down from the top
+	\thispagestyle{chapterpages}
+	\begin{center} % Centers content horizontally
+		\begin{minipage}{0.8\textwidth} % Creates a box for your text, adjust width as needed
+			\centering % Centers text within the minipage
+			{\color{RoyalBlue}\fontsize{30pt}{20pt}\bfseries\selectfont
+				CHAPTER 1 
+				\\[0.2cm] INTRODUCTION
+			}
+		\end{minipage}
+	\end{center}
+	\vfill % Pushes content up from the bottom (equivalent to \vspace{\fill})
+	
+	%%% Main Book Content %%%
+	\include{chapters/chapter1}
+	
+	%Chapter 2 Title page
+	\vspace*{\fill} % Pushes content down from the top
+	\thispagestyle{chapterpages}
+	\begin{center} % Centers content horizontally
+		\begin{minipage}{0.9\textwidth} % Creates a box for your text, adjust width as needed
+			\centering % Centers text within the minipage
+			{\color{RoyalBlue}\fontsize{30pt}{20pt}\bfseries\selectfont
+				CHAPTER 2 
+				\\[0.2cm] LITERATURE REVIEW
+			}
+		\end{minipage}
+	\end{center}
+	\vfill % Pushes content up from the bottom (equivalent to \vspace{\fill})
+	\newpage
+	
+	% Chapter 2 content
+	\include{chapters/chapter2}
+	
+	%Chapter 3 Title page
+	\vspace*{\fill} % Pushes content down from the top
+	\thispagestyle{chapterpages}
+	\begin{center} % Centers content horizontally
+		\begin{minipage}{0.9\textwidth} % Creates a box for your text, adjust width as needed
+			\centering % Centers text within the minipage
+			{\color{RoyalBlue}\fontsize{30pt}{20pt}\bfseries\selectfont
+				CHAPTER 3 
+				\\[0.2cm] PROPOSED MODELS
+			}
+		\end{minipage}
+	\end{center}
+	\vfill % Pushes content up from the bottom (equivalent to \vspace{\fill})
+	\newpage
+	
+	% Chapter 3 content
+	\include{chapters/chapter3}
+	
+	\newpage
+	%Chapter 4 Title page
+	\vspace*{\fill} % Pushes content down from the top
+	\thispagestyle{chapterpages}
+	\begin{center} % Centers content horizontally
+		\begin{minipage}{0.9\textwidth} % Creates a box for your text, adjust width as needed
+			\centering % Centers text within the minipage
+			{\color{RoyalBlue}\fontsize{30pt}{20pt}\bfseries\selectfont
+				CHAPTER 4 
+				\\[0.2cm] RESULTS \& \\[0.2cm] EVALUATION
+			}
+		\end{minipage}
+	\end{center}
+	\vfill % Pushes content up from the bottom (equivalent to \vspace{\fill})
+	\newpage
+	
+	% Chapter 4 content
+	\include{chapters/chapter4}
+	
+	% References
+	\printbibliography[heading=bibintoc ,title={References}]
+	
+\end{document}

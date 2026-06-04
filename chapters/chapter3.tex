@@ -1,0 +1,528 @@
+\chapter{Proposed Models}
+\pagestyle{default}
+\thispagestyle{default}
+
+This chapter presents the proposed end-to-end solution developed for the automated detection of chest diseases and bone fractures from medical imaging data. The chapter aims to provide a comprehensive description of the overall system architecture as well as a detailed explanation of the individual models that constitute the proposed solution.
+
+The chapter begins by outlining the solution architecture, which describes the complete pipelines of the system, including the high-level data flow and processing in the DL pipeline, and the backend processes and structure. This section illustrates how both the DL pipeline and the system's backend operate cohesively to form a unified diagnostic framework.
+
+Subsequently, the chapter discusses the transfer learning models used in the proposed system. This section explains the pre-trained architectures employed, and their advantages in medical image analysis.
+
+The medical image routing model is then introduced, which serves as an intelligent intermediary responsible for directing input images to the appropriate diagnostic model based on anatomical or modality-specific characteristics. This component plays a critical role in enabling the downstream models to act on an expected input image modality and anatomical region, it is also crucial in dropping out-of-distribution input data from being processed by the diagnostic models.
+
+Following this, the bone fracture detection model is presented in detail. This section describes the model architecture, and classification approach used to identify bone fractures from radiographic images.
+
+Then, an in-depth explanation of the chest disease detection model, which focuses on identifying various thoracic conditions from chest X-ray images, is presented. The section covers the model design, feature extraction process, and classification methodology employed to achieve robust disease detection.
+
+Finally, the chapter ends with a summary to conclude all the information presented and an emphasis is put on the key information given in the chapter.
+
+\section{Solution Architecture}
+This section presents the architecture of the proposed system for automated detection of chest diseases and bone fractures. It describes the structural design of the solution, highlighting how its major components interact to enable end-to-end medical image analysis. The section provides a high-level overview of both the deep learning diagnostic pipeline and the supporting backend infrastructure.
+
+\subsection{Deep Learning Inference Pipeline}
+The deep learning pipeline represents the core artificial intelligence component of the proposed system and is responsible for the automated analysis of medical images. It defines the sequential flow of data from image acquisition to final diagnostic output. Figure~\ref{fig:overall-arch} illustrates the overall pipeline, highlighting the interaction between the medical image routing model, and task-specific diagnostic models within a unified framework.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{assets/overall deep learning pipeline.png}
+	\caption{High-level diagram of the DL inference pipeline.}
+	\label{fig:overall-arch}
+\end{figure}
+
+The pipeline accepts medical X-ray images as input. This input is coming from a user but it is firstly processed by the backend infrastructure of the solution before it is forwarded to the deep learning pipeline, this forms the basis of the assumption that all input to the pipeline is in the form of images.
+
+The input is passed to a medical image routing model, which functions as an intelligent decision unit within the pipeline. This model identifies the anatomical category of the input image and determines the appropriate diagnostic path. By dynamically routing images to specialized models, the system achieves modularity and supports multiple diagnostic tasks within a single architecture. This unit also seizes out-of-distribution images before they are directed to the downstream diagnostic models. Out-of-distribution images represent images with an incorrect modality, from a wrong anatomical region, or non-medical images at all.
+
+Once routed, the image is processed by a task-specific diagnostic model tailored to its medical domain. For skeletal images, the bone fracture detection model is employed, while chest X-ray images are analyzed using the chest disease detection model. Each model is independently optimized to capture domain-specific patterns relevant to its respective diagnostic objective. \newpage
+
+The outputs of the diagnostic models are expressed as classification probabilities or predicted labels. These outputs are structured to ensure interpretability and seamless integration with downstream system components, such as backend services and user interfaces.
+
+\subsection{Backend Infrastructure and System Integration}
+
+The image analysis pipeline integrates user authentication, secure image upload, backend processing, and machine learning inference to deliver accurate diagnostic results. It combines a React frontend, Spring Boot backend, AWS S3 storage, and a FastAPI-based ML service to ensure efficient, scalable, and secure handling of medical images. Each step—from user login and image submission to model prediction and result visualization—is orchestrated to minimize server load, maintain data integrity, and provide interpretable outputs through Grad-CAM and YOLO visualizations, while storing all relevant metadata for future reference.
+
+%% ============ FIGURE 1: System Architecture Overview (FIXED) ============
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+		node distance=1.2cm,
+		box/.style={draw, rectangle, rounded corners=3pt, minimum width=3cm, minimum height=0.9cm, align=center, font=\small},
+		smallbox/.style={draw, rectangle, rounded corners=2pt, minimum width=2cm, minimum height=1.2cm, align=center, font=\scriptsize, fill=white},
+		storage/.style={draw, rectangle, rounded corners=3pt, minimum width=2.4cm, minimum height=2.6cm, align=center, font=\small},
+		arrow/.style={-{Stealth[length=2.5mm]}, thick},
+		label/.style={font=\scriptsize, align=center}
+		]
+		
+		% Frontend Layer (with React logo)
+		\node[box, fill=blue!5, minimum width=7cm, minimum height=1.8cm] (frontend) {
+			\includegraphics[height=0.7cm]{logos/React-icon.png}~~\textbf{FRONTEND LAYER}\\[2pt]
+			React + TypeScript + Vite\\
+			{\scriptsize (Auth, Image Upload, Results View)}
+		};
+		
+		% Spring Boot Backend - taller box
+		\node[draw, rectangle, rounded corners=3pt, fill=green!12, minimum width=9.7cm, minimum height=4.5cm, below=2.2cm of frontend] (springboot) {};
+		
+		% Spring Boot title with logo - inside the box
+		\node[font=\small] at ([yshift=1.6cm]springboot.center) {
+			\includegraphics[height=0.5cm]{logos/spring-boot.png}~~\textbf{SPRING BOOT BACKEND} {\scriptsize (Port 8080)}
+		};
+		
+		% Internal services - centered vertically
+		\node[smallbox, fill=orange!20] at ([xshift=-2.5cm, yshift=-0.1cm]springboot.center) (auth) {Auth Service\\(JWT)};
+		\node[smallbox, fill=yellow!25] at ([yshift=-0.1cm]springboot.center) (s3svc) {S3 Service\\(AWS SDK)};
+		\node[smallbox, fill=red!15] at ([xshift=2.5cm, yshift=-0.1cm]springboot.center) (imgproc) {Image\\Processing\\(Feign)};
+		
+		% PostgreSQL Database (with logo)
+		\node[storage, fill=blue!15, left=1.5cm of springboot] (postgresql) {
+			\includegraphics[height=1cm]{logos/postgres.png}\\[3pt]
+			\textbf{PostgreSQL}\\
+			{\scriptsize - Users}\\
+			{\scriptsize - Images}\\
+			{\scriptsize - Results}
+		};
+		
+		% Redis Cache (with logo)
+		\node[storage, fill=red!15, right=1.5cm of springboot] (redis) {
+			\includegraphics[height=0.45cm]{logos/redis-logo.png}\\[3pt]
+			\textbf{Redis}\\
+			{\scriptsize - Tokens}\\
+			{\scriptsize - URLs}\\
+			{\scriptsize - Blacklist}
+		};
+		
+		% FastAPI AI Service - taller box
+		\node[draw, rectangle, rounded corners=3pt, fill=purple!12, minimum width=9.5cm, minimum height=3.2cm, below=2.2cm of springboot] (fastapi) {};
+		
+		% FastAPI title with logo - inside the box
+		\node[font=\small] at ([yshift=1cm]fastapi.center) {
+			\includegraphics[height=0.45cm]{logos/fastapi-seeklogo.png}~~\textbf{FASTAPI AI SERVICE} {\scriptsize (Port 8000)}
+		};
+		
+		% Inner box for FastAPI - moved down
+		\node[smallbox, fill=purple!25, minimum width=5.5cm, minimum height=1cm] at ([yshift=-0.4cm]fastapi.center) (mlbox) {
+			TensorFlow Model Serving\\
+			Grad-CAM Heatmap Generator
+		};
+		
+		% Arrows
+		\draw[arrow] (frontend.south) -- node[right, label, xshift=0.15cm] {REST APIs (HTTP/JSON)\\JWT Authentication} (springboot.north);
+		\draw[arrow] (springboot.west) -- node[above, font=\scriptsize] {JPA} (postgresql.east);
+		\draw[arrow] (springboot.east) -- node[above, font=\scriptsize] {Cache} (redis.west);
+		\draw[arrow] (springboot.south) -- node[right, label, xshift=0.15cm] {REST API Call\\(Presigned URL)} (fastapi.north);
+		
+	\end{tikzpicture}
+	\caption{System Architecture Overview}
+	\label{fig:system-architecture}
+\end{figure}
+
+
+%% ============ FIGURE 2: AWS S3 Connections (WITH LOGOS) ============
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+		node distance=1.5cm,
+		component/.style={draw, rectangle, rounded corners=3pt, minimum width=2.8cm, minimum height=1.4cm, align=center, font=\small},
+		s3box/.style={draw, rectangle, rounded corners=3pt, minimum width=10cm, minimum height=5cm, fill=yellow!8},
+		folder/.style={draw, rectangle, rounded corners=3pt, minimum width=3.5cm, minimum height=1.2cm, align=center, font=\small, fill=white},
+		arrow/.style={-{Stealth[length=2.5mm]}, thick},
+		dashedarrow/.style={-{Stealth[length=2.5mm]}, thick, dashed},
+		label/.style={font=\scriptsize, align=center}
+		]
+		
+		% Service components with logos
+		\node[component, fill=blue!5] (frontend) {
+			\includegraphics[height=0.5cm]{logos/React-icon.png}\\[2pt]
+			Frontend\\
+			{\scriptsize (React)}
+		};
+		\node[component, fill=green!20, right=2.2cm of frontend] (springboot) {
+			\includegraphics[height=0.4cm]{logos/spring-boot.png}\\[2pt]
+			Spring Boot\\
+			{\scriptsize Backend}
+		};
+		\node[component, fill=purple!20, right=2.2cm of springboot] (fastapi) {
+			\includegraphics[height=0.35cm]{logos/fastapi-seeklogo.png}\\[2pt]
+			FastAPI\\
+			{\scriptsize ML Service}
+		};
+		
+		% AWS S3 Storage box
+		\node[s3box, below=3cm of springboot] (s3) {};
+		
+		% AWS S3 title with logo
+		\node[font=\normalsize\bfseries, anchor=north] at ([yshift=-0.15cm]s3.north) {
+			\includegraphics[height=0.5cm]{logos/aws-s3-logo.png}~~AWS S3 STORAGE
+		};
+		
+		% Folders
+		\node[folder] at ([xshift=-2.2cm, yshift=0.3cm]s3.center) (images) {
+			\textbf{images/ folder}\\[2pt]
+			{\scriptsize (Original X-rays)}
+		};
+		\node[folder] at ([xshift=2.2cm, yshift=0.3cm]s3.center) (heatmaps) {
+			\textbf{heatmaps/ folder}\\[2pt]
+			{\scriptsize (Grad-CAM)}
+		};
+		
+		% Access methods
+		\node[font=\scriptsize, align=left, anchor=north, text width=9cm] at ([yshift=-0.1cm]s3.south) {
+			\textbf{Access Methods:}\\
+			-- Frontend: Direct upload/download via presigned URLs\\
+			-- Spring Boot: Generates presigned URLs via AWS SDK v2\\
+			-- FastAPI: Upload/download files via boto3
+		};
+		
+		% Arrows
+		\draw[arrow] (frontend.south) -- ++(0,-1.2) -| node[pos=0.70, left, label] {Presigned URLs\\(Direct PUT/GET)} ([xshift=-4cm]s3.north);
+		\draw[arrow] (springboot.south) -- node[right, label, xshift=0.1cm] {AWS SDK v2\\(Generate URLs)} (s3.north);
+		\draw[arrow] (fastapi.south) -- ++(0,-1.2) -| node[pos=0.70, right, label] {boto3\\(Python SDK)} ([xshift=4cm]s3.north);
+		
+	\end{tikzpicture}
+	\caption{AWS S3 Integration in our system}
+	\label{fig:s3-connections}
+\end{figure}
+
+\squeezeup
+
+The full system architecture diagram is shown if Figure~\ref{fig:system-architecture}. While the Amazon Web Services (AWS) S3 integration in the system is illustrated in Figure~\ref{fig:s3-connections}.
+
+\subsubsection*{Step 1: User Authentication}
+
+The user begins by submitting their credentials through the React frontend. The frontend sends a POST request to \texttt{/auth/login}, which the Spring Boot backend validates against the PostgreSQL database. Upon successful authentication, an access token (JWT) is generated and returned in the response body, while a refresh token is stored in Redis and set as an HttpOnly cookie. The frontend stores the access token in localStorage to authenticate subsequent requests.
+
+\subsubsection*{Step 2: Image Upload (Direct-to-S3)}
+
+For efficient image uploads, the application uses a presigned URL pattern. The frontend first requests a presigned URL by calling \texttt{POST /api/upload/presigned-url} with the filename and content type. The backend generates a unique S3 key using a UUID and creates a time-limited (5 minutes) presigned PUT URL using the AWS SDK. The frontend then uploads the image directly to S3, bypassing the backend and reducing server load.
+
+\subsubsection*{Step 3: Image Processing Request}
+
+After uploading, the frontend initiates the processing request by calling \texttt{POST /api/ image-processing/upload-and-process} with the S3 key. The backend validates the user's JWT, saves image metadata to the PostgreSQL database, and generates a presigned GET URL for the original image.
+
+\subsubsection*{Step 4: ML Service Communication}
+
+Using Spring Cloud OpenFeign, the backend communicates with the ML service by sending a \texttt{POST /api/v1/process-image} request with the presigned URL. The ML service downloads the image from S3 and stores temporary files in a dedicated temp directory for processing.
+
+\subsubsection*{Step 5: Model Inference}
+
+The ML service performs several operations for inference. First, the image is preprocessed: it is loaded, resized to $224 \times 224$ pixels, normalized to the $[0, 1]$ range, and its dimensions expanded for batch processing. The image is then passed through a CNN routing model, which outputs a classification of the image being in either \texttt{Bone\_Scan}, \texttt{Chest\_Scan}, or \texttt{Other}. After this classification is completed the image is forwarded to another model if it either a \texttt{Bone\_Scan} or a \texttt{Chest\_Scan}.  If it is classified as \texttt{Other}, the user is informed that the input image is incorrect. The destination model is decided by the classification of the image.
+
+For interpretability, a Grad-CAM heatmap is generated for the chest scans images, while for the bone scan images the fracture region is identified with a geometrical shape in the output image, most usually a rectangle.
+
+\subsubsection*{Step 6: Result Storage and Response}
+
+Once inference is complete, the ML service uploads the generated image, for example a heatmap, to S3 and cleans up temporary files via a background task. The response, including the S3 key, prediction label, and confidence score, is sent back to Spring Boot. The backend saves the result in the database, generates a presigned URL for the heatmap, and returns the complete response to the frontend.
+
+\subsubsection*{Step 7: Result Display}
+
+On the frontend, the prediction results and presigned URLs are used to display the original X-ray and the generated image side-by-side. The predicted label and confidence percentage are shown to the user, and the results are stored in the prediction history for future reference.
+
+
+
+\section{Transfer-Learning Models Used}
+This section presents the transfer learning models employed in the proposed system and discusses the rationale behind their selection. Transfer learning is adopted to leverage pre-trained deep neural networks that have been trained on large-scale datasets, enabling effective feature extraction and improved generalization in medical imaging tasks with limited labeled data. The section provides an overview of the selected architectures and highlights their suitability for different components of the proposed diagnostic pipeline.
+
+\subsection{ResNet50 Model} \label{subsec:resnet50-arch}
+Residual Networks (ResNets) were introduced to address the degradation problem observed in deep convolutional neural networks, where increasing network depth leads to saturation or decline in training accuracy. This issue emerges due to optimization difficulties such as vanishing gradients. ResNet addresses this limitation through the concept of residual learning, which allows the training of substantially deeper networks by enabling more effective gradient propagation.
+
+The key idea of residual learning is to reformulate the learning objective of a neural network block. Instead of directly learning a desired underlying mapping \( H(x) \), a residual block learns a residual function \( F(x) \) such that:
+\[
+H(x) = F(x) + x
+\]
+where \( x \) represents the input to the residual block and \( F(x) \) represents the output of the stacked convolutional layers within the block. The identity shortcut connection that performs the addition allows gradients to flow directly through the network during backpropagation, thereby minimizing vanishing gradient effects and improving training stability.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{assets/resnet50.png}
+	\caption{Architecture of the ResNet50 illustrating the successive stages of the model.}
+	\label{fig:resnet50-arch}
+\end{figure}
+
+As illustrated in Figure~\ref{fig:resnet50-arch}, the ResNet50 architecture begins with an initial convolutional layer preceded by zero padding, followed by batch normalization, a ReLU activation function, and a max pooling operation. This initial stage is responsible for extracting low-level visual features from the input image. The network then proceeds through five sequential stages composed of convolutional blocks and identity blocks, each incorporating residual connections that bypass multiple convolutional layers.
+
+ResNet50 employs a bottleneck design within its residual blocks, consisting of a sequence of \(1 \times 1\), \(3 \times 3\), and \(1 \times 1\) convolutional layers. The \(1 \times 1\) convolutions are used to reduce and subsequently restore feature dimensionality, thereby decreasing computational complexity while preserving representational power. This design enables ResNet50 to achieve substantial depth without incurring prohibitive computational costs.
+
+Compared to shallower variants such as ResNet18 and ResNet34, ResNet50 offers increased representational capacity and improved ability to capture complex and abstract visual patterns. While deeper variants such as ResNet101 and ResNet152 further extend network depth, they introduce higher computational overhead and an increased risk of overfitting, particularly in medical imaging applications where annotated data is often limited. Consequently, ResNet50 represents a balanced trade-off between depth, efficiency, and performance within the ResNet family.
+
+As shown in Figure~\ref{fig:resnet50-arch}, the final stages of ResNet50 consist of a global average pooling layer, followed by feature flattening and a fully connected layer. In transfer learning scenarios, this classification head can be replaced or fine-tuned to adapt the network to domain-specific medical tasks.
+
+In the context of medical image analysis, ResNet50 is well-suited for extracting both low-level structural features and high-level semantic representations relevant to pathological patterns. The residual connections promote feature reuse and robust optimization, which is particularly important for detecting subtle abnormalities in medical images such as fractures or thoracic diseases. These characteristics make ResNet50 a reliable and widely adopted backbone for medical image classification tasks.
+
+\subsection{YOLOv8 Model} \label{subsec:yolo}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{assets/yolo-arch.png}
+	\caption{Architecture of the YOLOv8 illustrating the successive stages of the model.}
+	\label{fig:yolo-arch}
+\end{figure}
+
+As shown in Figure~\ref{fig:yolo-arch}, the architecture is a "single-stage" pipeline that processes an X-ray in one forward pass, making it fast eno ugh for real-time clinical use. It is composed of three main parts:
+\begin{itemize}[]
+	\item \textbf{The Backbone (C2f Module):} This is the model's feature extractor. It uses the C2f (Cross-stage Partial Bottleneck with 2 convolutions) structure to scan the X-ray for textures. It learns to distinguish the high-density, sharp-edged appearance of Hardware (screws/plates) from the organic textures of Hand, Hip, Leg, or Shoulder bones.
+	\item \textbf{The Neck (PANet): }This part handles "feature fusion." In medical imaging, context is everything. The Neck combines fine details (like a jagged fracture line) with global shapes (the overall structure of a Hip vs. a Shoulder). This helps the model realize that a specific shadow is a Fractured region and not just a natural bone groove.
+	\item \textbf{The Head (Decoupled \& Anchor-Free): }Unlike older models, YOLOv8 uses a Decoupled Head, which separates the task of identifying the class (e.g., "Leg") from the task of drawing the box. It is Anchor-Free, meaning it predicts the center of the object directly. This is much better for medical use because fractures and surgical hardware don't come in "standard" box shapes.
+\end{itemize}
+
+During training, the model uses three mathematical "grades" to improve its accuracy:
+\begin{itemize}[]
+	\item \textbf{Classification Loss (BCE):} Using Binary Cross-Entropy, the model learns to accurately label its 6 classes. It ensures that 'Hardware' isn't confused with 'Fractured' bone and that the anatomical regions (Hand, Hip, etc.) are correctly identified.
+	\item \textbf{Box Localization Loss (CIoU): }This measures how well the predicted box overlaps with the actual object. For a long Leg bone or a small Hardware screw, CIoU adjusts the box's aspect ratio and center point to ensure a tight, perfect fit.
+	\item \textbf{Distribution Focal Loss (DFL): } This is critical for hairline fractures. Since the edges of a crack can be blurry on an X-ray, DFL predicts a probability distribution for the box boundaries, allowing the model to be more precise even when the image quality is low.
+\end{itemize}
+
+To ensure the model is both reliable and clinically safe, we evaluate its performance using three primary metrics: Precision, Recall, and mAP50. These indicators provide a comprehensive look at the model's accuracy, its ability to detect every injury, and its overall effectiveness in a real-world medical environment. By analyzing these figures, we can understand how the system balances the need for "Quality Control" with the "Safety Net" required to ensure no fracture goes unnoticed.
+
+Precision acts as the model's primary "Quality Control" mechanism. In the context of medical imaging, high precision ensures that when the model identifies an injury as "Fractured," there is a high statistical certainty that a break actually exists. By focusing on the accuracy of positive predictions, precision prevents doctors from being overwhelmed by "False Alarms," allowing them to trust that the alerts they receive are legitimate and actionable.
+
+While precision focuses on accuracy, Recall serves as the critical "Safety Net" for patient care. It measures the model's ability to find every single instance of a fracture within the dataset. Maintaining high recall is vital in a clinical setting because it ensures that no patient is accidentally sent home with an undiagnosed broken bone. In short, recall prioritizes "catching" every case, minimizing the risk of a dangerous false negative.
+
+The mAP50, or mean Average Precision at a 50\% overlap threshold, serves as the comprehensive "Overall Score" for the model’s performance. This metric provides the best single indicator of how well the model identifies both the specific anatomy and the underlying injuries simultaneously. By calculating the average precision across all categories at a standard detection threshold, mAP50 offers a balanced view of the system’s total effectiveness.
+
+\section{Medical Image Routing Model}
+This section presents the proposed medical image routing model employed in the system and discusses the motivation behind the model, its problem formulation, and finally its architecture. This models is used as the decision making unit for the system, where the destination of each input image is determined and forwarded thereafter.
+
+\subsection{Motivation}
+The increasing use of deep learning in medical image analysis has enabled the development of highly specialized models for tasks such as disease detection and fracture identification. However, in real-world deployment scenarios, these models are often exposed to heterogeneous image inputs originating from different anatomical regions, imaging modalities, or acquisition protocols. Applying a task-specific diagnostic model to an inappropriate image type may lead to unreliable predictions and compromise the robustness and safety of the overall system. Consequently, there is a need for an initial classification mechanism capable of identifying the nature of incoming medical images before further analysis is performed.
+
+This section introduces a medical image classification model designed to function as an image routing component within a larger diagnostic pipeline. The model distinguishes between bone fracture scans, chest scans, and an additional out-of-distribution category referred to as “Other.” By incorporating this third category, the system is able to explicitly handle images that do not belong to the intended diagnostic classes, thereby reducing the risk of misclassification and improving overall system reliability. The following subsections present the motivation for this approach, formally define the classification problem, and describe the model architectures employed.
+
+\subsection{Problem Statement}
+
+The goal of this work is to develop an automated medical image classification model capable of identifying the type of an input image and routing it to the appropriate downstream analysis. The task is formulated as a three-class classification problem, where each input image \(X \in \mathbb{R}^{224 \times 224 \times 3}\) must be assigned to one of three categories: bone fracture scans (\(0\)), chest scans (\(1\)), or out-of-distribution images labeled as \emph{Other} (\(2\)). This multi-class formulation ensures that irrelevant or ambiguous inputs are explicitly handled, improving system safety and reducing the risk of inappropriate downstream processing.
+
+The model is designed to output a probability distribution \(\mathbf{p} = [p_0, p_1, p_2]\) over the three classes, where \(p_k = P(y = k \mid X)\) and \(\sum_{k=0}^{2} p_k = 1\). The predicted class is obtained by selecting the class with the highest probability, \(\hat{y} = \arg\max_{k} p_k\). By incorporating the \emph{Other} category, the model avoids forcing all inputs into diagnostic categories and can robustly separate images outside the target distribution, laying a solid foundation for safe integration within a larger medical image analysis pipeline.
+
+
+\subsection{Model Architecture}
+
+The proposed medical image classification model is designed using a transfer learning approach based on the ResNet50 convolutional neural network. The architecture follows a structured pipeline consisting of input preprocessing, deep feature extraction, feature aggregation, and final classification. This modular design allows the model to benefit from representations learned on large-scale image datasets while adapting effectively to the target medical imaging task. An overview of the complete classification pipeline is illustrated in Figure~\ref{fig:overall_architecture}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.95\linewidth]{assets/router-architecture.jpg}
+	\caption{Overall architecture of the proposed medical image routing model.}
+	\label{fig:overall_architecture}
+\end{figure}
+
+The input to the model is a medical image \(X \in \mathbb{R}^{224 \times 224 \times 3}\), resized to a fixed spatial resolution and represented in RGB color space. Prior to being processed by the pretrained network, the image undergoes a preprocessing step to ensure compatibility with the ResNet50 weights. This step mirrors the preprocessing applied during the original ImageNet training of ResNet50 and is essential for effective transfer learning. Specifically, the input image is first converted to floating-point representation, its color channels are reordered from RGB to BGR, and a fixed channel-wise mean is subtracted. Let \(X_{rgb}\) denote the raw input image; the preprocessed image \(X_{prep}\) is obtained as \(X_{prep} = \mathrm{BGR}(X_{rgb}) - \mu\), where \(\mu = [103.939, 116.779, 123.68]\) represents the ImageNet mean for the blue, green, and red channels, respectively. This operation centers the input distribution around zero and aligns it with the statistical properties expected by the pretrained backbone.
+
+Following preprocessing, the image is passed through the ResNet50 network with its original classification layers removed. In this configuration, ResNet50 functions as a fully convolutional feature extractor. For an input tensor of shape \((224, 224, 3)\), the output of the backbone is a high-dimensional feature map of shape \((7, 7, 2048)\). This tensor contains 2048 feature channels, each encoding abstract visual patterns such as anatomical structures, textures, and shape-related information, while preserving coarse spatial relationships within the image. For a detailed discussion of the ResNet50 model architecture, refer to Subsection~\ref{subsec:resnet50-arch}. 
+
+To transform the spatial feature maps into a compact representation suitable for classification, a global average pooling operation is applied to the output of the ResNet50 backbone. This operation computes the average activation of each feature channel across the spatial dimensions, effectively summarizing the presence of each learned feature over the entire image. Given a feature map \(F \in \mathbb{R}^{7 \times 7 \times 2048}\), the pooled feature vector \(z \in \mathbb{R}^{2048}\) is computed such that each element \(z_k\) corresponds to the mean of the activations in channel \(k\), i.e.
+\begin{equation*}
+	z_k = \frac{1}{7 \times 7} \sum_{i=1}^{7} \sum_{j=1}^{7} F_{i,j,k}
+\end{equation*}
+This operation reduces the tensor shape from \((7, 7, 2048)\) to \((2048)\) while significantly lowering the number of parameters required in subsequent layers and improving generalization.
+
+The resulting feature vector is then passed to a task-specific classification head composed of fully connected layers. These layers learn discriminative combinations of the extracted features and map them to the target class space. The final layer applies a softmax activation function, producing a probability distribution \(\mathbf{p} = [p_0, p_1, p_2]\), where each component represents the predicted probability of the image belonging to the bone fracture class, chest class, or the out-of-distribution \emph{Other} class. The predicted label is obtained as \(\hat{y} = \arg\max_k p_k\).
+
+\section{Bone Fracture Detection Model}
+
+This section describes the deep learning model employed for automated bone fracture detection within the proposed system. The objective of this model is to accurately identify fracture patterns in skeletal X-ray images as part of the end-to-end diagnostic pipeline. Given the real-time requirements and spatial nature of fracture localization, a one-stage object detection framework was selected. To avoid redundancy, this section focuses on the task-specific motivation and formulation, while architectural details already discussed in Section~X are referenced where appropriate.
+
+\subsection{Motivation}
+
+Bone fractures are among the most common musculoskeletal injuries and require timely and accurate diagnosis to prevent complications. Manual fracture detection from radiographic images is a time-consuming process that is highly dependent on the expertise of the radiologist and may be prone to inter-observer variability. Automated fracture detection systems have the potential to assist clinicians by providing fast and consistent assessments, particularly in emergency and high-throughput clinical settings.
+
+From a technical perspective, fracture detection is inherently a localization problem, as fractures often occupy small and irregular regions within an image. Therefore, a model capable of both identifying and localizing regions of interest is essential. YOLOv8 was selected due to its ability to perform object detection in a single forward pass, offering an effective balance between detection accuracy and computational efficiency.
+
+\subsection{Problem Statement}
+
+The bone fracture detection task is formulated as a supervised object detection problem. Given an input skeletal X-ray image, the objective is to determine the presence and location of bone fractures by predicting bounding boxes and corresponding class labels. The model is trained to distinguish fractured regions from normal bone structures, accounting for variations in fracture type, size, orientation, and imaging conditions.
+
+Let an input image be denoted by \( I \), and the model output be represented as a set of predictions:
+\[
+\mathcal{P} = \{(b_i, c_i, s_i)\}_{i=1}^{N}
+\]
+where \( b_i \) denotes the predicted bounding box, \( c_i \) represents the fracture class label, and \( s_i \) is the confidence score associated with the prediction. The goal of the model is to maximize detection accuracy while minimizing false positives, particularly in clinically sensitive regions.
+
+\subsection{Model Architecture}
+
+The bone fracture detection model is implemented using the YOLOv8 architecture without any structural modifications or additional components. The pre-trained YOLOv8 model is adopted directly and fine-tuned on the fracture dataset to adapt its learned representations to the skeletal imaging domain. No custom layers, architectural changes, or task-specific alterations were introduced.
+
+YOLOv8 follows a one-stage detection paradigm consisting of a backbone network for feature extraction, a neck module for multi-scale feature aggregation, and a detection head responsible for predicting bounding boxes, class probabilities, and confidence scores. This architecture enables efficient detection of fractures at multiple scales, which is particularly important given the varying size and appearance of fracture patterns in X-ray images.
+
+Since YOLOv8 has already been described in detail in Subsection~\ref{subsec:yolo}, a comprehensive architectural discussion is not repeated here. Instead, the reader is referred to the previously presented description and to the official YOLOv8 documentation and reference literature for an in-depth explanation of the model design, training strategy, and loss functions. The use of the unmodified YOLOv8 architecture ensures reproducibility, robustness, and alignment with established object detection benchmarks.
+
+Several attempts have been made to utilize the DenseNet121 model is this classification task. The first trial was done on the MURA dataset whose properties are briefly described in Table\ref{tab:datasets}, it yielded an accuracy of 79.9\% which was a considerable improvement over the results yielded by the ResNet50 model when used on the same dataset, ResNet50 yielded an accuracy of only 60\%, but it still did not achieve the project objective outlined in Section~\ref{sec:objectives}. A similar attempt to use the DenseNet121 model was used on the FracAtlas dataset which was also described in Table~\ref{tab:datasets}, and although it yielded acceptable quantitative metrics, after employing Grad-CAM for interpretbility, it was discovered that the model did not learn from the fracture areas at all but from features in other areas. Thus, after these trials the DenseNet121 model was discarded and we focused on utilizing the YOLOv8 model instead.
+
+Figure~\ref{fig:pre-proc-bone} shows one of the preprocessing pipelines employed in the attempts to utilize the DenseNet121 model.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{assets/pre-proc-bones.png}
+	\caption{Image preprocessing pipeline used in the attempt to train DenseNet121 on the MURA dataset.}
+	\label{fig:pre-proc-bone}
+\end{figure}
+
+
+
+\section{Chest Disease Classification Model}
+
+This section presents one of the downstream diagnostic models developed within the project, focusing on automated multi-class classification of chest diseases from chest X-ray (CXR) images. The model is designed as a robust and interpretable pipeline that integrates standardized image preprocessing, lung region isolation, and deep learning–based classification using transfer learning. Emphasis is placed on architectural design choices and methodological foundations rather than performance evaluation, which is discussed in a later chapter.
+
+\subsection{Motivation}
+
+Deep learning has demonstrated strong potential in medical image analysis, yet several challenges remain, including variability in image acquisition, class imbalance, and the need for explainable decision-making. The proposed model addresses these issues through a multi-stage pipeline that enhances image quality, isolates clinically relevant lung regions, and applies a transfer learning–based classifier augmented with explainability techniques.
+
+\subsection{Problem Statement}
+
+The objective of this model is to perform multi-class classification of chest X-ray images into the following diagnostic categories:
+\[
+\mathcal{C} = \{\text{NORMAL}, \text{PNEUMONIA}, \text{COVID-19}, \text{TUBERCULOSIS}\}.
+\]
+
+Given an input chest X-ray image \( I \in \mathbb{R}^{H \times W} \), the task is to learn a mapping
+\[
+f_\theta : I \rightarrow \mathbf{p},
+\]
+where \( \mathbf{p} \in \mathbb{R}^{|\mathcal{C}|} \) is a probability distribution over disease classes and \( \theta \) denotes the model parameters.
+
+To improve robustness and clinical relevance, the classification task is constrained to lung parenchyma regions extracted via an explicit segmentation stage. Additionally, the model must provide interpretable outputs to support clinical trust, motivating the use of gradient-based visualization techniques.
+
+\subsection{Model Architecture}
+
+The diagnostic model is structured as a multi-stage pipeline, illustrated conceptually in Figure~\ref{fig:chest_pipeline_overview}. The pipeline consists of three main components: image preprocessing, lung segmentation, and disease classification.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{assets/chest-pipeline.png}
+	\caption{High-level overview of the multi-stage chest disease classification pipeline.}
+	\label{fig:chest_pipeline_overview}
+\end{figure}
+
+
+Each chest X-ray image undergoes a standardized preprocessing pipeline to enhance diagnostically relevant features. Images are first converted to grayscale and enhanced using Contrast Limited Adaptive Histogram Equalization (CLAHE). Noise introduced during enhancement is mitigated using Gaussian smoothing with a \(5 \times 5\) kernel.
+
+Pixel intensities are then normalized using Min--Max normalization: $I_{\text{norm}} = \frac{I - I_{\min}}{I_{\max} - I_{\min}}$ where \( I_{\min} \) and \( I_{\max} \) represent the minimum and maximum pixel values of the image. Finally, images are converted to RGB format to ensure compatibility with the ResNet50 model. For a discussion of the ResNet50 model, refer to Subsection~\ref{subsec:resnet50-arch}.
+
+Figure~\ref{fig:preprocessing} illustrates the effect of the preprocessing pipeline on representative CXR images.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{assets/pneu1.jpg}
+		\caption{Original Pneumonia CXR}
+		\label{fig:orig-pneumonia}
+	\end{subfigure}
+	\hspace*{1cm}
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{assets/proc-pneu1.jpg}
+		\caption{Preprocessed Pneumonia CXR}
+		\label{fig:proc-pneumonia}
+	\end{subfigure}
+	\\
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{assets/pneu2.png}
+		\caption{Original Pneumonia CXR}
+		\label{fig:orig-pneumonia2}
+	\end{subfigure}
+	\hspace*{1cm}
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{assets/proc-pneu2.png}
+		\caption{Preprocessed Pneumonia CXR}
+		\label{fig:proc-pneumonia2}
+	\end{subfigure}
+	\caption{Chest X-ray images before and after preprocessing, highlighting improved contrast and reduced noise.}
+	\label{fig:preprocessing}
+\end{figure}
+%	\begin{figure}[h]
+	%		\centering
+	%		\includegraphics[width=0.9\textwidth]{preprocessing_comparison.png}
+	%		\caption{Chest X-ray images before and after preprocessing, highlighting improved contrast and reduced noise.}
+	%		\label{fig:preprocessing}
+	%	\end{figure}
+
+To ensure that classification focuses exclusively on clinically relevant regions, a U-Net–based segmentation model is employed to extract lung masks. The U-Net architecture follows an encoder–decoder structure with skip connections that preserve spatial information, making it well suited for biomedical image segmentation. The U-Net architecture used is shown in Figure~\ref{fig:unet-arch}
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{assets/unet-arch.png}
+	\caption{The U-Net architecture, illustrating the encoder-decoder structure with skip connections that merge high-resolution features from the contracting path with upsampled features in the expansive path. This design is highly effective for precise medical image segmentation.}
+	\label{fig:unet-arch}
+\end{figure}
+
+The segmentation network outputs a binary lung mask \( M \in \{0,1\}^{H \times W} \), which is applied to the preprocessed image using element-wise multiplication:
+\[
+I_{\text{lung}} = I_{\text{norm}} \odot M.
+\]
+
+Training of the segmentation model is guided by the Dice Loss, derived from the Dice--Sørensen Coefficient (DSC):
+\[
+\text{DSC} = \frac{2|X \cap Y|}{|X| + |Y|},
+\]
+where \( X \) and \( Y \) denote the predicted and ground-truth masks, respectively. The loss function is defined as
+\[
+\mathcal{L}_{\text{Dice}} = 1 - \text{DSC},
+\]
+which is particularly effective in handling class imbalance between lung and background pixels. The result of using segmentation on CXR images is illustrated in Figure~\ref{fig:lung_segmentation}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{assets/proc-cxr.png}
+		\caption{Preprocessed CXR Image}
+		\label{fig:proc-cxr}
+	\end{subfigure}
+	\hspace*{1cm}
+	\begin{subfigure}[b]{0.25\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{assets/segmented-lung.png}
+		\caption{Segmented Lung Image after Mask Application}
+		\label{fig:segmented-lung}
+	\end{subfigure}
+	\caption{Application of the U-Net segmentation mask. The original preprocessed Figure~\ref{fig:proc-cxr} is processed to produce the final segmented lung Figure~\ref{fig:segmented-lung}, which serves as the input for the classification stage}
+	\label{fig:lung_segmentation}
+\end{figure}
+
+%	\begin{figure}[h]
+	%		\centering
+	%		\includegraphics[width=0.9\textwidth]{lung_segmentation.png}
+	%		\caption{Application of the U-Net segmentation mask to isolate lung regions from chest X-ray images.}
+	%		\label{fig:lung_segmentation}
+	%	\end{figure}
+%	
+The final classification stage employs a ResNet50-based transfer learning model. ResNet architectures leverage residual connections to facilitate gradient flow and enable the training of deep networks. As the ResNet family is discussed in detail earlier in this book, only a brief overview is provided here.
+
+A ResNet50 model pre-trained on ImageNet is used as a feature extractor, with early layers frozen to preserve general visual representations. A custom classification head is appended, consisting of global average pooling, fully connected layers with ReLU activation, dropout for regularization, and a final softmax layer producing class probabilities.
+
+The model is trained using Sparse Categorical Cross-Entropy loss:
+\[
+\mathcal{L}_{\text{CE}} = - \sum_{i=1}^{N} \log p_{i,c},
+\]
+where \( p_{i,c} \) denotes the predicted probability of the true class \( c \) for sample \( i \). To address class imbalance, class-weighted loss scaling is applied during training.
+
+To enhance interpretability, Gradient-weighted Class Activation Mapping (Grad-CAM) is employed to visualize the regions most influential to model predictions, an example is shown in Figure~\ref{fig:gradcam}. Grad-CAM computes the gradients of the target class score with respect to the feature maps of the final convolutional layer and produces a coarse localization map highlighting salient regions.
+
+These heatmaps are overlaid on the original chest X-ray images, enabling qualitative assessment of whether the model attends to clinically meaningful lung regions.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{assets/gradcam.png}
+	\caption{Grad-CAM visualizations highlighting regions contributing to model predictions.}
+	\label{fig:gradcam}
+\end{figure}
+
+
+
+\section{Summary}
+
+This chapter presented the proposed end-to-end model for automated detection of chest diseases and bone fractures from medical images. The overall solution architecture was introduced, highlighting the integration of a deep learning–based diagnostic pipeline with supporting backend processes to enable efficient and scalable medical image analysis.
+
+The deep learning pipeline was described in detail, illustrating the sequential flow from image preprocessing and feature extraction to intelligent routing and task-specific inference. Transfer learning was adopted as a core strategy to leverage pre-trained deep neural networks, enabling effective feature representation and improved generalization in the presence of limited labeled medical data.
+
+The chapter also introduced the medical image routing model, which enables dynamic task allocation by directing input images to specialized diagnostic models. This design enhances modularity and allows the system to support multiple medical imaging tasks within a unified framework.
+
+Then, the architecture of the chest disease classification model was discussed in detail. The design was illustrated, and the use of ResNet50 as the main feature extractor was justified. The formulation of the problem and the motivation behind such a model were presented while detailed architectural aspects of the transfer-learning model were omitted to avoid redundancy.
+
+Finally, the bone fracture detection model was presented as a task-specific component of the system, implemented using an unmodified YOLOv8 architecture. The formulation of the fracture detection problem and the motivation for adopting a one-stage object detection approach were discussed, while detailed architectural aspects were referenced to earlier sections to avoid redundancy.
+
+Overall, this chapter established the structural and methodological foundation of the proposed system, providing a clear understanding of its components and design choices. The described models form the basis for the experimental evaluation and performance analysis presented in the subsequent chapter.

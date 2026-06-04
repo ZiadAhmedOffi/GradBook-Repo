@@ -1,0 +1,400 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{ref1}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/pdf/2509.06228v1}}
+      \field{title}{AI-Based Applied Innovation for Fracture Detection in X-rays Using Custom CNN and Transfer Learning Models}
+      \field{year}{2025}
+    \endentry
+    \entry{ref2}{article}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.sciencedirect.com/science/article/pii/S1687850725000214}}
+      \field{journaltitle}{ScienceDirect}
+      \field{title}{YOLOv11-based multi-task learning for enhanced bone fracture detection and classification in X-ray images}
+      \field{year}{2025}
+    \endentry
+    \entry{ref3}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/pdf/2406.15958}}
+      \field{title}{Bone Fracture Classification Using Transfer Learning}
+      \field{year}{2024}
+    \endentry
+    \entry{ref4}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.researchgate.net/publication/341248451}}
+      \field{title}{Bone Fracture Detection and Classification using Deep Learning Approach}
+      \field{year}{2020}
+    \endentry
+    \entry{ref5}{article}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.sciencedirect.com/science/article/pii/S0010482517303372}}
+      \field{journaltitle}{ScienceDirect}
+      \field{title}{Classification of the Trabecular Bone Structure of Osteoporotic Patients Using Machine Vision}
+      \field{year}{2017}
+    \endentry
+    \entry{ref6}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.researchgate.net/publication/361433305}}
+      \field{title}{Bone Fracture Detection in X-ray Images using Convolutional Neural Network}
+      \field{year}{2022}
+    \endentry
+    \entry{ref7}{misc}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.researchgate.net/publication/384975763}}
+      \field{title}{Bone Fracture Detection from X-ray Images using a Convolutional Neural Network (CNN)}
+      \field{year}{2024}
+    \endentry
+    \entry{ref8}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a97f2fc04d3038d4c4863a7089d4a167}{%
+           family={Tahamtan},
+           familyi={T\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=57ccc02d92314e2f6d82ad8d1aeb11fd}{%
+           family={Ardebili},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3853e751a0f3a31a6ab237fea3f1441}
+      \strng{fullhash}{c3853e751a0f3a31a6ab237fea3f1441}
+      \strng{bibnamehash}{c3853e751a0f3a31a6ab237fea3f1441}
+      \strng{authorbibnamehash}{c3853e751a0f3a31a6ab237fea3f1441}
+      \strng{authornamehash}{c3853e751a0f3a31a6ab237fea3f1441}
+      \strng{authorfullhash}{c3853e751a0f3a31a6ab237fea3f1441}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Expert Review of Molecular Diagnostics}
+      \field{number}{5}
+      \field{title}{Real-time RT-PCR in COVID-19 Detection: Issues Affecting the Results}
+      \field{volume}{20}
+      \field{year}{2020}
+      \field{pages}{453\bibrangedash 454}
+      \range{pages}{2}
+    \endentry
+    \entry{ref9}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3e87ad8fa9164f3ff517ac8d9b623e0f}{%
+           family={Boswell},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e87ad8fa9164f3ff517ac8d9b623e0f}
+      \strng{fullhash}{3e87ad8fa9164f3ff517ac8d9b623e0f}
+      \strng{bibnamehash}{3e87ad8fa9164f3ff517ac8d9b623e0f}
+      \strng{authorbibnamehash}{3e87ad8fa9164f3ff517ac8d9b623e0f}
+      \strng{authornamehash}{3e87ad8fa9164f3ff517ac8d9b623e0f}
+      \strng{authorfullhash}{3e87ad8fa9164f3ff517ac8d9b623e0f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nurse Practitioner}
+      \field{number}{3}
+      \field{title}{Pulmonary Tuberculosis: Clinical Features and Diagnosis}
+      \field{volume}{46}
+      \field{year}{2021}
+      \field{pages}{20\bibrangedash 25}
+      \range{pages}{6}
+    \endentry
+    \entry{ref10}{article}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.mdpi.com/2075-4418/13/15/2562}}
+      \field{title}{Joint Diagnosis of Pneumonia, COVID-19, and Tuberculosis from Chest X-ray Images: A Deep Learning Approach}
+      \field{year}{2023}
+    \endentry
+    \entry{ref11}{article}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://pubmed.ncbi.nlm.nih.gov/41067063/}}
+      \field{title}{Multi-class deep learning architecture for COVID-19, tuberculosis, and pneumonia classification}
+      \field{year}{2025}
+    \endentry
+    \entry{ref12}{article}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://pmc.ncbi.nlm.nih.gov/articles/PMC9281341/}}
+      \field{title}{Classification of COVID-19 from Tuberculosis and Pneumonia Using Deep Learning Techniques}
+      \field{year}{2022}
+    \endentry
+    \entry{ref13}{article}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.nature.com/articles/s41598-025-16669-z}}
+      \field{title}{CXR-MultiTaskNet: Unified Deep Learning Framework for Disease Localization and Classification in Chest Radiographs}
+      \field{year}{2025}
+    \endentry
+    \entry{ref14}{misc}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://scispace.com/pdf/chest-x-ray-classification-using-deep-learning-for-automated-4jqra7h02h.pdf}}
+      \field{title}{Chest X-ray Classification Using Deep Learning for Automated COVID-19 Screening}
+      \field{year}{2020}
+    \endentry
+    \entry{ref15}{article}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.sciencedirect.com/science/article/pii/S2405844024028329}}
+      \field{title}{Detection of COVID-19, Pneumonia, and Tuberculosis from Radiographs Using AI-driven Knowledge Distillation}
+      \field{year}{2024}
+    \endentry
+    \entry{ref16}{article}{}
+      \name{author}{2}{}{%
+        {{hash=507d21ba8e38a2648654a86ac7afa841}{%
+           family={Bhuiyan},
+           familyi={B\bibinitperiod},
+           given={M.R.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=dc4fd70230aa62feb02ed4b4e2f78f8d}{%
+           family={Islam},
+           familyi={I\bibinitperiod},
+           given={et\bibnamedelima al.},
+           giveni={e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
+      }
+      \strng{namehash}{4758d147e4320ab1a686b308ba0ffc02}
+      \strng{fullhash}{4758d147e4320ab1a686b308ba0ffc02}
+      \strng{bibnamehash}{4758d147e4320ab1a686b308ba0ffc02}
+      \strng{authorbibnamehash}{4758d147e4320ab1a686b308ba0ffc02}
+      \strng{authornamehash}{4758d147e4320ab1a686b308ba0ffc02}
+      \strng{authorfullhash}{4758d147e4320ab1a686b308ba0ffc02}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://journals.sagepub.com/doi/10.1177/20552076231215915}}
+      \field{journaltitle}{SAGE}
+      \field{title}{Deep learning-based analysis of COVID-19 X-ray images}
+      \field{year}{2023}
+    \endentry
+    \entry{ref17}{article}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://pmc.ncbi.nlm.nih.gov/articles/PMC10417844/}}
+      \field{title}{Joint Diagnosis of Pneumonia, COVID-19, and Tuberculosis from Chest X-ray Images}
+      \field{year}{2023}
+    \endentry
+    \entry{ref18}{inproceedings}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://ieeexplore.ieee.org/document/10772888}}
+      \field{title}{Enhancing Wrist Fracture Detection and Classification through Deep Learning and XAI}
+      \field{year}{2024}
+    \endentry
+    \entry{ref19}{inproceedings}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://ieeexplore.ieee.org/document/10918136}}
+      \field{title}{Enhancing Bone Fracture Detection in Radiology: A Machine Learning and Explainable AI Approach}
+      \field{year}{2024}
+    \endentry
+    \entry{ref20}{inproceedings}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://ieeexplore.ieee.org/document/11172213}}
+      \field{title}{Interpretable Machine Learning for Osteoporosis Risk}
+      \field{year}{2024}
+    \endentry
+    \entry{ref21}{inproceedings}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://ieeexplore.ieee.org/document/11085540}}
+      \field{title}{XAI-based Computational Models for Predictive Analysis of Bone Fracture and Structural Repair}
+      \field{year}{2024}
+    \endentry
+    \entry{ref22}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.researchgate.net/publication/389138164}}
+      \field{title}{Explainable AI-Based Humerus Fracture Detection and Classification from X-Ray Images}
+      \field{year}{2024}
+    \endentry
+    \entry{ref23}{article}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.scitepress.org/Papers/2025/136762/136762.pdf}}
+      \field{title}{Fracture Detection in Hand Radiographs with Grad-CAM Insights}
+      \field{year}{2025}
+    \endentry
+    \entry{ref24}{article}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://pmc.ncbi.nlm.nih.gov/articles/PMC9818469/}}
+      \field{title}{An Explainable AI-Enabled Framework for Interpreting Pulmonary Diseases using Deep Learning}
+      \field{year}{2023}
+    \endentry
+    \entry{ref25}{article}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.nature.com/articles/s41598-025-07603-4}}
+      \field{title}{NextGen Lung Disease Diagnosis with Explainable Artificial Intelligence}
+      \field{year}{2025}
+    \endentry
+    \entry{ref26}{article}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.sciencedirect.com/science/article/pii/S1361841522001177}}
+      \field{title}{Explainable AI in Deep Learning-Based Medical Image Analysis}
+      \field{year}{2022}
+    \endentry
+    \entry{ref27}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://arxiv.org/abs/2404.11428}}
+      \field{title}{Explainable Lung Disease Classification Using Deep Learning and XAI}
+      \field{year}{2024}
+    \endentry
+    \entry{ref28}{article}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://pmc.ncbi.nlm.nih.gov/articles/PMC9549800/}}
+      \field{title}{Explanatory Classification of CXR Images into COVID-19, Pneumonia and Tuberculosis}
+      \field{year}{2022}
+    \endentry
+    \entry{ref29}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.diva-portal.org/smash/get/diva2:1831474/FULLTEXT01.pdf}}
+      \field{title}{Classifying Femur Fractures Using Federated Learning}
+      \field{year}{2023}
+    \endentry
+    \entry{ref30}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://ieeexplore.ieee.org/document/10077569}}
+      \field{title}{A Systematic Review on Federated Learning in Medical Image Analysis}
+      \field{year}{2023}
+    \endentry
+    \entry{ref31}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.nature.com/articles/s41598-025-97565-4}}
+      \field{title}{Privacy-Preserving Federated Learning for Collaborative Medical Data Mining}
+      \field{year}{2025}
+    \endentry
+    \entry{ref32}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.sciencedirect.com/science/article/pii/S305057712500026X}}
+      \field{title}{Boosting Multi-Demographic Federated Learning for Chest Radiograph Classification}
+      \field{year}{2025}
+      \true{nocite}
+    \endentry
+    \entry{ref33}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.nature.com/articles/s41598-024-74491-5}}
+      \field{title}{Efficient Federated Learning for Pediatric Pneumonia on Chest X-ray Images}
+      \field{year}{2024}
+    \endentry
+    \entry{ref34}{misc}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{}}
+      \field{title}{Federated Transfer Learning for Lung Disease Detection}
+    \endentry
+    \entry{ref35}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.mdpi.com/1424-8220/23/2/743}}
+      \field{title}{DMFL\_Net: Federated Learning Framework for COVID-19 Classification}
+      \field{year}{2023}
+    \endentry
+    \entry{ref36}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.mdpi.com/2078-2489/16/6/435}}
+      \field{title}{SemFedXAI: Semantic Framework for Explainable Federated Learning in Healthcare}
+      \field{year}{2024}
+    \endentry
+    \entry{ref37}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.frontiersin.org/articles/10.3389/fcomp.2025.1633916}}
+      \field{title}{FLEM-XAI: Federated Ensemble Model with Explainable AI for Lung Disease Diagnosis}
+      \field{year}{2025}
+    \endentry
+    \entry{ref38}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0324957}}
+      \field{title}{FLPneXAINet: Federated Deep Learning and XAI for Pneumonia Detection}
+      \field{year}{2025}
+    \endentry
+    \entry{ref39}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.nature.com/articles/s41598-025-19478-6}}
+      \field{title}{Secure and Interpretable Lung Cancer Prediction Using Blockchain Federated Learning with XAI}
+      \field{year}{2025}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

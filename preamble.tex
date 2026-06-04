@@ -1,0 +1,118 @@
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ragged2e}
+\usepackage{placeins}
+\usepackage{microtype}
+\usepackage{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tocloft}
+\usepackage{siunitx}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage[font=small]{caption}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage[style=numeric, sorting=none, backend=biber]{biblatex}
+\addbibresource{refs.bib}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% ============ REQUIRED PACKAGES FOR FIGURES ============
+
+% Core graphics
+\usepackage{graphicx}           % For \includegraphics (logos)
+
+% TikZ and libraries
+\usepackage{tikz}
+\usetikzlibrary{
+	shapes.geometric,           % For rectangle, rounded corners
+	arrows.meta,                % For Stealth arrows
+	positioning,                % For "below=2cm of node" syntax
+	calc                        % For coordinate calculations like ([yshift=1cm]node.center)
+}
+
+% Float control
+\usepackage{float}              % For [H] placement specifier (forces figure position)
+
+% Optional but recommended
+\usepackage{xcolor}             % For color definitions (usually auto-loaded by tikz)
+
+
+\setlist[itemize]{topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=2pt}
+
+\fancypagestyle{chapterpages}{
+	\fancyhead{} % clear all header fields
+	\fancyfoot{} % clear all footer fields
+	\fancyfoot[RO]{\thepage | Page}
+	\fancyfoot[LE]{Page | \thepage}
+}
+
+\fancypagestyle{default}{
+	\fancyhead{}
+	\fancyfoot{}
+	\fancyhead{}
+	\fancyfoot[RO]{\thepage | Page}
+	\fancyfoot[LE]{Page | \thepage}
+	\fancyhead[LE, RO]{\nouppercase{\leftmark}} % Chapter title (\\leftmark)
+	\fancyhead[RE, LO]{\nouppercase{\rightmark}} % Section title (\\rightmark)
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+}
+
+\fancypagestyle{style1}{
+	\fancyhead{}
+	\fancyfoot{}
+	\fancyfoot[CE,CO]{\thepage}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+}
+
+\titleformat{\chapter}[block]{\fontsize{24}{36}\bfseries\centering}{\chaptertitlename\ \thechapter}{1.5ex}{}
+
+\titleformat{\section}[block]{\fontsize{22}{24}\bfseries\color{RoyalBlue}}{\thesection}{1.5ex}{}
+
+\titleformat{\subsection}[block]{\fontsize{18}{20}\bfseries\color{RoyalBlue}}{\thesubsection}{1.5ex}{}
+
+\titleformat{\subsubsection}[block]{\fontsize{14}{20}\bfseries\color{RoyalBlue}}{\thesubsection}{1.5ex}{}
+
+\renewcommand*\contentsname{Table of Contents}
+\renewcommand{\cfttoctitlefont}{\normalfont\Huge\bfseries\color{RoyalBlue}}
+\renewcommand{\listfigurename}{\normalfont\Huge\bfseries\color{RoyalBlue}List of Figures}
+\renewcommand{\listtablename}{\normalfont\Huge\bfseries\color{RoyalBlue}List of Tables}
+
+\newcommand{\squeezeup}{\vspace{-5mm}}
+
+\titlespacing*{\chapter}{0pt}{-\baselineskip}{20pt}
+\titlespacing*{\section}{0pt}{10pt}{10pt}
+\titlespacing*{\subsection}{0pt}{2pt}{2pt}
+\titlespacing*{\subsubsection}{0pt}{2pt}{2pt}
+
+% Setting up siunitx
+\sisetup{
+	group-separator = {,},
+	group-minimum-digits = 4
+}
+
+% -------------------------------------------------------
+% Color setup
+\definecolor{headercolor}{RGB}{0,110,160}
+\definecolor{rowlight}{RGB}{225,245,255}
+\definecolor{rowdark}{RGB}{200,230,245}
+
+\setlength{\parindent}{20pt}
+\setlength{\parskip}{12pt}
