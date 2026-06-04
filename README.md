@@ -1,4 +1,4 @@
-# How to Compile Correctly:
+# How to Compile Correctly
 
 - Make sure that `pdflatex` is installed and in the `PATH`, then open a terminal window and run the command:
 ```bash
