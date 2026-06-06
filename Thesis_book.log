@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.30)  3 JUN 2026 12:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.30)  6 JUN 2026 04:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1354,7 +1354,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<assets/college-logo.png, id=216, 255.95625pt x 222.8325pt>
+<assets/college-logo.png, id=220, 255.95625pt x 222.8325pt>
 File: assets/college-logo.png Graphic file (type png)
 <use assets/college-logo.png>
 Package pdftex.def Info: assets/college-logo.png  used on input line 14.
@@ -1428,7 +1428,7 @@ ogo.png>] [2] [3] [1
 
 ] (Thesis_book.toc
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-5.
+6.
 
 (C:\Users\Zyad\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1564,7 +1564,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
-<assets/XAI.png, id=438, 336.25626pt x 150.5625pt>
+<assets/XAI.png, id=443, 336.25626pt x 150.5625pt>
 File: assets/XAI.png Graphic file (type png)
 <use assets/XAI.png>
 Package pdftex.def Info: assets/XAI.png  used on input line 283.
@@ -1578,7 +1578,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11 <./assets/XAI.png>]
-<assets/federated_learning.png, id=444, 674.52pt x 377.41pt>
+<assets/federated_learning.png, id=449, 674.52pt x 377.41pt>
 File: assets/federated_learning.png Graphic file (type png)
 <use assets/federated_learning.png>
 Package pdftex.def Info: assets/federated_learning.png  used on input line 311.
@@ -1744,12 +1744,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [26]
-<assets/bone_heatmap.png, id=529, 292.84406pt x 180.675pt>
+<assets/bone_heatmap.png, id=533, 292.84406pt x 180.675pt>
 File: assets/bone_heatmap.png Graphic file (type png)
 <use assets/bone_heatmap.png>
 Package pdftex.def Info: assets/bone_heatmap.png  used on input line 129.
 (pdftex.def)             Requested size: 249.13371pt x 153.71506pt.
-<assets/pneumonia_heatmap.jpg, id=530, 238.01967pt x 178.31837pt>
+<assets/pneumonia_heatmap.jpg, id=534, 238.01967pt x 178.31837pt>
 File: assets/pneumonia_heatmap.jpg Graphic file (type jpg)
 <use assets/pneumonia_heatmap.jpg>
 Package pdftex.def Info: assets/pneumonia_heatmap.jpg  used on input line 135.
@@ -1774,12 +1774,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [28]
-<assets/federated1.jpg, id=560, 250.317pt x 251.3025pt>
+<assets/federated1.jpg, id=564, 250.317pt x 251.3025pt>
 File: assets/federated1.jpg Graphic file (type jpg)
 <use assets/federated1.jpg>
 Package pdftex.def Info: assets/federated1.jpg  used on input line 167.
 (pdftex.def)             Requested size: 203.83417pt x 204.63908pt.
-<assets/federated2.png, id=561, 237.834pt x 147.825pt>
+<assets/federated2.png, id=565, 237.834pt x 147.825pt>
 File: assets/federated2.png Graphic file (type png)
 <use assets/federated2.png>
 Package pdftex.def Info: assets/federated2.png  used on input line 171.
@@ -3479,17 +3479,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [39]
-<assets/aidoc.png, id=628, 391.572pt x 158.994pt>
+<assets/aidoc.png, id=632, 391.572pt x 158.994pt>
 File: assets/aidoc.png Graphic file (type png)
 <use assets/aidoc.png>
 Package pdftex.def Info: assets/aidoc.png  used on input line 332.
 (pdftex.def)             Requested size: 226.48395pt x 91.96184pt.
-<assets/vizai.png, id=629, 371.862pt x 171.8055pt>
+<assets/vizai.png, id=633, 371.862pt x 171.8055pt>
 File: assets/vizai.png Graphic file (type png)
 <use assets/vizai.png>
 Package pdftex.def Info: assets/vizai.png  used on input line 339.
 (pdftex.def)             Requested size: 226.48395pt x 104.63866pt.
-<assets/qure.png, id=630, 346.239pt x 175.419pt>
+<assets/qure.png, id=634, 346.239pt x 175.419pt>
 File: assets/qure.png Graphic file (type png)
 <use assets/qure.png>
 Package pdftex.def Info: assets/qure.png  used on input line 346.
@@ -3541,7 +3541,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-<assets/overall deep learning pipeline.png, id=660, 1445.4pt x 813.0375pt>
+<assets/overall deep learning pipeline.png, id=664, 1445.4pt x 813.0375pt>
 File: assets/overall deep learning pipeline.png Graphic file (type png)
 <use assets/overall deep learning pipeline.png>
 Package pdftex.def Info: assets/overall deep learning pipeline.png  used on inp
@@ -3556,27 +3556,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [45 <./assets/overall deep learning pipeline.png (PNG copy)>]
-<logos/React-icon.png, id=665, 963.6pt x 858.20625pt>
+<logos/React-icon.png, id=669, 963.6pt x 858.20625pt>
 File: logos/React-icon.png Graphic file (type png)
 <use logos/React-icon.png>
 Package pdftex.def Info: logos/React-icon.png  used on input line 58.
 (pdftex.def)             Requested size: 22.34906pt x 19.91684pt.
-<logos/spring-boot.png, id=666, 2007.5pt x 516.93124pt>
+<logos/spring-boot.png, id=670, 2007.5pt x 516.93124pt>
 File: logos/spring-boot.png Graphic file (type png)
 <use logos/spring-boot.png>
 Package pdftex.def Info: logos/spring-boot.png  used on input line 68.
 (pdftex.def)             Requested size: 55.22939pt x 14.22636pt.
-<logos/postgres.png, id=667, 963.6pt x 993.7125pt>
+<logos/postgres.png, id=671, 963.6pt x 993.7125pt>
 File: logos/postgres.png Graphic file (type png)
 <use logos/postgres.png>
 Package pdftex.def Info: logos/postgres.png  used on input line 78.
 (pdftex.def)             Requested size: 27.58345pt x 28.45274pt.
-<logos/redis-logo.png, id=668, 2007.5pt x 640.3925pt>
+<logos/redis-logo.png, id=672, 2007.5pt x 640.3925pt>
 File: logos/redis-logo.png Graphic file (type png)
 <use logos/redis-logo.png>
 Package pdftex.def Info: logos/redis-logo.png  used on input line 87.
 (pdftex.def)             Requested size: 40.12784pt x 12.80365pt.
-<logos/fastapi-seeklogo.png, id=669, 2007.5pt x 371.3875pt>
+<logos/fastapi-seeklogo.png, id=673, 2007.5pt x 371.3875pt>
 File: logos/fastapi-seeklogo.png Graphic file (type png)
 <use logos/fastapi-seeklogo.png>
 Package pdftex.def Info: logos/fastapi-seeklogo.png  used on input line 99.
@@ -3598,7 +3598,7 @@ File: logos/fastapi-seeklogo.png Graphic file (type png)
 <use logos/fastapi-seeklogo.png>
 Package pdftex.def Info: logos/fastapi-seeklogo.png  used on input line 145.
 (pdftex.def)             Requested size: 53.82031pt x 9.95863pt.
-<logos/aws-s3-logo.png, id=670, 513.92pt x 513.92pt>
+<logos/aws-s3-logo.png, id=674, 513.92pt x 513.92pt>
 File: logos/aws-s3-logo.png Graphic file (type png)
 <use logos/aws-s3-logo.png>
 Package pdftex.def Info: logos/aws-s3-logo.png  used on input line 155.
@@ -3649,7 +3649,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [48]
-<assets/resnet50.png, id=696, 204.765pt x 33.4851pt>
+<assets/resnet50.png, id=700, 204.765pt x 33.4851pt>
 File: assets/resnet50.png Graphic file (type png)
 <use assets/resnet50.png>
 Package pdftex.def Info: assets/resnet50.png  used on input line 236.
@@ -3663,7 +3663,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [49 <./assets/resnet50.png>]
-<assets/yolo-arch.png, id=704, 453.19313pt x 371.13657pt>
+<assets/yolo-arch.png, id=708, 453.19313pt x 371.13657pt>
 File: assets/yolo-arch.png Graphic file (type png)
 <use assets/yolo-arch.png>
 Package pdftex.def Info: assets/yolo-arch.png  used on input line 254.
@@ -3694,7 +3694,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51 <./assets/yolo-arch.png>]
+[51 <./assets/yolo-arch.png>] (chapters/Chapter3/Routing Model.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3706,12 +3706,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [52]
-<assets/router-architecture.jpg, id=721, 1445.4pt x 813.0375pt>
+<assets/router-architecture.jpg, id=725, 1445.4pt x 813.0375pt>
 File: assets/router-architecture.jpg Graphic file (type jpg)
 <use assets/router-architecture.jpg>
-Package pdftex.def Info: assets/router-architecture.jpg  used on input line 302
-.
+Package pdftex.def Info: assets/router-architecture.jpg  used on input line 23.
+
 (pdftex.def)             Requested size: 430.31812pt x 242.05225pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3721,7 +3728,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [53{C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
-c} <./assets/router-architecture.jpg>]
+c}])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3729,7 +3736,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[54]
+[54 <./assets/router-architecture.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3738,10 +3748,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [55]
-<assets/pre-proc-bones.png, id=746, 461.3235pt x 179.4705pt>
+<assets/pre-proc-bones.png, id=750, 461.3235pt x 179.4705pt>
 File: assets/pre-proc-bones.png Graphic file (type png)
 <use assets/pre-proc-bones.png>
-Package pdftex.def Info: assets/pre-proc-bones.png  used on input line 353.
+Package pdftex.def Info: assets/pre-proc-bones.png  used on input line 317.
 (pdftex.def)             Requested size: 339.72592pt x 132.16527pt.
 
 
@@ -3752,11 +3762,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [56 <./assets/pre-proc-bones.png>]
-<assets/chest-pipeline.png, id=753, 462.22687pt x 96.36pt>
+<assets/chest-pipeline.png, id=757, 462.22687pt x 96.36pt>
 File: assets/chest-pipeline.png Graphic file (type png)
 <use assets/chest-pipeline.png>
-Package pdftex.def Info: assets/chest-pipeline.png  used on input line 390.
+Package pdftex.def Info: assets/chest-pipeline.png  used on input line 354.
 (pdftex.def)             Requested size: 339.72592pt x 70.823pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3765,57 +3778,64 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[57 <./assets/chest-pipeline.png>]
-<assets/pneu1.jpg, id=762, 163.3603pt x 146.04562pt>
+[57]
+<assets/pneu1.jpg, id=764, 163.3603pt x 146.04562pt>
 File: assets/pneu1.jpg Graphic file (type jpg)
 <use assets/pneu1.jpg>
-Package pdftex.def Info: assets/pneu1.jpg  used on input line 406.
+Package pdftex.def Info: assets/pneu1.jpg  used on input line 370.
 (pdftex.def)             Requested size: 113.24197pt x 101.23955pt.
 
-Underfull \hbox (badness 1603) in paragraph at lines 407--407
+Underfull \hbox (badness 1603) in paragraph at lines 371--371
 []\T1/lmr/m/n/10 (+20) (a) |Orig-i-nal Pneu-mo-nia
  []
 
-<assets/proc-pneu1.jpg, id=763, 162.6075pt x 144.54pt>
+<assets/proc-pneu1.jpg, id=765, 162.6075pt x 144.54pt>
 File: assets/proc-pneu1.jpg Graphic file (type jpg)
 <use assets/proc-pneu1.jpg>
-Package pdftex.def Info: assets/proc-pneu1.jpg  used on input line 413.
+Package pdftex.def Info: assets/proc-pneu1.jpg  used on input line 377.
 (pdftex.def)             Requested size: 113.24197pt x 100.66121pt.
-<assets/pneu2.png, id=764, 144.54pt x 147.55125pt>
+<assets/pneu2.png, id=766, 144.54pt x 147.55125pt>
 File: assets/pneu2.png Graphic file (type png)
 <use assets/pneu2.png>
-Package pdftex.def Info: assets/pneu2.png  used on input line 420.
+Package pdftex.def Info: assets/pneu2.png  used on input line 384.
 (pdftex.def)             Requested size: 113.24197pt x 115.60057pt.
 
-Underfull \hbox (badness 1946) in paragraph at lines 421--421
+Underfull \hbox (badness 1946) in paragraph at lines 385--385
 []\T1/lmr/m/n/10 (+20) (c) |Orig-i-nal Pneu-mo-nia
  []
 
-<assets/proc-pneu2.png, id=765, 155.07938pt x 146.04562pt>
+<assets/proc-pneu2.png, id=767, 155.07938pt x 146.04562pt>
 File: assets/proc-pneu2.png Graphic file (type png)
 <use assets/proc-pneu2.png>
-Package pdftex.def Info: assets/proc-pneu2.png  used on input line 427.
+Package pdftex.def Info: assets/proc-pneu2.png  used on input line 391.
 (pdftex.def)             Requested size: 113.24197pt x 106.64583pt.
-<assets/unet-arch.png, id=767, 445.665pt x 263.48438pt>
+<assets/unet-arch.png, id=769, 445.665pt x 263.48438pt>
 File: assets/unet-arch.png Graphic file (type png)
 <use assets/unet-arch.png>
-Package pdftex.def Info: assets/unet-arch.png  used on input line 447.
+Package pdftex.def Info: assets/unet-arch.png  used on input line 411.
 (pdftex.def)             Requested size: 407.66833pt x 241.0215pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<assets/proc-cxr.png, id=769, 165.61874pt x 153.57375pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[58 <./assets/chest-pipeline.png> <./assets/pneu1.jpg> <./assets/proc-pneu1.jpg
+> <./assets/pneu2.png> <./assets/proc-pneu2.png>]
+<assets/proc-cxr.png, id=780, 165.61874pt x 153.57375pt>
 File: assets/proc-cxr.png Graphic file (type png)
 <use assets/proc-cxr.png>
-Package pdftex.def Info: assets/proc-cxr.png  used on input line 471.
+Package pdftex.def Info: assets/proc-cxr.png  used on input line 435.
 (pdftex.def)             Requested size: 113.24197pt x 105.00522pt.
-<assets/segmented-lung.png, id=770, 181.42781pt x 157.33781pt>
+<assets/segmented-lung.png, id=781, 181.42781pt x 157.33781pt>
 File: assets/segmented-lung.png Graphic file (type png)
 <use assets/segmented-lung.png>
-Package pdftex.def Info: assets/segmented-lung.png  used on input line 478.
+Package pdftex.def Info: assets/segmented-lung.png  used on input line 442.
 (pdftex.def)             Requested size: 113.24197pt x 98.20863pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3824,34 +3844,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[58 <./assets/pneu1.jpg> <./assets/proc-pneu1.jpg> <./assets/pneu2.png> <./asse
-ts/proc-pneu2.png>]
-<assets/gradcam.png, id=783, 472.76625pt x 168.63pt>
+[59 <./assets/unet-arch.png> <./assets/proc-cxr.png> <./assets/segmented-lung.p
+ng>]
+<assets/gradcam.png, id=794, 472.76625pt x 168.63pt>
 File: assets/gradcam.png Graphic file (type png)
 <use assets/gradcam.png>
-Package pdftex.def Info: assets/gradcam.png  used on input line 509.
+Package pdftex.def Info: assets/gradcam.png  used on input line 473.
 (pdftex.def)             Requested size: 407.66833pt x 145.41264pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[59 <./assets/unet-arch.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[60 <./assets/proc-cxr.png> <./assets/segmented-lung.png> <./assets/gradcam.png
->])
+[60 <./assets/gradcam.png>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3878,17 +3886,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-<assets/res-epoch.png, id=808, 721.9773pt x 270.2898pt>
+<assets/res-epoch.png, id=812, 721.9773pt x 270.2898pt>
 File: assets/res-epoch.png Graphic file (type png)
 <use assets/res-epoch.png>
 Package pdftex.def Info: assets/res-epoch.png  used on input line 37.
 (pdftex.def)             Requested size: 407.66833pt x 152.61916pt.
-<assets/res-cm.png, id=809, 326.6604pt x 284.0211pt>
+<assets/res-cm.png, id=813, 326.6604pt x 284.0211pt>
 File: assets/res-cm.png Graphic file (type png)
 <use assets/res-cm.png>
 Package pdftex.def Info: assets/res-cm.png  used on input line 43.
 (pdftex.def)             Requested size: 317.07614pt x 275.68648pt.
-<assets/bone-results.png, id=810, 453.0015pt x 301.8915pt>
+<assets/bone-results.png, id=814, 453.0015pt x 301.8915pt>
 File: assets/bone-results.png Graphic file (type png)
 <use assets/bone-results.png>
 Package pdftex.def Info: assets/bone-results.png  used on input line 49.
@@ -3897,7 +3905,7 @@ Package pdftex.def Info: assets/bone-results.png  used on input line 49.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<assets/bone-cm.png, id=811, 453.0015pt x 339.669pt>
+<assets/bone-cm.png, id=815, 453.0015pt x 339.669pt>
 File: assets/bone-cm.png Graphic file (type png)
 <use assets/bone-cm.png>
 Package pdftex.def Info: assets/bone-cm.png  used on input line 55.
@@ -3905,7 +3913,7 @@ Package pdftex.def Info: assets/bone-cm.png  used on input line 55.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<assets/bone-sample.jpg, id=812, 401.24907pt x 328.97906pt>
+<assets/bone-sample.jpg, id=816, 401.24907pt x 328.97906pt>
 File: assets/bone-sample.jpg Graphic file (type jpg)
 <use assets/bone-sample.jpg>
 Package pdftex.def Info: assets/bone-sample.jpg  used on input line 61.
@@ -3913,7 +3921,7 @@ Package pdftex.def Info: assets/bone-sample.jpg  used on input line 61.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<assets/chest-results.jpeg, id=813, 589.81645pt x 149.97968pt>
+<assets/chest-results.jpeg, id=817, 589.81645pt x 149.97968pt>
 File: assets/chest-results.jpeg Graphic file (type jpg)
 <use assets/chest-results.jpeg>
 Package pdftex.def Info: assets/chest-results.jpeg  used on input line 67.
@@ -3921,7 +3929,7 @@ Package pdftex.def Info: assets/chest-results.jpeg  used on input line 67.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<assets/chest-cm.jpeg, id=814, 456.90161pt x 327.39764pt>
+<assets/chest-cm.jpeg, id=818, 456.90161pt x 327.39764pt>
 File: assets/chest-cm.jpeg Graphic file (type jpg)
 <use assets/chest-cm.jpeg>
 Package pdftex.def Info: assets/chest-cm.jpeg  used on input line 73.
@@ -3929,7 +3937,7 @@ Package pdftex.def Info: assets/chest-cm.jpeg  used on input line 73.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<assets/chest-sample.png, id=815, 465.23813pt x 165.61874pt>
+<assets/chest-sample.png, id=819, 465.23813pt x 165.61874pt>
 File: assets/chest-sample.png Graphic file (type png)
 <use assets/chest-sample.png>
 Package pdftex.def Info: assets/chest-sample.png  used on input line 79.
@@ -3969,7 +3977,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [67 <./assets/chest-cm.jpeg> <./assets/chest-sample.png>]
-<assets/yolo-mura-results.png, id=839, 498.06075pt x 443.256pt>
+<assets/yolo-mura-results.png, id=843, 498.06075pt x 443.256pt>
 File: assets/yolo-mura-results.png Graphic file (type png)
 <use assets/yolo-mura-results.png>
 Package pdftex.def Info: assets/yolo-mura-results.png  used on input line 100.
@@ -4006,14 +4014,8 @@ L3 programming layer <2024-01-04>
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `Thesis_book.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Thesis_book.out':
-(rerunfilecheck)             Before: EA187C0BEBDBC59A754A328DD81FB0B0;8570
-(rerunfilecheck)             After:  F1CA7A769A3B0ACA9D000F3541EB9CF5;8935.
+Package rerunfilecheck Info: File `Thesis_book.out' has not changed.
+(rerunfilecheck)             Checksum: F1CA7A769A3B0ACA9D000F3541EB9CF5;8935.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                Thesis_book
@@ -4024,11 +4026,11 @@ Package logreq Info: Writing requests to 'Thesis_book.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39867 strings out of 474486
- 810328 string characters out of 5744226
+ 39874 strings out of 474486
+ 811037 string characters out of 5744226
  2028542 words of memory out of 5000000
- 60997 multiletter control sequences out of 15000+600000
- 703827 words of font info for 273 fonts, out of 8000000 for 9000
+ 61001 multiletter control sequences out of 15000+600000
+ 700689 words of font info for 271 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,12n,95p,1158b,2045s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb
@@ -4050,9 +4052,9 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Zyad/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Zyad/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
 /Zyad/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on Thesis_book.pdf (79 pages, 4445971 bytes).
+Output written on Thesis_book.pdf (79 pages, 4447398 bytes).
 PDF statistics:
- 1023 PDF objects out of 1200 (max. 8388607)
+ 1027 PDF objects out of 1200 (max. 8388607)
  209 named destinations out of 1000 (max. 500000)
- 93304 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 91264 words of extra memory for PDF output out of 106986 (max. 10000000)
 

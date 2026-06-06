@@ -40,11 +40,11 @@
 \contentsline {subsection}{\numberline {3.3.1}Motivation}{52}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Problem Statement}{53}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Model Architecture}{53}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Bone Fracture Detection Model}{54}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Bone Fracture Detection Model}{55}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Motivation}{55}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Problem Statement}{55}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Model Architecture}{55}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Chest Disease Classification Model}{56}{section.3.5}%
+\contentsline {subsection}{\numberline {3.4.3}Model Architecture}{56}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Chest Disease Classification Model}{57}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Motivation}{57}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Problem Statement}{57}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}Model Architecture}{57}{subsection.3.5.3}%
