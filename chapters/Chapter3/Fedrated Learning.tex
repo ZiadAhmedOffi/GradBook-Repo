@@ -1,0 +1,293 @@
+\section{Federated Learning}
+\subsection{Concept and Motivation}
+\label{subsec:fl_concept}
+ 
+Federated learning (FL) is a distributed machine learning paradigm in which
+a model is trained collaboratively across multiple independent nodes without
+any raw data leaving its source institution~\cite{mcmahan2017}. Rather than
+centralizing training samples on a shared server, FL brings the computation
+to the data: each participating node trains a local model on its private
+dataset and shares only the resulting model parameters with a central
+aggregation server, which combines the updates into an improved global model.
+This cycle repeats for a defined number of communication rounds until the
+global model converges.
+ 
+The motivation for adopting FL in this work is rooted in the fundamental
+tension between data-driven model development and patient privacy. Healthcare
+institutions collect large volumes of annotated medical images, yet regulatory
+frameworks — including the Health Insurance Portability and Accountability Act
+(HIPAA) in the United States and the General Data Protection Regulation (GDPR)
+in the European Union — impose strict constraints on cross-institutional data
+sharing. Negotiating data transfer agreements is costly, time-consuming, and
+in many cases legally impractical. FL resolves this tension by enabling
+institutions to contribute to a shared model without relinquishing data
+custody, making large-scale collaborative medical AI both legally feasible
+and technically practical.
+ 
+% -----------------------------------------------------------------------------
+\subsection{Federated Learning in Medical Imaging}
+\label{subsec:fl_medical}
+ 
+The adoption of FL in the medical domain has grown substantially since its
+introduction, driven by the recognition that many clinical datasets are too
+small at any single institution to train robust deep learning models, while
+the combined data across institutions would be sufficient~\cite{sheller2019}.
+FL directly addresses this data insufficiency problem without requiring
+physical data consolidation.
+ 
+In medical imaging specifically, FL has been applied across a broad range of
+modalities and anatomical targets. Early work by Sheller~\textit{et al.}
+demonstrated FL for brain tumor segmentation from MRI scans across multiple
+institutions, achieving performance comparable to centralized training without
+sharing any patient data~\cite{sheller2019}. Subsequent studies have extended
+FL to chest radiograph classification, diabetic retinopathy screening from
+fundus photography, histopathology slide analysis, and cardiac structure
+segmentation from echocardiography, among others~\cite{rieke2020}.
+ 
+This breadth of applicability is a key motivation for the design of the
+proposed system. Rather than building a solution tied to a specific model
+architecture or anatomical region, the FL framework developed in this work
+is designed to be \textbf{model-agnostic} and \textbf{organ-agnostic}: any
+classification or segmentation backbone can be substituted as the local
+model, and the training data can comprise images from any body region or
+imaging modality. The federated coordination layer — covering client
+management, weight aggregation, and communication — remains unchanged
+regardless of the underlying clinical task.
+ 
+% -----------------------------------------------------------------------------
+\subsection{The Federated Averaging Algorithm}
+\label{subsec:fedavg}
+ 
+The aggregation algorithm that underpins the proposed system is Federated
+Averaging (FedAvg), introduced by McMahan~\textit{et al.}~\cite{mcmahan2017}
+and the most widely adopted FL optimization method to date. FedAvg operates
+in iterative communication rounds. Let $K$ denote the number of participating
+clients, $\mathcal{D}_k$ the private dataset of client $k$, $n_k =
+|\mathcal{D}_k|$ its size, and $n = \sum_{k=1}^{K} n_k$ the total number of
+training samples across all clients. The global model at round $t$ is
+parameterized by weight vector $\mathbf{w}_t$. Each round consists of three
+phases:
+ 
+\textbf{(1) Broadcast.} The server distributes the current global model
+weights to all $K$ clients:
+\begin{equation}
+    \mathbf{w}_t \;\longrightarrow\; \{\text{client}_1, \dots, \text{client}_K\}.
+\end{equation}
+ 
+\textbf{(2) Local Training.} Each client $k$ independently minimizes its
+local empirical risk $\mathcal{L}_k$ over $E$ local epochs using a gradient-
+based optimizer, producing updated local weights:
+\begin{equation}
+    \mathbf{w}_t^k \;=\; \mathbf{w}_t \;-\; \eta\,\nabla\mathcal{L}_k(\mathbf{w}_t),
+\end{equation}
+where $\eta$ is the local learning rate and $\mathcal{L}_k$ is the
+task-specific loss function evaluated over the client's local dataset:
+\begin{equation}
+    \mathcal{L}_k(\mathbf{w}) \;=\;
+    \frac{1}{n_k}\sum_{(x_i,\,y_i)\,\in\,\mathcal{D}_k}
+    \ell\!\left(f_{\mathbf{w}}(x_i),\,y_i\right).
+\end{equation}
+ 
+\textbf{(3) Aggregation.} The server collects the locally updated weights
+from all clients and computes the new global model as a weighted average
+proportional to each client's dataset size:
+\begin{equation}
+    \mathbf{w}_{t+1} \;=\; \sum_{k=1}^{K}\frac{n_k}{n}\,\mathbf{w}_t^k.
+    \label{eq:fedavg}
+\end{equation}
+ 
+This process minimizes the global objective:
+\begin{equation}
+    F(\mathbf{w}) \;=\; \sum_{k=1}^{K}\frac{n_k}{n}\,\mathcal{L}_k(\mathbf{w}).
+\end{equation}
+ 
+Equation~\eqref{eq:fedavg} assigns greater influence to clients with larger
+datasets, which is appropriate in the medical setting where institutional
+dataset sizes vary considerably. Clients contributing more annotated images
+should exert proportionally greater influence on the global model.
+ 
+% -----------------------------------------------------------------------------
+\subsection{Key Parameters of a Federated Learning System}
+\label{subsec:fl_parameters}
+ 
+Configuring a federated learning system involves a distinct set of
+parameters beyond those of conventional deep learning. These parameters
+govern the coordination between server and clients and directly affect
+convergence speed, model quality, communication cost, and privacy. A clear
+understanding of each parameter is essential for adapting the system to
+different clinical tasks. Table~\ref{tab:fl_params} provides an overview
+of the critical parameters and their implications.
+ 
+\begin{table}[ht]
+\centering
+\caption{Key Federated Learning Parameters and Their Clinical Implications}
+\label{tab:fl_params}
+\begin{tabular}{|p{3.2cm}|p{4.2cm}|p{5.8cm}|}
+\hline
+\textbf{Parameter} & \textbf{Definition} & \textbf{Implication} \\
+\hline
+Number of clients ($K$)
+    & Total participating institutions
+    & More clients improve data diversity and model generalization but
+      increase coordination overhead. \\
+\hline
+Communication rounds ($T$)
+    & Number of server--client training cycles
+    & More rounds improve accuracy at the cost of higher communication
+      volume. Convergence is typically monitored to select $T$. \\
+\hline
+Client fraction ($C$)
+    & Proportion of clients selected per round ($C \in (0,1]$)
+    & $C = 1.0$ uses all clients every round (synchronous FL).
+      $C < 1.0$ enables asynchronous, scalable training. \\
+\hline
+Local epochs ($E$)
+    & Training epochs each client performs before returning weights
+    & Higher $E$ reduces communication rounds but risks \textit{client drift}
+      — divergence of local models due to non-IID data~\cite{li2020}. \\
+\hline
+Local batch size ($B$)
+    & Mini-batch size for local gradient computation
+    & Affects local convergence speed, memory footprint, and gradient
+      privacy (smaller batches increase reconstruction attack risk). \\
+\hline
+Local learning rate ($\eta$)
+    & Step size for local gradient updates
+    & Must be tuned per model architecture; too large a value exacerbates
+      client drift in non-IID settings. \\
+\hline
+Aggregation strategy
+    & Algorithm used to combine client updates (e.g., FedAvg, FedProx,
+      FedNova)
+    & Choice depends on data heterogeneity; FedAvg is the standard baseline;
+      FedProx adds a proximal term to limit client drift. \\
+\hline
+Data partitioning scheme
+    & How training data is divided across clients (IID vs. non-IID)
+    & Non-IID partitions (realistic in healthcare) slow convergence and
+      reduce final accuracy compared to IID partitions. \\
+\hline
+Minimum clients for aggregation
+    & Minimum number of client updates required before the server aggregates
+    & Prevents the global model from being updated on insufficient
+      information; critical for stability. \\
+\hline
+\end{tabular}
+\end{table}
+ 
+Among these, the number of local epochs $E$ and the aggregation strategy
+warrant particular attention in the medical imaging context. Increasing $E$
+reduces the number of costly communication rounds, which is beneficial in
+healthcare networks where bandwidth and uptime may be limited. However,
+when client datasets are statistically heterogeneous — a common condition
+across hospitals using different scanners, populations, or labeling protocols
+— high $E$ causes the local models to overfit to their local distributions
+and diverge from the global optimum, a phenomenon known as \textit{client
+drift}~\cite{li2020}. The selection of $E$ therefore requires careful
+empirical tuning for each deployment scenario.
+ 
+% -----------------------------------------------------------------------------
+\subsection{Privacy and Security}
+\label{subsec:fl_privacy}
+ 
+The primary privacy guarantee of federated learning is that raw data never
+leaves its source institution. The server observes only model weight tensors,
+which are orders of magnitude smaller than the original imaging data and
+contain no explicit patient identifiers. This stands in contrast to
+centralized approaches, where a single data breach exposes the entire
+training corpus. Table~\ref{tab:privacy_comparison} summarizes the key
+differences.
+ 
+\begin{table}[ht]
+\centering
+\caption{Privacy and Security: Centralized vs.\ Federated Learning}
+\label{tab:privacy_comparison}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Property} & \textbf{Centralized} & \textbf{Federated} \\
+\hline
+Raw data leaves institution   & Yes        & No              \\
+Single point of data breach   & Yes        & No              \\
+HIPAA / GDPR compliance       & Difficult  & Easier          \\
+Shared artifact               & Full dataset & Model weights \\
+Supports differential privacy & N/A        & Yes             \\
+Resilient to server breach    & No         & Partial         \\
+\hline
+\end{tabular}
+\end{table}
+ 
+It is important to acknowledge that gradient sharing is not unconditionally
+private. Gradient inversion attacks~\cite{zhu2019} have demonstrated that
+an adversarial server can reconstruct approximate training images from shared
+weight updates, particularly at small batch sizes. Two complementary
+mitigations are incorporated into the design of the proposed system:
+ 
+\textbf{Batch size selection.} Using a sufficiently large mini-batch (e.g.,
+$B \geq 32$) aggregates gradient information across many samples, significantly
+reducing the fidelity of any reconstruction attempt.
+ 
+\textbf{Differential Privacy (DP).} For deployments requiring formal privacy
+guarantees, the system supports $(\varepsilon, \delta)$-DP~\cite{dwork2014}
+by adding calibrated Gaussian noise to client updates before transmission:
+\begin{equation}
+    \tilde{\mathbf{w}}_t^k \;=\; \mathbf{w}_t^k \;+\;
+    \mathcal{N}\!\left(0,\;\sigma^2 C^2 \mathbf{I}\right),
+\end{equation}
+where $C$ is the gradient clipping threshold and $\sigma$ is the noise
+multiplier. The privacy budget $\varepsilon$ quantifies the worst-case
+privacy loss: smaller $\varepsilon$ implies stronger privacy at the cost
+of model utility.
+ 
+% -----------------------------------------------------------------------------
+\subsection{What Makes the Proposed System Distinctive}
+\label{subsec:fl_novelty}
+ 
+While federated learning has been applied in various medical imaging studies,
+the majority of existing implementations are designed around a fixed model
+architecture and a specific anatomical target, limiting their transferability
+to new clinical tasks. The proposed framework differentiates itself through
+the following design principles:
+ 
+\textbf{Model Agnosticism.} The federated coordination layer — encompassing
+client management, weight serialization, aggregation, and communication — is
+fully decoupled from the local model definition. Any differentiable model
+that can be expressed as a parameter vector (e.g., CNNs for classification,
+U-Net variants for segmentation, Vision Transformers) can be substituted as
+the local model without modifying the federated infrastructure. This makes
+the system immediately applicable to new imaging tasks simply by swapping the
+model definition on the client side.
+ 
+\textbf{Organ and Modality Agnosticism.} The system imposes no constraints
+on the nature of the input images. Training data may originate from any body
+region (chest, brain, abdomen, retina) and any imaging modality (X-ray, CT,
+MRI, ultrasound, fundus photography). The federated server is entirely
+unaware of image content; it operates solely on weight tensors.
+ 
+\textbf{Staged Data Integration.} The system incorporates a staged data
+feeding protocol that progressively increases each client's active training
+subset across federated rounds. This design reflects the clinical reality
+that expert-annotated medical imaging datasets grow incrementally over time
+as radiologists label new cases. Rather than requiring a fully annotated
+dataset before training begins, the system accommodates continuous data
+growth, enabling earlier model deployment and iterative improvement as
+annotation progresses.
+ 
+\textbf{Containerized Reproducibility.} Each participating node is deployed
+as an isolated Docker container, ensuring that the federated environment is
+fully reproducible across different hardware configurations and operating
+systems. The container-based architecture also simplifies scaling: adding a
+new institution requires only the deployment of an additional client
+container with the appropriate data volume mount, with no changes to the
+server or existing clients.
+ 
+\textbf{Framework Choice.} The system is implemented using the Flower
+(flwr) framework~\cite{beutel2022}, selected for its support of multiple
+ML backends (PyTorch, TensorFlow, JAX), its clean abstraction of the
+client-server protocol, and its active development for healthcare FL
+research. The backend-agnostic design of Flower further reinforces the
+model-agnostic objective of the proposed system.
+ 
+Collectively, these properties position the proposed FL framework as a
+general-purpose infrastructure for privacy-preserving collaborative medical
+image analysis, extensible to a wide range of clinical specialties and
+diagnostic tasks without architectural redesign.
