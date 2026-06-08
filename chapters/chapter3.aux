@@ -4,65 +4,85 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Solution Architecture}{44}{section.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Deep Learning Inference Pipeline}{45}{subsection.3.1.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces High-level diagram of the DL inference pipeline.}}{45}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:overall-arch}{{3.1}{45}{High-level diagram of the DL inference pipeline}{figure.caption.15}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Backend Infrastructure and System Integration}{46}{subsection.3.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces System Architecture Overview}}{46}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:system-architecture}{{3.2}{46}{System Architecture Overview}{figure.caption.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces AWS S3 Integration in our system}}{47}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:s3-connections}{{3.3}{47}{AWS S3 Integration in our system}{figure.caption.17}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Transfer-Learning Models Used}{49}{section.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}ResNet50 Model}{49}{subsection.3.2.1}\protected@file@percent }
-\newlabel{subsec:resnet50-arch}{{3.2.1}{49}{ResNet50 Model}{subsection.3.2.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Architecture of the ResNet50 illustrating the successive stages of the model.}}{49}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:resnet50-arch}{{3.4}{49}{Architecture of the ResNet50 illustrating the successive stages of the model}{figure.caption.18}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}YOLOv8 Model}{50}{subsection.3.2.2}\protected@file@percent }
-\newlabel{subsec:yolo}{{3.2.2}{50}{YOLOv8 Model}{subsection.3.2.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Architecture of the YOLOv8 illustrating the successive stages of the model.}}{51}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:yolo-arch}{{3.5}{51}{Architecture of the YOLOv8 illustrating the successive stages of the model}{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Medical Image Routing Model}{52}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Motivation}{52}{subsection.3.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Problem Statement}{53}{subsection.3.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Model Architecture}{53}{subsection.3.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Overall architecture of the proposed medical image routing model.}}{54}{figure.caption.20}\protected@file@percent }
-\newlabel{fig:overall_architecture}{{3.6}{54}{Overall architecture of the proposed medical image routing model}{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Bone Fracture Detection Model}{55}{section.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Motivation}{55}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Problem Statement}{55}{subsection.3.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Model Architecture}{56}{subsection.3.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Image preprocessing pipeline used in the attempt to train DenseNet121 on the MURA dataset.}}{56}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:pre-proc-bone}{{3.7}{56}{Image preprocessing pipeline used in the attempt to train DenseNet121 on the MURA dataset}{figure.caption.21}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Chest Disease Classification Model}{57}{section.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Motivation}{57}{subsection.3.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Problem Statement}{57}{subsection.3.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Model Architecture}{57}{subsection.3.5.3}\protected@file@percent }
+\newlabel{sec:solution_architecture}{{3.1}{44}{Solution Architecture}{section.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces High-level architecture of the proposed framework. The system consists of a modality routing model, specialized disease classifiers, Explainable AI modules, and a Federated Learning infrastructure connecting multiple healthcare institutions.}}{45}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:overall_architecture}{{3.1}{45}{High-level architecture of the proposed framework. The system consists of a modality routing model, specialized disease classifiers, Explainable AI modules, and a Federated Learning infrastructure connecting multiple healthcare institutions}{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Architectural Design Philosophy}{45}{subsection.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}System Workflow}{46}{subsection.3.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Classification tree of the proposed two-level framework. The routing model first determines the image modality before directing the image toward the appropriate disease-specific classifier.}}{47}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:classification_tree}{{3.2}{47}{Classification tree of the proposed two-level framework. The routing model first determines the image modality before directing the image toward the appropriate disease-specific classifier}{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Level One: Modality Routing and Out-of-Distribution Detection}{47}{subsection.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Level Two: Chest Disease Detection Model}{48}{subsection.3.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}Level Two: Lung Cancer Detection Model}{49}{subsection.3.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.6}Explainable Artificial Intelligence Integration}{50}{subsection.3.1.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Placeholder figure illustrating explainability outputs generated by the proposed framework. Example visualizations may include Grad-CAM heatmaps highlighting image regions contributing to the model prediction.}}{50}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:xai_examples}{{3.3}{50}{Placeholder figure illustrating explainability outputs generated by the proposed framework. Example visualizations may include Grad-CAM heatmaps highlighting image regions contributing to the model prediction}{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.7}Federated Learning Infrastructure}{50}{subsection.3.1.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Federated Learning workflow used within the proposed framework. Each institution trains a local model using its private data before contributing parameter updates to a centralized aggregation process.}}{51}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:fl_workflow}{{3.4}{51}{Federated Learning workflow used within the proposed framework. Each institution trains a local model using its private data before contributing parameter updates to a centralized aggregation process}{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Transfer-Learning Models Used}{51}{section.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}ResNet50 Model}{51}{subsection.3.2.1}\protected@file@percent }
+\newlabel{subsec:resnet50-arch}{{3.2.1}{51}{ResNet50 Model}{subsection.3.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Architecture of the ResNet50 illustrating the successive stages of the model.}}{52}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:resnet50-arch}{{3.5}{52}{Architecture of the ResNet50 illustrating the successive stages of the model}{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}YOLOv8 Model}{53}{subsection.3.2.2}\protected@file@percent }
+\newlabel{subsec:yolo}{{3.2.2}{53}{YOLOv8 Model}{subsection.3.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Architecture of the YOLOv8 illustrating the successive stages of the model.}}{53}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:yolo-arch}{{3.6}{53}{Architecture of the YOLOv8 illustrating the successive stages of the model}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Medical Image Routing Model}{54}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Motivation}{55}{subsection.3.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Problem Statement}{55}{subsection.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Model Architecture}{56}{subsection.3.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Overall architecture of the proposed medical image routing model.}}{56}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:overall_architecture}{{3.7}{56}{Overall architecture of the proposed medical image routing model}{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Chest Disease Classification Model}{57}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Motivation}{57}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Problem Statement}{58}{subsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Model Architecture}{58}{subsection.3.4.3}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces High-level overview of the multi-stage chest disease classification pipeline.}}{58}{figure.caption.22}\protected@file@percent }
 \newlabel{fig:chest_pipeline_overview}{{3.8}{58}{High-level overview of the multi-stage chest disease classification pipeline}{figure.caption.22}{}}
-\newlabel{fig:orig-pneumonia}{{3.9a}{58}{Original Pneumonia CXR}{figure.caption.23}{}}
-\newlabel{sub@fig:orig-pneumonia}{{a}{58}{Original Pneumonia CXR}{figure.caption.23}{}}
-\newlabel{fig:proc-pneumonia}{{3.9b}{58}{Preprocessed Pneumonia CXR}{figure.caption.23}{}}
-\newlabel{sub@fig:proc-pneumonia}{{b}{58}{Preprocessed Pneumonia CXR}{figure.caption.23}{}}
-\newlabel{fig:orig-pneumonia2}{{3.9c}{58}{Original Pneumonia CXR}{figure.caption.23}{}}
-\newlabel{sub@fig:orig-pneumonia2}{{c}{58}{Original Pneumonia CXR}{figure.caption.23}{}}
-\newlabel{fig:proc-pneumonia2}{{3.9d}{58}{Preprocessed Pneumonia CXR}{figure.caption.23}{}}
-\newlabel{sub@fig:proc-pneumonia2}{{d}{58}{Preprocessed Pneumonia CXR}{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Chest X-ray images before and after preprocessing, highlighting improved contrast and reduced noise.}}{58}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:preprocessing}{{3.9}{58}{Chest X-ray images before and after preprocessing, highlighting improved contrast and reduced noise}{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces The U-Net architecture, illustrating the encoder-decoder structure with skip connections that merge high-resolution features from the contracting path with upsampled features in the expansive path. This design is highly effective for precise medical image segmentation.}}{59}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:unet-arch}{{3.10}{59}{The U-Net architecture, illustrating the encoder-decoder structure with skip connections that merge high-resolution features from the contracting path with upsampled features in the expansive path. This design is highly effective for precise medical image segmentation}{figure.caption.24}{}}
-\newlabel{fig:proc-cxr}{{3.11a}{59}{Preprocessed CXR Image}{figure.caption.25}{}}
-\newlabel{sub@fig:proc-cxr}{{a}{59}{Preprocessed CXR Image}{figure.caption.25}{}}
-\newlabel{fig:segmented-lung}{{3.11b}{59}{Segmented Lung Image after Mask Application}{figure.caption.25}{}}
-\newlabel{sub@fig:segmented-lung}{{b}{59}{Segmented Lung Image after Mask Application}{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Application of the U-Net segmentation mask. The original preprocessed Figure~\ref {fig:proc-cxr} is processed to produce the final segmented lung Figure~\ref {fig:segmented-lung}, which serves as the input for the classification stage}}{59}{figure.caption.25}\protected@file@percent }
-\newlabel{fig:lung_segmentation}{{3.11}{59}{Application of the U-Net segmentation mask. The original preprocessed Figure~\ref {fig:proc-cxr} is processed to produce the final segmented lung Figure~\ref {fig:segmented-lung}, which serves as the input for the classification stage}{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Grad-CAM visualizations highlighting regions contributing to model predictions.}}{60}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:gradcam}{{3.12}{60}{Grad-CAM visualizations highlighting regions contributing to model predictions}{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Summary}{60}{section.3.6}\protected@file@percent }
+\newlabel{fig:orig-pneumonia}{{3.9a}{59}{Original Pneumonia CXR}{figure.caption.23}{}}
+\newlabel{sub@fig:orig-pneumonia}{{a}{59}{Original Pneumonia CXR}{figure.caption.23}{}}
+\newlabel{fig:proc-pneumonia}{{3.9b}{59}{Preprocessed Pneumonia CXR}{figure.caption.23}{}}
+\newlabel{sub@fig:proc-pneumonia}{{b}{59}{Preprocessed Pneumonia CXR}{figure.caption.23}{}}
+\newlabel{fig:orig-pneumonia2}{{3.9c}{59}{Original Pneumonia CXR}{figure.caption.23}{}}
+\newlabel{sub@fig:orig-pneumonia2}{{c}{59}{Original Pneumonia CXR}{figure.caption.23}{}}
+\newlabel{fig:proc-pneumonia2}{{3.9d}{59}{Preprocessed Pneumonia CXR}{figure.caption.23}{}}
+\newlabel{sub@fig:proc-pneumonia2}{{d}{59}{Preprocessed Pneumonia CXR}{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Chest X-ray images before and after preprocessing, highlighting improved contrast and reduced noise.}}{59}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:preprocessing}{{3.9}{59}{Chest X-ray images before and after preprocessing, highlighting improved contrast and reduced noise}{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces The U-Net architecture, illustrating the encoder-decoder structure with skip connections that merge high-resolution features from the contracting path with upsampled features in the expansive path. This design is highly effective for precise medical image segmentation.}}{60}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:unet-arch}{{3.10}{60}{The U-Net architecture, illustrating the encoder-decoder structure with skip connections that merge high-resolution features from the contracting path with upsampled features in the expansive path. This design is highly effective for precise medical image segmentation}{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Federated Learning}{60}{section.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Concept and Motivation}{60}{subsection.3.5.1}\protected@file@percent }
+\newlabel{subsec:fl_concept}{{3.5.1}{60}{Concept and Motivation}{subsection.3.5.1}{}}
+\newlabel{fig:proc-cxr}{{3.11a}{61}{Preprocessed CXR Image}{figure.caption.25}{}}
+\newlabel{sub@fig:proc-cxr}{{a}{61}{Preprocessed CXR Image}{figure.caption.25}{}}
+\newlabel{fig:segmented-lung}{{3.11b}{61}{Segmented Lung Image after Mask Application}{figure.caption.25}{}}
+\newlabel{sub@fig:segmented-lung}{{b}{61}{Segmented Lung Image after Mask Application}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Application of the U-Net segmentation mask. The original preprocessed Figure~\ref {fig:proc-cxr} is processed to produce the final segmented lung Figure~\ref {fig:segmented-lung}, which serves as the input for the classification stage}}{61}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:lung_segmentation}{{3.11}{61}{Application of the U-Net segmentation mask. The original preprocessed Figure~\ref {fig:proc-cxr} is processed to produce the final segmented lung Figure~\ref {fig:segmented-lung}, which serves as the input for the classification stage}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Grad-CAM visualizations highlighting regions contributing to model predictions.}}{61}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:gradcam}{{3.12}{61}{Grad-CAM visualizations highlighting regions contributing to model predictions}{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Federated Learning in Medical Imaging}{61}{subsection.3.5.2}\protected@file@percent }
+\newlabel{subsec:fl_medical}{{3.5.2}{61}{Federated Learning in Medical Imaging}{subsection.3.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}The Federated Averaging Algorithm}{62}{subsection.3.5.3}\protected@file@percent }
+\newlabel{subsec:fedavg}{{3.5.3}{62}{The Federated Averaging Algorithm}{subsection.3.5.3}{}}
+\newlabel{eq:fedavg}{{3.9}{62}{The Federated Averaging Algorithm}{equation.3.5.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Key Parameters of a Federated Learning System}{63}{subsection.3.5.4}\protected@file@percent }
+\newlabel{subsec:fl_parameters}{{3.5.4}{63}{Key Parameters of a Federated Learning System}{subsection.3.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.5}Privacy and Security}{63}{subsection.3.5.5}\protected@file@percent }
+\newlabel{subsec:fl_privacy}{{3.5.5}{63}{Privacy and Security}{subsection.3.5.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.6}What Makes the Proposed System Distinctive}{64}{subsection.3.5.6}\protected@file@percent }
+\newlabel{subsec:fl_novelty}{{3.5.6}{64}{What Makes the Proposed System Distinctive}{subsection.3.5.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Summary}{65}{section.3.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Key Federated Learning Parameters and Their Clinical Implications}}{66}{table.caption.27}\protected@file@percent }
+\newlabel{tab:fl_params}{{3.1}{66}{Key Federated Learning Parameters and Their Clinical Implications}{table.caption.27}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Privacy and Security: Centralized vs.\ Federated Learning}}{67}{table.caption.28}\protected@file@percent }
+\newlabel{tab:privacy_comparison}{{3.2}{67}{Privacy and Security: Centralized vs.\ Federated Learning}{table.caption.28}{}}
 \@setckpt{chapters/chapter3}{
-\setcounter{page}{62}
-\setcounter{equation}{0}
+\setcounter{page}{68}
+\setcounter{equation}{11}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -77,7 +97,7 @@
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
 \setcounter{figure}{12}
-\setcounter{table}{0}
+\setcounter{table}{2}
 \setcounter{parentequation}{0}
 \setcounter{lofdepth}{1}
 \setcounter{lotdepth}{1}
@@ -91,7 +111,7 @@
 \setcounter{section@level}{0}
 \setcounter{Item}{7}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{50}
+\setcounter{bookmark@seq@number}{58}
 \setcounter{tabx@nest}{0}
 \setcounter{listtotal}{0}
 \setcounter{listcount}{0}
@@ -101,7 +121,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{28}
+\setcounter{instcount}{38}
 \setcounter{maxnames}{3}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}

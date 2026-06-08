@@ -1,7 +1,7 @@
 \contentsline {section}{Acknowledgments}{I}{chapter*.2}%
 \contentsline {section}{Abstract}{II}{chapter*.3}%
 \contentsline {section}{List of Tables}{V}{chapter*.3}%
-\contentsline {section}{List of Figures}{VI}{chapter*.3}%
+\contentsline {section}{List of Figures}{VII}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Problem Definition}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Challenges in Medical Image Analysis}{4}{section.1.2}%
@@ -31,25 +31,33 @@
 \contentsline {section}{\numberline {2.8}Summary}{41}{section.2.8}%
 \contentsline {chapter}{\numberline {3}Proposed Models}{44}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Solution Architecture}{44}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Deep Learning Inference Pipeline}{45}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Backend Infrastructure and System Integration}{46}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Transfer-Learning Models Used}{49}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}ResNet50 Model}{49}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}YOLOv8 Model}{50}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Medical Image Routing Model}{52}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Motivation}{52}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Problem Statement}{53}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Model Architecture}{53}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Bone Fracture Detection Model}{55}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Motivation}{55}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Problem Statement}{55}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Model Architecture}{56}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Chest Disease Classification Model}{57}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Motivation}{57}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Problem Statement}{57}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Model Architecture}{57}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}Summary}{60}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Results and Evaluation}{63}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Evaluation Metrics}{63}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Results}{64}{section.4.2}%
-\contentsline {chapter}{References}{69}{chapter*.36}%
+\contentsline {subsection}{\numberline {3.1.1}Architectural Design Philosophy}{45}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}System Workflow}{46}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Level One: Modality Routing and Out-of-Distribution Detection}{47}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Level Two: Chest Disease Detection Model}{48}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Level Two: Lung Cancer Detection Model}{49}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Explainable Artificial Intelligence Integration}{50}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Federated Learning Infrastructure}{50}{subsection.3.1.7}%
+\contentsline {section}{\numberline {3.2}Transfer-Learning Models Used}{51}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}ResNet50 Model}{51}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}YOLOv8 Model}{53}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Medical Image Routing Model}{54}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Motivation}{55}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Problem Statement}{55}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Model Architecture}{56}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Chest Disease Classification Model}{57}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Motivation}{57}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Problem Statement}{58}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Model Architecture}{58}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Federated Learning}{60}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Concept and Motivation}{60}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Federated Learning in Medical Imaging}{61}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}The Federated Averaging Algorithm}{62}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Key Parameters of a Federated Learning System}{63}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Privacy and Security}{63}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.6}What Makes the Proposed System Distinctive}{64}{subsection.3.5.6}%
+\contentsline {section}{\numberline {3.6}Summary}{65}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Results and Evaluation}{69}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Evaluation Metrics}{69}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Results}{70}{section.4.2}%
+\contentsline {chapter}{References}{75}{chapter*.38}%
