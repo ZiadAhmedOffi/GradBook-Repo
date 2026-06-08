@@ -1,15 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
-[1] Config.pm:310> INFO - Logfile is 'Thesis_book.blg'
-[140] biber-MSWIN64:340> INFO - === 
-[238] Biber.pm:419> INFO - Reading 'Thesis_book.bcf'
-[392] Biber.pm:976> INFO - Using all citekeys in bib section 0
-[413] Biber.pm:4419> INFO - Processing section 0
-[426] Biber.pm:4610> INFO - Looking for bibtex file 'refs.bib' for section 0
-[560] bibtex.pm:1713> INFO - LaTeX decoding ...
-[616] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
-[746] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[747] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[748] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[749] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[776] bbl.pm:660> INFO - Writing 'Thesis_book.bbl' with encoding 'UTF-8'
-[806] bbl.pm:763> INFO - Output to Thesis_book.bbl
+[0] Config.pm:310> INFO - Logfile is 'Thesis_book.blg'
+[150] biber-MSWIN64:340> INFO - === 
+[249] Biber.pm:419> INFO - Reading 'Thesis_book.bcf'
+[409] Biber.pm:979> INFO - Found 47 citekeys in bib section 0
+[430] Biber.pm:4419> INFO - Processing section 0
+[444] Biber.pm:4610> INFO - Looking for bibtex file 'refs.bib' for section 0
+[582] bibtex.pm:1713> INFO - LaTeX decoding ...
+[664] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
+[953] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[953] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[954] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[955] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[993] bbl.pm:660> INFO - Writing 'Thesis_book.bbl' with encoding 'UTF-8'
+[1053] bbl.pm:763> INFO - Output to Thesis_book.bbl
+[1055] Biber.pm:131> WARN - legacy month field 'Mar' in entry 'Shuvo_2026' is not an integer - this will probably not sort properly.
+[1056] Biber.pm:133> INFO - WARNINGS: 1

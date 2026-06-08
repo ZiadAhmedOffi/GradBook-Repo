@@ -76,75 +76,335 @@
       \field{pages}{20\bibrangedash 25}
       \range{pages}{6}
     \endentry
-    \entry{ref10}{article}{}
+    \entry{cancers14215457}{article}{}
+      \name{author}{7}{}{%
+        {{hash=09732a590360812b9545a1f8d5f8ac9a}{%
+           family={Shafi},
+           familyi={S\bibinitperiod},
+           given={Imran},
+           giveni={I\bibinitperiod}}}%
+        {{hash=cebb5ec024bf598458eb630e38b566f3}{%
+           family={Din},
+           familyi={D\bibinitperiod},
+           given={Sadia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b58d4b41b88186b7ed3d8f9ad023d7de}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Asim},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7964cb9044a8f3bb443da47303dae6ec}{%
+           family={Diez},
+           familyi={D\bibinitperiod},
+           given={Isabel\bibnamedelimb De\bibnamedelimb La\bibnamedelima Torre},
+           giveni={I\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=244f389da5f6ccb8efcc23b942e9bc80}{%
+           family={Casanova},
+           familyi={C\bibinitperiod},
+           given={Ramon\bibnamedelimb del\bibnamedelimb Jesus\bibnamedelima Pali},
+           giveni={R\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=aa471cf288edd550bb44626bf9bc17f7}{%
+           family={Pifarre},
+           familyi={P\bibinitperiod},
+           given={Kilian\bibnamedelima Tutusaus},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=38c004e153a7beeec2ef81b0ccd7821e}{%
+           family={Ashraf},
+           familyi={A\bibinitperiod},
+           given={Imran},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{91137682acb0d01245180d18828afcbe}
+      \strng{fullhash}{8573de845c50dca49be7b64ef00a23d4}
+      \strng{bibnamehash}{91137682acb0d01245180d18828afcbe}
+      \strng{authorbibnamehash}{91137682acb0d01245180d18828afcbe}
+      \strng{authornamehash}{91137682acb0d01245180d18828afcbe}
+      \strng{authorfullhash}{8573de845c50dca49be7b64ef00a23d4}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2072-6694}
+      \field{journaltitle}{Cancers}
+      \field{number}{21}
+      \field{title}{An Effective Method for Lung Cancer Diagnosis from CT Scan Using Deep Learning-Based Support Vector Network}
+      \field{volume}{14}
+      \field{year}{2022}
+      \field{pages}{5457}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/cancers14215457
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2072-6694/14/21/5457
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2072-6694/14/21/5457
+      \endverb
+    \endentry
+    \entry{10.1371/journal.pone.0285796}{article}{}
+      \name{author}{3}{}{%
+        {{hash=83b626dbe61bcb7b9ed009ed40779af9}{%
+           family={Mohamed},
+           familyi={M\bibinitperiod},
+           given={Tehnan\bibnamedelimb I.\bibnamedelimi A.},
+           giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d5c242a026ca4df7f254168c18219cbd}{%
+           family={Oyelade},
+           familyi={O\bibinitperiod},
+           given={Olaide\bibnamedelima N.},
+           giveni={O\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=7d0212acf93bc31f5ada23a3e50b1841}{%
+           family={Ezugwu},
+           familyi={E\bibinitperiod},
+           given={Absalom\bibnamedelima E.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{4a9348c86d5579f88e3476dafb8f09aa}
+      \strng{fullhash}{4a9348c86d5579f88e3476dafb8f09aa}
+      \strng{bibnamehash}{4a9348c86d5579f88e3476dafb8f09aa}
+      \strng{authorbibnamehash}{4a9348c86d5579f88e3476dafb8f09aa}
+      \strng{authornamehash}{4a9348c86d5579f88e3476dafb8f09aa}
+      \strng{authorfullhash}{4a9348c86d5579f88e3476dafb8f09aa}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PLOS ONE}
+      \field{month}{08}
+      \field{number}{8}
+      \field{title}{Automatic detection and classification of lung cancer CT scans based on deep learning and ebola optimization search algorithm}
+      \field{volume}{18}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 33}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0285796
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1371/journal.pone.0285796
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1371/journal.pone.0285796
+      \endverb
+    \endentry
+    \entry{muna2025}{article}{}
+      \name{author}{13}{}{%
+        {{hash=75ac3f01c76c9172325ee91ee62f4fd4}{%
+           family={Alsallal},
+           familyi={A\bibinitperiod},
+           given={Muna},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1768cec0c25d0fa69be18ba04c21756c}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Hanan\bibnamedelima Hassan},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=43962b7462d66545be0759d750e8c14b}{%
+           family={Kareem},
+           familyi={K\bibinitperiod},
+           given={Radhwan\bibnamedelima Abdul},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=7aa39528b131d68f57bdb74849f967e7}{%
+           family={Yadav},
+           familyi={Y\bibinitperiod},
+           given={Anupam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=016cbc82676e863725b0abceaede3c1b}{%
+           family={Ganesan},
+           familyi={G\bibinitperiod},
+           given={Subbulakshmi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=492ee7034c9e0bbc6c8693de982e209f}{%
+           family={Shankhyan},
+           familyi={S\bibinitperiod},
+           given={Aman},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1c6dec823c51de31479ea0880bf4bbcb}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Sofia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=27710ad2d8c9309a62247fc0fb8ebfbd}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Kamal\bibnamedelima Kant},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=ec283a40191d6b32e8fb0717085a564b}{%
+           family={Sameer},
+           familyi={S\bibinitperiod},
+           given={Hayder\bibnamedelima Naji},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=13ad70cb13a7b0abcd8c88f6a4ddc3bf}{%
+           family={Yaseen},
+           familyi={Y\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod}}}%
+        {{hash=eca749d149d467e117aaca1cc142b554}{%
+           family={Athab},
+           familyi={A\bibinitperiod},
+           given={Zainab\bibnamedelima H.},
+           giveni={Z\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=8034c6a3f9bbd492d31b5b394b61bb4d}{%
+           family={Adil},
+           familyi={A\bibinitperiod},
+           given={Mohaned},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e92884966f9f033fece3c6f85678dee8}{%
+           family={Farhood},
+           familyi={F\bibinitperiod},
+           given={Bagher},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{454536bfa84840ab4ca88a28326dee49}
+      \strng{fullhash}{2195bf6d15e482dd120fd7808ff0f001}
+      \strng{bibnamehash}{454536bfa84840ab4ca88a28326dee49}
+      \strng{authorbibnamehash}{454536bfa84840ab4ca88a28326dee49}
+      \strng{authornamehash}{454536bfa84840ab4ca88a28326dee49}
+      \strng{authorfullhash}{2195bf6d15e482dd120fd7808ff0f001}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Springer}
+      \field{title}{Enhanced lung cancer subtype classification using attention-integrated DeepCNN and radiomic features from CT images: a focus on feature reproducibility}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1007/s12672-025-02115-z
+      \endverb
+    \endentry
+    \entry{zia2024}{article}{}
+      \name{author}{8}{}{%
+        {{hash=e88dbc36d4478a2fac101d9791cd2ac3}{%
+           family={UrRehman},
+           familyi={U\bibinitperiod},
+           given={Zia},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=1c558e402458227e0b164ff6324d4acd}{%
+           family={Qiang},
+           familyi={Q\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=83ecf503e9f7bab960ff39352d9ae1ae}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Long},
+           giveni={L\bibinitperiod}}}%
+        {{hash=652192ab93f8d5aa1cef39bc59ed1a52}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Yiwei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d91a3bd51f60db98be8c280303779905}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Qianqian},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=355b1b462d573cb51678d4147e63b3c4}{%
+           family={Khattak},
+           familyi={K\bibinitperiod},
+           given={Saeed\bibnamedelima Ullah},
+           giveni={S\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=4bbb0fcfbce8040f4ec84c7d6648c0c9}{%
+           family={Aftab},
+           familyi={A\bibinitperiod},
+           given={Rukhma},
+           giveni={R\bibinitperiod}}}%
+        {{hash=50fde4ed7fe81b47c29d1a1cc4bb662b}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Juanjuan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ba68ee1c15bbd60bd7c4e644c95311e2}
+      \strng{fullhash}{3c8477f091fe01ed578c127ee51bcdca}
+      \strng{bibnamehash}{ba68ee1c15bbd60bd7c4e644c95311e2}
+      \strng{authorbibnamehash}{ba68ee1c15bbd60bd7c4e644c95311e2}
+      \strng{authornamehash}{ba68ee1c15bbd60bd7c4e644c95311e2}
+      \strng{authorfullhash}{3c8477f091fe01ed578c127ee51bcdca}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{Effective lung nodule detection using deep CNN with dual attention mechanisms}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1038/s41598-024-51833-x
+      \endverb
+    \endentry
+    \entry{ref10}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.mdpi.com/2075-4418/13/15/2562}}
       \field{title}{Joint Diagnosis of Pneumonia, COVID-19, and Tuberculosis from Chest X-ray Images: A Deep Learning Approach}
       \field{year}{2023}
     \endentry
     \entry{ref11}{article}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://pubmed.ncbi.nlm.nih.gov/41067063/}}
       \field{title}{Multi-class deep learning architecture for COVID-19, tuberculosis, and pneumonia classification}
       \field{year}{2025}
     \endentry
     \entry{ref12}{article}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://pmc.ncbi.nlm.nih.gov/articles/PMC9281341/}}
       \field{title}{Classification of COVID-19 from Tuberculosis and Pneumonia Using Deep Learning Techniques}
       \field{year}{2022}
     \endentry
     \entry{ref13}{article}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.nature.com/articles/s41598-025-16669-z}}
       \field{title}{CXR-MultiTaskNet: Unified Deep Learning Framework for Disease Localization and Classification in Chest Radiographs}
       \field{year}{2025}
     \endentry
     \entry{ref14}{misc}{}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://scispace.com/pdf/chest-x-ray-classification-using-deep-learning-for-automated-4jqra7h02h.pdf}}
       \field{title}{Chest X-ray Classification Using Deep Learning for Automated COVID-19 Screening}
       \field{year}{2020}
     \endentry
     \entry{ref15}{article}{}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.sciencedirect.com/science/article/pii/S2405844024028329}}
       \field{title}{Detection of COVID-19, Pneumonia, and Tuberculosis from Radiographs Using AI-driven Knowledge Distillation}
       \field{year}{2024}
     \endentry
     \entry{ref16}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
       \name{author}{2}{}{%
         {{hash=507d21ba8e38a2648654a86ac7afa841}{%
            family={Bhuiyan},
            familyi={B\bibinitperiod},
            given={M.R.},
            giveni={M\bibinitperiod}}}%
-        {{hash=dc4fd70230aa62feb02ed4b4e2f78f8d}{%
+        {{hash=2ee6986e22831d3d91b0971635ac4f7c}{%
            family={Islam},
-           familyi={I\bibinitperiod},
-           given={et\bibnamedelima al.},
-           giveni={e\bibinitperiod\bibinitdelim a\bibinitperiod}}}%
+           familyi={I\bibinitperiod}}}%
       }
-      \strng{namehash}{4758d147e4320ab1a686b308ba0ffc02}
-      \strng{fullhash}{4758d147e4320ab1a686b308ba0ffc02}
-      \strng{bibnamehash}{4758d147e4320ab1a686b308ba0ffc02}
-      \strng{authorbibnamehash}{4758d147e4320ab1a686b308ba0ffc02}
-      \strng{authornamehash}{4758d147e4320ab1a686b308ba0ffc02}
-      \strng{authorfullhash}{4758d147e4320ab1a686b308ba0ffc02}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \strng{namehash}{ada7a4f793720a0ea3e107005fda64f1}
+      \strng{fullhash}{ada7a4f793720a0ea3e107005fda64f1}
+      \strng{bibnamehash}{ada7a4f793720a0ea3e107005fda64f1}
+      \strng{authorbibnamehash}{ada7a4f793720a0ea3e107005fda64f1}
+      \strng{authornamehash}{ada7a4f793720a0ea3e107005fda64f1}
+      \strng{authorfullhash}{ada7a4f793720a0ea3e107005fda64f1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://journals.sagepub.com/doi/10.1177/20552076231215915}}
@@ -160,53 +420,97 @@
       \field{title}{Joint Diagnosis of Pneumonia, COVID-19, and Tuberculosis from Chest X-ray Images}
       \field{year}{2023}
     \endentry
-    \entry{ref18}{inproceedings}{}
+    \entry{asi8050153}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a323362b9f263632f4d4c106c7490eac}{%
+           family={Jozi},
+           familyi={J\bibinitperiod},
+           given={Noor\bibnamedelima S.},
+           giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d3090bfc14d816d66e5ffbb27dc5e043}{%
+           family={Al-Suhail},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={Ghaida\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e9e41ebb1fc07ad4fedeccafe3a8e29}
+      \strng{fullhash}{6e9e41ebb1fc07ad4fedeccafe3a8e29}
+      \strng{bibnamehash}{6e9e41ebb1fc07ad4fedeccafe3a8e29}
+      \strng{authorbibnamehash}{6e9e41ebb1fc07ad4fedeccafe3a8e29}
+      \strng{authornamehash}{6e9e41ebb1fc07ad4fedeccafe3a8e29}
+      \strng{authorfullhash}{6e9e41ebb1fc07ad4fedeccafe3a8e29}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://ieeexplore.ieee.org/document/10772888}}
-      \field{title}{Enhancing Wrist Fracture Detection and Classification through Deep Learning and XAI}
-      \field{year}{2024}
-    \endentry
-    \entry{ref19}{inproceedings}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://ieeexplore.ieee.org/document/10918136}}
-      \field{title}{Enhancing Bone Fracture Detection in Radiology: A Machine Learning and Explainable AI Approach}
-      \field{year}{2024}
-    \endentry
-    \entry{ref20}{inproceedings}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://ieeexplore.ieee.org/document/11172213}}
-      \field{title}{Interpretable Machine Learning for Osteoporosis Risk}
-      \field{year}{2024}
-    \endentry
-    \entry{ref21}{inproceedings}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://ieeexplore.ieee.org/document/11085540}}
-      \field{title}{XAI-based Computational Models for Predictive Analysis of Bone Fracture and Structural Repair}
-      \field{year}{2024}
-    \endentry
-    \entry{ref22}{misc}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.researchgate.net/publication/389138164}}
-      \field{title}{Explainable AI-Based Humerus Fracture Detection and Classification from X-Ray Images}
-      \field{year}{2024}
-    \endentry
-    \entry{ref23}{article}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.scitepress.org/Papers/2025/136762/136762.pdf}}
-      \field{title}{Fracture Detection in Hand Radiographs with Grad-CAM Insights}
+      \field{issn}{2571-5577}
+      \field{journaltitle}{Applied System Innovation}
+      \field{number}{5}
+      \field{title}{LCxNet: An Explainable CNN Framework for Lung Cancer Detection in CT Images Using Multi-Optimizer and Visual Interpretability}
+      \field{volume}{8}
       \field{year}{2025}
+      \verb{doi}
+      \verb 10.3390/asi8050153
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2571-5577/8/5/153
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2571-5577/8/5/153
+      \endverb
+    \endentry
+    \entry{Hamza-Cherif2025}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=03432dd3c905d31611681b478ba18eb2}{%
+           family={Hamza-Cherif},
+           familyi={H\bibinithyphendelim C\bibinitperiod},
+           given={Souaad},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f27f3f55dd728ffb11109697de479cda}{%
+           family={Tariq},
+           familyi={T\bibinitperiod},
+           given={Taleb},
+           giveni={T\bibinitperiod}}}%
+        {{hash=289f863b0c58610a1bae2f366f31f5db}{%
+           family={Elaouaber},
+           familyi={E\bibinitperiod},
+           given={Zineb\bibnamedelima Aziza},
+           giveni={Z\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=104bb0abcdea89c761e2f9cf89114c71}{%
+           family={Mohammed},
+           familyi={M\bibinitperiod},
+           given={Messadi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Atlantis Press}%
+      }
+      \strng{namehash}{59b61d65bdea08747d160c7f144071bd}
+      \strng{fullhash}{0f61e479005a2d00309ce1088e28026c}
+      \strng{bibnamehash}{59b61d65bdea08747d160c7f144071bd}
+      \strng{authorbibnamehash}{59b61d65bdea08747d160c7f144071bd}
+      \strng{authornamehash}{59b61d65bdea08747d160c7f144071bd}
+      \strng{authorfullhash}{0f61e479005a2d00309ce1088e28026c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the First International Conference on Artificial Intelligence, Smart Technologies and Communications (AISTC 2025)}
+      \field{isbn}{978-94-6463-805-9}
+      \field{issn}{1951-6851}
+      \field{title}{Explainable Lung Cancer Classification using VGG16, and Grad-CAM}
+      \field{year}{2025}
+      \field{pages}{5\bibrangedash 11}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.2991/978-94-6463-805-9_2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2991/978-94-6463-805-9_2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2991/978-94-6463-805-9_2
+      \endverb
     \endentry
     \entry{ref24}{article}{}
       \field{sortinit}{1}
@@ -248,47 +552,672 @@
       \field{title}{Explanatory Classification of CXR Images into COVID-19, Pneumonia and Tuberculosis}
       \field{year}{2022}
     \endentry
-    \entry{ref33}{article}{}
+    \entry{umam2023}{article}{}
+      \name{author}{5}{}{%
+        {{hash=67b172f9637db6c9faec89f88d0879f9}{%
+           family={Subashchandrabose},
+           familyi={S\bibinitperiod},
+           given={Umamaheswaran},
+           giveni={U\bibinitperiod}}}%
+        {{hash=9ad5da8d6d8edd51a40bc237d46c891c}{%
+           family={John},
+           familyi={J\bibinitperiod},
+           given={Rajan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=06b295650dad7fd6b56f1d381a27fd96}{%
+           family={wagons},
+           familyi={w\bibinitperiod},
+           given={Usha\bibnamedelimb Veerasamy\bibnamedelima Anbazhagu},
+           giveni={U\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=9d586edaa956b0b59317a29011e9a5c8}{%
+           family={Venkatesan},
+           familyi={V\bibinitperiod},
+           given={Vinoth\bibnamedelima Kumar},
+           giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=33efd8f69aa31811f9302ffb151435ed}{%
+           family={Ramakrishna},
+           familyi={R\bibinitperiod},
+           given={Mahesh\bibnamedelima Thyluru},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{925095e28cfb7d1fed73456d952a6a37}
+      \strng{fullhash}{a46c5efba6e2e931fbde439e24f2688d}
+      \strng{bibnamehash}{925095e28cfb7d1fed73456d952a6a37}
+      \strng{authorbibnamehash}{925095e28cfb7d1fed73456d952a6a37}
+      \strng{authornamehash}{925095e28cfb7d1fed73456d952a6a37}
+      \strng{authorfullhash}{a46c5efba6e2e931fbde439e24f2688d}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Diagnostics}
+      \field{title}{Ensemble Federated Learning Approach for Diagnostics of Multi-Order Lung Cancer}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.3390/diagnostics13193053
+      \endverb
+    \endentry
+    \entry{BEHURIA2025279}{article}{}
+      \name{author}{5}{}{%
+        {{hash=a561d1cf0c66a882b614cba273916b42}{%
+           family={Behuria},
+           familyi={B\bibinitperiod},
+           given={Smitirekha},
+           giveni={S\bibinitperiod}}}%
+        {{hash=716f19b716573881866200a5d3dc3369}{%
+           family={Swain},
+           familyi={S\bibinitperiod},
+           given={Sujata},
+           giveni={S\bibinitperiod}}}%
+        {{hash=37baf7bc4736e4898dd770714c068cde}{%
+           family={Bandyopadhyay},
+           familyi={B\bibinitperiod},
+           given={Anjan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=dc669177cb690b8c43c9f0d90b23a510}{%
+           family={Turjya},
+           familyi={T\bibinitperiod},
+           given={Sapthak\bibnamedelima Mohajon},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f50133ff053db4c0bb7d91a106ad7a06}{%
+           family={Gourisaria},
+           familyi={G\bibinitperiod},
+           given={Mahendra\bibnamedelima Kumar},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{e46617267e44dee0760011cf0e3dabe8}
+      \strng{fullhash}{8be16b36ea0c80cafe12edb751d84132}
+      \strng{bibnamehash}{e46617267e44dee0760011cf0e3dabe8}
+      \strng{authorbibnamehash}{e46617267e44dee0760011cf0e3dabe8}
+      \strng{authornamehash}{e46617267e44dee0760011cf0e3dabe8}
+      \strng{authorfullhash}{8be16b36ea0c80cafe12edb751d84132}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1877-0509}
+      \field{journaltitle}{Procedia Computer Science}
+      \field{title}{Federated Learning approach in Healthcare ecosystems for efficient Lung Cancer classification: Insights from Model Generic Training to Fine-Tuning and Transfer Learning}
+      \field{volume}{259}
+      \field{year}{2025}
+      \field{pages}{279\bibrangedash 290}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.procs.2025.03.329
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1877050925010737
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1877050925010737
+      \endverb
+    \endentry
+    \entry{HEIDARI2023102572}{article}{}
+      \name{author}{6}{}{%
+        {{hash=b1670c87fe48231733bc74b3fad5bf8e}{%
+           family={Heidari},
+           familyi={H\bibinitperiod},
+           given={Arash},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c6cb595f94b29e7446ce432b74879f22}{%
+           family={Javaheri},
+           familyi={J\bibinitperiod},
+           given={Danial},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6074def7049281fdcecd175568e5f536}{%
+           family={Toumaj},
+           familyi={T\bibinitperiod},
+           given={Shiva},
+           giveni={S\bibinitperiod}}}%
+        {{hash=272b33ef7ad1883f8964443fb92719a9}{%
+           family={Navimipour},
+           familyi={N\bibinitperiod},
+           given={Nima\bibnamedelima Jafari},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=dabe04422eb59c87a8c0f0af26fd9ef3}{%
+           family={Rezaei},
+           familyi={R\bibinitperiod},
+           given={Mahsa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2abbe14f5b5c608534a99fe474dd39f4}{%
+           family={Unal},
+           familyi={U\bibinitperiod},
+           given={Mehmet},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7c347eb1ce5341f2ca6a276292ff37ce}
+      \strng{fullhash}{4ddf67ef2f73eaa208db3f8db5886b3d}
+      \strng{bibnamehash}{7c347eb1ce5341f2ca6a276292ff37ce}
+      \strng{authorbibnamehash}{7c347eb1ce5341f2ca6a276292ff37ce}
+      \strng{authornamehash}{7c347eb1ce5341f2ca6a276292ff37ce}
+      \strng{authorfullhash}{4ddf67ef2f73eaa208db3f8db5886b3d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0933-3657}
+      \field{journaltitle}{Artificial Intelligence in Medicine}
+      \field{title}{A new lung cancer detection method based on the chest CT images using Federated Learning and blockchain systems}
+      \field{volume}{141}
+      \field{year}{2023}
+      \field{pages}{102572}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.artmed.2023.102572
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0933365723000866
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0933365723000866
+      \endverb
+    \endentry
+    \entry{SIAM2026108719}{article}{}
+      \name{author}{7}{}{%
+        {{hash=019b156b2158036f6bf68eabe81b79f5}{%
+           family={Siam},
+           familyi={S\bibinitperiod},
+           given={Abu\bibnamedelimb Sayem\bibnamedelima Md},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a3a65b9db8b48db462fc41b4d46e4ea5}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={Md.\bibnamedelimi Mehedi},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=0075d29c59b2a908d55145123ce75589}{%
+           family={Arafat},
+           familyi={A\bibinitperiod},
+           given={Yeasir},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=621dcab8eba67adbd700312171f99ed0}{%
+           family={Chowdhury},
+           familyi={C\bibinitperiod},
+           given={Md\bibnamedelima Muzadded},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=6d6434b1652a6a73905640d549fbda41}{%
+           family={Jobayer},
+           familyi={J\bibinitperiod},
+           given={Sayed\bibnamedelima Hossain},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=1c41eb38f6d8ea007c5e83f7e9ef6790}{%
+           family={Hafiz},
+           familyi={H\bibinitperiod},
+           given={Fahim},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0f78cc109569a01454bd45865bdaf271}{%
+           family={Azim},
+           familyi={A\bibinitperiod},
+           given={Riasat},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a02a8541fd71224c30f44a0c2671d745}
+      \strng{fullhash}{1c1b0dc73cb7b62249a87ab18a8544e5}
+      \strng{bibnamehash}{a02a8541fd71224c30f44a0c2671d745}
+      \strng{authorbibnamehash}{a02a8541fd71224c30f44a0c2671d745}
+      \strng{authornamehash}{a02a8541fd71224c30f44a0c2671d745}
+      \strng{authorfullhash}{1c1b0dc73cb7b62249a87ab18a8544e5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1746-8094}
+      \field{journaltitle}{Biomedical Signal Processing and Control}
+      \field{title}{FVCM-Net: Interpretable privacy-preserved attention driven lung cancer detection from CT scan images with explainable HiRes-CAM attribution map and ensemble learning}
+      \field{volume}{112}
+      \field{year}{2026}
+      \field{pages}{108719}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.bspc.2025.108719
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1746809425012303
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1746809425012303
+      \endverb
+    \endentry
+    \entry{article3}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1935da221f04456f41feeba701e9e9e2}{%
+           family={Mohammed},
+           familyi={M\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=36f42e318936043138a1d948c2281905}{%
+           family={Abdulwahhab},
+           familyi={A\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ea9bbc89a35d90bc6a3171f99b16cded}{%
+           family={Ibraheem},
+           familyi={I\bibinitperiod},
+           given={Ibraheem},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a53b543b1995b5ea709fdae64f797a3c}
+      \strng{fullhash}{a53b543b1995b5ea709fdae64f797a3c}
+      \strng{bibnamehash}{a53b543b1995b5ea709fdae64f797a3c}
+      \strng{authorbibnamehash}{a53b543b1995b5ea709fdae64f797a3c}
+      \strng{authornamehash}{a53b543b1995b5ea709fdae64f797a3c}
+      \strng{authorfullhash}{a53b543b1995b5ea709fdae64f797a3c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Baghdad Science Journal}
+      \field{month}{05}
+      \field{title}{Detection Lung Nodules Using Medical CT Images Based on Deep Learning Techniques}
+      \field{volume}{22}
+      \field{year}{2025}
+      \field{pages}{1596\bibrangedash 1608}
+      \range{pages}{13}
+    \endentry
+    \entry{KANAKARADDI20243226}{article}{}
+      \name{author}{5}{}{%
+        {{hash=1698680c4d441b98659ef7ee9f4e621f}{%
+           family={Kanakaraddi},
+           familyi={K\bibinitperiod},
+           given={Suvarna\bibnamedelima G},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=ee6b08c003372d72b6cf9a8f05c4c62a}{%
+           family={Handur},
+           familyi={H\bibinitperiod},
+           given={Vidya\bibnamedelima S},
+           giveni={V\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=cf0ff375cb3ba993125bbc9b2059df0f}{%
+           family={Jalannavar},
+           familyi={J\bibinitperiod},
+           given={Anjana},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2d78b39f100a4a7cbd449a0fec3322b7}{%
+           family={Chikaraddi},
+           familyi={C\bibinitperiod},
+           given={Ashok},
+           giveni={A\bibinitperiod}}}%
+        {{hash=69c072500456117a4813582d7d256288}{%
+           family={Giraddi},
+           familyi={G\bibinitperiod},
+           given={Shantala},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6b3f3e59e3f551a0a3bc36a69ec9d0de}
+      \strng{fullhash}{9aa43ec4058486ed95e2af5957eaf003}
+      \strng{bibnamehash}{6b3f3e59e3f551a0a3bc36a69ec9d0de}
+      \strng{authorbibnamehash}{6b3f3e59e3f551a0a3bc36a69ec9d0de}
+      \strng{authornamehash}{6b3f3e59e3f551a0a3bc36a69ec9d0de}
+      \strng{authorfullhash}{9aa43ec4058486ed95e2af5957eaf003}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1877-0509}
+      \field{journaltitle}{Procedia Computer Science}
+      \field{title}{Segmentation and Classification of Lung Cancer using Deep Learning Techniques}
+      \field{volume}{235}
+      \field{year}{2024}
+      \field{pages}{3226\bibrangedash 3235}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.procs.2024.04.305
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1877050924009852
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1877050924009852
+      \endverb
+    \endentry
+    \entry{tian2024}{article}{}
+      \name{author}{6}{}{%
+        {{hash=86b90c5639174f882e245de4f84cc084}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Tianjiao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fe80199f342c7559df9b7b279360f544}{%
+           family={Lan},
+           familyi={L\bibinitperiod},
+           given={Yihua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=5b292be174aaf33422a79c3acdcab6d2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yingqi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=50ea000987b1b58498ad0d38bc72aefe}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Jiashu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=872785dbf8bc749bb3a72a476ff44af5}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Shuai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=67caa4e9349a112b13c7ea622fe84616}{%
+           family={Hung},
+           familyi={H\bibinitperiod},
+           given={Chih-Cheng},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f04d9518ac492f83af7d1eeaf80cca9d}
+      \strng{fullhash}{c5735684836329e20122a04011820d60}
+      \strng{bibnamehash}{f04d9518ac492f83af7d1eeaf80cca9d}
+      \strng{authorbibnamehash}{f04d9518ac492f83af7d1eeaf80cca9d}
+      \strng{authornamehash}{f04d9518ac492f83af7d1eeaf80cca9d}
+      \strng{authorfullhash}{c5735684836329e20122a04011820d60}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{A lung nodule segmentation model based on the transformer with multiple thresholds and coordinate attention}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.1038/s41598-024-82877-8
+      \endverb
+    \endentry
+    \entry{wenjuan2025}{article}{}
+      \name{author}{6}{}{%
+        {{hash=13cd3e3ad630d84d1ef7166108cdcfd1}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Wenjuan},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5db99c31c007c71a8ececba0cc64d9c4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Limin},
+           giveni={L\bibinitperiod}}}%
+        {{hash=de91480b7e7e120166a7cd3909afbbfc}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xiangrui},
+           giveni={X\bibinitperiod}}}%
+        {{hash=e637ff2ffe5bf66fc665b717c0e189aa}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Haoran},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d1ce515aba68965bc45d96bbd9dbc309}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3baae1c34d809f0b70b4eb05790a1656}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yanxia},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{405ecfcbffa7db84c1e81541082f2ab9}
+      \strng{fullhash}{d6b0fb58130159b1407047517f676be5}
+      \strng{bibnamehash}{405ecfcbffa7db84c1e81541082f2ab9}
+      \strng{authorbibnamehash}{405ecfcbffa7db84c1e81541082f2ab9}
+      \strng{authornamehash}{405ecfcbffa7db84c1e81541082f2ab9}
+      \strng{authorfullhash}{d6b0fb58130159b1407047517f676be5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{A semisupervised knowledge distillation model for lung nodule segmentation}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1038/s41598-025-94132-9
+      \endverb
+    \endentry
+    \entry{s25144245}{article}{}
+      \name{author}{5}{}{%
+        {{hash=886687a83906d43226f1a60b29bcb877}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Xinhang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=edd4d7b8d942862c2e11fc73757ec415}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Haoran},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fd3c774dab903d0e97ae9f91f6f7412e}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Tianding},
+           giveni={T\bibinitperiod}}}%
+        {{hash=872bf63005af2647d588def338080b5a}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Nuo},
+           giveni={N\bibinitperiod}}}%
+        {{hash=760b591cbcf586266094a2d347ea00d4}{%
+           family={Gou},
+           familyi={G\bibinitperiod},
+           given={Jianping},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{53cf4c68897db8a1bd4daa2275a1444e}
+      \strng{fullhash}{60b4508fd48a77966be276b689a433b1}
+      \strng{bibnamehash}{53cf4c68897db8a1bd4daa2275a1444e}
+      \strng{authorbibnamehash}{53cf4c68897db8a1bd4daa2275a1444e}
+      \strng{authornamehash}{53cf4c68897db8a1bd4daa2275a1444e}
+      \strng{authorfullhash}{60b4508fd48a77966be276b689a433b1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1424-8220}
+      \field{journaltitle}{Sensors}
+      \field{number}{14}
+      \field{title}{Improved YOLO-Based Pulmonary Nodule Detection with Spatial-SE Attention and an Aspect Ratio Penalty}
+      \field{volume}{25}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.3390/s25144245
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/1424-8220/25/14/4245
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/1424-8220/25/14/4245
+      \endverb
+    \endentry
+    \entry{article1}{article}{}
+      \name{author}{4}{}{%
+        {{hash=0420007b79ca95ae224268ab67ed8226}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Cheng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b4367a9afeaedc3a424eb8dcd3fef712}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Shouming},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5d9f42a3027fc54893c39015dea22004}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Jianchao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ac141704e41cc7c58bd721a904f8eb92}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={Yuteng},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{b57f5b97d55581b30c514ca4f6d442c6}
+      \strng{fullhash}{859b88b79d1cd3e90e2b20ebb5107f0b}
+      \strng{bibnamehash}{b57f5b97d55581b30c514ca4f6d442c6}
+      \strng{authorbibnamehash}{b57f5b97d55581b30c514ca4f6d442c6}
+      \strng{authornamehash}{b57f5b97d55581b30c514ca4f6d442c6}
+      \strng{authorfullhash}{859b88b79d1cd3e90e2b20ebb5107f0b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Biology and Life Sciences}
+      \field{month}{03}
+      \field{title}{SwiF-YOLO: A Deep Learning Method for Lung Nodule Detection}
+      \field{volume}{5}
+      \field{year}{2024}
+      \field{pages}{20\bibrangedash 27}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.54097/rcx9h636
+      \endverb
+    \endentry
+    \entry{article2}{article}{}
+      \name{author}{2}{}{%
+        {{hash=05e4ca8672ee5570ab9083e3eb625106}{%
+           family={Saman},
+           familyi={S\bibinitperiod},
+           given={Cihat},
+           giveni={C\bibinitperiod}}}%
+        {{hash=41e639de10a4f8aaf7569ac9cc88911f}{%
+           family={Celikbas},
+           familyi={C\bibinitperiod},
+           given={Serife},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7727d2879011e4b9c0e40e9e0b8338f}
+      \strng{fullhash}{f7727d2879011e4b9c0e40e9e0b8338f}
+      \strng{bibnamehash}{f7727d2879011e4b9c0e40e9e0b8338f}
+      \strng{authorbibnamehash}{f7727d2879011e4b9c0e40e9e0b8338f}
+      \strng{authornamehash}{f7727d2879011e4b9c0e40e9e0b8338f}
+      \strng{authorfullhash}{f7727d2879011e4b9c0e40e9e0b8338f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{YOLOv8-Based Lung Nodule Detection: A Novel Hybrid Deep Learning Model Proposal}
+      \field{volume}{10}
+      \field{year}{2023}
+      \field{pages}{2395\bibrangedash 0056}
+      \range{pages}{-38}
+    \endentry
+    \entry{inproceedings1}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=f7717f9492d397bba69d1cb12ea142d5}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Kejia},
+           giveni={K\bibinitperiod}}}%
+        {{hash=e0879b52aa4eccf0ea6c596bbbcefd95}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Hong},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d5ee4a48bd38f0b6ad29ba64f4c30405}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Wenfang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{dbf1fc85c8b0e98ef4e80455db9d1a71}
+      \strng{fullhash}{dbf1fc85c8b0e98ef4e80455db9d1a71}
+      \strng{bibnamehash}{dbf1fc85c8b0e98ef4e80455db9d1a71}
+      \strng{authorbibnamehash}{dbf1fc85c8b0e98ef4e80455db9d1a71}
+      \strng{authornamehash}{dbf1fc85c8b0e98ef4e80455db9d1a71}
+      \strng{authorfullhash}{dbf1fc85c8b0e98ef4e80455db9d1a71}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{A New Object Detection Algorithm Based on YOLOv3 for Lung Nodules}
+      \field{year}{2020}
+      \field{pages}{233\bibrangedash 239}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1145/3404555.3404609
+      \endverb
+    \endentry
+    \entry{Shuvo_2026}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cea20226e1e308c39eda224f99fce88b}{%
+           family={Shuvo},
+           familyi={S\bibinitperiod},
+           given={Samiul\bibnamedelima Based},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2e5abd9b101d982bc759779f95ec7539}{%
+           family={Mamun},
+           familyi={M\bibinitperiod},
+           given={Tasnia\bibnamedelima Binte},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{376c4584d20b0c6a02ee6348c4d82da2}
+      \strng{fullhash}{376c4584d20b0c6a02ee6348c4d82da2}
+      \strng{bibnamehash}{376c4584d20b0c6a02ee6348c4d82da2}
+      \strng{authorbibnamehash}{376c4584d20b0c6a02ee6348c4d82da2}
+      \strng{authornamehash}{376c4584d20b0c6a02ee6348c4d82da2}
+      \strng{authorfullhash}{376c4584d20b0c6a02ee6348c4d82da2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2352-9148}
+      \field{journaltitle}{Informatics in Medicine Unlocked}
+      \field{month}{3}
+      \field{title}{AutoLungDx: A hybrid deep learning approach for early lung cancer diagnosis using 3D Res-U-Net, YOLOv5, and vision transformers}
+      \field{volume}{61}
+      \field{year}{2026}
+      \field{pages}{101739}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.imu.2026.101739
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/j.imu.2026.101739
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/j.imu.2026.101739
+      \endverb
+    \endentry
+    \entry{ref33}{article}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.nature.com/articles/s41598-024-74491-5}}
       \field{title}{Efficient Federated Learning for Pediatric Pneumonia on Chest X-ray Images}
       \field{year}{2024}
     \endentry
     \entry{ref34}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{title}{Federated Transfer Learning for Lung Disease Detection}
     \endentry
     \entry{ref35}{article}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.mdpi.com/1424-8220/23/2/743}}
       \field{title}{DMFL\_Net: Federated Learning Framework for COVID-19 Classification}
       \field{year}{2023}
     \endentry
     \entry{ref37}{article}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.frontiersin.org/articles/10.3389/fcomp.2025.1633916}}
       \field{title}{FLEM-XAI: Federated Ensemble Model with Explainable AI for Lung Disease Diagnosis}
       \field{year}{2025}
     \endentry
     \entry{ref38}{article}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0324957}}
       \field{title}{FLPneXAINet: Federated Deep Learning and XAI for Pneumonia Detection}
       \field{year}{2025}
     \endentry
     \entry{ref39}{article}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.nature.com/articles/s41598-025-19478-6}}
       \field{title}{Secure and Interpretable Lung Cancer Prediction Using Blockchain Federated Learning with XAI}
@@ -316,22 +1245,22 @@
            familyi={H\bibinitperiod},
            given={Seth},
            giveni={S\bibinitperiod}}}%
-        {{hash=0cc24566971975b00b96b02cc1b4c452}{%
+        {{hash=f055a5e7ef3fad90289ae0061819e058}{%
            family={Arcas},
            familyi={A\bibinitperiod},
-           given={Blaise\bibnamedelima Agüera},
+           given={Blaise\bibnamedelima Aguera},
            giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
            prefix={y},
            prefixi={y\bibinitperiod}}}%
       }
       \strng{namehash}{d09630a633644c2d6bfe26906672e7a7}
-      \strng{fullhash}{f6f78a7a02fec09d484ebb87adedac0e}
+      \strng{fullhash}{6b8be53c02a59438baf3c27c0b389e79}
       \strng{bibnamehash}{d09630a633644c2d6bfe26906672e7a7}
       \strng{authorbibnamehash}{d09630a633644c2d6bfe26906672e7a7}
       \strng{authornamehash}{d09630a633644c2d6bfe26906672e7a7}
-      \strng{authorfullhash}{f6f78a7a02fec09d484ebb87adedac0e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \strng{authorfullhash}{6b8be53c02a59438baf3c27c0b389e79}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proc. 20th Int. Conf. Artif. Intell. Stat. (AISTATS)}
@@ -374,11 +1303,11 @@
       \strng{authorbibnamehash}{7914b871995b108d4d540667aafe4c11}
       \strng{authornamehash}{7914b871995b108d4d540667aafe4c11}
       \strng{authorfullhash}{cf4b34269bb0d774b0037cc918f6febe}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Brainlesion: Glioma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries}
+      \field{journaltitle}{Brainlesion: Glioma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries}
       \field{title}{Multi-Institutional Deep Learning Modeling Without Sharing Patient Data}
       \field{year}{2019}
       \field{pages}{92\bibrangedash 104}
@@ -410,8 +1339,8 @@
       \strng{authorbibnamehash}{da2c2ed968fc978bfca033119a5a93a6}
       \strng{authornamehash}{da2c2ed968fc978bfca033119a5a93a6}
       \strng{authorfullhash}{da2c2ed968fc978bfca033119a5a93a6}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{npj Digital Medicine}
@@ -451,8 +1380,8 @@
       \strng{authorbibnamehash}{5329113239c1af2f73d1aa82275d622e}
       \strng{authornamehash}{5329113239c1af2f73d1aa82275d622e}
       \strng{authorfullhash}{b47d48188af9f040e84dfaf6ae5d35ab}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Signal Process. Mag.}
@@ -487,8 +1416,8 @@
       \strng{authorbibnamehash}{494438a72725aa3e44a4a795334e4fe8}
       \strng{authornamehash}{494438a72725aa3e44a4a795334e4fe8}
       \strng{authorfullhash}{494438a72725aa3e44a4a795334e4fe8}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Adv. Neural Inf. Process. Syst. (NeurIPS)}
@@ -515,8 +1444,8 @@
       \strng{authorbibnamehash}{4d8bf63261aefa96e8725c0b5785f3b3}
       \strng{authornamehash}{4d8bf63261aefa96e8725c0b5785f3b3}
       \strng{authorfullhash}{4d8bf63261aefa96e8725c0b5785f3b3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Found. Trends Theor. Comput. Sci.}
@@ -553,123 +1482,13 @@
       \strng{authorbibnamehash}{b0b83a4a3cece87bdd8b45795f12e826}
       \strng{authornamehash}{b0b83a4a3cece87bdd8b45795f12e826}
       \strng{authorfullhash}{b0b83a4a3cece87bdd8b45795f12e826}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2007.14390}
       \field{title}{Flower: A Friendly Federated Learning Research Framework}
       \field{year}{2022}
-    \endentry
-    \entry{ref1}{misc}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://arxiv.org/pdf/2509.06228v1}}
-      \field{title}{AI-Based Applied Innovation for Fracture Detection in X-rays Using Custom CNN and Transfer Learning Models}
-      \field{year}{2025}
-      \true{nocite}
-    \endentry
-    \entry{ref2}{article}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.sciencedirect.com/science/article/pii/S1687850725000214}}
-      \field{journaltitle}{ScienceDirect}
-      \field{title}{YOLOv11-based multi-task learning for enhanced bone fracture detection and classification in X-ray images}
-      \field{year}{2025}
-      \true{nocite}
-    \endentry
-    \entry{ref3}{misc}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://arxiv.org/pdf/2406.15958}}
-      \field{title}{Bone Fracture Classification Using Transfer Learning}
-      \field{year}{2024}
-      \true{nocite}
-    \endentry
-    \entry{ref4}{misc}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.researchgate.net/publication/341248451}}
-      \field{title}{Bone Fracture Detection and Classification using Deep Learning Approach}
-      \field{year}{2020}
-      \true{nocite}
-    \endentry
-    \entry{ref5}{article}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.sciencedirect.com/science/article/pii/S0010482517303372}}
-      \field{journaltitle}{ScienceDirect}
-      \field{title}{Classification of the Trabecular Bone Structure of Osteoporotic Patients Using Machine Vision}
-      \field{year}{2017}
-      \true{nocite}
-    \endentry
-    \entry{ref6}{misc}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.researchgate.net/publication/361433305}}
-      \field{title}{Bone Fracture Detection in X-ray Images using Convolutional Neural Network}
-      \field{year}{2022}
-      \true{nocite}
-    \endentry
-    \entry{ref7}{misc}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.researchgate.net/publication/384975763}}
-      \field{title}{Bone Fracture Detection from X-ray Images using a Convolutional Neural Network (CNN)}
-      \field{year}{2024}
-      \true{nocite}
-    \endentry
-    \entry{ref29}{misc}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.diva-portal.org/smash/get/diva2:1831474/FULLTEXT01.pdf}}
-      \field{title}{Classifying Femur Fractures Using Federated Learning}
-      \field{year}{2023}
-      \true{nocite}
-    \endentry
-    \entry{ref30}{article}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://ieeexplore.ieee.org/document/10077569}}
-      \field{title}{A Systematic Review on Federated Learning in Medical Image Analysis}
-      \field{year}{2023}
-      \true{nocite}
-    \endentry
-    \entry{ref31}{article}{}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.nature.com/articles/s41598-025-97565-4}}
-      \field{title}{Privacy-Preserving Federated Learning for Collaborative Medical Data Mining}
-      \field{year}{2025}
-      \true{nocite}
-    \endentry
-    \entry{ref32}{article}{}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.sciencedirect.com/science/article/pii/S305057712500026X}}
-      \field{title}{Boosting Multi-Demographic Federated Learning for Chest Radiograph Classification}
-      \field{year}{2025}
-      \true{nocite}
-    \endentry
-    \entry{ref36}{article}{}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.mdpi.com/2078-2489/16/6/435}}
-      \field{title}{SemFedXAI: Semantic Framework for Explainable Federated Learning in Healthcare}
-      \field{year}{2024}
-      \true{nocite}
     \endentry
   \enddatalist
 \endrefsection
