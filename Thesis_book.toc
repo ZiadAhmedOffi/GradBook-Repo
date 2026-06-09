@@ -60,17 +60,25 @@
 \contentsline {subsection}{\numberline {3.4.1}Motivation}{75}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Problem Statement}{75}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Model Architecture}{75}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Federated Learning}{78}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Concept and Motivation}{78}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Federated Learning in Medical Imaging}{79}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}The Federated Averaging Algorithm}{79}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Key Parameters of a Federated Learning System}{80}{subsection.3.5.4}%
-\contentsline {subsection}{\numberline {3.5.5}Privacy and Security}{82}{subsection.3.5.5}%
-\contentsline {subsection}{\numberline {3.5.6}What Makes the Proposed System Distinctive}{82}{subsection.3.5.6}%
-\contentsline {section}{\numberline {3.6}Summary}{83}{section.3.6}%
-\contentsline {chapter}{\numberline {4}System Implementation}{86}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Routing Model Implementation}{87}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Results and Evaluation}{93}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Evaluation Metrics}{93}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Results}{94}{section.5.2}%
-\contentsline {chapter}{References}{99}{chapter*.49}%
+\contentsline {section}{\numberline {3.5}Lung Cancer Detection Model}{78}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Motivation}{79}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Problem Statement}{79}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Model Architecture}{79}{subsection.3.5.3}%
+\contentsline {subsubsection}{Mask-to-Bounding-Box Conversion}{79}{subsubsection*.38}%
+\contentsline {subsubsection}{Dataset Preparation and Splitting}{81}{subsubsection*.39}%
+\contentsline {subsubsection}{YOLOv8 Detection Architecture}{81}{subsubsection*.40}%
+\contentsline {subsection}{\numberline {3.5.4}Interpretability Considerations}{82}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Federated Learning}{83}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Concept and Motivation}{83}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Federated Learning in Medical Imaging}{84}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}The Federated Averaging Algorithm}{84}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Key Parameters of a Federated Learning System}{85}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Privacy and Security}{87}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}What Makes the Proposed System Distinctive}{87}{subsection.3.6.6}%
+\contentsline {section}{\numberline {3.7}Summary}{88}{section.3.7}%
+\contentsline {chapter}{\numberline {4}System Implementation}{91}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Routing Model Implementation}{92}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Results and Evaluation}{98}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Evaluation Metrics}{98}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Results}{99}{section.5.2}%
+\contentsline {chapter}{References}{104}{chapter*.55}%

@@ -72,28 +72,44 @@
 \newlabel{fig:lung_segmentation}{{3.10}{77}{Application of the U-Net segmentation mask. The original preprocessed Figure~\ref {fig:proc-cxr} is processed to produce the final segmented lung Figure~\ref {fig:segmented-lung}, which serves as the input for the classification stage}{figure.caption.35}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Grad-CAM visualizations highlighting regions contributing to model predictions.}}{78}{figure.caption.36}\protected@file@percent }
 \newlabel{fig:gradcam}{{3.11}{78}{Grad-CAM visualizations highlighting regions contributing to model predictions}{figure.caption.36}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Federated Learning}{78}{section.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Concept and Motivation}{78}{subsection.3.5.1}\protected@file@percent }
-\newlabel{subsec:fl_concept}{{3.5.1}{78}{Concept and Motivation}{subsection.3.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Federated Learning in Medical Imaging}{79}{subsection.3.5.2}\protected@file@percent }
-\newlabel{subsec:fl_medical}{{3.5.2}{79}{Federated Learning in Medical Imaging}{subsection.3.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}The Federated Averaging Algorithm}{79}{subsection.3.5.3}\protected@file@percent }
-\newlabel{subsec:fedavg}{{3.5.3}{79}{The Federated Averaging Algorithm}{subsection.3.5.3}{}}
-\newlabel{eq:fedavg}{{3.14}{80}{The Federated Averaging Algorithm}{equation.3.5.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Key Parameters of a Federated Learning System}{80}{subsection.3.5.4}\protected@file@percent }
-\newlabel{subsec:fl_parameters}{{3.5.4}{80}{Key Parameters of a Federated Learning System}{subsection.3.5.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Key Federated Learning Parameters and Their Clinical Implications}}{81}{table.caption.37}\protected@file@percent }
-\newlabel{tab:fl_params}{{3.2}{81}{Key Federated Learning Parameters and Their Clinical Implications}{table.caption.37}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.5}Privacy and Security}{82}{subsection.3.5.5}\protected@file@percent }
-\newlabel{subsec:fl_privacy}{{3.5.5}{82}{Privacy and Security}{subsection.3.5.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Privacy and Security: Centralized vs.\ Federated Learning}}{82}{table.caption.38}\protected@file@percent }
-\newlabel{tab:privacy_comparison}{{3.3}{82}{Privacy and Security: Centralized vs.\ Federated Learning}{table.caption.38}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.6}What Makes the Proposed System Distinctive}{82}{subsection.3.5.6}\protected@file@percent }
-\newlabel{subsec:fl_novelty}{{3.5.6}{82}{What Makes the Proposed System Distinctive}{subsection.3.5.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Summary}{83}{section.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Lung Cancer Detection Model}{78}{section.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Motivation}{79}{subsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Problem Statement}{79}{subsection.3.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Model Architecture}{79}{subsection.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mask-to-Bounding-Box Conversion}{79}{subsubsection*.38}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities.}}{80}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:yolov8_architecture}{{3.12}{80}{YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities}{figure.caption.37}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Dataset Preparation and Splitting}{81}{subsubsection*.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{YOLOv8 Detection Architecture}{81}{subsubsection*.40}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice.}}{82}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:qualitative_ct_1}{{3.13}{82}{Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice.}}{82}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:qualitative_ct_2}{{3.14}{82}{Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice}{figure.caption.41}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Interpretability Considerations}{82}{subsection.3.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques.}}{83}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:interpretability_example}{{3.15}{83}{Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques}{figure.caption.42}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Federated Learning}{83}{section.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Concept and Motivation}{83}{subsection.3.6.1}\protected@file@percent }
+\newlabel{subsec:fl_concept}{{3.6.1}{83}{Concept and Motivation}{subsection.3.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Federated Learning in Medical Imaging}{84}{subsection.3.6.2}\protected@file@percent }
+\newlabel{subsec:fl_medical}{{3.6.2}{84}{Federated Learning in Medical Imaging}{subsection.3.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}The Federated Averaging Algorithm}{84}{subsection.3.6.3}\protected@file@percent }
+\newlabel{subsec:fedavg}{{3.6.3}{84}{The Federated Averaging Algorithm}{subsection.3.6.3}{}}
+\newlabel{eq:fedavg}{{3.18}{85}{The Federated Averaging Algorithm}{equation.3.6.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.4}Key Parameters of a Federated Learning System}{85}{subsection.3.6.4}\protected@file@percent }
+\newlabel{subsec:fl_parameters}{{3.6.4}{85}{Key Parameters of a Federated Learning System}{subsection.3.6.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Key Federated Learning Parameters and Their Clinical Implications}}{86}{table.caption.43}\protected@file@percent }
+\newlabel{tab:fl_params}{{3.2}{86}{Key Federated Learning Parameters and Their Clinical Implications}{table.caption.43}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.5}Privacy and Security}{87}{subsection.3.6.5}\protected@file@percent }
+\newlabel{subsec:fl_privacy}{{3.6.5}{87}{Privacy and Security}{subsection.3.6.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Privacy and Security: Centralized vs.\ Federated Learning}}{87}{table.caption.44}\protected@file@percent }
+\newlabel{tab:privacy_comparison}{{3.3}{87}{Privacy and Security: Centralized vs.\ Federated Learning}{table.caption.44}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.6}What Makes the Proposed System Distinctive}{87}{subsection.3.6.6}\protected@file@percent }
+\newlabel{subsec:fl_novelty}{{3.6.6}{87}{What Makes the Proposed System Distinctive}{subsection.3.6.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Summary}{88}{section.3.7}\protected@file@percent }
 \@setckpt{chapters/chapter3}{
-\setcounter{page}{85}
-\setcounter{equation}{16}
+\setcounter{page}{90}
+\setcounter{equation}{20}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -102,12 +118,12 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{3}
-\setcounter{section}{6}
+\setcounter{section}{7}
 \setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{11}
+\setcounter{figure}{15}
 \setcounter{table}{3}
 \setcounter{parentequation}{0}
 \setcounter{lofdepth}{1}
@@ -122,7 +138,7 @@
 \setcounter{section@level}{0}
 \setcounter{Item}{10}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{61}
+\setcounter{bookmark@seq@number}{66}
 \setcounter{tabx@nest}{0}
 \setcounter{listtotal}{0}
 \setcounter{listcount}{0}
