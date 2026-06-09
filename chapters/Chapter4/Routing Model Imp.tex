@@ -1,0 +1,189 @@
+\section[Routing Model Implementation]{Implementation of the First-Level Routing Model}
+\label{sec:routing_model_implementation}
+
+The first component implemented within the proposed framework is the modality routing model. As discussed in Chapter~\ref{chap:proposed_model}, this model serves as the entry point of the entire classification pipeline and is responsible for determining the type of the incoming image before directing it toward the appropriate diagnostic model. Since the subsequent classification stages were specifically designed for particular imaging modalities, ensuring the accuracy of the routing stage was considered a critical requirement for the reliability of the overall framework.
+
+The routing model was formulated as a three-class image classification problem in which each input image was assigned to one of three categories: chest X-ray images, chest CT scans, or out-of-distribution (OOD) images. The OOD category was intentionally incorporated to improve the robustness of the system during deployment. In practical healthcare environments, medical information systems may contain a wide variety of image types that fall outside the scope of the proposed framework. Without an explicit OOD category, unsupported images could be mistakenly forwarded to disease classification models, potentially resulting in unreliable predictions. The inclusion of this category therefore acts as a safety mechanism that prevents unsupported inputs from entering the diagnostic pipeline.
+
+The final routing dataset was constructed by aggregating images originating from multiple sources. After dataset integration, the X-ray category contained 7,123 images, the CT category contained 2,534 images, and the OOD category contained 9,958 images. Although this aggregation process provided a sufficiently diverse collection of samples, it also introduced a noticeable class imbalance problem. The CT class represented a considerably smaller portion of the dataset compared to the other categories, creating a risk that the trained model would become biased toward the more frequently represented classes.
+
+To mitigate this issue, several balancing strategies were incorporated into the training pipeline. Data augmentation techniques were applied to increase the effective diversity of minority-class samples while simultaneously improving model generalization. Augmentation operations included random rotations, horizontal flipping, zoom transformations, and intensity variations. These transformations were selected because they preserve medically relevant structures while exposing the model to realistic image variations that may occur across different acquisition settings. In addition to augmentation, class balancing procedures were employed during dataset preparation to reduce the influence of class distribution disparities on the learning process. These measures contributed to a more stable training process and improved the model's ability to recognize underrepresented classes.
+
+The complete routing workflow implemented within the framework is illustrated in Figure~\ref{fig:routing_model_overview}. The figure summarizes both the operational behavior of the routing model and the architectures investigated during the model selection process.
+
+\begin{figure}[H]
+	\centering
+	
+	%================ TOP ROW ==================
+	\begin{subfigure}{0.48\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}[node distance=0.8cm]
+				
+				\node[block] (input) {Input Image};
+				\node[process, below=of input] (prep) {Preprocessing};
+				\node[process, below=of prep] (router) {Routing Model};
+				
+				\node[output, below left=1cm and 1.1cm of router] (xray) {X-Ray};
+				\node[output, below=1.3cm of router] (ct) {CT};
+				\node[output, below right=1cm and 1.1cm of router] (ood) {OOD};
+				
+				\draw[arrow] (input)--(prep);
+				\draw[arrow] (prep)--(router);
+				
+				\draw[arrow] (router)--(xray);
+				\draw[arrow] (router)--(ct);
+				\draw[arrow] (router)--(ood);
+				
+			\end{tikzpicture}
+		}
+		\caption{Routing workflow.}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}[node distance=0.6cm]
+				
+				\node[block] (input)
+				{224$\times$224 Image};
+				
+				\node[process, below=of input]
+				(prep) {Preprocessing};
+				
+				\node[process, below=of prep]
+				(backbone)
+				{DenseNet121 / ResNet50 / EfficientNetB3};
+				
+				\node[process, below=of backbone]
+				(gap) {Global Avg Pooling};
+				
+				\node[process, below=of gap]
+				(fc) {Dense(128)};
+				
+				\node[output, below=of fc]
+				(out) {Softmax(3)};
+				
+				\draw[arrow] (input)--(prep);
+				\draw[arrow] (prep)--(backbone);
+				\draw[arrow] (backbone)--(gap);
+				\draw[arrow] (gap)--(fc);
+				\draw[arrow] (fc)--(out);
+				
+			\end{tikzpicture}
+		}
+		\caption{Transfer learning models.}
+	\end{subfigure}
+	
+	\vspace{0.4cm}
+	
+	%================ BOTTOM ROW ==================
+	\begin{subfigure}{0.95\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}[
+				font=\large,
+				node distance=1.0cm,
+				cnnblock/.style={
+					draw,
+					rounded corners,
+					thick,
+					fill=green!10,
+					minimum width=2.8cm,
+					minimum height=1.2cm,
+					align=center
+				},
+				outputblock/.style={
+					draw,
+					rounded corners,
+					thick,
+					fill=orange!15,
+					minimum width=3cm,
+					minimum height=1.2cm,
+					align=center
+				},
+				inputblock/.style={
+					draw,
+					rounded corners,
+					thick,
+					fill=blue!10,
+					minimum width=3cm,
+					minimum height=1.2cm,
+					align=center
+				}
+				]
+				
+				% ---------- Top Row ----------
+				\node[inputblock] (input)
+				{224$\times$224\\RGB};
+				
+				\node[cnnblock, right=of input]
+				(c1) {Conv2D\\32 Filters};
+				
+				\node[cnnblock, right=of c1]
+				(p1) {MaxPool};
+				
+				\node[cnnblock, right=of p1]
+				(c2) {Conv2D\\64 Filters};
+				
+				\node[cnnblock, right=of c2]
+				(p2) {MaxPool};
+				
+				% ---------- Bottom Row ----------
+				\node[cnnblock, below=2cm of p2]
+				(c3) {Conv2D\\128 Filters};
+				
+				\node[cnnblock, left=of c3]
+				(p3) {MaxPool};
+				
+				\node[cnnblock, left=of p3]
+				(fc) {Dense\\128};
+				
+				\node[outputblock, left=of fc]
+				(out) {Softmax\\3 Classes};
+				
+				% ---------- Arrows ----------
+				\draw[arrow] (input) -- (c1);
+				\draw[arrow] (c1) -- (p1);
+				\draw[arrow] (p1) -- (c2);
+				\draw[arrow] (c2) -- (p2);
+				
+				% Down arrow
+				\draw[arrow] (p2) -- (c3);
+				
+				% Bottom row (right to left)
+				\draw[arrow] (c3) -- (p3);
+				\draw[arrow] (p3) -- (fc);
+				\draw[arrow] (fc) -- (out);
+				
+			\end{tikzpicture}
+		}
+		\caption{Custom CNN architecture used as a baseline model for modality routing.}
+	\end{subfigure}
+	
+	\caption{Architectures and workflow investigated during the implementation of the routing model. Blue blocks represent inputs, green blocks denote processing stages, and orange blocks correspond to classification outputs.}
+	\label{fig:routing_model_overview}
+	
+\end{figure}
+
+Rather than committing immediately to a single architecture, several alternative models were implemented and evaluated in order to identify the most suitable solution for the routing task. This decision was motivated by the observation that image modality classification differs substantially from disease classification. While disease detection often requires learning subtle pathological patterns, modality recognition primarily depends on identifying broader structural and acquisition-specific characteristics. Consequently, it was necessary to experimentally determine whether a lightweight custom architecture would be sufficient or whether a deeper pretrained network would provide superior performance.
+
+The first architecture investigated was a custom convolutional neural network developed specifically for the routing task. The model begins with a rescaling layer that normalizes pixel intensities into the range $[0,1]$. Feature extraction is then performed through three convolutional blocks containing 32, 64, and 128 filters respectively. Each convolutional layer uses a ReLU activation function and is followed by a max-pooling operation that progressively reduces the spatial dimensions of the feature maps while preserving the most salient visual information. After the final convolutional block, the extracted features are flattened and passed through a fully connected layer consisting of 128 neurons. The output layer employs a softmax activation function to generate probability estimates for the three target classes.
+
+Although the custom CNN provided a relatively lightweight solution with low computational requirements, the project also explored the use of transfer learning techniques. Transfer learning has become a widely adopted strategy in medical image analysis because it enables models to leverage feature representations learned from large-scale image datasets. Instead of training a deep architecture entirely from scratch, a pretrained backbone can be used as a feature extractor while only a small classification head is trained on the target dataset.
+
+Three state-of-the-art architectures were evaluated during experimentation: ResNet50, DenseNet121, and EfficientNetB3. For each architecture, the pretrained backbone was initialized using publicly available weights and subsequently frozen during training. Freezing the backbone prevented updates to the pretrained parameters and allowed the network to function as a fixed feature extractor. A Global Average Pooling layer was then applied to aggregate spatial information into a compact feature vector, followed by a fully connected layer containing 128 neurons and a final softmax classification layer producing probabilities for the three routing classes.
+
+The implementation of transfer learning significantly reduced training complexity while benefiting from the rich visual representations learned by these networks during large-scale pretraining. However, preliminary experiments revealed that different architectures exhibited varying levels of sensitivity to optimization parameters. Consequently, additional effort was dedicated to hyperparameter tuning in order to maximize classification performance.
+
+One of the most important optimization parameters investigated during experimentation was the learning rate. The learning rate directly controls the magnitude of weight updates during optimization and can substantially influence convergence behavior. A learning rate that is too large may cause unstable training, whereas an excessively small learning rate may prevent efficient convergence. Since each pretrained architecture possesses unique characteristics and parameter distributions, a single learning rate was not expected to perform optimally across all models.
+
+To address this issue, architecture-specific learning rates were introduced. ResNet50 and DenseNet121 were trained using a learning rate of $10^{-2}$, while EfficientNetB3 was trained using a learning rate of $10^{-4}$. These values were selected based on empirical experimentation and repeated evaluation of training behavior. The custom CNN utilized the default Adam optimization configuration due to its comparatively smaller parameter space. This targeted hyperparameter tuning strategy improved convergence stability and ensured that each architecture was evaluated under favorable training conditions.
+
+All routing models were trained using the Adam optimization algorithm and sparse categorical cross-entropy loss. The use of sparse categorical cross-entropy was appropriate because the routing task involves mutually exclusive classes, where each image belongs to exactly one category. Model performance was monitored using classification accuracy, which provided a direct measure of the model's ability to correctly identify image modalities.
+
+To ensure a fair and consistent evaluation process, all experiments were conducted using identical dataset partitions. The aggregated dataset was divided into training, validation, and testing subsets according to a ratio of 70\%, 15\%, and 15\%, respectively. Training was performed using a batch size of 8 and a total of 10 epochs. Maintaining a consistent experimental protocol allowed the performance differences observed between models to be attributed primarily to architectural characteristics rather than variations in the training procedure.
+
+Following extensive experimentation, DenseNet121 was selected as the final routing model incorporated into the proposed framework. The architecture demonstrated the most favorable balance between classification performance, convergence behavior, and generalization capability. DenseNet121's dense connectivity pattern enables efficient feature reuse and improved gradient propagation, characteristics that proved particularly beneficial for distinguishing between imaging modalities exhibiting substantial structural differences. Furthermore, the architecture achieved strong performance while maintaining a relatively efficient parameter utilization strategy compared to alternative deep learning models.
+
+The final routing model therefore consists of a DenseNet121 feature extraction backbone followed by a Global Average Pooling layer, a fully connected layer with 128 neurons, and a three-class softmax output layer. Once deployed within the complete framework, the model receives an input image, determines whether the image corresponds to a chest X-ray, a CT scan, or an out-of-distribution sample, and subsequently forwards the image to the appropriate downstream component. This routing decision constitutes the first stage of the proposed hierarchical classification pipeline and forms the foundation upon which all subsequent diagnostic analyses are performed.

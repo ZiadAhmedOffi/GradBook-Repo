@@ -20,12 +20,14 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Application of the U-Net segmentation mask. The original preprocessed Figure~\ref {fig:proc-cxr} is processed to produce the final segmented lung Figure~\ref {fig:segmented-lung}, which serves as the input for the classification stage}}{77}{figure.caption.35}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Grad-CAM visualizations highlighting regions contributing to model predictions.}}{78}{figure.caption.36}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Training dynamics of the medical image routing model.}}{88}{figure.caption.39}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Confusion matrix of the medical image routing model.}}{88}{figure.caption.40}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Bone fracture detection model Recall-Precision curve.}}{89}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Bone fracture detection model confusion matrix.}}{89}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Sample output from the bone fracture detection model.}}{90}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Classification results of the chest disease detection model.}}{90}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Confusion matrix of the chest disease detection model.}}{91}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Sample output from the chest disease detection model.}}{91}{figure.caption.46}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Results of successive experiments done on the MURA dataset to reach the best YOLO detection model possible.}}{92}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architectures and workflow investigated during the implementation of the routing model. Blue blocks represent inputs, green blocks denote processing stages, and orange blocks correspond to classification outputs.}}{89}{figure.caption.39}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Training dynamics of the medical image routing model.}}{94}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Confusion matrix of the medical image routing model.}}{94}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Bone fracture detection model Recall-Precision curve.}}{95}{figure.caption.42}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Bone fracture detection model confusion matrix.}}{95}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Sample output from the bone fracture detection model.}}{96}{figure.caption.44}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Classification results of the chest disease detection model.}}{96}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Confusion matrix of the chest disease detection model.}}{97}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Sample output from the chest disease detection model.}}{97}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Results of successive experiments done on the MURA dataset to reach the best YOLO detection model possible.}}{98}{figure.caption.48}%

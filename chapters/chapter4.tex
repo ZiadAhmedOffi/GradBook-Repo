@@ -1,103 +1,22 @@
-\chapter{Results and Evaluation}
-\pagestyle{default}
-\thispagestyle{default}
+\chapter{System Implementation}
+\label{chap:system_implementation}
 
-This chapter presents preliminary results and an initial evaluation of the proposed models. The current version of the chapter is intended as a draft to demonstrate that the models have been successfully developed, trained, and integrated within the proposed system, and that a subset of the required experimental results has already been obtained. While the presented findings provide early evidence of the feasibility and effectiveness of the proposed approach, the evaluation will be expanded and refined in the final version of the manuscript to include additional experiments, metrics, and comparative analyses.
+The previous chapter presented the conceptual design of the proposed framework, describing the overall solution architecture, its constituent components, and the rationale behind the adoption of a two-level classification pipeline for medical image analysis. While the architectural design establishes the theoretical foundation of the system, the successful realization of such a framework requires careful implementation decisions that translate these concepts into a functional and deployable solution. Therefore, this chapter focuses on the practical aspects of developing the proposed system, providing a detailed description of the methodologies, technologies, and engineering processes employed throughout the implementation phase.
 
-\section{Evaluation Metrics}
+Developing an intelligent medical image analysis framework involves considerably more than selecting suitable machine learning models. The implementation process encompasses a broad range of interconnected tasks, including data acquisition and preprocessing, model development, training pipeline construction, performance optimization, explainability integration, federated learning infrastructure design, and system-level deployment considerations. Each of these components introduces unique technical requirements that must be addressed to ensure that the final system operates reliably, efficiently, and consistently under realistic conditions.
 
-To quantitatively evaluate the performance of the proposed models, standard classification metrics are employed, namely precision, recall, accuracy, and F1-score. These metrics are computed based on the confusion matrix, which consists of true positives (TP), true negatives (TN), false positives (FP), and false negatives (FN).
+The implementation of the proposed framework was guided by the architectural principles established in the previous chapter. Particular emphasis was placed on maintaining modularity, scalability, and reproducibility throughout the development process. As a result, the system was designed as a collection of loosely coupled components that can be independently developed, evaluated, and improved without requiring significant modifications to the remainder of the framework. Such an approach not only facilitates future enhancements but also supports the integration of additional disease classifiers, imaging modalities, and collaborative learning mechanisms as the system evolves.
 
-Precision measures the proportion of correctly predicted positive samples among all samples predicted as positive and is defined as:
-\[
-\text{Precision} = \frac{TP}{TP + FP}
-\]
+A significant portion of the implementation effort was dedicated to constructing a robust data processing pipeline capable of handling heterogeneous medical imaging datasets originating from multiple sources. Medical images frequently exhibit substantial variability in terms of resolution, image quality, acquisition protocols, and annotation standards. These variations introduce challenges that can negatively impact model performance if not properly addressed. Consequently, extensive preprocessing procedures were developed to standardize input data and ensure compatibility across the different classification stages of the framework.
 
-Recall, also referred to as sensitivity, measures the proportion of correctly predicted positive samples among all actual positive samples and is given by:
-\[
-\text{Recall} = \frac{TP}{TP + FN}
-\]
+The implementation process also involved the development and training of multiple deep learning models corresponding to the various components of the proposed architecture. These models include the modality routing network responsible for distinguishing between X-ray images, CT scans, and out-of-distribution samples, the multi-label chest disease classifier designed to detect COVID-19, Tuberculosis, and Pneumonia from chest radiographs, and the lung cancer detection model operating on computed tomography images. The selection of network architectures, optimization strategies, hyperparameter configurations, and training procedures was driven by both empirical evaluation and the specific requirements of each diagnostic task.
 
-Accuracy represents the overall correctness of the model by measuring the proportion of correctly classified samples among all samples and is defined as:
-\[
-\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
-\]
+In addition to predictive performance, considerable attention was devoted to the interpretability and practical usability of the framework. Explainable Artificial Intelligence (XAI) techniques were integrated into the implementation to provide visual explanations that assist users in understanding model predictions. The incorporation of explainability mechanisms required the development of additional processing pipelines capable of generating meaningful visualizations while maintaining compatibility with the underlying deep learning models.
 
-The F1-score provides a single metric that balances precision and recall by computing their harmonic mean. It is particularly useful in scenarios involving class imbalance, which are common in medical imaging applications. The F1-score is defined as:
-\[
-\text{F1-score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
-\]
+Another important aspect of the implementation concerns the integration of Federated Learning capabilities. While the primary objective of the classification framework is accurate disease detection, long-term adoption within healthcare environments requires mechanisms that support privacy-preserving collaboration among institutions. Consequently, the system was implemented with the necessary infrastructure to facilitate distributed model training and parameter aggregation without requiring the exchange of sensitive patient data. This component introduces additional technical considerations related to communication, synchronization, and model update management that are discussed throughout this chapter.
 
-Together, these metrics offer a comprehensive evaluation of model performance. Precision reflects the model’s ability to minimize false positive predictions, recall evaluates its effectiveness in identifying positive cases, accuracy provides an overall measure of correctness, and the F1-score captures the trade-off between precision and recall. This combination of metrics ensures a balanced and reliable assessment of the proposed models across different diagnostic tasks.
+As with any complex engineering project, the implementation process presented a variety of technical challenges. These challenges ranged from issues related to dataset heterogeneity and class imbalance to computational limitations, model convergence difficulties, and the integration of multiple independent components into a unified workflow. Addressing these obstacles required iterative experimentation, extensive evaluation, and the adoption of various optimization techniques. Understanding these challenges and the solutions developed to overcome them provides valuable insight into the practical realities of building large-scale artificial intelligence systems for healthcare applications.
 
-\section{Results}
+Accordingly, this chapter not only describes the final implementation of the proposed framework but also documents the key challenges encountered during development and the engineering decisions that enabled their resolution. By presenting both the implementation details and the problem-solving process behind them, this chapter provides a comprehensive account of how the theoretical architecture introduced in the previous chapter was transformed into a fully operational medical image analysis system.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.9\textwidth]{assets/res-epoch.png}
-	\caption{Training dynamics of the medical image routing model.}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\textwidth]{assets/res-cm.png}
-	\caption{Confusion matrix of the medical image routing model.}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.9\textwidth]{assets/bone-results.png}
-	\caption{Bone fracture detection model Recall-Precision curve.}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.9\textwidth]{assets/bone-cm.png}
-	\caption{Bone fracture detection model confusion matrix.}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.9\textwidth]{assets/bone-sample.jpg}
-	\caption{Sample output from the bone fracture detection model.}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.9\textwidth]{assets/chest-results.jpeg}
-	\caption{Classification results of the chest disease detection model.}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.9\textwidth]{assets/chest-cm.jpeg}
-	\caption{Confusion matrix of the chest disease detection model.}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.9\textwidth]{assets/chest-sample.png}
-	\caption{Sample output from the chest disease detection model.}
-\end{figure}
-
-\FloatBarrier
-
-
-The YOLOv8s had an input image size of \( 640 \times 640 \) as raw data. It proved capable of finding normal bones, but had poor fracture recall.
-
-In the next attempt, the resolution was increased to \( 1024 \times 1024 \). The performance had a noticeable drop and the higher resolution introduced noise in the input data.
-
-The following attempt, the high resolution was kept but Contrasted Limited Adaptive Histogram Equalization (CLAHE) was utilized to mitigate the problem of noise amplification. The performance recovered and the precision was high, but the recall remained a challenge.
-
-Then, the newer YOLO11s model was tested on the MURA dataset to observe if it performed better than the previous attempts with the YOLOv8s model. It was observed that the performance of the YOLO11s model was worse than the YOLOv8 for this specific task.
-
-In the final attempt, the batch size was configured to 8 to see if it had any significant effects on the model's performance. It was observed that reducing batch size allowed for more frequent weight updates, stabilizing gradients for the subtle fracture features. Thus, the final pipeline tested on the MURA dataset proved to be the best, and it employed the YOLOv8 model with CLAHE and a batch size of 8.
-
-Figure~\ref{fig:mura-results} shows the results of the experiments done on the MURA dataset with the different YOLO models and configurations.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.7\textwidth]{assets/yolo-mura-results.png}
-	\caption{Results of successive experiments done on the MURA dataset to reach the best YOLO detection model possible.}
-	\label{fig:mura-results}
-\end{figure}
+\input{chapters/Chapter4/Routing Model Imp}
