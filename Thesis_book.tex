@@ -224,6 +224,25 @@
 	% Chapter 5 content
 	\include{chapters/chapter5}
 	
+	
+	%Chapter 6 Title page
+	\vspace*{\fill} % Pushes content down from the top
+	\thispagestyle{chapterpages}
+	\begin{center} % Centers content horizontally
+		\begin{minipage}{0.9\textwidth} % Creates a box for your text, adjust width as needed
+			\centering % Centers text within the minipage
+			{\color{RoyalBlue}\fontsize{30pt}{20pt}\bfseries\selectfont
+				CHAPTER 6
+				\\[0.2cm] CONCLUSION
+			}
+		\end{minipage}
+	\end{center}
+	\vfill % Pushes content up from the bottom (equivalent to \vspace{\fill})
+	\newpage
+	
+	% Chapter 6 content
+	\include{chapters/chapter6}
+	
 	% References
 	\printbibliography[heading=bibintoc ,title={References}]
 	
