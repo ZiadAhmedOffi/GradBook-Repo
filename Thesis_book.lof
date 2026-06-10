@@ -25,13 +25,14 @@
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques.}}{83}{figure.caption.42}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Architectures and workflow investigated during the implementation of the routing model. Blue blocks represent inputs, green blocks denote processing stages, and orange blocks correspond to classification outputs.}}{94}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction.}}{99}{figure.caption.51}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Training dynamics of the medical image routing model.}}{99}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Confusion matrix of the medical image routing model.}}{99}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Bone fracture detection model Recall-Precision curve.}}{100}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Bone fracture detection model confusion matrix.}}{100}{figure.caption.49}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Sample output from the bone fracture detection model.}}{101}{figure.caption.50}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Classification results of the chest disease detection model.}}{101}{figure.caption.51}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Confusion matrix of the chest disease detection model.}}{102}{figure.caption.52}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Sample output from the chest disease detection model.}}{102}{figure.caption.53}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Results of successive experiments done on the MURA dataset to reach the best YOLO detection model possible.}}{103}{figure.caption.54}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Training dynamics of the medical image routing model.}}{104}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Confusion matrix of the medical image routing model.}}{104}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Bone fracture detection model Recall-Precision curve.}}{105}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Bone fracture detection model confusion matrix.}}{105}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Sample output from the bone fracture detection model.}}{106}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Classification results of the chest disease detection model.}}{106}{figure.caption.60}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Confusion matrix of the chest disease detection model.}}{107}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Sample output from the chest disease detection model.}}{107}{figure.caption.62}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Results of successive experiments done on the MURA dataset to reach the best YOLO detection model possible.}}{108}{figure.caption.63}%

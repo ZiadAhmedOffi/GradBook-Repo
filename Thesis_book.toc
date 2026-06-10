@@ -78,7 +78,23 @@
 \contentsline {section}{\numberline {3.7}Summary}{88}{section.3.7}%
 \contentsline {chapter}{\numberline {4}System Implementation}{91}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Routing Model Implementation}{92}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Results and Evaluation}{98}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Evaluation Metrics}{98}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Results}{99}{section.5.2}%
-\contentsline {chapter}{References}{104}{chapter*.55}%
+\contentsline {section}{\numberline {4.2}CT Model Implementation}{96}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Dataset Preparation and Annotation Generation}{97}{subsection.4.2.1}%
+\contentsline {paragraph}{Step 1: Mask Loading}{97}{paragraph*.46}%
+\contentsline {paragraph}{Step 2: Contour Extraction}{97}{paragraph*.47}%
+\contentsline {paragraph}{Step 3: Bounding Box Generation}{97}{paragraph*.48}%
+\contentsline {paragraph}{Step 4: YOLO Coordinate Conversion}{98}{paragraph*.49}%
+\contentsline {paragraph}{Step 5: Label File Generation}{98}{paragraph*.50}%
+\contentsline {subsection}{\numberline {4.2.2}Dataset Organization}{98}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}YOLOv8 Detection Architecture}{99}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Transfer Learning Strategy}{100}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Training Configuration}{100}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Evaluation Methodology}{100}{subsection.4.2.6}%
+\contentsline {paragraph}{Precision}{100}{paragraph*.52}%
+\contentsline {paragraph}{Recall}{100}{paragraph*.53}%
+\contentsline {paragraph}{Mean Average Precision (mAP)}{100}{paragraph*.54}%
+\contentsline {subsection}{\numberline {4.2.7}Prediction Visualization and Model Interpretability}{101}{subsection.4.2.7}%
+\contentsline {chapter}{\numberline {5}Results and Evaluation}{103}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Evaluation Metrics}{103}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Results}{104}{section.5.2}%
+\contentsline {chapter}{References}{109}{chapter*.64}%
