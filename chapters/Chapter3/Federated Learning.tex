@@ -73,7 +73,6 @@ weights to all $K$ clients:
 \begin{equation}
     \mathbf{w}_t \;\longrightarrow\; \{\text{client}_1, \dots, \text{client}_K\}.
 \end{equation}
- 
 \textbf{(2) Local Training.} Each client $k$ independently minimizes its
 local empirical risk $\mathcal{L}_k$ over $E$ local epochs using a gradient-
 based optimizer, producing updated local weights:
@@ -95,12 +94,10 @@ proportional to each client's dataset size:
     \mathbf{w}_{t+1} \;=\; \sum_{k=1}^{K}\frac{n_k}{n}\,\mathbf{w}_t^k.
     \label{eq:fedavg}
 \end{equation}
- 
 This process minimizes the global objective:
 \begin{equation}
     F(\mathbf{w}) \;=\; \sum_{k=1}^{K}\frac{n_k}{n}\,\mathcal{L}_k(\mathbf{w}).
 \end{equation}
- 
 Equation~\eqref{eq:fedavg} assigns greater influence to clients with larger
 datasets, which is appropriate in the medical setting where institutional
 dataset sizes vary considerably. Clients contributing more annotated images
@@ -118,7 +115,7 @@ understanding of each parameter is essential for adapting the system to
 different clinical tasks. Table~\ref{tab:fl_params} provides an overview
 of the critical parameters and their implications.
  
-\begin{table}[H]
+\begin{table}[!htbp]
 \centering
 \caption{Key Federated Learning Parameters and Their Clinical Implications}
 \label{tab:fl_params}

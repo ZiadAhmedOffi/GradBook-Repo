@@ -2,28 +2,26 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Explainble AI in action}}{11}{figure.caption.6}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Centeralized server approach to federated learning}}{12}{figure.caption.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Illustration of common symptoms and clinical signs associated with lung cancer.}}{24}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Representative CT imaging findings associated with lung cancer.}}{25}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Heatmap for bone}}{33}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Heatmap for pneumonia detection}}{33}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces FL-Based efficient framework for smart healthcare sector}}{36}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Representative CT imaging findings associated with lung cancer.}}{25}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Heatmap for pneumonia detection}}{34}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces FL-Based efficient framework for smart healthcare sector}}{36}{figure.caption.10}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces High-level architecture of the proposed framework. The system consists of a modality routing model, specialized disease classifiers, Explainable AI modules, and a Federated Learning infrastructure connecting multiple healthcare institutions.}}{56}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Classification tree of the proposed two-level framework. The routing model first determines the image modality before directing the image toward the appropriate disease-specific classifier.}}{59}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Architecture of the ResNet50 illustrating the successive stages of the model.}}{64}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Overall architecture of DenseNet121 showing the arrangement of dense blocks, transition layers, and the final classification stage.}}{65}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Architecture of the YOLOv8 illustrating the successive stages of the model.}}{70}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Overall architecture of the proposed medical image routing model.}}{74}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces High-level overview of the multi-stage chest disease classification pipeline.}}{76}{figure.caption.32}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Chest X-ray images before and after preprocessing, highlighting improved contrast and reduced noise.}}{76}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces The U-Net architecture, illustrating the encoder-decoder structure with skip connections that merge high-resolution features from the contracting path with upsampled features in the expansive path. This design is highly effective for precise medical image segmentation.}}{77}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Application of the U-Net segmentation mask. The original preprocessed Figure~\ref {fig:proc-cxr} is processed to produce the final segmented lung Figure~\ref {fig:segmented-lung}, which serves as the input for the classification stage}}{77}{figure.caption.35}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Grad-CAM visualizations highlighting regions contributing to model predictions.}}{78}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities.}}{80}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice.}}{82}{figure.caption.41}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice.}}{82}{figure.caption.41}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques.}}{83}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces High-level architecture of the proposed framework. The system consists of a modality routing model, specialized disease classifiers, Explainable AI modules, and a Federated Learning infrastructure connecting multiple healthcare institutions.}}{56}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Classification tree of the proposed two-level framework. The routing model first determines the image modality before directing the image toward the appropriate disease-specific classifier.}}{58}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Architecture of the ResNet50 illustrating the successive stages of the model.}}{63}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Overall architecture of DenseNet121 showing the arrangement of dense blocks, transition layers, and the final classification stage.}}{65}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Architecture of the YOLOv8 illustrating the successive stages of the model.}}{70}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Two-row architecture of the DenseNet121-based medical image routing model.}}{74}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces High-level overview of the multi-stage chest disease classification pipeline.}}{77}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Chest X-ray images before and after preprocessing, highlighting improved contrast and reduced noise.}}{78}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The U-Net architecture, illustrating the encoder-decoder structure with skip connections that merge high-resolution features from the contracting path with upsampled features in the expansive path. This design is highly effective for precise medical image segmentation.}}{79}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Application of the U-Net segmentation mask. The original preprocessed Figure~\ref {fig:proc-cxr} is processed to produce the final segmented lung Figure~\ref {fig:segmented-lung}, which serves as the input for the classification stage}}{80}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Grad-CAM visualizations highlighting regions contributing to model predictions.}}{80}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities.}}{81}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice.}}{83}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice.}}{83}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques.}}{84}{figure.caption.41}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Architectures and workflow investigated during the implementation of the routing model. Blue blocks represent inputs, green blocks denote processing stages, and orange blocks correspond to classification outputs.}}{94}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction.}}{99}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architectures and workflow investigated during the implementation of the routing model. Blue blocks represent inputs, green blocks denote processing stages, and orange blocks correspond to classification outputs.}}{95}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction.}}{100}{figure.caption.50}%
 \addvspace {10\p@ }

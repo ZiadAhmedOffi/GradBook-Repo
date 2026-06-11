@@ -1,38 +1,186 @@
 \section{Medical Image Routing Model}
-This section presents the proposed medical image routing model employed in the system and discusses the motivation behind the model, its problem formulation, and finally its architecture. This model serves as the decision-making unit of the system, where the destination of each input image is determined and forwarded thereafter.
+
+This section presents the proposed medical image routing model employed as the first level of the hierarchical diagnostic framework and discusses the motivation behind its development, the formal problem formulation, and its architectural design. The routing model serves as the entry point of the proposed system, where the modality of each incoming image is identified and the image is subsequently forwarded to the most appropriate downstream diagnostic component. By introducing an explicit routing stage, the framework ensures that specialized diagnostic models receive only the image types for which they were designed, thereby improving overall system reliability, robustness, and scalability.
 
 \subsection{Motivation}
-The increasing use of deep learning in medical image analysis has enabled the development of highly specialized models for tasks such as disease detection and diagnosis. In the context of lung cancer detection, chest X-ray and computed tomography (CT) images provide complementary diagnostic information and often require different processing pipelines and model architectures. While chest X-rays offer a low-cost and widely accessible imaging modality for preliminary screening, CT scans provide detailed cross-sectional information that supports more comprehensive assessment of lung abnormalities.
 
-However, in real-world deployment scenarios, diagnostic systems are often exposed to heterogeneous image inputs originating from different imaging modalities, anatomical regions, or acquisition protocols. Applying a modality-specific diagnostic model to an inappropriate image type may lead to unreliable predictions and compromise the robustness and safety of the overall system. Consequently, there is a need for an initial classification mechanism capable of identifying the nature of incoming medical images before further analysis is performed.
+The increasing adoption of deep learning within medical image analysis has enabled the development of highly specialized models for disease detection, diagnosis, and clinical decision support. However, most medical imaging models are designed for specific imaging modalities and diagnostic tasks. Consequently, their performance depends heavily on receiving inputs that match the data distribution encountered during training. Applying a modality-specific model to an inappropriate image type can significantly degrade performance and may result in unreliable predictions.
 
-This section introduces a medical image classification model designed to function as an image routing component within a larger lung cancer diagnostic pipeline. The model distinguishes between chest X-ray images, chest CT scan images, and an additional out-of-distribution category referred to as “Other.” By incorporating this third category, the system is able to explicitly handle images that do not belong to the intended diagnostic classes, thereby reducing the risk of misclassification and improving overall system reliability. Once classified, chest X-ray and CT scan images are forwarded to their corresponding lung cancer diagnostic models, while out-of-distribution images are rejected from further analysis. The following subsections present the motivation for this approach, formally define the classification problem, and describe the model architecture employed.
+In the context of the proposed framework, two distinct diagnostic pathways are employed. The first pathway focuses on chest disease classification from chest X-ray images and is responsible for identifying the presence of COVID-19, Tuberculosis, Pneumonia, or the absence of disease. The second pathway focuses on lung cancer detection from chest CT scans using a dedicated object detection model. Since these diagnostic models operate on fundamentally different imaging modalities and address different clinical objectives, a mechanism is required to automatically determine which model should process each incoming image.
+
+Real-world deployment scenarios further emphasize the importance of such a mechanism. Medical information systems may receive images originating from various imaging modalities, anatomical regions, acquisition devices, and clinical workflows. In addition, unsupported images may be inadvertently submitted to the system. Without a dedicated routing stage, these images would be forced through one of the diagnostic models regardless of their suitability, increasing the likelihood of incorrect predictions and reducing overall system reliability.
+
+To address this challenge, a dedicated medical image routing model is introduced as the first stage of the proposed architecture. The model distinguishes between chest X-ray images, chest CT scan images, and an additional out-of-distribution category referred to as \emph{Other}. By incorporating this third category, the framework explicitly recognizes unsupported images and prevents them from being processed by downstream diagnostic models. Images identified as chest X-rays are forwarded to the multi-label chest disease classification model, while CT scans are forwarded to the lung cancer detection model. Images classified as \emph{Other} are rejected from further analysis. This design not only improves robustness and safety but also provides a modular foundation upon which additional imaging modalities and diagnostic models may be incorporated in future system extensions.
 
 \subsection{Problem Statement}
 
-The goal of this work is to develop an automated medical image classification model capable of identifying the type of an input image and routing it to the appropriate downstream analysis. The task is formulated as a three-class classification problem, where each input image \(X \in \mathbb{R}^{224 \times 224 \times 3}\) must be assigned to one of three categories: chest X-ray images (\(0\)), chest CT scan images (\(1\)), or out-of-distribution images labeled as \emph{Other} (\(2\)). This multi-class formulation ensures that irrelevant or ambiguous inputs are explicitly handled, improving system safety and reducing the risk of inappropriate downstream processing.
+The objective of the routing model is to automatically determine the modality of an incoming medical image and direct it toward the appropriate downstream diagnostic pathway. This task is formulated as a three-class image classification problem in which each input image must be assigned to one of three predefined categories.
 
-The model is designed to output a probability distribution \(\mathbf{p} = [p_0, p_1, p_2]\) over the three classes, where \(p_k = P(y = k \mid X)\) and \(\sum_{k=0}^{2} p_k = 1\). The predicted class is obtained by selecting the class with the highest probability, \(\hat{y} = \arg\max_{k} p_k\). Images classified as chest X-rays are forwarded to the X-ray-based lung cancer detection model, while images classified as CT scans are routed to the CT-based lung cancer detection model. By incorporating the \emph{Other} category, the model avoids forcing all inputs into diagnostic categories and can robustly separate images outside the target distribution, laying a solid foundation for safe integration within a larger medical image analysis pipeline.
+Let the input image be represented by
+
+\[
+X \in \mathbb{R}^{224 \times 224 \times 3},
+\]
+
+where the image is resized to a fixed spatial resolution of \(224 \times 224\) pixels and represented using three color channels. Given an input image \(X\), the routing model predicts one of the following classes:
+
+\begin{itemize}
+	\item Chest X-ray (\(0\))
+	\item Chest CT Scan (\(1\))
+	\item Other / Out-of-Distribution (\(2\))
+\end{itemize}
+
+The model produces a probability distribution
+
+\[
+\mathbf{p}=[p_0,p_1,p_2],
+\]
+
+where
+
+\[
+p_k=P(y=k \mid X)
+\]
+
+and
+
+\[
+\sum_{k=0}^{2} p_k = 1.
+\]
+
+The predicted class label is obtained using
+
+\[
+\hat{y}=\arg\max_k p_k.
+\]
+
+Images classified as chest X-rays are forwarded to the multi-label chest disease classification model, while images classified as CT scans are directed to the lung cancer detection model. The out-of-distribution category serves as an additional safety mechanism that prevents unsupported images from being processed by downstream diagnostic components. By incorporating this category, the routing model improves the reliability and robustness of the overall framework and establishes a structured entry point for all incoming medical images.
+
+The routing model therefore functions as a modality recognition system whose purpose extends beyond simple image classification. Its predictions directly determine the diagnostic pathway followed by each image and consequently influence all subsequent processing stages within the proposed architecture.
 
 \subsection{Model Architecture}
 
-The proposed medical image classification model is designed using a transfer learning approach based on the ResNet50 convolutional neural network. The architecture follows a structured pipeline consisting of input preprocessing, deep feature extraction, feature aggregation, and final classification. This modular design allows the model to benefit from representations learned on large-scale image datasets while adapting effectively to the target medical imaging task. An overview of the complete classification pipeline is illustrated in Figure~\ref{fig:overall_architecture}.
+The proposed medical image routing model is implemented using a transfer learning approach based on the DenseNet121 convolutional neural network architecture. The model constitutes the first level of the proposed hierarchical framework and is responsible for determining the appropriate diagnostic pathway for each incoming image. By accurately identifying image modalities and separating unsupported inputs from valid medical scans, the routing model ensures that downstream diagnostic models receive only the image types for which they were designed.
 
-\begin{figure}[h]
+Several candidate architectures were investigated during development, including a custom convolutional neural network, ResNet50, DenseNet121, and EfficientNetB3. Although all evaluated models demonstrated the ability to learn modality-specific representations, DenseNet121 consistently provided the most favorable balance between classification performance, feature extraction capability, and computational efficiency. The dense connectivity mechanism employed by DenseNet121 promotes feature reuse throughout the network and improves gradient propagation, allowing the model to learn highly discriminative features while maintaining a relatively compact parameter count. Consequently, DenseNet121 was selected as the backbone architecture for the final routing model.
+
+The architecture follows a structured pipeline consisting of image preprocessing, deep feature extraction using DenseNet121, feature aggregation through global average pooling, and final classification using fully connected layers. A high-level overview of the proposed architecture is illustrated in Figure~\ref{fig:densenet_router_architecture}.
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.95\linewidth]{assets/router-architecture.jpg}
-	\caption{Overall architecture of the proposed medical image routing model.}
-	\label{fig:overall_architecture}
+	
+	\resizebox{\linewidth}{!}{
+		
+		\tikzset{
+			block/.style={
+				draw,
+				rounded corners,
+				thick,
+				minimum width=3.2cm,
+				minimum height=1.2cm,
+				align=center
+			},
+			inputblock/.style={block, fill=blue!15},
+			preprocessblock/.style={block, fill=cyan!15},
+			backboneblock/.style={block, fill=green!15, minimum width=4.2cm, minimum height=1.6cm},
+			featureblock/.style={block, fill=yellow!20},
+			classifierblock/.style={block, fill=orange!20},
+			outputblock/.style={block, fill=red!15}
+		}
+		
+		\begin{tikzpicture}
+			
+			% ================= ROW 1 =================
+			
+			\node[inputblock] (input) at (0,0)
+			{Input Image\\$224 \times 224 \times 3$};
+			
+			\node[preprocessblock] (prep) at (4,0)
+			{DenseNet121\\Preprocessing};
+			
+			\node[backboneblock] (dense) at (10,0)
+			{DenseNet121 Backbone};
+			
+			\node[featureblock] (feature) at (15,0)
+			{Feature Maps\\$7 \times 7 \times 1024$};
+			
+			% ================= ROW 2 =================
+			
+			\node[classifierblock] (gap) at (7.5,-3)
+			{Global Average Pooling\\1024};
+			
+			\node[classifierblock] (fc) at (12.5,-3)
+			{Dense Layer\\128 Neurons};
+			
+			\node[outputblock] (out) at (17.5,-3)
+			{Softmax\\3 Classes};
+			
+			% ================= CONNECTIONS =================
+			
+			\draw[->,thick] (input) -- (prep);
+			\draw[->,thick] (prep) -- (dense);
+			\draw[->,thick] (dense) -- (feature);
+			\draw[->,thick] (feature) -- (gap);
+			\draw[->,thick] (gap) -- (fc);
+			\draw[->,thick] (fc) -- (out);
+			
+		\end{tikzpicture}
+	}
+	
+	\caption{Two-row architecture of the DenseNet121-based medical image routing model.}
+	\label{fig:densenet_router_architecture}
+	
 \end{figure}
 
-The input to the model is a medical image \(X \in \mathbb{R}^{224 \times 224 \times 3}\), resized to a fixed spatial resolution and represented in RGB color space. Prior to being processed by the pretrained network, the image undergoes a preprocessing step to ensure compatibility with the ResNet50 weights. This step mirrors the preprocessing applied during the original ImageNet training of ResNet50 and is essential for effective transfer learning. Specifically, the input image is first converted to floating-point representation, its color channels are reordered from RGB to BGR, and a fixed channel-wise mean is subtracted. Let \(X_{rgb}\) denote the raw input image; the preprocessed image \(X_{prep}\) is obtained as \(X_{prep} = \mathrm{BGR}(X_{rgb}) - \mu\), where \(\mu = [103.939, 116.779, 123.68]\) represents the ImageNet mean for the blue, green, and red channels, respectively. This operation centers the input distribution around zero and aligns it with the statistical properties expected by the pretrained backbone.
 
-Following preprocessing, the image is passed through the ResNet50 network with its original classification layers removed. In this configuration, ResNet50 functions as a fully convolutional feature extractor. For an input tensor of shape \((224, 224, 3)\), the output of the backbone is a high-dimensional feature map of shape \((7, 7, 2048)\). This tensor contains 2048 feature channels, each encoding abstract visual patterns such as anatomical structures, textures, and modality-specific characteristics while preserving coarse spatial relationships within the image. For a detailed discussion of the ResNet50 model architecture, refer to Subsection~\ref{subsec:resnet50-arch}.
+The input to the model is a medical image represented by a tensor of dimensions \(224 \times 224 \times 3\). Prior to feature extraction, the image undergoes the preprocessing procedure associated with DenseNet121. This preprocessing transforms the image into a format compatible with the ImageNet-pretrained weights used by the backbone network. By aligning the input distribution with the statistical properties encountered during pretraining, the model can effectively leverage the learned representations obtained from large-scale natural image datasets.
 
-To transform the spatial feature maps into a compact representation suitable for classification, a global average pooling operation is applied to the output of the ResNet50 backbone. This operation computes the average activation of each feature channel across the spatial dimensions, effectively summarizing the presence of each learned feature over the entire image. Given a feature map \(F \in \mathbb{R}^{7 \times 7 \times 2048}\), the pooled feature vector \(z \in \mathbb{R}^{2048}\) is computed such that each element \(z_k\) corresponds to the mean of the activations in channel \(k\), i.e.
-\begin{equation*}
-	z_k = \frac{1}{7 \times 7} \sum_{i=1}^{7} \sum_{j=1}^{7} F_{i,j,k}
-\end{equation*}
-This operation reduces the tensor shape from \((7, 7, 2048)\) to \((2048)\) while significantly lowering the number of parameters required in subsequent layers and improving generalization.
+Following preprocessing, the image is passed through the DenseNet121 backbone with its original classification layers removed. DenseNet121 belongs to the family of densely connected convolutional neural networks, in which each layer receives feature maps from all preceding layers within a dense block. This dense connectivity pattern encourages feature reuse, facilitates gradient propagation during training, and improves parameter efficiency. As a result, DenseNet121 is capable of learning rich hierarchical representations while requiring fewer parameters than many conventional deep convolutional architectures.
 
-The resulting feature vector is then passed to a task-specific classification head composed of fully connected layers. These layers learn discriminative combinations of the extracted features and map them to the target class space. The final layer applies a softmax activation function, producing a probability distribution \(\mathbf{p} = [p_0, p_1, p_2]\), where each component represents the predicted probability of the image belonging to the chest X-ray class, chest CT scan class, or the out-of-distribution \emph{Other} class. The predicted label is obtained as \(\hat{y} = \arg\max_k p_k\).
+For an input image of dimensions \((224,224,3)\), the DenseNet121 backbone produces a high-level feature tensor of dimensions \((7,7,1024)\). These feature maps contain abstract representations of visual patterns extracted from the image, including anatomical structures, texture information, intensity distributions, and modality-specific characteristics. Because information from earlier layers remains accessible throughout the network, DenseNet121 can effectively combine low-level and high-level features when constructing its final representation.
+
+To transform these spatial feature maps into a compact feature representation suitable for classification, a Global Average Pooling (GAP) layer is applied. Unlike flattening operations that convert all feature map values into a large vector, GAP computes the average activation of each feature channel across all spatial locations. Given a feature tensor
+
+\[
+F \in \mathbb{R}^{7 \times 7 \times 1024},
+\]
+
+the pooled feature vector
+
+\[
+z \in \mathbb{R}^{1024}
+\]
+
+is computed as
+
+\[
+z_k=
+\frac{1}{7 \times 7}
+\sum_{i=1}^{7}
+\sum_{j=1}^{7}
+F_{i,j,k},
+\]
+
+where \(z_k\) represents the average activation of the \(k\)-th feature channel. This operation reduces the dimensionality of the representation while preserving the most important information learned by the backbone network. Furthermore, it significantly reduces the number of trainable parameters in the classification head and helps improve model generalization.
+
+The resulting feature vector is subsequently processed by a fully connected layer consisting of 128 neurons with ReLU activation. This layer learns task-specific combinations of the extracted features and serves as an intermediate representation between the pretrained backbone and the final classification layer.
+
+The final layer consists of three output neurons followed by a softmax activation function. This layer produces a probability distribution
+
+\[
+\mathbf{p}
+=
+[p_{XRay},\,p_{CT},\,p_{Other}],
+\]
+
+where each component corresponds to the predicted probability that the input image belongs to the chest X-ray, chest CT scan, or out-of-distribution category, respectively. The final prediction is obtained according to
+
+\[
+\hat{y}
+=
+\arg\max_k p_k.
+\]
+
+Images classified as chest X-rays are forwarded to the multi-label chest disease classification model, images classified as CT scans are directed to the lung cancer detection model, and images assigned to the \emph{Other} category are rejected from further analysis. Consequently, the routing model serves as the gateway to the entire diagnostic framework and plays a critical role in ensuring that each image is processed by the most appropriate downstream component.
+
+The successful operation of this routing stage is fundamental to the effectiveness of the proposed hierarchical architecture. Since all subsequent diagnostic decisions depend on accurate modality recognition, errors introduced at this stage may propagate throughout the remainder of the system. Therefore, the routing model acts not only as a classifier but also as a reliability and safety mechanism that enhances the robustness of the overall framework. The following sections describe the specialized diagnostic models that receive images from the routing component and perform disease-specific analysis.

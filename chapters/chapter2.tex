@@ -51,25 +51,6 @@ In addition to respiratory symptoms, patients frequently experience systemic man
 
 Advanced lung cancer may also produce symptoms associated with metastatic spread. For example, metastasis to the skeletal system may cause bone pain and pathological fractures, while brain metastases can lead to neurological symptoms such as headaches, dizziness, seizures, or cognitive impairment. Liver involvement may result in jaundice and abdominal discomfort. The presence of such symptoms often indicates advanced disease and is generally associated with a less favorable prognosis.
 
-Figure~\ref{fig:lung_cancer_symptoms} summarizes several common clinical manifestations associated with lung cancer.
-
-\begin{figure}[H]
-	\centering
-	\fbox{
-		\parbox{0.9\textwidth}{
-			\centering
-			\vspace{1.5cm}
-			\textbf{Placeholder for Figure: Common Symptoms and Signs of Lung Cancer}\\[0.5cm]
-			Suggested illustration showing a human body diagram highlighting:
-			persistent cough, hemoptysis, chest pain, dyspnea, fatigue,
-			unexplained weight loss, hoarseness, and metastatic symptoms.
-			\vspace{1.5cm}
-		}
-	}
-	\caption{Illustration of common symptoms and clinical signs associated with lung cancer.}
-	\label{fig:lung_cancer_symptoms}
-\end{figure}
-
 From a diagnostic perspective, medical imaging plays a central role in lung cancer detection, characterization, staging, and treatment planning. Imaging techniques enable clinicians to visualize pulmonary abnormalities that may not be detectable through physical examination alone. Among the available imaging modalities, chest radiography and computed tomography are the most commonly utilized for initial evaluation and diagnostic assessment.
 
 Chest X-ray imaging is frequently used as a first-line diagnostic tool due to its accessibility, low cost, and widespread availability. Radiographic findings suggestive of lung cancer may include pulmonary nodules, masses, hilar enlargement, pleural effusion, or areas of abnormal opacity. However, chest radiographs possess limited sensitivity for detecting small lesions and early-stage tumors. Consequently, subtle abnormalities may remain undetected, particularly when located behind anatomical structures such as ribs or the mediastinum.
@@ -82,20 +63,7 @@ Figure~\ref{fig:lung_cancer_ct_examples} illustrates representative examples of 
 
 \begin{figure}[H]
 	\centering
-	\fbox{
-		\parbox{0.9\textwidth}{
-			\centering
-			\vspace{1.5cm}
-			\textbf{Placeholder for Figure: CT Imaging Examples of Lung Cancer}\\[0.5cm]
-			Suggested image panel containing:
-			(a) Normal chest CT scan,
-			(b) Benign pulmonary nodule,
-			(c) Malignant pulmonary nodule,
-			(d) Advanced lung tumor with surrounding tissue involvement.
-			Lesions should be annotated with arrows or bounding markers.
-			\vspace{1.5cm}
-		}
-	}
+	\includegraphics[width=\linewidth]{assets/lung_cancer_CT_ex.jpg}
 	\caption{Representative CT imaging findings associated with lung cancer.}
 	\label{fig:lung_cancer_ct_examples}
 \end{figure}
@@ -230,17 +198,9 @@ Explainable AI (XAI) refers to techniques that make the decision-making process 
 
 \begin{figure}[htb]
 	\centering
-	\begin{minipage}{0.55\textwidth} % Adjust width as needed
-		\includegraphics[width=\linewidth]{assets/bone_heatmap.png}
-		\caption{Heatmap for bone}
-		\label{fig:heatmap_bone}
-	\end{minipage}
-	\hfill % Adds horizontal space between minipages
-	\begin{minipage}{0.40\textwidth} % Adjust width as needed
-		\includegraphics[width=\linewidth]{assets/pneumonia_heatmap.jpg}
-		\caption{Heatmap for pneumonia detection}
-		\label{fig:heatmap_pneumonia}
-	\end{minipage}
+	\includegraphics[width=\linewidth]{assets/pneumonia_heatmap.jpg}
+	\caption{Heatmap for pneumonia detection}
+	\label{fig:heatmap_pneumonia}
 \end{figure}
 
 \subsubsection*{Related Papers on XAI For Lung Cancer Classification}
@@ -410,9 +370,9 @@ Integrating XAI and FL in medical image diagnosis combines privacy with interpre
 		\hline
 		\textbf{Dataset Name} & \textbf{Domain} & \textbf{Class Distribution / Description} & \textbf{Total Images} \\
 		\hline
-		FracAtlas & Bone &
-		Fractured (1707), Hand (3487), Hardware (210), Hip (796), Leg (5293), Shoulder (796) &
-		9,383 \\
+		Lung CT Nodule & Lung &
+		Annotated lung CT scans that are used in training the lung cancer detection model&
+		\num{5069} \\
 		\hline
 		COVID-19 \& Pneumonia \& Tuberculosis with Normal \& Non-X-ray &
 		Chest &
@@ -428,11 +388,6 @@ Integrating XAI and FL in medical image diagnosis combines privacy with interpre
 		General &
 		Unlabeled random images used for general image classification experiments &
 		\num{9958} \\
-		\hline
-		MURA &
-		Bone &
-		Elbow (1,912), Finger (2,110), Hand (2,185), Humerus (727), Forearm (1,010), Shoulder (3,015), Wrist (3,697) &
-		40,561 images (14,656 studies) \\
 		\hline
 	\end{tabular}
 \end{table}
