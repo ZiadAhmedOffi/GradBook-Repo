@@ -61,9 +61,9 @@ Radiologists typically evaluate several imaging characteristics when assessing p
 
 Figure~\ref{fig:lung_cancer_ct_examples} illustrates representative examples of CT findings commonly associated with lung cancer.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\linewidth]{assets/lung_cancer_CT_ex.jpg}
+	\includegraphics{assets/lung_cancer_CT_ex.jpg}
 	\caption{Representative CT imaging findings associated with lung cancer.}
 	\label{fig:lung_cancer_ct_examples}
 \end{figure}
@@ -198,7 +198,7 @@ Explainable AI (XAI) refers to techniques that make the decision-making process 
 
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=\linewidth]{assets/pneumonia_heatmap.jpg}
+	\includegraphics{assets/pneumonia_heatmap.jpg}
 	\caption{Heatmap for pneumonia detection}
 	\label{fig:heatmap_pneumonia}
 \end{figure}
@@ -280,43 +280,82 @@ Integrating XAI and FL in medical image diagnosis combines privacy with interpre
 	\begin{longtable}{|p{1cm}|p{1.5cm}|p{2cm}|p{1.8cm}|p{5cm}|p{1.2cm}|}
 		\caption{Summary of related papers.} \\
 		\hline
-		\textbf{Focus Area} & \textbf{Sub-category} & \textbf{Model} & \textbf{Dataset} & \textbf{Result} & \textbf{Ref. Num.} \\ \hline % 
-		Bones & General & Custom CNN and transfer learning & \textbf{FracAtlas} & The custom CNN achieved superior performance with 95.96\% accuracy, significantly outperforming the transfer learning models (EfficientNetB0, MobileNetV2, ResNet50) which only managed between 65\% and 67\% accuracy. & [1] \\ \hline
+		\textbf{Focus Area} & \textbf{Sub-category} & \textbf{Model} & \textbf{Dataset} & \textbf{Result} & \textbf{Ref. Num.} \\ \hline %
 		
-		Bones & General & YOLOv11 was developed and benchmarked against \textbf{Faster R-CNN} and SSD. & --- & YOLOv11 achieved superior performance with 96.8\% mAP and 95.14\% accuracy, significantly outperforming Faster R-CNN (87.5\% mAP) and SSD (82.9\% mAP) in both real-time fracture detection and localization. & [1] \\ \hline
+		Lung & General & DL-SVM & LIDC-IDRI & The proposed DL-SVM model achieved 94\% accuracy, outperforming traditional machine learning models, standalone deep learning models, and hybrid baseline techniques for pulmonary nodule classification.& \cite{cancers14215457} \\
+		\hline
 		
-		Bones & General & YOLOv11 was developed and benchmarked against Faster R-CNN and SSD. & --- & YOLOv11 achieved superior performance with 96.8\% mAP and 95.14\% accuracy, significantly outperforming Faster R-CNN (87.5\% mAP) and SSD (82.9\% mAP) in both real-time fracture detection and localization. & [1] \\ \hline
+		Lung & General & Custom CNN & Kaggle + Private Hospital & The EOSA-CNN model achieved 93.21\% accuracy, with up to 97\% specificity and 93\% sensitivity, outperforming standard CNN models and baseline optimization methods in lung cancer CT classification. & \cite{10.1371/journal.pone.0285796} \\
+		\hline
 		
-		Bones & General & EfficientNet-B6 & FracAtlas & The EfficientNet-B6 model achieved a 96.83\% testing accuracy & [3] \\
+		Lung & General & ML Classifiers + CNN & Figshare & ICC-based filtering on 104 radiomic features retained 58 reliable features (ICC > 0.75) and removed 46 unstable ones, improving robustness by reducing inter-scanner variability.
+		& \cite{muna2025} \\
 		\hline
-		Bones & General & Custom CNN & ------ & The model achieved a classification accuracy of 92.44\% & [4] \\
+		
+		Lung & General & Custom CNN + Dual Attention Mechanism & Not Specified & The model achieved 96\% - 98\% accuracy with improved precision, recall, and F1-score, outperforming existing methods. Attention improved feature localization for lung nodule detection.
+		& \cite{zia2024} \\
 		\hline
-		Bones & General & SVM, k-NN, Naïve Bayes & -------- & Support Vector Machine (SVM) classifier achieved the highest accuracy, with a classification rate of 98\%. & [5] \\
+		
+		Lung & XAI & LCxNet (CNN-Based) & IQ-OTH/NCCD & The LCxNet model achieved 99.3\% accuracy and 99.45\% specificity, outperforming state-of-the-art CNN models with stable performance across optimizers.
+		& \cite{asi8050153} \\
 		\hline
-		Bones & General & Custom CNN & & Accuracy: 89.865\% (Approx. 90\%), Specificity: 89.90\% & [6] \\
+		
+		Lung & XAI & VGG16 & IQ-OTH/NCCD & The VGG16 model achieved 96\% accuracy and used Grad-CAM for interpretability, highlighting tumor regions and improving clinical trust.
+		& \cite{Hamza-Cherif2025} \\
 		\hline
-		Bones & General & Custom CNN & MURA dataset & Testing Accuracy: 99.79\% (at epoch 13). & [7] \\
+		
+		Lung & FL & Federated Ensemble & Not Specified & The federated ensemble model achieved 97\% accuracy with F1-score 0.95 - 0.97, outperforming standalone CNNs while preserving data privacy.
+		& \cite{umam2023} \\
 		\hline
-		Bones & XAI & MobileNetV3 style convolutional blocks with self-attention layers. & NEU Surface Defect Database, MVTec AD (Anomaly Detection), Severstal Steel Defect Dataset & proposed EdgeViT-Slim achieved 96.0\% accuracy, 0.953 F1 score, and 85 FPS on industrial defect datasets, outperforming baselines with far fewer parameters & [18] \\
+		
+		Lung & FL & CNN + SVM & LIDC-IDRI & The hybrid CNN–SVM model achieved 99.7\% accuracy with 99\%+ sensitivity and specificity, outperforming traditional ML and CNN models.
+		& \cite{BEHURIA2025279} \\
 		\hline
-		Bones & XAI & ResNet-50, Faster R-CNN, and Mask R-CNN with Grad-CAM explainability & MURA & achieving 83\% classification accuracy (ResNet-50) & [19] \\
+		
+		Lung & FL & Feature Vision Framework & LIDC-IDRI & The framework achieved 97\% - 98\% accuracy with 96\%+ sensitivity and 97\%+ specificity, improving robustness through feature fusion.
+		& \cite{HEIDARI2023102572} \\
 		\hline
-		Bones & XAI & Random Forest, SVM, and KNN & MURA & Random Forest classifier achieved the best performance with 95\% accuracy, 93\% precision, and 0.96 F1-score, outperforming SVM (91\%) and KNN (88\%) & [20] \\
+		
+		Lung & Combined & CNN + Attention Mechanism & Not Specified & The model achieved 97\% - 99\% accuracy with F1-score 0.96 - 0.98, outperforming baseline CNN models. Attention improved feature discrimination.
+		& \cite{SIAM2026108719} \\
 		\hline
-		Bones & XAI & Logistic Regression, Random Forest, XGBoost, AdaBoost, LightGBM, and Gradient Boosting & custom multi-center clinical osteoporosis dataset (1,250 records) & ensemble model achieved the best performance with 90.82\% accuracy, 100\% precision, 81.63\% recall, and 89.99\% F1-score & [21] \\
+		
+		Lung & General & Multiple CNN-Based Models & Private & VGG19 - Accuracy: 98.65 $\mp$ 0.22\%, Precision: 98.80 $\mp$ 0.15\%, Specificity: 98.70 $\mp$ 0.20\%, Sensitivity: 98.55 $\mp$ 0.18\%, F1-Score: 98.60 $\mp$ 0.16\%, IoU: 0.94 $\mp$ 0.03, FP Rate: 1.05 $\mp$ 0.22
+		& \cite{article3} \\
 		\hline
-		Bones & XAI & (CNN, VGG, DenseNet) and found that Ensemble-2 (combining DenseNet121 and DenseNet169) & MURA dataset & The Ensemble-2 model achieved the highest accuracy of 85\% and an F1 score of 0.79. Additionally, the integration of Explainable AI (Grad-CAM and Saliency Maps) & [22] \\
+		
+		Lung & Combined & Multiple CNN Models & Private & U-Net Segmentation: 81\%,ResNet-50: 91\% ,VGG-16: 94\%,EfficientNet-B5: 97\%,Ensemble Model: 99\%
+		& \cite{KANAKARADDI20243226} \\
 		\hline
-		Bones & XAI & YOLO, Faster R-CNN, & ------- & YOLOv5m (Best Performer) Achieved a Pointing Game Accuracy of $>85$\%, meaning Grad-CAM heatmaps consistently aligned with the ground truth fracture locations. & [23] \\
+		
+		Lung & XAI & MCAT-Net & Private & LIDC-IDRI:IOU: 82.14\% , LNDb:IOU: 71.28\%
+		& \cite{tian2024} \\
 		\hline
-		Bones & FL & DenseNet161 & & Federated Learning (FedAvg): The 5-node FedAvg model achieved the best performance with 91\% accuracy. Centralized Training: The centralized DenseNet161 model achieved 89.6\% accuracy. & [29] \\
+		
+		Lung & Combined & SSLKD-Unet & Private & SSLKD-Unet,Dice Coefficient: 93.8\%,Sensitivity: 94.2\%,Specificity: 96.1\%,Pixel Accuracy: 96.5\%
+		& \cite{wenjuan2025} \\
 		\hline
-		Bone & FL & Local ML Models (Client-side), Federated Learning Frameworks (Server-side) & -- & Highest accuracy of 94.4\% (FL+VGG16 with augmentation) for binary classification. & [30] \\
+		
+		Lung & XAI & Faster R-CNN & Private & LUNA16: Precision: 0.781, Recall: 77.3\%, mAP@50: 75.5\%, mAP@50-90: 33.3\%, NODE21: Precision: 0.895, Recall: 88.3\%, mAP@50: 89.1\%, mAP@50-90: 51.4\%, LungCT: Precision: 0.887, Recall: 82.5\%, mAP@50: 92.4\%, mAP@50-90: 53.8\%
+		& \cite{s25144245} \\
 		\hline
-		Bones & FL & EfficientNet V2 (implemented within an Adaptive Federated Learning framework) & --- & federated methods lagged slightly behind the 96–98\% accuracy achieving near-centralized performance of up to 98.6\% using EfficientNetV2 & [31] \\
+		
+		Lung & XAI & Multiple YOLO Models & Private & SwiF-YOLO: Precision: 84.54\%,Recall: 81.37\%,mAP: 83.17\%,YOLOx-M (baseline):Precision: 83.78\%,Recall: 79.78\%,mAP: 81.77\%
+		& \cite{article1} \\
 		\hline
-		Bones & Combined & SemFedXAI (a framework combining Semantic Web technologies and Federated Learning & ------ & The SemFedXAI framework achieved the highest predictive accuracy at 85.3\%, outperforming standard Federated Learning (73.5\%) and other baselines. It also demonstrated superior explainability, scoring 0.85 in feature identification accuracy & [36] \\
+		
+		Lung & Combined & CNN, YOLOv8 Variants & LIDC-IDRI & YOLOv8n: Precision 0.291, mAP50 0.356, mAP50-95 0.296, YOLOv8s: Precision 0.775, mAP50 0.505, mAP50-95 0.394,YOLOv8m (Best): Precision 0.873, mAP50 0.535, mAP50-95 0.4
+		& \cite{article2} \\
 		\hline
+		
+		Lung & XAI & Multiple YOLO Models & Private & YOLOv3 + MSE: AP 73.1\%, Sensitivity 85.2\%,Faster-RCNN (ResNet101): AP 79.2\%, Sensitivity 91.6\%,Faster-RCNN (VGG16): AP 81.4\%, Sensitivity 90.7\%
+		& \cite{inproceedings1} \\
+		\hline
+		
+		Lung & Combined & Multiple 3D Models with YOLO Variant & Private & (3D Res-U-Net):Dice Score: 98.82\% (95\% CI: 98.5–99.1\%),F1-Score: 98.73\%,IoU: 97.6\% ,YOLOv5s):mAP@50: 0.76 (95\% CI: 0.73–0.79),VGG-16:94\%
+		& \cite{Shuvo_2026} \\
+		\hline
+		
 		Chest & General & Custom CNN & Kaggle \& IEEE & The model achieved 98.72\% overall accuracy across all classes. Recall per class: Pneumonia 99.66\%, No-findings 99.35\%, Tuberculosis 98.10\%, COVID-19 96.27\%. & [10] \\
 		\hline
 		Chest & General & & Kaggle & Accuracy: 97\% (using Resnet-50) VGG-19 (95\%), DenseNet (91\%), EfficientNet (94\%) & [11] \\

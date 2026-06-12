@@ -1,4 +1,4 @@
-\section[Routing Model Implementation]{Implementation of the First-Level Routing Model}
+\subsection[Routing Model Implementation]{Implementation of the First-Level Routing Model}
 \label{sec:routing_model_implementation}
 
 The first component implemented within the proposed framework is the modality routing model. As discussed in Chapter~\ref{chap:proposed_model}, this model serves as the entry point of the entire classification pipeline and is responsible for determining the type of the incoming image before directing it toward the appropriate diagnostic model. Since the subsequent classification stages were specifically designed for particular imaging modalities, ensuring the accuracy of the routing stage was considered a critical requirement for the reliability of the overall framework.
@@ -10,8 +10,7 @@ The final routing dataset was constructed by aggregating images originating from
 To mitigate this issue, several balancing strategies were incorporated into the training pipeline. Data augmentation techniques were applied to increase the effective diversity of minority-class samples while simultaneously improving model generalization. Augmentation operations included random rotations, horizontal flipping, zoom transformations, and intensity variations. These transformations were selected because they preserve medically relevant structures while exposing the model to realistic image variations that may occur across different acquisition settings. In addition to augmentation, class balancing procedures were employed during dataset preparation to reduce the influence of class distribution disparities on the learning process. These measures contributed to a more stable training process and improved the model's ability to recognize underrepresented classes.
 
 The complete routing workflow implemented within the framework is illustrated in Figure~\ref{fig:routing_model_overview}. The figure summarizes both the operational behavior of the routing model and the architectures investigated during the model selection process.
-
-\begin{figure}[H]
+\begin{figure}[htbp]
 	\centering
 	
 	%================ TOP ROW ==================
@@ -165,7 +164,6 @@ The complete routing workflow implemented within the framework is illustrated in
 	\label{fig:routing_model_overview}
 	
 \end{figure}
-
 Rather than committing immediately to a single architecture, several alternative models were implemented and evaluated in order to identify the most suitable solution for the routing task. This decision was motivated by the observation that image modality classification differs substantially from disease classification. While disease detection often requires learning subtle pathological patterns, modality recognition primarily depends on identifying broader structural and acquisition-specific characteristics. Consequently, it was necessary to experimentally determine whether a lightweight custom architecture would be sufficient or whether a deeper pretrained network would provide superior performance.
 
 The first architecture investigated was a custom convolutional neural network developed specifically for the routing task. The model begins with a rescaling layer that normalizes pixel intensities into the range $[0,1]$. Feature extraction is then performed through three convolutional blocks containing 32, 64, and 128 filters respectively. Each convolutional layer uses a ReLU activation function and is followed by a max-pooling operation that progressively reduces the spatial dimensions of the feature maps while preserving the most salient visual information. After the final convolutional block, the extracted features are flattened and passed through a fully connected layer consisting of 128 neurons. The output layer employs a softmax activation function to generate probability estimates for the three target classes.

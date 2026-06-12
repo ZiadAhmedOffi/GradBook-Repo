@@ -1,34 +1,45 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}System Implementation}{92}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Results and Evaluation}{99}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:system_implementation}{{4}{92}{System Implementation}{chapter.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Routing Model Implementation}{93}{section.4.1}\protected@file@percent }
-\newlabel{sec:routing_model_implementation}{{4.1}{93}{Routing Model Implementation}{section.4.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Architectures and workflow investigated during the implementation of the routing model. Blue blocks represent inputs, green blocks denote processing stages, and orange blocks correspond to classification outputs.}}{95}{figure.caption.44}\protected@file@percent }
-\newlabel{fig:routing_model_overview}{{4.1}{95}{Architectures and workflow investigated during the implementation of the routing model. Blue blocks represent inputs, green blocks denote processing stages, and orange blocks correspond to classification outputs}{figure.caption.44}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}CT Model Implementation}{97}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Dataset Preparation and Annotation Generation}{98}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 1: Mask Loading}{98}{paragraph*.45}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 2: Contour Extraction}{98}{paragraph*.46}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 3: Bounding Box Generation}{98}{paragraph*.47}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 4: YOLO Coordinate Conversion}{99}{paragraph*.48}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 5: Label File Generation}{99}{paragraph*.49}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Dataset Organization}{99}{subsection.4.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}YOLOv8 Detection Architecture}{100}{subsection.4.2.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction.}}{100}{figure.caption.50}\protected@file@percent }
-\newlabel{fig:yolov8_detailed_architecture}{{4.2}{100}{Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction}{figure.caption.50}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Transfer Learning Strategy}{101}{subsection.4.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}Training Configuration}{101}{subsection.4.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.6}Evaluation Methodology}{101}{subsection.4.2.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Precision}{101}{paragraph*.51}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Recall}{101}{paragraph*.52}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Mean Average Precision (mAP)}{101}{paragraph*.53}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.7}Prediction Visualization and Model Interpretability}{102}{subsection.4.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Routing Model Results}{100}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Implementation Environment and Development Tools}{100}{subsection.4.1.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Software and hardware environment used for implementing the routing model.}}{101}{table.caption.54}\protected@file@percent }
+\newlabel{tab:routing_tools}{{4.1}{101}{Software and hardware environment used for implementing the routing model}{table.caption.54}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Dataset Preparation and Experimental Setup}{101}{subsection.4.1.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Class distribution of the routing dataset.}}{101}{figure.caption.55}\protected@file@percent }
+\newlabel{tab:routing_dataset_distribution}{{4.2}{101}{Class distribution of the routing dataset}{figure.caption.55}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribution of the routing dataset classes.}}{101}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:routing_dataset_distribution}{{4.1}{101}{Distribution of the routing dataset classes}{figure.caption.55}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Summary of the routing dataset distribution.}}{101}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:routing_dataset_summary}{{4.2}{101}{Summary of the routing dataset distribution}{figure.caption.55}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Learning Rate Optimization}{102}{subsection.4.1.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Optimal learning rates identified during hyperparameter tuning.}}{102}{table.caption.56}\protected@file@percent }
+\newlabel{tab:learning_rates}{{4.3}{102}{Optimal learning rates identified during hyperparameter tuning}{table.caption.56}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Comparative Evaluation of Candidate Architectures}{102}{subsection.4.1.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Performance comparison of candidate routing architectures.}}{103}{table.caption.57}\protected@file@percent }
+\newlabel{tab:routing_model_comparison}{{4.4}{103}{Performance comparison of candidate routing architectures}{table.caption.57}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison of classification accuracy across all evaluated routing architectures.}}{103}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:routing_accuracy_comparison}{{4.3}{103}{Comparison of classification accuracy across all evaluated routing architectures}{figure.caption.58}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}Training and Validation Behavior}{103}{subsection.4.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.6}Confusion Matrix Analysis}{104}{subsection.4.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.7}Discussion}{104}{subsection.4.1.7}\protected@file@percent }
+\newlabel{fig:customcnn_training_curves}{{4.4a}{105}{Training and validation curves for the Custom CNN model}{figure.caption.59}{}}
+\newlabel{sub@fig:customcnn_training_curves}{{a}{105}{Training and validation curves for the Custom CNN model}{figure.caption.59}{}}
+\newlabel{fig:resnet50_training_curves}{{4.4b}{105}{Training and validation curves for the ResNet50 model}{figure.caption.59}{}}
+\newlabel{sub@fig:resnet50_training_curves}{{b}{105}{Training and validation curves for the ResNet50 model}{figure.caption.59}{}}
+\newlabel{fig:efficientnet_training_curves}{{4.4c}{105}{Training and validation curves for the EfficientNetB3 model}{figure.caption.59}{}}
+\newlabel{sub@fig:efficientnet_training_curves}{{c}{105}{Training and validation curves for the EfficientNetB3 model}{figure.caption.59}{}}
+\newlabel{fig:densenet121_training_curves}{{4.4d}{105}{Training and validation curves for the DenseNet121 model}{figure.caption.59}{}}
+\newlabel{sub@fig:densenet121_training_curves}{{d}{105}{Training and validation curves for the DenseNet121 model}{figure.caption.59}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Training and validation performance curves for all evaluated routing model architectures. Each figure illustrates the evolution of accuracy and loss throughout the training process and provides insight into model convergence, optimization stability, and generalization behavior.}}{105}{figure.caption.59}\protected@file@percent }
+\newlabel{fig:routing_training_curves}{{4.4}{105}{Training and validation performance curves for all evaluated routing model architectures. Each figure illustrates the evolution of accuracy and loss throughout the training process and provides insight into model convergence, optimization stability, and generalization behavior}{figure.caption.59}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Confusion matrices for all evaluated routing models across the three classes.}}{106}{figure.caption.60}\protected@file@percent }
+\newlabel{fig:all_confusion_matrices}{{4.5}{106}{Confusion matrices for all evaluated routing models across the three classes}{figure.caption.60}{}}
 \@setckpt{chapters/chapter4}{
-\setcounter{page}{103}
-\setcounter{equation}{6}
+\setcounter{page}{107}
+\setcounter{equation}{0}
 \setcounter{enumi}{5}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -37,27 +48,27 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{4}
-\setcounter{section}{2}
+\setcounter{section}{1}
 \setcounter{subsection}{7}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{2}
-\setcounter{table}{0}
+\setcounter{figure}{5}
+\setcounter{table}{4}
 \setcounter{parentequation}{0}
 \setcounter{lofdepth}{1}
 \setcounter{lotdepth}{1}
 \setcounter{LT@tables}{1}
 \setcounter{LT@chunks}{1}
-\setcounter{caption@flags}{2}
+\setcounter{caption@flags}{6}
 \setcounter{continuedfloat}{0}
 \setcounter{float@type}{4}
-\setcounter{subfigure}{0}
+\setcounter{subfigure}{4}
 \setcounter{subtable}{0}
 \setcounter{section@level}{0}
 \setcounter{Item}{15}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{76}
+\setcounter{bookmark@seq@number}{78}
 \setcounter{tabx@nest}{0}
 \setcounter{listtotal}{0}
 \setcounter{listcount}{0}
@@ -67,7 +78,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{51}
+\setcounter{instcount}{70}
 \setcounter{maxnames}{3}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}

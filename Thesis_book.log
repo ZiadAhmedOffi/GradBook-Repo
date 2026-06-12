@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.30)  11 JUN 2026 08:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.30)  12 JUN 2026 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1208,8 +1208,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 5.
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (Thesis_book.aux (chapters/chapter1.aux) (chapters/chapter2.aux)
-(chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux)
-(chapters/chapter6.aux))
+(chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux))
 \openout1 = `Thesis_book.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -1355,7 +1354,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<assets/college-logo.png, id=372, 255.95625pt x 222.8325pt>
+<assets/college-logo.png, id=380, 255.95625pt x 222.8325pt>
 File: assets/college-logo.png Graphic file (type png)
 <use assets/college-logo.png>
 Package pdftex.def Info: assets/college-logo.png  used on input line 14.
@@ -1444,7 +1443,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout7 = `Thesis_book.lot'.
 
  [6] (Thesis_book.lof
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1337) has occurred while \output is active []
 
  [7])
 \tf@lof=\write8
@@ -1569,7 +1568,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
-<assets/XAI.png, id=654, 336.25626pt x 150.5625pt>
+<assets/XAI.png, id=685, 336.25626pt x 150.5625pt>
 File: assets/XAI.png Graphic file (type png)
 <use assets/XAI.png>
 Package pdftex.def Info: assets/XAI.png  used on input line 283.
@@ -1583,7 +1582,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11 <./assets/XAI.png>]
-<assets/federated_learning.png, id=660, 674.52pt x 377.41pt>
+<assets/federated_learning.png, id=691, 674.52pt x 377.41pt>
 File: assets/federated_learning.png Graphic file (type png)
 <use assets/federated_learning.png>
 Package pdftex.def Info: assets/federated_learning.png  used on input line 311.
@@ -1716,11 +1715,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23]
-<assets/lung_cancer_CT_ex.jpg, id=713, 213.79875pt x 237.88875pt>
+<assets/lung_cancer_CT_ex.jpg, id=744, 213.79875pt x 237.88875pt>
 File: assets/lung_cancer_CT_ex.jpg Graphic file (type jpg)
 <use assets/lung_cancer_CT_ex.jpg>
 Package pdftex.def Info: assets/lung_cancer_CT_ex.jpg  used on input line 66.
-(pdftex.def)             Requested size: 452.9679pt x 504.04584pt.
+(pdftex.def)             Requested size: 213.79822pt x 237.88815pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1818,22 +1817,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [32]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[33]
-<assets/pneumonia_heatmap.jpg, id=784, 238.01967pt x 178.31837pt>
+<assets/pneumonia_heatmap.jpg, id=810, 238.01967pt x 178.31837pt>
 File: assets/pneumonia_heatmap.jpg Graphic file (type jpg)
 <use assets/pneumonia_heatmap.jpg>
 Package pdftex.def Info: assets/pneumonia_heatmap.jpg  used on input line 201.
-(pdftex.def)             Requested size: 452.9679pt x 339.37706pt.
+(pdftex.def)             Requested size: 238.01909pt x 178.31792pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1842,7 +1830,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[34 <./assets/pneumonia_heatmap.jpg>]
+[33 <./assets/pneumonia_heatmap.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1853,19 +1841,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[35]
-<assets/federated1.jpg, id=804, 250.317pt x 251.3025pt>
+[34]
+<assets/federated1.jpg, id=832, 250.317pt x 251.3025pt>
 File: assets/federated1.jpg Graphic file (type jpg)
 <use assets/federated1.jpg>
 Package pdftex.def Info: assets/federated1.jpg  used on input line 228.
 (pdftex.def)             Requested size: 203.83417pt x 204.63908pt.
-<assets/federated2.png, id=805, 237.834pt x 147.825pt>
+<assets/federated2.png, id=833, 237.834pt x 147.825pt>
 File: assets/federated2.png Graphic file (type png)
 <use assets/federated2.png>
 Package pdftex.def Info: assets/federated2.png  used on input line 232.
 (pdftex.def)             Requested size: 203.83417pt x 126.69392pt.
 
-Underfull \vbox (badness 5388) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1875,7 +1863,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[36 <./assets/federated1.jpg> <./assets/federated2.png>]
+[35 <./assets/federated1.jpg> <./assets/federated2.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1919,18 +1918,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[41{C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
+[40{C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.en
 c}{C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1942,7 +1930,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[42]
+[41]
 Overfull \hbox (4.177pt too wide) in paragraph at lines 283--283
 []|\T1/lmr/bx/n/12 (-20) Focus
  []
@@ -1963,1530 +1951,1268 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--283
  []
 
 
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 284--284
-[]|\T1/lmr/m/n/12 (-20) Bones| 
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/lmr/m/n/12 (+20) LIDC-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\T1/lmr/m/n/12 (+20) The pro-posed DL-SVM
+ []
+
+
+Underfull \hbox (badness 3525) in paragraph at lines 285--285
+\T1/lmr/m/n/12 (+20) model achieved 94% ac-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\T1/lmr/m/n/12 (+20) cu-racy, out-per-form-ing
+ []
+
+
+Underfull \hbox (badness 3769) in paragraph at lines 285--285
+\T1/lmr/m/n/12 (+20) mod-els, stan-dalone deep
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\T1/lmr/m/n/12 (+20) base-line tech-niques for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 []|\T1/lmr/m/n/12 (+20) Custom
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 284--284
-\T1/lmr/m/n/12 (+20) CNN and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
-\T1/lmr/m/n/12 (+20) trans-fer
- []
-
-
-Overfull \hbox (3.77602pt too wide) in paragraph at lines 284--284
-[]|\T1/lmr/bx/n/12 (-20) FracAtlas| 
- []
-
-
-Underfull \hbox (badness 5203) in paragraph at lines 284--284
-\T1/lmr/m/n/12 (+20) 95.96% ac-cu-racy, sig-nif-i-
- []
-
-
-Underfull \hbox (badness 2368) in paragraph at lines 284--284
-\T1/lmr/m/n/12 (+20) cantly out-per-form-ing the
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 286--286
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
-[]|\T1/lmr/m/n/12 (+20) YOLOv11
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
-\T1/lmr/m/n/12 (+20) was de-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
-\T1/lmr/m/n/12 (+20) vel-oped
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
-\T1/lmr/m/n/12 (+20) marked
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
-\T1/lmr/m/n/12 (+20) against
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
-\T1/lmr/bx/n/12 (+20) Faster
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
-\T1/lmr/bx/n/12 (+20) R-CNN
- []
-
-
-Underfull \hbox (badness 2197) in paragraph at lines 286--286
-[]|\T1/lmr/m/n/12 (+20) YOLOv11 achieved su-pe-
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 288--288
-[]|\T1/lmr/m/n/12 (-20) Bones| 
+Underfull \hbox (badness 1057) in paragraph at lines 288--288
+[]|\T1/lmr/m/n/12 (+20) Kaggle +
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 288--288
-[]|\T1/lmr/m/n/12 (+20) YOLOv11
+\T1/lmr/m/n/12 (+20) Pri-vate
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 288--288
-\T1/lmr/m/n/12 (+20) was de-
+[]|\T1/lmr/m/n/12 (+20) The EOSA-CNN model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
-\T1/lmr/m/n/12 (+20) vel-oped
+Underfull \hbox (badness 1168) in paragraph at lines 288--288
+\T1/lmr/m/n/12 (+20) and 93% sen-si-tiv-ity, out-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
-\T1/lmr/m/n/12 (+20) marked
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
+[]|\T1/lmr/m/n/12 (+20) ML Clas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
-\T1/lmr/m/n/12 (+20) against
+Underfull \hbox (badness 10000) in paragraph at lines 291--291
+\T1/lmr/m/n/12 (+20) si-fiers +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
-\T1/lmr/m/n/12 (+20) Faster
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
-\T1/lmr/m/n/12 (+20) R-CNN
- []
-
-
-Underfull \hbox (badness 2197) in paragraph at lines 288--288
-[]|\T1/lmr/m/n/12 (+20) YOLOv11 achieved su-pe-
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 290--290
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Overfull \hbox (4.61148pt too wide) in paragraph at lines 290--290
-[]|\T1/lmr/m/n/12 (-20) EfficientNet-
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 292--292
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--292
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
 []|\T1/lmr/m/n/12 (+20) Custom
  []
 
 
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 294--294
-[]|\T1/lmr/m/n/12 (-20) Bones| 
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
+\T1/lmr/m/n/12 (+20) CNN +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--294
-[]|\T1/lmr/m/n/12 (+20) SVM, k-
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
+\T1/lmr/m/n/12 (+20) Dual At-
  []
 
 
-Underfull \hbox (badness 4792) in paragraph at lines 294--294
-[]|\T1/lmr/m/n/12 (+20) Support Vec-tor Ma-chine
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
+\T1/lmr/m/n/12 (+20) ten-tion
  []
 
 
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 296--296
-[]|\T1/lmr/m/n/12 (-20) Bones| 
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
+\T1/lmr/m/n/12 (+20) Mech-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--296
-[]|\T1/lmr/m/n/12 (+20) Custom
+Underfull \hbox (badness 10000) in paragraph at lines 299--299
+[]|\T1/lmr/m/n/12 (+20) LCxNet
  []
 
 
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 298--298
-[]|\T1/lmr/m/n/12 (-20) Bones| 
+Underfull \hbox (badness 10000) in paragraph at lines 299--299
+\T1/lmr/m/n/12 (+20) (CNN-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--298
-[]|\T1/lmr/m/n/12 (+20) Custom
+Underfull \hbox (badness 10000) in paragraph at lines 299--299
+[]|\T1/lmr/m/n/12 (+20) IQ-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--298
-[]|\T1/lmr/m/n/12 (+20) MURA
+Overfull \hbox (14.50563pt too wide) in paragraph at lines 299--299
+\T1/lmr/m/n/12 (-20) OTH/NCCD| 
  []
 
 
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 300--300
-[]|\T1/lmr/m/n/12 (-20) Bones| 
+Underfull \hbox (badness 6332) in paragraph at lines 299--300
+\T1/lmr/m/n/12 (+20) speci-ficity, out-per-form-ing
  []
 
 
-Overfull \hbox (9.63895pt too wide) in paragraph at lines 300--300
-[]|\T1/lmr/m/n/12 (-20) MobileNetV3
+Underfull \hbox (badness 10000) in paragraph at lines 303--303
+[]|\T1/lmr/m/n/12 (+20) IQ-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) style con-
+Overfull \hbox (14.50563pt too wide) in paragraph at lines 303--303
+\T1/lmr/m/n/12 (-20) OTH/NCCD| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) vo-lu-tional
+Underfull \hbox (badness 4084) in paragraph at lines 303--304
+\T1/lmr/m/n/12 (+20) 96% ac-cu-racy and used
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) blocks
+Underfull \hbox (badness 10000) in paragraph at lines 307--307
+[]|\T1/lmr/m/n/12 (+20) Federated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) with self-
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+[]|\T1/lmr/m/n/12 (+20) The fed-er-ated en-sem-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) attention
+Underfull \hbox (badness 2781) in paragraph at lines 307--308
+\T1/lmr/m/n/12 (+20) ble model achieved 97%
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-[]|\T1/lmr/m/n/12 (+20) NEU
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+\T1/lmr/m/n/12 (+20) ac-cu-racy with F1-score
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) Sur-face
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+\T1/lmr/m/n/12 (+20) stan-dalone CNNs while
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) De-fect
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+[]|\T1/lmr/m/n/12 (+20) CNN +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) Database,
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+[]|\T1/lmr/m/n/12 (+20) LIDC-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) MVTec
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+[]|\T1/lmr/m/n/12 (+20) The hy-brid CNN^^USVM
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) AD
+Underfull \hbox (badness 4886) in paragraph at lines 311--312
+\T1/lmr/m/n/12 (+20) ing tra-di-tional ML and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) (Anomaly
+Underfull \hbox (badness 10000) in paragraph at lines 315--315
+[]|\T1/lmr/m/n/12 (+20) LIDC-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) De-tec-
+Underfull \hbox (badness 5133) in paragraph at lines 315--316
+[]|\T1/lmr/m/n/12 (+20) The frame-work achieved
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) tion),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) Sev-er-stal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) Steel
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) De-fect
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-[]|\T1/lmr/m/n/12 (+20) proposed EdgeViT-Slim
- []
-
-
-Underfull \hbox (badness 3260) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) achieved 96.0% ac-cu-racy,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-\T1/lmr/m/n/12 (+20) out-per-form-ing base-lines
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 302--302
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--302
-[]|\T1/lmr/m/n/12 (+20) ResNet-50,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--302
-\T1/lmr/m/n/12 (+20) Faster
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--302
-\T1/lmr/m/n/12 (+20) R-CNN,
- []
-
-
-Underfull \hbox (badness 2809) in paragraph at lines 302--302
-\T1/lmr/m/n/12 (+20) and Mask
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--302
-\T1/lmr/m/n/12 (+20) R-CNN
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--302
-\T1/lmr/m/n/12 (+20) CAM
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--302
-\T1/lmr/m/n/12 (+20) ex-plain-
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 304--304
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
-[]|\T1/lmr/m/n/12 (+20) Random
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--304
-\T1/lmr/m/n/12 (+20) For-est,
- []
-
-
-Underfull \hbox (badness 4819) in paragraph at lines 304--304
-[]|\T1/lmr/m/n/12 (+20) Random For-est clas-si-fier
- []
-
-
-Underfull \hbox (badness 1515) in paragraph at lines 304--304
-\T1/lmr/m/n/12 (+20) achieved the best per-for-
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 306--306
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-[]|\T1/lmr/m/n/12 (+20) Logistic
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) Ran-dom
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) For-est,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) XG-Boost,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) Ad-aBoost,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) Light-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) Gra-di-ent
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-[]|\T1/lmr/m/n/12 (+20) custom
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) multi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) center
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) clin-i-cal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) os-teo-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) poro-sis
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) dataset
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-\T1/lmr/m/n/12 (+20) (1,250
- []
-
-
-Underfull \hbox (badness 2529) in paragraph at lines 306--306
-[]|\T1/lmr/m/n/12 (+20) ensemble model achieved
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 308--308
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-[]|\T1/lmr/m/n/12 (+20) (CNN,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-\T1/lmr/m/n/12 (+20) VGG,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-\T1/lmr/m/n/12 (+20) DenseNet)
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-\T1/lmr/m/n/12 (+20) that
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-\T1/lmr/m/n/12 (+20) Ensemble-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-\T1/lmr/m/n/12 (+20) 2 (com-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-\T1/lmr/m/n/12 (+20) bin-ing
- []
-
-
-Overfull \hbox (7.38832pt too wide) in paragraph at lines 308--308
-\T1/lmr/m/n/12 (-20) DenseNet121
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-\T1/lmr/m/n/12 (+20) and
- []
-
-
-Overfull \hbox (13.04126pt too wide) in paragraph at lines 308--308
-\T1/lmr/m/n/12 (-20) DenseNet169)| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-[]|\T1/lmr/m/n/12 (+20) MURA
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 308--308
-[]|\T1/lmr/m/n/12 (+20) The Ensemble-2 model
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 310--310
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
-[]|\T1/lmr/m/n/12 (+20) YOLO,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 310--310
-\T1/lmr/m/n/12 (+20) Faster
- []
-
-
-Underfull \hbox (badness 1259) in paragraph at lines 310--310
-\T1/lmr/m/n/12 (+20) ing Grad-CAM heatmaps
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 312--312
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Overfull \hbox (8.56331pt too wide) in paragraph at lines 312--312
-[]|\T1/lmr/m/n/12 (-20) DenseNet161| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
-[]|\T1/lmr/m/n/12 (+20) Federated Learn-ing (Fe-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
-\T1/lmr/m/n/12 (+20) cen-tral-ized DenseNet161
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
-\T1/lmr/m/n/12 (+20) model achieved 89.6%
- []
-
-
-Underfull \hbox (badness 3525) in paragraph at lines 314--314
-[]|\T1/lmr/m/n/12 (+20) Local ML
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
-\T1/lmr/m/n/12 (+20) Mod-els
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
-\T1/lmr/m/n/12 (+20) (Client-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
-\T1/lmr/m/n/12 (+20) side),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
-\T1/lmr/m/n/12 (+20) Fed-er-ated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
-\T1/lmr/m/n/12 (+20) Learn-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
-\T1/lmr/m/n/12 (+20) Frame-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
-\T1/lmr/m/n/12 (+20) works
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 314--314
-\T1/lmr/m/n/12 (+20) (Server-
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 316--316
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Overfull \hbox (2.41812pt too wide) in paragraph at lines 316--316
-[]|\T1/lmr/m/n/12 (-20) EfficientNet
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
-\T1/lmr/m/n/12 (+20) V2 (im-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
-\T1/lmr/m/n/12 (+20) ple-mented
- []
-
-
-Underfull \hbox (badness 5533) in paragraph at lines 316--316
-\T1/lmr/m/n/12 (+20) within an
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
-\T1/lmr/m/n/12 (+20) Adap-tive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
-\T1/lmr/m/n/12 (+20) Fed-er-ated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
-\T1/lmr/m/n/12 (+20) Learn-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
-\T1/lmr/m/n/12 (+20) frame-
- []
-
-
-Underfull \hbox (badness 1028) in paragraph at lines 316--316
-[]|\T1/lmr/m/n/12 (+20) federated meth-ods lagged
- []
-
-
-Underfull \hbox (badness 6236) in paragraph at lines 316--316
-\T1/lmr/m/n/12 (+20) ac-cu-racy achiev-ing near-
- []
-
-
-Overfull \hbox (1.51628pt too wide) in paragraph at lines 318--318
-[]|\T1/lmr/m/n/12 (-20) Bones| 
- []
-
-
-Overfull \hbox (8.17293pt too wide) in paragraph at lines 318--318
+Overfull \hbox (8.17293pt too wide) in paragraph at lines 319--319
 []|\T1/lmr/m/n/12 (-20) Combined| 
  []
 
 
-Overfull \hbox (3.67395pt too wide) in paragraph at lines 318--318
-[]|\T1/lmr/m/n/12 (-20) SemFedXAI
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+[]|\T1/lmr/m/n/12 (+20) CNN +
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-\T1/lmr/m/n/12 (+20) (a frame-
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+\T1/lmr/m/n/12 (+20) At-ten-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-\T1/lmr/m/n/12 (+20) work
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+\T1/lmr/m/n/12 (+20) Mech-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-\T1/lmr/m/n/12 (+20) com-bin-ing
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
+[]|\T1/lmr/m/n/12 (+20) Multiple
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-\T1/lmr/m/n/12 (+20) Se-man-
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
+\T1/lmr/m/n/12 (+20) CNN-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-\T1/lmr/m/n/12 (+20) tic Web
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
+\T1/lmr/m/n/12 (+20) Based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-\T1/lmr/m/n/12 (+20) tech-nolo-
+Overfull \hbox (8.17293pt too wide) in paragraph at lines 327--327
+[]|\T1/lmr/m/n/12 (-20) Combined| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-\T1/lmr/m/n/12 (+20) gies and
+Underfull \hbox (badness 10000) in paragraph at lines 327--327
+[]|\T1/lmr/m/n/12 (+20) Multiple
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-\T1/lmr/m/n/12 (+20) Fed-er-ated
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
+[]|\T1/lmr/m/n/12 (+20) U-Net Seg-men-ta-
  []
 
 
-Underfull \hbox (badness 1377) in paragraph at lines 318--318
-\T1/lmr/m/n/12 (+20) other base-lines. It also
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
+[]|\T1/lmr/m/n/12 (+20) MCAT-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--320
+Overfull \hbox (8.17293pt too wide) in paragraph at lines 335--335
+[]|\T1/lmr/m/n/12 (-20) Combined| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+[]|\T1/lmr/m/n/12 (+20) SSLKD-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+[]|\T1/lmr/m/n/12 (+20) SSLKD-Unet,Dice Co-ef-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+\T1/lmr/m/n/12 (+20) fi-cient: 93.8%,Sen-si-tiv-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+\T1/lmr/m/n/12 (+20) ity: 94.2%,Speci-ficity:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+\T1/lmr/m/n/12 (+20) 96.1%,Pixel Ac-cu-racy:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
+[]|\T1/lmr/m/n/12 (+20) Faster
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+[]|\T1/lmr/m/n/12 (+20) LUNA16: Pre-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+\T1/lmr/m/n/12 (+20) 90: 33.3%, NODE21:
+ []
+
+
+Underfull \hbox (badness 2197) in paragraph at lines 339--340
+\T1/lmr/m/n/12 (+20) Pre-ci-sion: 0.895, Re-call:
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 339--340
+\T1/lmr/m/n/12 (+20) 88.3%, mAP@50: 89.1%,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+\T1/lmr/m/n/12 (+20) mAP@50-90: 51.4%,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
+[]|\T1/lmr/m/n/12 (+20) Multiple
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
+\T1/lmr/m/n/12 (+20) YOLO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+[]|\T1/lmr/m/n/12 (+20) SwiF-YOLO: Pre-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+\T1/lmr/m/n/12 (+20) ci-sion: 84.54%,Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+\T1/lmr/m/n/12 (+20) call: 81.37%,mAP:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+\T1/lmr/m/n/12 (+20) 83.17%,YOLOx-M (base-
+ []
+
+
+Overfull \hbox (8.17293pt too wide) in paragraph at lines 347--347
+[]|\T1/lmr/m/n/12 (-20) Combined| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
+[]|\T1/lmr/m/n/12 (+20) CNN,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
+\T1/lmr/m/n/12 (+20) YOLOv8
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
+[]|\T1/lmr/m/n/12 (+20) LIDC-
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 347--348
+\T1/lmr/m/n/12 (+20) mAP50 0.356, mAP50-95
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 347--348
+\T1/lmr/m/n/12 (+20) 0.296, YOLOv8s: Pre-ci-
+ []
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 347--348
+\T1/lmr/m/n/12 (+20) (Best): Pre-ci-sion 0.873,
+ []
+
+
+Underfull \hbox (badness 1127) in paragraph at lines 347--348
+\T1/lmr/m/n/12 (+20) mAP50 0.535, mAP50-95
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+[]|\T1/lmr/m/n/12 (+20) Multiple
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--351
+\T1/lmr/m/n/12 (+20) YOLO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+\T1/lmr/m/n/12 (+20) Sen-si-tiv-ity 85.2%,Faster-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+\T1/lmr/m/n/12 (+20) RCNN (ResNet101):
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+\T1/lmr/m/n/12 (+20) AP 79.2%, Sen-si-tiv-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+\T1/lmr/m/n/12 (+20) 91.6%,Faster-RCNN
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+\T1/lmr/m/n/12 (+20) (VGG16): AP 81.4%,
+ []
+
+
+Overfull \hbox (8.17293pt too wide) in paragraph at lines 355--355
+[]|\T1/lmr/m/n/12 (-20) Combined| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--355
+[]|\T1/lmr/m/n/12 (+20) Multiple
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--355
+\T1/lmr/m/n/12 (+20) 3D Mod-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--355
+\T1/lmr/m/n/12 (+20) els with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--355
+\T1/lmr/m/n/12 (+20) YOLO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
+[]|\T1/lmr/m/n/12 (+20) (3D Res-U-Net):Dice
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
+\T1/lmr/m/n/12 (+20) Score: 98.82% (95%
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
+\T1/lmr/m/n/12 (+20) CI: 98.5^^U99.1%),F1-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--359
 []|\T1/lmr/m/n/12 (+20) Custom
  []
 
 
-Underfull \hbox (badness 6859) in paragraph at lines 320--320
+Underfull \hbox (badness 6859) in paragraph at lines 359--359
 \T1/lmr/m/n/12 (+20) Pneu-mo-nia 99.66%, No-
  []
 
 
-Underfull \hbox (badness 4699) in paragraph at lines 320--320
+Underfull \hbox (badness 4699) in paragraph at lines 359--359
 \T1/lmr/m/n/12 (+20) lo-sis 98.10%, COVID-19
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--322
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
 []|\T1/lmr/m/n/12 (+20) Accuracy: 97% (us-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--324
+Underfull \hbox (badness 10000) in paragraph at lines 363--363
 []|\T1/lmr/m/n/12 (+20) Custom
  []
 
 
-Underfull \hbox (badness 1377) in paragraph at lines 324--324
+Underfull \hbox (badness 1377) in paragraph at lines 363--363
 []|\T1/lmr/m/n/12 (+20) TB vs Pneu-mo-nia clas-si-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--326
+Underfull \hbox (badness 10000) in paragraph at lines 365--365
 []|\T1/lmr/m/n/12 (+20) Custom
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--326
+Underfull \hbox (badness 10000) in paragraph at lines 365--365
 []|\T1/lmr/m/n/12 (+20) VinDr-
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 326--326
+Underfull \hbox (badness 1297) in paragraph at lines 365--365
 \T1/lmr/m/n/12 (+20) 96.8% (from micro-F1 $\OMS/lmsy/m/n/12 ^^Y$
  []
 
 
-Underfull \hbox (badness 2050) in paragraph at lines 326--326
+Underfull \hbox (badness 2050) in paragraph at lines 365--365
 \T1/lmr/m/n/12 (+20) 0.968) Lo-cal-iza-tion Ac-cu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 []|\T1/lmr/m/n/12 (+20) VGG16,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) DenseNet-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) 161 and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 []|\T1/lmr/m/n/12 (+20) Custom
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) clin-i-cal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) dataset
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) col-lected
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) and la-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 []|\T1/lmr/m/n/12 (+20) Normal/Pneumonia/TB/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) COVID-19 clas-si-fi-ca-
  []
 
 
-Overfull \hbox (3.52791pt too wide) in paragraph at lines 328--328
+Overfull \hbox (3.52791pt too wide) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (-20) Normal/Pneumonia/COVID-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--328
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) 19 clas-si-fi-ca-tion (via
  []
 
 
-Underfull \hbox (badness 4341) in paragraph at lines 328--328
+Underfull \hbox (badness 4341) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) DenseNet-161): 98.9% .
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 328--328
+Underfull \hbox (badness 1147) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) COVID-19 sever-ity clas-si-
  []
 
 
-Underfull \hbox (badness 5970) in paragraph at lines 328--328
+Underfull \hbox (badness 5970) in paragraph at lines 367--367
 \T1/lmr/m/n/12 (+20) fi-ca-tion (via ResNet-18):
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--330
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/lmr/m/n/12 (+20) Custom
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 []|\T1/lmr/m/n/12 (+20) Custom
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 332--332
+Underfull \hbox (badness 4686) in paragraph at lines 371--371
 \T1/lmr/m/n/12 (+20) CNN and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 []|\T1/lmr/m/n/12 (+20) Kaggle
  []
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 332--332
+Underfull \hbox (badness 2894) in paragraph at lines 371--371
 \T1/lmr/m/n/12 (+20) & pub-lic
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 \T1/lmr/m/n/12 (+20) dataset
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 \T1/lmr/m/n/12 (+20) from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--332
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
 \T1/lmr/m/n/12 (+20) 95.18% , Mo-bileNet :
  []
 
 
-Overfull \hbox (10.1288pt too wide) in paragraph at lines 334--334
+Overfull \hbox (10.1288pt too wide) in paragraph at lines 373--373
 []|\T1/lmr/m/n/12 (-20) DenseNet201,
  []
 
 
-Overfull \hbox (11.1172pt too wide) in paragraph at lines 334--334
+Overfull \hbox (11.1172pt too wide) in paragraph at lines 373--373
 \T1/lmr/m/n/12 (-20) ResNet152V2| 
  []
 
 
-Overfull \hbox (2.42755pt too wide) in paragraph at lines 336--336
+Overfull \hbox (2.42755pt too wide) in paragraph at lines 375--375
 []|\T1/lmr/m/n/12 (-20) Explainable
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
 \T1/lmr/m/n/12 (+20) based on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
 \T1/lmr/m/n/12 (+20) DenseNet-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
 []|\T1/lmr/m/n/12 (+20) The pro-posed ex-plain-
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 336--336
+Underfull \hbox (badness 1365) in paragraph at lines 375--375
 \T1/lmr/m/n/12 (+20) able DenseNet-201 model
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 336--336
+Underfull \hbox (badness 1874) in paragraph at lines 375--375
 \T1/lmr/m/n/12 (+20) tion ac-cu-racy of 98.08%,
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 336--336
+Underfull \hbox (badness 2111) in paragraph at lines 375--375
 \T1/lmr/m/n/12 (+20) ex-pla-na-tions (Grad-CAM)
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 336--336
+Underfull \hbox (badness 1270) in paragraph at lines 375--375
 \T1/lmr/m/n/12 (+20) to build trust and in-ter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
+Underfull \hbox (badness 10000) in paragraph at lines 375--375
 \T1/lmr/m/n/12 (+20) pretabil-ity for clin-i-cal
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 338--338
+Underfull \hbox (badness 4686) in paragraph at lines 377--377
 []|\T1/lmr/m/n/12 (+20) CNN and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
 \T1/lmr/m/n/12 (+20) Vi-sion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
 \T1/lmr/m/n/12 (+20) Trans-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 []|\T1/lmr/m/n/12 (+20) Review
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/lmr/m/n/12 (+20) of var-i-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/lmr/m/n/12 (+20) ous Deep
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/lmr/m/n/12 (+20) Learn-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/lmr/m/n/12 (+20) mod-els
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/lmr/m/n/12 (+20) and XAI
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/lmr/m/n/12 (+20) tech-niques
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/lmr/m/n/12 (+20) CAM,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/lmr/m/n/12 (+20) med-i-cal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/lmr/m/n/12 (+20) im-age
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--340
+Underfull \hbox (badness 10000) in paragraph at lines 379--379
 \T1/lmr/m/n/12 (+20) anal-y-sis
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--342
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 []|\T1/lmr/m/n/12 (+20) Custom
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--342
+Underfull \hbox (badness 10000) in paragraph at lines 381--381
 \T1/lmr/m/n/12 (+20) Grad-
  []
 
 
-Underfull \hbox (badness 1721) in paragraph at lines 342--342
+Underfull \hbox (badness 1721) in paragraph at lines 381--381
 \T1/lmr/m/n/12 (+20) CAM and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--344
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
 []|\T1/lmr/m/n/12 (+20) Ensemble
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--344
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
 \T1/lmr/m/n/12 (+20) of
  []
 
 
-Overfull \hbox (10.1288pt too wide) in paragraph at lines 344--344
+Overfull \hbox (10.1288pt too wide) in paragraph at lines 383--383
 \T1/lmr/m/n/12 (-20) DenseNet201,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--344
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
 \T1/lmr/m/n/12 (+20) In-cep-tion-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--344
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
 \T1/lmr/m/n/12 (+20) Res-NetV2,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--344
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
 \T1/lmr/m/n/12 (+20) Xcep-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 []|\T1/lmr/m/n/12 (+20) Federated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 \T1/lmr/m/n/12 (+20) Learn-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 \T1/lmr/m/n/12 (+20) (Fe-dAvg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 \T1/lmr/m/n/12 (+20) with a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 \T1/lmr/m/n/12 (+20) ResNet-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 \T1/lmr/m/n/12 (+20) based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 \T1/lmr/m/n/12 (+20) back-bone
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 \T1/lmr/m/n/12 (+20) age de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 []|\T1/lmr/m/n/12 (+20) Multi-
  []
 
 
-Overfull \hbox (10.26292pt too wide) in paragraph at lines 346--346
+Overfull \hbox (10.26292pt too wide) in paragraph at lines 385--385
 \T1/lmr/m/n/12 (-20) institutional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 \T1/lmr/m/n/12 (+20) chest
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 385--385
 \T1/lmr/m/n/12 (+20) X-ray
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 []|\T1/lmr/m/n/12 (+20) Federated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/lmr/m/n/12 (+20) Av-er-ag-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/lmr/m/n/12 (+20) (Fe-dAvg)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/lmr/m/n/12 (+20) al-go-rithm
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/lmr/m/n/12 (+20) with a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/lmr/m/n/12 (+20) DenseNet-
  []
 
 
-Underfull \hbox (badness 6608) in paragraph at lines 348--348
+Underfull \hbox (badness 6608) in paragraph at lines 387--387
 \T1/lmr/m/n/12 (+20) 121 ar-chi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/lmr/m/n/12 (+20) tec-ture
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/lmr/m/n/12 (+20) as the
  []
 
 
-Underfull \hbox (badness 1721) in paragraph at lines 348--348
+Underfull \hbox (badness 1721) in paragraph at lines 387--387
 \T1/lmr/m/n/12 (+20) core CNN
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 []|\T1/lmr/m/n/12 (+20) Chest
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 387--387
 \T1/lmr/m/n/12 (+20) mul-ti-ple
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 []|\T1/lmr/m/n/12 (+20) Federated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 \T1/lmr/m/n/12 (+20) Trans-fer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 \T1/lmr/m/n/12 (+20) Learn-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 \T1/lmr/m/n/12 (+20) us-ing a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 \T1/lmr/m/n/12 (+2) pre-trained
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 \T1/lmr/m/n/12 (+20) ResNet-50
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 \T1/lmr/m/n/12 (+20) model,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 \T1/lmr/m/n/12 (+20) fine-tuned
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 \T1/lmr/m/n/12 (+20) col-lab-o-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 \T1/lmr/m/n/12 (+20) ra-tively
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 \T1/lmr/m/n/12 (+20) across
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 []|\T1/lmr/m/n/12 (-7) Collection
  []
 
 
-Underfull \hbox (badness 3919) in paragraph at lines 352--352
+Underfull \hbox (badness 3919) in paragraph at lines 391--391
 []|\T1/lmr/m/n/12 (+20) A cus-tom
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--352
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
 \T1/lmr/m/n/12 (+20) Fed-er-ated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--352
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
 \T1/lmr/m/n/12 (+20) Learn-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--352
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
 \T1/lmr/m/n/12 (+20) frame-work
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--352
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
 \T1/lmr/m/n/12 (+20) us-ing a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--352
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
 \T1/lmr/m/n/12 (+20) spe-cial-ized
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--352
+Underfull \hbox (badness 10000) in paragraph at lines 391--391
 \T1/lmr/m/n/12 (+6) Composite-
  []
 
 
-Overfull \hbox (8.17293pt too wide) in paragraph at lines 354--354
+Overfull \hbox (8.17293pt too wide) in paragraph at lines 393--393
 []|\T1/lmr/m/n/12 (-20) Combined| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 []|\T1/lmr/m/n/12 (+20) A Fed-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) er-ated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) Learning-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) Real-Time
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) En-sem-ble
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) Model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) com-bin-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) mul-ti-ple
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) CNNs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) (VGG16,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) ResNet)
  []
 
 
-Underfull \hbox (badness 6348) in paragraph at lines 354--354
+Underfull \hbox (badness 6348) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) with XAI
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
+Underfull \hbox (badness 10000) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) tech-niques
  []
 
 
-Underfull \hbox (badness 3250) in paragraph at lines 354--354
+Underfull \hbox (badness 3250) in paragraph at lines 393--393
 \T1/lmr/m/n/12 (+20) like Grad-
  []
 
 
-Overfull \hbox (8.17293pt too wide) in paragraph at lines 356--356
+Overfull \hbox (8.17293pt too wide) in paragraph at lines 395--395
 []|\T1/lmr/m/n/12 (-20) Combined| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 []|\T1/lmr/m/n/12 (+20) A Fed-er-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) Learn-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) frame-work
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) us-ing a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) cus-tom
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) CNN ar-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) chi-tec-ture
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) in-te-grated
  []
 
 
-Underfull \hbox (badness 6348) in paragraph at lines 356--356
+Underfull \hbox (badness 6348) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) with XAI
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) meth-ods
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) such as
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) SHAP
  []
 
 
-Underfull \hbox (badness 4660) in paragraph at lines 356--356
+Underfull \hbox (badness 4660) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) for model
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) in-ter-pre-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 []|\T1/lmr/m/n/12 (+20) Chest
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) X-ray
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) im-ages
  []
 
 
-Underfull \hbox (badness 3240) in paragraph at lines 356--356
+Underfull \hbox (badness 3240) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) from dis-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 \T1/lmr/m/n/12 (+20) tributed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
+Underfull \hbox (badness 10000) in paragraph at lines 395--395
 []|\T1/lmr/m/n/12 (+20) The pro-posed FLP-neX-
  []
 
 
-Overfull \hbox (8.17293pt too wide) in paragraph at lines 358--358
+Overfull \hbox (8.17293pt too wide) in paragraph at lines 397--397
 []|\T1/lmr/m/n/12 (-20) Combined| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 []|\T1/lmr/m/n/12 (+20) A Se-cure
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) Frame-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) MapRe-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) duce,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (-12) Blockchain-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) based
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) Fed-er-ated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) Learn-ing,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) and XAI
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) with a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) DenseNet-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 []|\T1/lmr/m/n/12 (+20) Multi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--358
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) source
  []
 
 
-Underfull \hbox (badness 5147) in paragraph at lines 358--358
+Underfull \hbox (badness 5147) in paragraph at lines 397--397
 \T1/lmr/m/n/12 (+20) CT scan
  []
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3510,8 +3236,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[45{C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
-c}]
+[45]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3536,14 +3261,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [48]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[49]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3554,63 +3271,63 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 []|\T1/lmr/bx/n/12 (+20) Total Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--377
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
 []|\T1/lmr/m/n/12 (+20) COVID-19 &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--377
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
 \T1/lmr/m/n/12 (+20) Pneu-mo-nia &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--377
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
 \T1/lmr/m/n/12 (+20) Tu-ber-cu-lo-sis
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--382
+Underfull \hbox (badness 10000) in paragraph at lines 421--421
 []|\T1/lmr/m/n/12 (+20) Chest X-ray
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 385--386
+Underfull \hbox (badness 1314) in paragraph at lines 424--425
 []|$\OT1/lmr/m/n/12 (+20) 6[]106$ \T1/lmr/m/n/12 (+20) im-ages
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 \T1/lmr/m/n/12 (+20) with cor-re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 \T1/lmr/m/n/12 (+20) spond-ing
  []
 
 
-Overfull \hbox (23.82338pt too wide) in paragraph at lines 369--393
+Overfull \hbox (23.82338pt too wide) in paragraph at lines 408--432
  [][] 
  []
 
-<assets/aidoc.png, id=915, 391.572pt x 158.994pt>
+<assets/aidoc.png, id=959, 391.572pt x 158.994pt>
 File: assets/aidoc.png Graphic file (type png)
 <use assets/aidoc.png>
-Package pdftex.def Info: assets/aidoc.png  used on input line 405.
+Package pdftex.def Info: assets/aidoc.png  used on input line 444.
 (pdftex.def)             Requested size: 226.48395pt x 91.96184pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<assets/vizai.png, id=916, 371.862pt x 171.8055pt>
+<assets/vizai.png, id=960, 371.862pt x 171.8055pt>
 File: assets/vizai.png Graphic file (type png)
 <use assets/vizai.png>
-Package pdftex.def Info: assets/vizai.png  used on input line 412.
+Package pdftex.def Info: assets/vizai.png  used on input line 451.
 (pdftex.def)             Requested size: 226.48395pt x 104.63866pt.
 
 Underfull \vbox (badness 1910) has occurred while \output is active []
@@ -3623,11 +3340,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
-<assets/qure.png, id=922, 346.239pt x 175.419pt>
+[50{C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
+c}]
+<assets/qure.png, id=968, 346.239pt x 175.419pt>
 File: assets/qure.png Graphic file (type png)
 <use assets/qure.png>
-Package pdftex.def Info: assets/qure.png  used on input line 419.
+Package pdftex.def Info: assets/qure.png  used on input line 458.
 (pdftex.def)             Requested size: 226.48395pt x 114.74637pt.
 
 
@@ -3637,7 +3355,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[52 <./assets/aidoc.png> <./assets/vizai.png> <./assets/qure.png>]
+[51 <./assets/aidoc.png> <./assets/vizai.png> <./assets/qure.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3645,7 +3363,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[53]) [54
+[52]) [53
 
 
 ]
@@ -3664,11 +3382,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[55
+[54
 
 
 ]
-<assets/full_project_arch.png, id=946, 1187.93813pt x 536.75531pt>
+<assets/full_project_arch.png, id=992, 1187.93813pt x 536.75531pt>
 File: assets/full_project_arch.png Graphic file (type png)
 <use assets/full_project_arch.png>
 Package pdftex.def Info: assets/full_project_arch.png  used on input line 14.
@@ -3681,7 +3399,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[56 <./assets/full_project_arch.png (PNG copy)>]
+[55 <./assets/full_project_arch.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3692,8 +3410,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[57]
-<assets/classification_tree.png, id=957, 1339.25343pt x 743.02594pt>
+[56]
+<assets/classification_tree.png, id=1003, 1339.25343pt x 743.02594pt>
 File: assets/classification_tree.png Graphic file (type png)
 <use assets/classification_tree.png>
 Package pdftex.def Info: assets/classification_tree.png  used on input line 47.
@@ -3707,7 +3425,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[58 <./assets/classification_tree.png (PNG copy)>]
+[57 <./assets/classification_tree.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3718,7 +3436,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[59]
+[58]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3726,7 +3444,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[60{C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
+[59{C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.en
 c}]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -3735,7 +3453,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[61])
+[60])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3743,8 +3461,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[62]
-<assets/resnet50.png, id=989, 204.765pt x 33.4851pt>
+[61]
+<assets/resnet50.png, id=1034, 204.765pt x 33.4851pt>
 File: assets/resnet50.png Graphic file (type png)
 <use assets/resnet50.png>
 Package pdftex.def Info: assets/resnet50.png  used on input line 35.
@@ -3757,8 +3475,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[63 <./assets/resnet50.png>] (chapters/Chapter3/DenseNet121.tex
-<assets/DenseNet121.png, id=998, 509.5035pt x 151.767pt>
+[62 <./assets/resnet50.png>] (chapters/Chapter3/DenseNet121.tex
+<assets/DenseNet121.png, id=1044, 509.5035pt x 151.767pt>
 File: assets/DenseNet121.png Graphic file (type png)
 <use assets/DenseNet121.png>
 Package pdftex.def Info: assets/DenseNet121.png  used on input line 14.
@@ -3774,7 +3492,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[64]
+[63]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3782,7 +3500,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[65 <./assets/DenseNet121.png>]
+[64 <./assets/DenseNet121.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3793,7 +3511,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[66]
+[65]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3801,7 +3519,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[67]
+[66]
 Underfull \vbox (badness 1762) has occurred while \output is active []
 
 
@@ -3812,8 +3530,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[68])
-<assets/yolo-arch.png, id=1038, 453.19313pt x 371.13657pt>
+[67])
+<assets/yolo-arch.png, id=1083, 453.19313pt x 371.13657pt>
 File: assets/yolo-arch.png Graphic file (type png)
 <use assets/yolo-arch.png>
 Package pdftex.def Info: assets/yolo-arch.png  used on input line 55.
@@ -3833,7 +3551,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[69]
+[68]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3844,7 +3562,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[70 <./assets/yolo-arch.png>] (chapters/Chapter3/Routing Model.tex
+[69 <./assets/yolo-arch.png>] (chapters/Chapter3/Routing Model.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[70]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3856,9 +3585,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [71]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3882,7 +3608,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[74]
+[74] (chapters/Chapter3/Routing Model Imp.tex
+
+LaTeX Warning: Reference `chap:proposed_model' on page 75 undefined on input li
+ne 4.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3890,8 +3620,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[75])
-Underfull \vbox (badness 6658) has occurred while \output is active []
+[75]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 159.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 159.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 159.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -3902,12 +3639,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [76]
-<assets/chest-pipeline.png, id=1078, 462.22687pt x 96.36pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[78]))
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[79]
+<assets/chest-pipeline.png, id=1141, 462.22687pt x 96.36pt>
 File: assets/chest-pipeline.png Graphic file (type png)
 <use assets/chest-pipeline.png>
 Package pdftex.def Info: assets/chest-pipeline.png  used on input line 115.
 (pdftex.def)             Requested size: 339.72592pt x 70.823pt.
-<assets/pneu1.jpg, id=1081, 163.3603pt x 146.04562pt>
+<assets/pneu1.jpg, id=1144, 163.3603pt x 146.04562pt>
 File: assets/pneu1.jpg Graphic file (type jpg)
 <use assets/pneu1.jpg>
 Package pdftex.def Info: assets/pneu1.jpg  used on input line 131.
@@ -3917,12 +3681,12 @@ Underfull \hbox (badness 1603) in paragraph at lines 132--132
 []\T1/lmr/m/n/10 (+20) (a) |Orig-i-nal Pneu-mo-nia
  []
 
-<assets/proc-pneu1.jpg, id=1082, 162.6075pt x 144.54pt>
+<assets/proc-pneu1.jpg, id=1145, 162.6075pt x 144.54pt>
 File: assets/proc-pneu1.jpg Graphic file (type jpg)
 <use assets/proc-pneu1.jpg>
 Package pdftex.def Info: assets/proc-pneu1.jpg  used on input line 138.
 (pdftex.def)             Requested size: 113.24197pt x 100.66121pt.
-<assets/pneu2.png, id=1083, 144.54pt x 147.55125pt>
+<assets/pneu2.png, id=1146, 144.54pt x 147.55125pt>
 File: assets/pneu2.png Graphic file (type png)
 <use assets/pneu2.png>
 Package pdftex.def Info: assets/pneu2.png  used on input line 145.
@@ -3932,7 +3696,7 @@ Underfull \hbox (badness 1946) in paragraph at lines 146--146
 []\T1/lmr/m/n/10 (+20) (c) |Orig-i-nal Pneu-mo-nia
  []
 
-<assets/proc-pneu2.png, id=1084, 155.07938pt x 146.04562pt>
+<assets/proc-pneu2.png, id=1147, 155.07938pt x 146.04562pt>
 File: assets/proc-pneu2.png Graphic file (type png)
 <use assets/proc-pneu2.png>
 Package pdftex.def Info: assets/proc-pneu2.png  used on input line 152.
@@ -3940,7 +3704,7 @@ Package pdftex.def Info: assets/proc-pneu2.png  used on input line 152.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<assets/unet-arch.png, id=1086, 445.665pt x 263.48438pt>
+<assets/unet-arch.png, id=1149, 445.665pt x 263.48438pt>
 File: assets/unet-arch.png Graphic file (type png)
 <use assets/unet-arch.png>
 Package pdftex.def Info: assets/unet-arch.png  used on input line 172.
@@ -3955,13 +3719,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[77 <./assets/chest-pipeline.png>]
-<assets/proc-cxr.png, id=1094, 165.61874pt x 153.57375pt>
+[80 <./assets/chest-pipeline.png>]
+<assets/proc-cxr.png, id=1158, 165.61874pt x 153.57375pt>
 File: assets/proc-cxr.png Graphic file (type png)
 <use assets/proc-cxr.png>
 Package pdftex.def Info: assets/proc-cxr.png  used on input line 196.
 (pdftex.def)             Requested size: 113.24197pt x 105.00522pt.
-<assets/segmented-lung.png, id=1095, 181.42781pt x 157.33781pt>
+<assets/segmented-lung.png, id=1159, 181.42781pt x 157.33781pt>
 File: assets/segmented-lung.png Graphic file (type png)
 <use assets/segmented-lung.png>
 Package pdftex.def Info: assets/segmented-lung.png  used on input line 203.
@@ -3977,9 +3741,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[78 <./assets/pneu1.jpg> <./assets/proc-pneu1.jpg> <./assets/pneu2.png> <./asse
+[81 <./assets/pneu1.jpg> <./assets/proc-pneu1.jpg> <./assets/pneu2.png> <./asse
 ts/proc-pneu2.png>]
-<assets/gradcam.png, id=1107, 472.76625pt x 168.63pt>
+<assets/gradcam.png, id=1171, 472.76625pt x 168.63pt>
 File: assets/gradcam.png Graphic file (type png)
 <use assets/gradcam.png>
 Package pdftex.def Info: assets/gradcam.png  used on input line 234.
@@ -3996,10 +3760,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[79 <./assets/unet-arch.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[82 <./assets/unet-arch.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -4007,54 +3768,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[80 <./assets/proc-cxr.png> <./assets/segmented-lung.png> <./assets/gradcam.png
+[83 <./assets/proc-cxr.png> <./assets/segmented-lung.png> <./assets/gradcam.png
 >]
-<assets/yolo8_arch.png, id=1122, 452.892pt x 317.38576pt>
+<assets/yolo8_arch.png, id=1186, 452.892pt x 317.38576pt>
 File: assets/yolo8_arch.png Graphic file (type png)
 <use assets/yolo8_arch.png>
 Package pdftex.def Info: assets/yolo8_arch.png  used on input line 26.
 (pdftex.def)             Requested size: 452.9679pt x 317.44794pt.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[81 <./assets/yolo8_arch.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[82]
-<assets/lung1.jpg, id=1137, 210.03468pt x 210.03468pt>
-File: assets/lung1.jpg Graphic file (type jpg)
-<use assets/lung1.jpg>
-Package pdftex.def Info: assets/lung1.jpg  used on input line 59.
-(pdftex.def)             Requested size: 217.42265pt x 217.42458pt.
-File: assets/lung1.jpg Graphic file (type jpg)
-<use assets/lung1.jpg>
-Package pdftex.def Info: assets/lung1.jpg  used on input line 65.
-(pdftex.def)             Requested size: 217.42265pt x 217.42458pt.
-<assets/lung3.jpg, id=1138, 317.68687pt x 317.68687pt>
-File: assets/lung3.jpg Graphic file (type jpg)
-<use assets/lung3.jpg>
-Package pdftex.def Info: assets/lung3.jpg  used on input line 76.
-(pdftex.def)             Requested size: 271.7835pt x 271.80444pt.
-)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[83 <./assets/lung1.jpg>] (chapters/Chapter3/Federated Learning.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1112) has occurred while \output is active []
 
 
 
@@ -4064,7 +3786,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[84 <./assets/lung3.jpg>]
+[84 <./assets/yolo8_arch.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -4073,6 +3795,108 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [85]
+<assets/lung1.jpg, id=1201, 210.03468pt x 210.03468pt>
+File: assets/lung1.jpg Graphic file (type jpg)
+<use assets/lung1.jpg>
+Package pdftex.def Info: assets/lung1.jpg  used on input line 59.
+(pdftex.def)             Requested size: 217.42265pt x 217.42458pt.
+File: assets/lung1.jpg Graphic file (type jpg)
+<use assets/lung1.jpg>
+Package pdftex.def Info: assets/lung1.jpg  used on input line 65.
+(pdftex.def)             Requested size: 217.42265pt x 217.42458pt.
+<assets/lung3.jpg, id=1202, 317.68687pt x 317.68687pt>
+File: assets/lung3.jpg Graphic file (type jpg)
+<use assets/lung3.jpg>
+Package pdftex.def Info: assets/lung3.jpg  used on input line 76.
+(pdftex.def)             Requested size: 271.7835pt x 271.80444pt.
+ (chapters/Chapter3/Lung Cancer Imp.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[86 <./assets/lung1.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[87 <./assets/lung3.jpg>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+0.
+
+(C:\Users\Zyad\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[88]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[89]
+<assets/yolo_imp_arch.png, id=1234, 449.388pt x 224.694pt>
+File: assets/yolo_imp_arch.png Graphic file (type png)
+<use assets/yolo_imp_arch.png>
+Package pdftex.def Info: assets/yolo_imp_arch.png  used on input line 102.
+(pdftex.def)             Requested size: 452.9679pt x 226.48656pt.
+
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[90 <./assets/yolo_imp_arch.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[91])) (chapters/Chapter3/Federated Learning.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[92]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[93]
 Underfull \hbox (badness 10000) in paragraph at lines 131--132
 []|\T1/lmr/m/n/12 (+20) Communication
  []
@@ -4098,98 +3922,6 @@ Underfull \hbox (badness 2717) in paragraph at lines 168--169
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[86]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[87]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[88])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[89])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[90] [91
-
-
-]
-\openout2 = `chapters/chapter4.aux'.
-
- (chapters/chapter4.tex
-Chapter 4.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [92
-
-
-]
-(chapters/Chapter4/Routing Model Imp.tex
-Overfull \hbox (7.40776pt too wide) in paragraph at lines 1--1
-|\T1/lmr/bx/n/22 (-20) 4.1 Im-ple-men-ta-tion of the First-Level Rout-
- []
-
-
-LaTeX Warning: Reference `chap:proposed_model' on page 93 undefined on input li
-ne 4.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[93]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 160.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 160.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 160.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -4205,6 +3937,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [95]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[96]))
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[97] [98
+
+
+]
+\openout2 = `chapters/chapter4.aux'.
+
+ (chapters/chapter4.tex
+Chapter 4.
+(chapters/Chapter4/Routing Model Res.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99
+
+
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -4215,68 +3977,95 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[96]) (chapters/Chapter4/Lung Cancer Imp.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[97]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-0.
- (C:\Users\Zyad\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[98]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[99]
-<assets/yolo_imp_arch.png, id=1254, 449.388pt x 224.694pt>
-File: assets/yolo_imp_arch.png Graphic file (type png)
-<use assets/yolo_imp_arch.png>
-Package pdftex.def Info: assets/yolo_imp_arch.png  used on input line 102.
-(pdftex.def)             Requested size: 452.9679pt x 226.48656pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[100 <./assets/yolo_imp_arch.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[101]
-Overfull \hbox (20.90797pt too wide) in paragraph at lines 145--145
-|\T1/lmr/bx/n/18 (-20) 4.2.7 Pre-dic-tion Vi-su-al-iza-tion and Model In-ter-pr
-etabil-
+[100]
+Overfull \hbox (4.65923pt too wide) in paragraph at lines 52--65
+ [][] 
  []
 
+<assets/dataset_dist_rm.png, id=1318, 403.2666pt x 284.0211pt>
+File: assets/dataset_dist_rm.png Graphic file (type png)
+<use assets/dataset_dist_rm.png>
+Package pdftex.def Info: assets/dataset_dist_rm.png  used on input line 74.
+(pdftex.def)             Requested size: 208.36827pt x 146.7557pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[101 <./assets/dataset_dist_rm.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[102]
+Overfull \hbox (12.04842pt too wide) in paragraph at lines 150--151
+[]\T1/lmr/m/n/12 (-20) The re-sults demon-strate the su-pe-ri-or-ity of DenseNe
+t121 for the rout-ing task. DenseNet121
+ []
+
+<assets/models_acc_rm.png, id=1330, 484.9317pt x 270.2898pt>
+File: assets/models_acc_rm.png Graphic file (type png)
+<use assets/models_acc_rm.png>
+Package pdftex.def Info: assets/models_acc_rm.png  used on input line 156.
+(pdftex.def)             Requested size: 452.9679pt x 252.48459pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[103 <./assets/models_acc_rm.png>]
+<assets/curve_customcnn.png, id=1337, 721.9773pt x 270.2898pt>
+File: assets/curve_customcnn.png Graphic file (type png)
+<use assets/curve_customcnn.png>
+Package pdftex.def Info: assets/curve_customcnn.png  used on input line 179.
+(pdftex.def)             Requested size: 336.78456pt x 126.08351pt.
+<assets/curve_resnet.png, id=1338, 728.4816pt x 270.2898pt>
+File: assets/curve_resnet.png Graphic file (type png)
+<use assets/curve_resnet.png>
+Package pdftex.def Info: assets/curve_resnet.png  used on input line 195.
+(pdftex.def)             Requested size: 339.81866pt x 126.08351pt.
+<assets/curve_efficient.png, id=1339, 721.9773pt x 270.2898pt>
+File: assets/curve_efficient.png Graphic file (type png)
+<use assets/curve_efficient.png>
+Package pdftex.def Info: assets/curve_efficient.png  used on input line 211.
+(pdftex.def)             Requested size: 336.78456pt x 126.08351pt.
+<assets/curve_densenet.png, id=1340, 728.4816pt x 270.2898pt>
+File: assets/curve_densenet.png Graphic file (type png)
+<use assets/curve_densenet.png>
+Package pdftex.def Info: assets/curve_densenet.png  used on input line 227.
+(pdftex.def)             Requested size: 339.81866pt x 126.08351pt.
+
+
+LaTeX Warning: Reference `fig:routing_confusion_matrices' on page 104 undefined
+ on input line 244.
+
+<assets/customcnn_cm_rm.png, id=1341, 326.6604pt x 284.0211pt>
+File: assets/customcnn_cm_rm.png Graphic file (type png)
+<use assets/customcnn_cm_rm.png>
+Package pdftex.def Info: assets/customcnn_cm_rm.png  used on input line 256.
+(pdftex.def)             Requested size: 217.42082pt x 189.04066pt.
+<assets/resnet50_cm_rm.png, id=1342, 326.6604pt x 284.0211pt>
+File: assets/resnet50_cm_rm.png Graphic file (type png)
+<use assets/resnet50_cm_rm.png>
+Package pdftex.def Info: assets/resnet50_cm_rm.png  used on input line 266.
+(pdftex.def)             Requested size: 217.42082pt x 189.04066pt.
+<assets/efficient_cm_rm.png, id=1343, 326.6604pt x 284.0211pt>
+File: assets/efficient_cm_rm.png Graphic file (type png)
+<use assets/efficient_cm_rm.png>
+Package pdftex.def Info: assets/efficient_cm_rm.png  used on input line 279.
+(pdftex.def)             Requested size: 217.42082pt x 189.04066pt.
+<assets/densenet_cm_rm.png, id=1344, 326.6604pt x 284.0211pt>
+File: assets/densenet_cm_rm.png Graphic file (type png)
+<use assets/densenet_cm_rm.png>
+Package pdftex.def Info: assets/densenet_cm_rm.png  used on input line 289.
+(pdftex.def)             Requested size: 217.42082pt x 189.04066pt.
 ))
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4285,63 +4074,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[102] [103
+[104]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[105 <./assets/curve_customcnn.png> <./assets/curve_resnet.png> <./assets/curve
+_efficient.png> <./assets/curve_densenet.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[106 <./assets/customcnn_cm_rm.png> <./assets/resnet50_cm_rm.png> <./assets/eff
+icient_cm_rm.png> <./assets/densenet_cm_rm.png>] [107
 
 
 ]
 \openout2 = `chapters/chapter5.aux'.
 
-
-No file chapters/chapter5.tex.
-[104
-
-
-
-]
-\openout2 = `chapters/chapter6.aux'.
-
- (chapters/chapter6.tex
+ (chapters/chapter5.tex
 Chapter 5.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [105
+ [108
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[106]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[107]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[108]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -4385,7 +4150,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[112])
+[112]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -4394,10 +4162,40 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [113]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[114]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[115])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[116]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
- [114
+ [117
 
 
 
@@ -4409,7 +4207,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[115]
+[118]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -4417,7 +4215,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[116]
+[119]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -4425,9 +4223,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[117] (Thesis_book.aux (chapters/chapter1.aux) (chapters/chapter2.aux)
-(chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux)
-(chapters/chapter6.aux))
+[120] (Thesis_book.aux (chapters/chapter1.aux) (chapters/chapter2.aux)
+(chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -4437,19 +4234,19 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Thesis_book.out' has not changed.
-(rerunfilecheck)             Checksum: 9056FFDF5F8104D6B7D816A6CFA6F1EC;17267.
+(rerunfilecheck)             Checksum: 289CDA7EBF0F4D8C34F12096116A32E7;17717.
 Package logreq Info: Writing requests to 'Thesis_book.run.xml'.
 \openout1 = `Thesis_book.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40299 strings out of 474486
- 819791 string characters out of 5744226
- 2028542 words of memory out of 5000000
- 61174 multiletter control sequences out of 15000+600000
- 725070 words of font info for 324 fonts, out of 8000000 for 9000
+ 40402 strings out of 474486
+ 822560 string characters out of 5744226
+ 2029542 words of memory out of 5000000
+ 61253 multiletter control sequences out of 15000+600000
+ 728816 words of font info for 332 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,12n,95p,1910b,2071s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,13n,95p,1910b,2071s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb
 ><C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><
 C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><
@@ -4470,9 +4267,9 @@ ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Zyad/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Zyad/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/
 Zyad/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on Thesis_book.pdf (128 pages, 4473955 bytes).
+Output written on Thesis_book.pdf (131 pages, 4714544 bytes).
 PDF statistics:
- 1558 PDF objects out of 1728 (max. 8388607)
- 356 named destinations out of 1000 (max. 500000)
- 104825 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 1648 PDF objects out of 1728 (max. 8388607)
+ 368 named destinations out of 1000 (max. 500000)
+ 106939 words of extra memory for PDF output out of 106986 (max. 10000000)
 

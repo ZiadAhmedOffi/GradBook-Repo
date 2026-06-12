@@ -2402,16 +2402,35 @@
     <bcf:citekey order="39" intorder="1">ref37</bcf:citekey>
     <bcf:citekey order="40" intorder="1">ref38</bcf:citekey>
     <bcf:citekey order="41" intorder="1">ref39</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">mcmahan2017</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">sheller2019</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">sheller2019</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">rieke2020</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">mcmahan2017</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">li2020</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">li2020</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">zhu2019</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">dwork2014</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">beutel2022</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">cancers14215457</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">10.1371/journal.pone.0285796</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">muna2025</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">zia2024</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">asi8050153</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">Hamza-Cherif2025</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">umam2023</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">BEHURIA2025279</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">HEIDARI2023102572</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">SIAM2026108719</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">article3</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">KANAKARADDI20243226</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">tian2024</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">wenjuan2025</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">s25144245</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">article1</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">article2</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">inproceedings1</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">Shuvo_2026</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">mcmahan2017</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">sheller2019</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">sheller2019</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">rieke2020</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">mcmahan2017</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">li2020</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">li2020</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">zhu2019</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">dwork2014</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">beutel2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

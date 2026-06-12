@@ -2,11 +2,15 @@
 \contentsline {table}{\numberline {1.1}{\ignorespaces \small Key Advantages of Computer Vision in Medical Image Automation}}{8}{table.caption.4}%
 \contentsline {table}{\numberline {1.2}{\ignorespaces \small Challenges of Centralized Machine Learning in Healthcare}}{9}{table.caption.5}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Summary of related papers.}}{43}{table.2.1}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Summary of Datasets Used in the Project}}{51}{table.caption.11}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Summary of related papers.}}{42}{table.2.1}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Summary of Datasets Used in the Project}}{50}{table.caption.11}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Layer distribution within DenseNet121.}}{68}{table.caption.26}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Key Federated Learning Parameters and Their Clinical Implications}}{87}{table.caption.42}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Privacy and Security: Centralized vs.\ Federated Learning}}{88}{table.caption.43}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Layer distribution within DenseNet121.}}{67}{table.caption.26}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Privacy and Security: Centralized vs.\ Federated Learning}}{94}{table.caption.53}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Key Federated Learning Parameters and Their Clinical Implications}}{95}{table.caption.52}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Software and hardware environment used for implementing the routing model.}}{101}{table.caption.54}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Class distribution of the routing dataset.}}{101}{figure.caption.55}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Optimal learning rates identified during hyperparameter tuning.}}{102}{table.caption.56}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Performance comparison of candidate routing architectures.}}{103}{table.caption.57}%
 \addvspace {10\p@ }
