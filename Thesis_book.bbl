@@ -1223,6 +1223,14 @@
       \field{title}{Secure and Interpretable Lung Cancer Prediction Using Blockchain Federated Learning with XAI}
       \field{year}{2025}
     \endentry
+    \entry{ref32}{article}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.sciencedirect.com/science/article/pii/S305057712500026X}}
+      \field{title}{Boosting Multi-Demographic Federated Learning for Chest Radiograph Classification}
+      \field{year}{2025}
+    \endentry
     \entry{mcmahan2017}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=be349ac63090285fa87303a55d511957}{%
@@ -1259,8 +1267,8 @@
       \strng{authorbibnamehash}{d09630a633644c2d6bfe26906672e7a7}
       \strng{authornamehash}{d09630a633644c2d6bfe26906672e7a7}
       \strng{authorfullhash}{6b8be53c02a59438baf3c27c0b389e79}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proc. 20th Int. Conf. Artif. Intell. Stat. (AISTATS)}
@@ -1303,8 +1311,8 @@
       \strng{authorbibnamehash}{7914b871995b108d4d540667aafe4c11}
       \strng{authornamehash}{7914b871995b108d4d540667aafe4c11}
       \strng{authorfullhash}{cf4b34269bb0d774b0037cc918f6febe}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Brainlesion: Glioma, Multiple Sclerosis, Stroke and Traumatic Brain Injuries}
@@ -1339,8 +1347,8 @@
       \strng{authorbibnamehash}{da2c2ed968fc978bfca033119a5a93a6}
       \strng{authornamehash}{da2c2ed968fc978bfca033119a5a93a6}
       \strng{authorfullhash}{da2c2ed968fc978bfca033119a5a93a6}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{npj Digital Medicine}
@@ -1380,8 +1388,8 @@
       \strng{authorbibnamehash}{5329113239c1af2f73d1aa82275d622e}
       \strng{authornamehash}{5329113239c1af2f73d1aa82275d622e}
       \strng{authorfullhash}{b47d48188af9f040e84dfaf6ae5d35ab}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Signal Process. Mag.}
@@ -1416,8 +1424,8 @@
       \strng{authorbibnamehash}{494438a72725aa3e44a4a795334e4fe8}
       \strng{authornamehash}{494438a72725aa3e44a4a795334e4fe8}
       \strng{authorfullhash}{494438a72725aa3e44a4a795334e4fe8}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Adv. Neural Inf. Process. Syst. (NeurIPS)}
@@ -1444,8 +1452,8 @@
       \strng{authorbibnamehash}{4d8bf63261aefa96e8725c0b5785f3b3}
       \strng{authornamehash}{4d8bf63261aefa96e8725c0b5785f3b3}
       \strng{authorfullhash}{4d8bf63261aefa96e8725c0b5785f3b3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Found. Trends Theor. Comput. Sci.}
@@ -1482,8 +1490,8 @@
       \strng{authorbibnamehash}{b0b83a4a3cece87bdd8b45795f12e826}
       \strng{authornamehash}{b0b83a4a3cece87bdd8b45795f12e826}
       \strng{authorfullhash}{b0b83a4a3cece87bdd8b45795f12e826}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2007.14390}

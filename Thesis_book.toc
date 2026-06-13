@@ -98,18 +98,18 @@
 \contentsline {subsection}{\numberline {3.6.4}Key Parameters of a Federated Learning System}{98}{subsection.3.6.4}%
 \contentsline {subsection}{\numberline {3.6.5}Privacy and Security}{100}{subsection.3.6.5}%
 \contentsline {subsection}{\numberline {3.6.6}What Makes the Proposed System Distinctive}{101}{subsection.3.6.6}%
-\contentsline {section}{\numberline {3.7}Retrieval-Augmented Generation (RAG) Model}{102}{section.3.7}%
+\contentsline {section}{\numberline {3.7}Retrieval-Augmented Generation (RAG) Model}{101}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Motivation}{102}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3.7.2}Overview of the Proposed RAG Architecture}{102}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}Knowledge Base Construction}{103}{subsection.3.7.3}%
 \contentsline {subsection}{\numberline {3.7.4}Vector Embedding Generation}{104}{subsection.3.7.4}%
 \contentsline {subsection}{\numberline {3.7.5}FAISS Vector Database}{104}{subsection.3.7.5}%
-\contentsline {subsection}{\numberline {3.7.6}Large Language Model Integration}{105}{subsection.3.7.6}%
+\contentsline {subsection}{\numberline {3.7.6}Large Language Model Integration}{104}{subsection.3.7.6}%
 \contentsline {subsection}{\numberline {3.7.7}Query Processing Workflow}{105}{subsection.3.7.7}%
 \contentsline {subsection}{\numberline {3.7.8}Source Attribution and Explainability}{106}{subsection.3.7.8}%
 \contentsline {subsection}{\numberline {3.7.9}Advantages of the Proposed Approach}{106}{subsection.3.7.9}%
-\contentsline {section}{\numberline {3.8}Platform Architecture}{107}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}End-to-End System Architecture}{108}{subsection.3.8.1}%
+\contentsline {section}{\numberline {3.8}Platform Architecture}{106}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}End-to-End System Architecture}{107}{subsection.3.8.1}%
 \contentsline {subsubsection}{Architecture Visualization}{109}{subsubsection*.75}%
 \contentsline {subsection}{\numberline {3.8.2}Frontend}{109}{subsection.3.8.2}%
 \contentsline {paragraph}{Authentication \& Session Management}{113}{paragraph*.81}%
