@@ -253,13 +253,7 @@ U-Net variants for segmentation, Vision Transformers) can be substituted as
 the local model without modifying the federated infrastructure. This makes
 the system immediately applicable to new imaging tasks simply by swapping the
 model definition on the client side.
- 
-\textbf{Organ and Modality Agnosticism.} The system imposes no constraints
-on the nature of the input images. Training data may originate from any body
-region (chest, brain, abdomen, retina) and any imaging modality (X-ray, CT,
-MRI, ultrasound, fundus photography). The federated server is entirely
-unaware of image content; it operates solely on weight tensors.
- 
+  
 \textbf{Staged Data Integration.} The system incorporates a staged data
 feeding protocol that progressively increases each client's active training
 subset across federated rounds. This design reflects the clinical reality
