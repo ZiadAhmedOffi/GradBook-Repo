@@ -49,35 +49,7 @@ In the context of medical image analysis, ResNet50 is well-suited for extracting
 
 \input{chapters/Chapter3/DenseNet121}
 
-\subsection{YOLOv8 Model} \label{subsec:yolo}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{assets/yolo-arch.png}
-	\caption{Architecture of the YOLOv8 illustrating the successive stages of the model.}
-	\label{fig:yolo-arch}
-\end{figure}
-
-As shown in Figure~\ref{fig:yolo-arch}, the architecture is a "single-stage" pipeline that processes an X-ray in one forward pass, making it fast eno ugh for real-time clinical use. It is composed of three main parts:
-\begin{itemize}[]
-	\item \textbf{The Backbone (C2f Module):} This is the model's feature extractor. It uses the C2f (Cross-stage Partial Bottleneck with 2 convolutions) structure to scan the X-ray for textures. It learns to distinguish the high-density, sharp-edged appearance of Hardware (screws/plates) from the organic textures of Hand, Hip, Leg, or Shoulder bones.
-	\item \textbf{The Neck (PANet): }This part handles "feature fusion." In medical imaging, context is everything. The Neck combines fine details (like a jagged fracture line) with global shapes (the overall structure of a Hip vs. a Shoulder). This helps the model realize that a specific shadow is a Fractured region and not just a natural bone groove.
-	\item \textbf{The Head (Decoupled \& Anchor-Free): }Unlike older models, YOLOv8 uses a Decoupled Head, which separates the task of identifying the class (e.g., "Leg") from the task of drawing the box. It is Anchor-Free, meaning it predicts the center of the object directly. This is much better for medical use because fractures and surgical hardware don't come in "standard" box shapes.
-\end{itemize}
-
-During training, the model uses three mathematical "grades" to improve its accuracy:
-\begin{itemize}[]
-	\item \textbf{Classification Loss (BCE):} Using Binary Cross-Entropy, the model learns to accurately label its 6 classes. It ensures that 'Hardware' isn't confused with 'Fractured' bone and that the anatomical regions (Hand, Hip, etc.) are correctly identified.
-	\item \textbf{Box Localization Loss (CIoU): }This measures how well the predicted box overlaps with the actual object. For a long Leg bone or a small Hardware screw, CIoU adjusts the box's aspect ratio and center point to ensure a tight, perfect fit.
-	\item \textbf{Distribution Focal Loss (DFL): } This is critical for hairline fractures. Since the edges of a crack can be blurry on an X-ray, DFL predicts a probability distribution for the box boundaries, allowing the model to be more precise even when the image quality is low.
-\end{itemize}
-
-To ensure the model is both reliable and clinically safe, we evaluate its performance using three primary metrics: Precision, Recall, and mAP50. These indicators provide a comprehensive look at the model's accuracy, its ability to detect every injury, and its overall effectiveness in a real-world medical environment. By analyzing these figures, we can understand how the system balances the need for "Quality Control" with the "Safety Net" required to ensure no fracture goes unnoticed.
-
-Precision acts as the model's primary "Quality Control" mechanism. In the context of medical imaging, high precision ensures that when the model identifies an injury as "Fractured," there is a high statistical certainty that a break actually exists. By focusing on the accuracy of positive predictions, precision prevents doctors from being overwhelmed by "False Alarms," allowing them to trust that the alerts they receive are legitimate and actionable.
-
-While precision focuses on accuracy, Recall serves as the critical "Safety Net" for patient care. It measures the model's ability to find every single instance of a fracture within the dataset. Maintaining high recall is vital in a clinical setting because it ensures that no patient is accidentally sent home with an undiagnosed broken bone. In short, recall prioritizes "catching" every case, minimizing the risk of a dangerous false negative.
-
-The mAP50, or mean Average Precision at a 50\% overlap threshold, serves as the comprehensive "Overall Score" for the model’s performance. This metric provides the best single indicator of how well the model identifies both the specific anatomy and the underlying injuries simultaneously. By calculating the average precision across all categories at a standard detection threshold, mAP50 offers a balanced view of the system’s total effectiveness.
+\input{chapters/Chapter3/YOLO}
 
 \input{chapters/Chapter3/Routing Model}
 
@@ -240,6 +212,10 @@ These heatmaps are overlaid on the original chest X-ray images, enabling qualita
 \input{chapters/Chapter3/Lung Cancer Model}
 \FloatBarrier
 \input{chapters/Chapter3/Federated Learning}
+
+\input{chapters/Chapter3/RAG}
+
+\input{chapters/Chapter3/Backend Architecture}
 
 
 \section{Summary}
