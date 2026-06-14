@@ -18,45 +18,66 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Modular schematic layout detailing parameter extraction, input token construction, and feature routing pathways between the frozen base model and the target task head.}}{88}{figure.caption.53}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Two-row architecture of the DenseNet121-based medical image routing model.}}{91}{figure.caption.54}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Architectures and workflow investigated during the implementation of the routing model. Blue blocks represent inputs, green blocks denote processing stages, and orange blocks correspond to classification outputs.}}{95}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces High-level overview of the multi-stage chest disease classification pipeline.}}{98}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Chest X-ray images before and after preprocessing, highlighting improved contrast and reduced noise.}}{99}{figure.caption.57}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces The U-Net architecture, illustrating the encoder-decoder structure with skip connections that merge high-resolution features from the contracting path with upsampled features in the expansive path. This design is highly effective for precise medical image segmentation.}}{100}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Application of the U-Net segmentation mask. The original preprocessed Figure~\ref {fig:proc-cxr} is processed to produce the final segmented lung Figure~\ref {fig:segmented-lung}, which serves as the input for the classification stage}}{101}{figure.caption.59}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Grad-CAM visualizations highlighting regions contributing to model predictions.}}{101}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities.}}{102}{figure.caption.61}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice.}}{104}{figure.caption.65}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice.}}{104}{figure.caption.65}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques.}}{105}{figure.caption.66}%
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction.}}{108}{figure.caption.72}%
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Overall architecture of the proposed Retrieval-Augmented Generation (RAG) model. The user query is transformed into vector embeddings, relevant medical knowledge is retrieved from the FAISS vector database, and the retrieved context is supplied to the Qwen 2.5 language model to generate a grounded and source-aware response.}}{116}{figure.caption.78}%
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Query processing workflow of the proposed RAG system.}}{119}{figure.caption.80}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces End-to-end logical architecture of the proposed X-Fed NeuroScan framework, illustrating the interaction between users, backend services, AI models, explainability components, federated learning infrastructure, and data storage systems.}}{123}{figure.caption.85}%
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Deployment architecture of the proposed system showing the frontend application, backend services, model-serving infrastructure, federated learning server, databases, storage components, and external integrations.}}{124}{figure.caption.86}%
-\contentsline {figure}{\numberline {3.27}{\ignorespaces A visualization of the roles and pages implemented in the web application.}}{128}{figure.caption.94}%
-\contentsline {figure}{\numberline {3.28}{\ignorespaces An image of the Create Account interaction from the web application.}}{129}{figure.caption.96}%
-\contentsline {figure}{\numberline {3.29}{\ignorespaces An image of the Login interaction from the web application.}}{129}{figure.caption.97}%
-\contentsline {figure}{\numberline {3.30}{\ignorespaces An image of the Add User interaction from the web application.}}{131}{figure.caption.98}%
-\contentsline {figure}{\numberline {3.31}{\ignorespaces An image of the User Management tab from the web application.}}{132}{figure.caption.99}%
-\contentsline {figure}{\numberline {3.32}{\ignorespaces An image of the Add Hospital interaction from the web application.}}{133}{figure.caption.100}%
-\contentsline {figure}{\numberline {3.33}{\ignorespaces An image of the client hospital getting a confidential API key interaction from the web application.}}{133}{figure.caption.101}%
-\contentsline {figure}{\numberline {3.34}{\ignorespaces An image greeting page of the web application.}}{135}{figure.caption.103}%
-\contentsline {figure}{\numberline {3.35}{\ignorespaces An image of the system asking the user to upload a scan to diagnose.}}{135}{figure.caption.104}%
-\contentsline {figure}{\numberline {3.36}{\ignorespaces An image of the system showing the prediction history of the logged-in user.}}{135}{figure.caption.105}%
-\contentsline {figure}{\numberline {3.37}{\ignorespaces An image of the system showing the details of one of the user's historical predictions.}}{136}{figure.caption.106}%
-\contentsline {figure}{\numberline {3.38}{\ignorespaces One of the of the examples of using the system on the a lung cancer image.}}{136}{figure.caption.107}%
-\contentsline {figure}{\numberline {3.39}{\ignorespaces Another example of using the system on the a lung cancer image.}}{137}{figure.caption.108}%
-\contentsline {figure}{\numberline {3.40}{\ignorespaces An image of the Schedule Appointment interaction from the system.}}{138}{figure.caption.109}%
-\contentsline {figure}{\numberline {3.41}{\ignorespaces A simple visualization of the overall image processing pipeline from the backend's perspective.}}{142}{figure.caption.118}%
-\contentsline {figure}{\numberline {3.42}{\ignorespaces A simple visualization of the overall RAG architecture.}}{145}{figure.caption.123}%
-\contentsline {figure}{\numberline {3.43}{\ignorespaces Illustrative examples of the behavior of the retrieval-augmented generation (RAG) agent in different query scenarios. The system adapts its response strategy depending on whether the input is medical or general in nature.}}{147}{figure.caption.129}%
-\contentsline {figure}{\numberline {3.44}{\ignorespaces The federated learning dashboard of the web application.}}{150}{figure.caption.132}%
-\contentsline {figure}{\numberline {3.45}{\ignorespaces The federated learning management tab.}}{150}{figure.caption.133}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Overall architecture of the proposed chest disease multi-class classification system, illustrating the sequential pipeline from raw CXR acquisition through preprocessing, lung segmentation, deep classification, and visual explainability.}}{101}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Representative chest radiograph samples from each of the four target diagnostic classes. The subtle visual differences between COVID-19 and Pneumonia are clear, underscoring the difficulty of the classification task.}}{105}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Comparison of a Pneumonia chest radiograph before (left) and after (right).}}{107}{figure.caption.73}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Comparison of a Tuberculosis chest radiograph before (left) and after (right) the preprocessing pipeline.}}{107}{figure.caption.74}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Representative image–mask pair from the Darwin lung segmentation dataset. The mask precisely delineates both lung fields including regions behind the cardiac shadow.}}{108}{figure.caption.76}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces U-Net architecture implemented for lung segmentation. The contracting path (left) captures contextual information through successive down sampling, while the expansive path (right) enables precise localization via skip connections. Tensor shapes are annotated at each level.}}{111}{figure.caption.85}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces U-Net segmentation results. From left to right: the preprocessed input radiograph, the predicted binary lung mask, and the masked output image passed to the classification stage.}}{113}{figure.caption.89}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Proposed DenseNet121 OVR classification model architecture. The base network produces a 1024-dimensional feature vector via Global Average Pooling, which is refined through the custom classification head before producing independent sigmoid probability scores for each diagnostic class.}}{115}{figure.caption.91}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Grad-CAM visualization results for Pneumonia representative case. The saliency maps confirm that the model attends to pathologically relevant lung regions.}}{118}{figure.caption.100}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Grad-CAM visualization results for Tuberculosis cases. The upper-lower lobe localization of saliency for TB cases confirms the model's ability to recognize TB-specific radiological patterns.}}{118}{figure.caption.101}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities.}}{120}{figure.caption.102}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice.}}{122}{figure.caption.106}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice.}}{122}{figure.caption.106}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques.}}{123}{figure.caption.107}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction.}}{126}{figure.caption.113}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Overall architecture of the proposed Retrieval-Augmented Generation (RAG) model. The user query is transformed into vector embeddings, relevant medical knowledge is retrieved from the FAISS vector database, and the retrieved context is supplied to the Qwen 2.5 language model to generate a grounded and source-aware response.}}{134}{figure.caption.119}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Query processing workflow of the proposed RAG system.}}{136}{figure.caption.121}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces End-to-end logical architecture of the proposed X-Fed NeuroScan framework, illustrating the interaction between users, backend services, AI models, explainability components, federated learning infrastructure, and data storage systems.}}{141}{figure.caption.126}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Deployment architecture of the proposed system showing the frontend application, backend services, model-serving infrastructure, federated learning server, databases, storage components, and external integrations.}}{141}{figure.caption.127}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces A visualization of the roles and pages implemented in the web application.}}{145}{figure.caption.135}%
+\contentsline {figure}{\numberline {3.33}{\ignorespaces An image of the Create Account interaction from the web application.}}{147}{figure.caption.137}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces An image of the Login interaction from the web application.}}{147}{figure.caption.138}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces An image of the Add User interaction from the web application.}}{148}{figure.caption.139}%
+\contentsline {figure}{\numberline {3.36}{\ignorespaces An image of the User Management tab from the web application.}}{149}{figure.caption.140}%
+\contentsline {figure}{\numberline {3.37}{\ignorespaces An image of the Add Hospital interaction from the web application.}}{150}{figure.caption.141}%
+\contentsline {figure}{\numberline {3.38}{\ignorespaces An image of the client hospital getting a confidential API key interaction from the web application.}}{151}{figure.caption.142}%
+\contentsline {figure}{\numberline {3.39}{\ignorespaces An image greeting page of the web application.}}{152}{figure.caption.144}%
+\contentsline {figure}{\numberline {3.40}{\ignorespaces An image of the system asking the user to upload a scan to diagnose.}}{153}{figure.caption.145}%
+\contentsline {figure}{\numberline {3.41}{\ignorespaces An image of the system showing the prediction history of the logged-in user.}}{153}{figure.caption.146}%
+\contentsline {figure}{\numberline {3.42}{\ignorespaces An image of the system showing the details of one of the user's historical predictions.}}{153}{figure.caption.147}%
+\contentsline {figure}{\numberline {3.43}{\ignorespaces One of the of the examples of using the system on the a lung cancer image.}}{154}{figure.caption.148}%
+\contentsline {figure}{\numberline {3.44}{\ignorespaces Another example of using the system on the a lung cancer image.}}{154}{figure.caption.149}%
+\contentsline {figure}{\numberline {3.45}{\ignorespaces An image of the Schedule Appointment interaction from the system.}}{155}{figure.caption.150}%
+\contentsline {figure}{\numberline {3.46}{\ignorespaces A simple visualization of the overall image processing pipeline from the backend's perspective.}}{159}{figure.caption.159}%
+\contentsline {figure}{\numberline {3.47}{\ignorespaces A simple visualization of the overall RAG architecture.}}{162}{figure.caption.164}%
+\contentsline {figure}{\numberline {3.48}{\ignorespaces Illustrative examples of the behavior of the retrieval-augmented generation (RAG) agent in different query scenarios. The system adapts its response strategy depending on whether the input is medical or general in nature.}}{164}{figure.caption.170}%
+\contentsline {figure}{\numberline {3.49}{\ignorespaces The federated learning dashboard of the web application.}}{167}{figure.caption.173}%
+\contentsline {figure}{\numberline {3.50}{\ignorespaces The federated learning management tab.}}{167}{figure.caption.174}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribution of the routing dataset classes.}}{158}{figure.caption.137}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Summary of the routing dataset distribution.}}{158}{figure.caption.137}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison of classification accuracy across all evaluated routing architectures.}}{160}{figure.caption.140}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Training and validation performance curves for all evaluated routing model architectures. Each figure illustrates the evolution of accuracy and loss throughout the training process and provides insight into model convergence, optimization stability, and generalization behavior.}}{162}{figure.caption.141}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Confusion matrices for all evaluated routing models across the three classes.}}{163}{figure.caption.142}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Normalized confusion matrix of the centralized YOLOv8n model.}}{165}{figure.caption.144}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Precision-Recall curve of the centralized YOLOv8n model.}}{166}{figure.caption.145}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribution of the routing dataset classes.}}{175}{figure.caption.178}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Summary of the routing dataset distribution.}}{175}{figure.caption.178}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison of classification accuracy across all evaluated routing architectures.}}{177}{figure.caption.181}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Training and validation performance curves for all evaluated routing model architectures. Each figure illustrates the evolution of accuracy and loss throughout the training process and provides insight into model convergence, optimization stability, and generalization behavior.}}{179}{figure.caption.182}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Confusion matrices for all evaluated routing models across the three classes.}}{180}{figure.caption.183}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Learning curves for DenseNet121 SoftMax.}}{185}{figure.caption.196}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Confusion matrix for DenseNet121 SoftMax.}}{185}{figure.caption.197}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Classification report for DenseNet121 SoftMax.}}{185}{figure.caption.198}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Learning curves for ResNet50V2 SoftMax.}}{186}{figure.caption.201}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Confusion matrix for ResNet50V2 SoftMax.}}{187}{figure.caption.202}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Classification report for ResNet50V2 SoftMax.}}{187}{figure.caption.203}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Learning curves for EfficientNet SoftMax.}}{188}{figure.caption.206}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Confusion matrix for EfficientNet SoftMax.}}{188}{figure.caption.207}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Classification report for EfficientNet SoftMax.}}{189}{figure.caption.208}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Learning curves for ResNet50 OVR.}}{191}{figure.caption.213}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Confusion matrix for ResNet50 OVR.}}{191}{figure.caption.214}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Learning curves for DenseNet121 OVR.}}{192}{figure.caption.217}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Confusion matrix for DenseNet121 OVR.}}{192}{figure.caption.218}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Federated Learning architecture for privacy-preserving classification.}}{195}{figure.caption.222}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Confusion matrix for Federated DenseNet121 (2 clients, Accuracy: 95.57\%).}}{196}{figure.caption.225}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Confusion matrix for Federated DenseNet121 (4 clients, Accuracy: 93.22\%).}}{196}{figure.caption.226}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Normalized confusion matrix of the centralized YOLOv8n model.}}{198}{figure.caption.228}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Precision-Recall curve of the centralized YOLOv8n model.}}{198}{figure.caption.229}%
 \addvspace {10\p@ }

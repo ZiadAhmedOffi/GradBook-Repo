@@ -1,7 +1,7 @@
 \contentsline {section}{Acknowledgments}{I}{chapter*.2}%
 \contentsline {section}{Abstract}{II}{chapter*.3}%
 \contentsline {section}{List of Tables}{VII}{chapter*.3}%
-\contentsline {section}{List of Figures}{X}{chapter*.3}%
+\contentsline {section}{List of Figures}{XI}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Problem Definition}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Challenges in Medical Image Analysis}{5}{section.1.2}%
@@ -73,99 +73,155 @@
 \contentsline {subsection}{\numberline {3.3.2}Problem Statement}{90}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Model Architecture}{91}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Routing Model Implementation}{93}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Chest Disease Classification Model}{97}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Motivation}{97}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Problem Statement}{97}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Model Architecture}{98}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Lung Cancer Detection Model}{100}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Motivation}{101}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Problem Statement}{101}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Model Architecture}{102}{subsection.3.5.3}%
-\contentsline {subsubsection}{Mask-to-Bounding-Box Conversion}{103}{subsubsection*.62}%
-\contentsline {subsubsection}{Dataset Preparation and Splitting}{103}{subsubsection*.63}%
-\contentsline {subsubsection}{YOLOv8 Detection Architecture}{103}{subsubsection*.64}%
-\contentsline {subsection}{\numberline {3.5.4}Interpretability Considerations}{104}{subsection.3.5.4}%
-\contentsline {subsection}{\numberline {3.5.5}CT Model Implementation}{105}{subsection.3.5.5}%
-\contentsline {paragraph}{Step 1: Mask Loading}{106}{paragraph*.67}%
-\contentsline {paragraph}{Step 2: Contour Extraction}{106}{paragraph*.68}%
-\contentsline {paragraph}{Step 3: Bounding Box Generation}{106}{paragraph*.69}%
-\contentsline {paragraph}{Step 4: YOLO Coordinate Conversion}{107}{paragraph*.70}%
-\contentsline {paragraph}{Step 5: Label File Generation}{107}{paragraph*.71}%
-\contentsline {subsection}{\numberline {3.5.6}Dataset Organization}{107}{subsection.3.5.6}%
-\contentsline {paragraph}{Precision}{109}{paragraph*.73}%
-\contentsline {paragraph}{Recall}{109}{paragraph*.74}%
-\contentsline {paragraph}{Mean Average Precision (mAP)}{109}{paragraph*.75}%
-\contentsline {section}{\numberline {3.6}Federated Learning}{110}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Concept and Motivation}{110}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Federated Learning in Medical Imaging}{110}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}The Federated Averaging Algorithm}{111}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Key Parameters of a Federated Learning System}{112}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Privacy and Security}{112}{subsection.3.6.5}%
-\contentsline {subsection}{\numberline {3.6.6}What Makes the Proposed System Distinctive}{114}{subsection.3.6.6}%
-\contentsline {section}{\numberline {3.7}Retrieval-Augmented Generation (RAG) Model}{115}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Motivation}{115}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Overview of the Proposed RAG Architecture}{116}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Knowledge Base Construction}{116}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}Vector Embedding Generation}{117}{subsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.7.5}FAISS Vector Database}{117}{subsection.3.7.5}%
-\contentsline {subsection}{\numberline {3.7.6}Large Language Model Integration}{118}{subsection.3.7.6}%
-\contentsline {subsection}{\numberline {3.7.7}Query Processing Workflow}{118}{subsection.3.7.7}%
-\contentsline {subsection}{\numberline {3.7.8}Source Attribution and Explainability}{119}{subsection.3.7.8}%
-\contentsline {subsection}{\numberline {3.7.9}Advantages of the Proposed Approach}{119}{subsection.3.7.9}%
-\contentsline {section}{\numberline {3.8}Platform Architecture}{120}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}End-to-End System Architecture}{121}{subsection.3.8.1}%
-\contentsline {subsubsection}{Architecture Visualization}{121}{subsubsection*.84}%
-\contentsline {subsection}{\numberline {3.8.2}Frontend}{123}{subsection.3.8.2}%
-\contentsline {paragraph}{Authentication \& Session Management}{127}{paragraph*.90}%
-\contentsline {paragraph}{Medical Image Analysis}{127}{paragraph*.91}%
-\contentsline {paragraph}{Federated Learning Management}{127}{paragraph*.92}%
-\contentsline {paragraph}{AI Chatbot (RAG)}{127}{paragraph*.93}%
-\contentsline {subsection}{\numberline {3.8.3}Centralized Backend (Spring Boot)}{127}{subsection.3.8.3}%
-\contentsline {subsubsection}{Medical Image Pipeline}{134}{subsubsection*.102}%
-\contentsline {paragraph}{Real-Time WebSocket}{137}{paragraph*.110}%
-\contentsline {paragraph}{Email Service}{137}{paragraph*.111}%
-\contentsline {paragraph}{Core API Modules}{137}{paragraph*.112}%
-\contentsline {subsection}{\numberline {3.8.4}ML Service - ModelBackend}{140}{subsection.3.8.4}%
-\contentsline {paragraph}{Unified Routing}{141}{paragraph*.115}%
-\contentsline {paragraph}{Chest Pipeline}{141}{paragraph*.116}%
-\contentsline {paragraph}{Lung Cancer Pipeline}{141}{paragraph*.117}%
-\contentsline {paragraph}{Standard RAG Pipeline}{143}{paragraph*.119}%
-\contentsline {paragraph}{Categories}{144}{paragraph*.120}%
-\contentsline {paragraph}{Model Architecture}{144}{paragraph*.122}%
-\contentsline {paragraph}{Bilingual Tokenizer}{144}{paragraph*.124}%
-\contentsline {paragraph}{Training Configuration}{146}{paragraph*.125}%
-\contentsline {paragraph}{LLM Configuration}{146}{paragraph*.126}%
-\contentsline {paragraph}{Prompt Design}{146}{paragraph*.128}%
-\contentsline {subsection}{\numberline {3.8.5}Federated Learning Server}{148}{subsection.3.8.5}%
-\contentsline {subsection}{\numberline {3.8.6}End-to-End Data Flows}{152}{subsection.3.8.6}%
-\contentsline {section}{\numberline {3.9}Summary}{153}{section.3.9}%
-\contentsline {chapter}{\numberline {4}Results and Evaluation}{156}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Routing Model Results}{157}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Implementation Environment and Development Tools}{157}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Dataset Preparation and Experimental Setup}{158}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Learning Rate Optimization}{159}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Comparative Evaluation of Candidate Architectures}{159}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Training and Validation Behavior}{160}{subsection.4.1.5}%
-\contentsline {subsection}{\numberline {4.1.6}Confusion Matrix Analysis}{161}{subsection.4.1.6}%
-\contentsline {subsection}{\numberline {4.1.7}Discussion}{161}{subsection.4.1.7}%
-\contentsline {section}{\numberline {4.2}CT Scans Model Results}{164}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Experimental Setup}{164}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Centralized Model Results}{164}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Federated Learning Model Results}{165}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Comparative Analysis}{166}{subsection.4.2.4}%
-\contentsline {chapter}{\numberline {5}Conclusion}{169}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Achievement of Project Objectives}{169}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Discussion of the Proposed Framework}{170}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Discussion of Individual System Components}{171}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Routing Model}{171}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Chest Disease Classification Model}{172}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Lung Cancer Detection Model}{172}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Explainable Artificial Intelligence Component}{173}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Federated Learning Component}{173}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Practical and Clinical Significance}{174}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Project Contributions}{174}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Challenges Encountered During Development}{174}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Limitations}{175}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Future Work}{176}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Final Remarks}{177}{section.5.9}%
-\contentsline {chapter}{References}{178}{chapter*.149}%
+\contentsline {section}{\numberline {3.4}Chest Disease Detection Model}{97}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Motivation}{98}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Problem Statement}{99}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Model Architecture Overview}{100}{subsection.3.4.3}%
+\contentsline {paragraph}{Step 1: Image Preprocessing}{100}{paragraph*.57}%
+\contentsline {paragraph}{Stage 2: Lung Segmentation}{100}{paragraph*.58}%
+\contentsline {paragraph}{Classification Model}{100}{paragraph*.59}%
+\contentsline {paragraph}{Stage 4: Explainability via Grad-CAM}{101}{paragraph*.60}%
+\contentsline {subsection}{\numberline {3.4.4}Dataset Description}{101}{subsection.3.4.4}%
+\contentsline {subsubsection}{Dataset 1: COVID-19 Radiography Database}{102}{subsubsection*.61}%
+\contentsline {subsubsection}{Dataset 2: Chest X-Ray Multiclass Dataset with Non-X-Ray Anomalies}{102}{subsubsection*.62}%
+\contentsline {subsubsection}{Combined Dataset and Class Distribution}{103}{subsubsection*.64}%
+\contentsline {subsubsection}{Image Preprocessing Pipeline}{103}{subsubsection*.67}%
+\contentsline {paragraph}{Step 1: Greyscale Loading}{103}{paragraph*.68}%
+\contentsline {paragraph}{Step 2: Contrast Limited Adaptive Histogram Equalization (CLAHE)}{103}{paragraph*.69}%
+\contentsline {paragraph}{Step 3: Gaussian Smoothing}{106}{paragraph*.70}%
+\contentsline {paragraph}{Step 4: Min-Max Normalization}{106}{paragraph*.71}%
+\contentsline {paragraph}{Greyscale to RGB Conversion}{106}{paragraph*.72}%
+\contentsline {subsubsection}{Lung Segmentation Dataset}{107}{subsubsection*.75}%
+\contentsline {subsection}{\numberline {3.4.5}Segmentation Model Details}{108}{subsection.3.4.5}%
+\contentsline {subsubsection}{Rationale for Lung Segmentation}{108}{subsubsection*.77}%
+\contentsline {subsubsection}{U-Net Architecture}{109}{subsubsection*.78}%
+\contentsline {paragraph}{Convolutional Block}{109}{paragraph*.79}%
+\contentsline {paragraph}{Encoder (Contracting Path)}{109}{paragraph*.80}%
+\contentsline {paragraph}{Bridge (Bottleneck)}{110}{paragraph*.81}%
+\contentsline {paragraph}{Decoder (Expansive Path)}{110}{paragraph*.82}%
+\contentsline {paragraph}{Output}{110}{paragraph*.83}%
+\contentsline {subsubsection}{Loss Functions}{110}{subsubsection*.86}%
+\contentsline {subsubsection}{Training Configurations}{112}{subsubsection*.87}%
+\contentsline {subsubsection}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{112}{subsubsection*.90}%
+\contentsline {subsection}{\numberline {3.4.6}Grad-CAM Integration}{116}{subsection.3.4.6}%
+\contentsline {subsubsection}{Rationale for Explainability}{116}{subsubsection*.92}%
+\contentsline {subsubsection}{Gradient-weighted Class Activation Mapping (Grad-CAM)}{116}{subsubsection*.93}%
+\contentsline {paragraph}{Step 1: Compute Class-Discriminative Gradient}{116}{paragraph*.94}%
+\contentsline {paragraph}{Step 2: Global Average Pool the Gradients}{117}{paragraph*.95}%
+\contentsline {paragraph}{Step 3: Compute Weighted Combination and Apply ReLU}{117}{paragraph*.96}%
+\contentsline {paragraph}{Step 4: Resize and Normalize}{117}{paragraph*.97}%
+\contentsline {paragraph}{Step 5: Color Mapping and Overlay}{117}{paragraph*.98}%
+\contentsline {subsubsection}{OVR Grad-CAM for Multi-Class Visualization}{118}{subsubsection*.99}%
+\contentsline {section}{\numberline {3.5}Lung Cancer Detection Model}{119}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Motivation}{119}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Problem Statement}{119}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Model Architecture}{120}{subsection.3.5.3}%
+\contentsline {subsubsection}{Mask-to-Bounding-Box Conversion}{120}{subsubsection*.103}%
+\contentsline {subsubsection}{Dataset Preparation and Splitting}{121}{subsubsection*.104}%
+\contentsline {subsubsection}{YOLOv8 Detection Architecture}{121}{subsubsection*.105}%
+\contentsline {subsection}{\numberline {3.5.4}Interpretability Considerations}{122}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}CT Model Implementation}{122}{subsection.3.5.5}%
+\contentsline {paragraph}{Step 1: Mask Loading}{124}{paragraph*.108}%
+\contentsline {paragraph}{Step 2: Contour Extraction}{124}{paragraph*.109}%
+\contentsline {paragraph}{Step 3: Bounding Box Generation}{124}{paragraph*.110}%
+\contentsline {paragraph}{Step 4: YOLO Coordinate Conversion}{124}{paragraph*.111}%
+\contentsline {paragraph}{Step 5: Label File Generation}{125}{paragraph*.112}%
+\contentsline {subsection}{\numberline {3.5.6}Dataset Organization}{125}{subsection.3.5.6}%
+\contentsline {paragraph}{Precision}{127}{paragraph*.114}%
+\contentsline {paragraph}{Recall}{127}{paragraph*.115}%
+\contentsline {paragraph}{Mean Average Precision (mAP)}{127}{paragraph*.116}%
+\contentsline {section}{\numberline {3.6}Federated Learning}{128}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Concept and Motivation}{128}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Federated Learning in Medical Imaging}{128}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}The Federated Averaging Algorithm}{129}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Key Parameters of a Federated Learning System}{129}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Privacy and Security}{131}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}What Makes the Proposed System Distinctive}{132}{subsection.3.6.6}%
+\contentsline {section}{\numberline {3.7}Retrieval-Augmented Generation (RAG) Model}{132}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Motivation}{133}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Overview of the Proposed RAG Architecture}{133}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Knowledge Base Construction}{134}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Vector Embedding Generation}{135}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}FAISS Vector Database}{135}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3.7.6}Large Language Model Integration}{135}{subsection.3.7.6}%
+\contentsline {subsection}{\numberline {3.7.7}Query Processing Workflow}{136}{subsection.3.7.7}%
+\contentsline {subsection}{\numberline {3.7.8}Source Attribution and Explainability}{137}{subsection.3.7.8}%
+\contentsline {subsection}{\numberline {3.7.9}Advantages of the Proposed Approach}{137}{subsection.3.7.9}%
+\contentsline {section}{\numberline {3.8}Platform Architecture}{137}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}End-to-End System Architecture}{138}{subsection.3.8.1}%
+\contentsline {subsubsection}{Architecture Visualization}{140}{subsubsection*.125}%
+\contentsline {subsection}{\numberline {3.8.2}Frontend}{140}{subsection.3.8.2}%
+\contentsline {paragraph}{Authentication \& Session Management}{144}{paragraph*.131}%
+\contentsline {paragraph}{Medical Image Analysis}{144}{paragraph*.132}%
+\contentsline {paragraph}{Federated Learning Management}{145}{paragraph*.133}%
+\contentsline {paragraph}{AI Chatbot (RAG)}{145}{paragraph*.134}%
+\contentsline {subsection}{\numberline {3.8.3}Centralized Backend (Spring Boot)}{145}{subsection.3.8.3}%
+\contentsline {subsubsection}{Medical Image Pipeline}{152}{subsubsection*.143}%
+\contentsline {paragraph}{Real-Time WebSocket}{155}{paragraph*.151}%
+\contentsline {paragraph}{Email Service}{156}{paragraph*.152}%
+\contentsline {paragraph}{Core API Modules}{156}{paragraph*.153}%
+\contentsline {subsection}{\numberline {3.8.4}ML Service - ModelBackend}{156}{subsection.3.8.4}%
+\contentsline {paragraph}{Unified Routing}{158}{paragraph*.156}%
+\contentsline {paragraph}{Chest Pipeline}{158}{paragraph*.157}%
+\contentsline {paragraph}{Lung Cancer Pipeline}{158}{paragraph*.158}%
+\contentsline {paragraph}{Standard RAG Pipeline}{160}{paragraph*.160}%
+\contentsline {paragraph}{Categories}{161}{paragraph*.161}%
+\contentsline {paragraph}{Model Architecture}{161}{paragraph*.163}%
+\contentsline {paragraph}{Bilingual Tokenizer}{161}{paragraph*.165}%
+\contentsline {paragraph}{Training Configuration}{163}{paragraph*.166}%
+\contentsline {paragraph}{LLM Configuration}{163}{paragraph*.167}%
+\contentsline {paragraph}{Prompt Design}{163}{paragraph*.169}%
+\contentsline {subsection}{\numberline {3.8.5}Federated Learning Server}{165}{subsection.3.8.5}%
+\contentsline {subsection}{\numberline {3.8.6}End-to-End Data Flows}{169}{subsection.3.8.6}%
+\contentsline {section}{\numberline {3.9}Summary}{170}{section.3.9}%
+\contentsline {chapter}{\numberline {4}Results and Evaluation}{173}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Routing Model Results}{174}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Implementation Environment and Development Tools}{174}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Dataset Preparation and Experimental Setup}{175}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Learning Rate Optimization}{176}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Comparative Evaluation of Candidate Architectures}{176}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Training and Validation Behavior}{177}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Confusion Matrix Analysis}{178}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Discussion}{178}{subsection.4.1.7}%
+\contentsline {section}{\numberline {4.2}Chest Disease Classification Experiments}{180}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Implementation Environment and Development Tools}{180}{subsection.4.2.1}%
+\contentsline {subsubsection}{Hardware Environment}{181}{subsubsection*.184}%
+\contentsline {subsubsection}{Software Frameworks and Libraries}{181}{subsubsection*.186}%
+\contentsline {subsubsection}{Development Workflow}{181}{subsubsection*.188}%
+\contentsline {subsection}{\numberline {4.2.2}Dataset Preparation and Experimental Setup}{182}{subsection.4.2.2}%
+\contentsline {subsubsection}{Dataset Splits and Class Distribution}{182}{subsubsection*.189}%
+\contentsline {subsubsection}{Data Augmentation Strategy}{183}{subsubsection*.191}%
+\contentsline {subsubsection}{Class Weighting}{183}{subsubsection*.192}%
+\contentsline {subsubsection}{Evaluation Metrics}{183}{subsubsection*.193}%
+\contentsline {subsection}{\numberline {4.2.3}Single-Label Classification Results (SoftMax Approach)}{183}{subsection.4.2.3}%
+\contentsline {subsubsection}{DenseNet121 (SoftMax, Two-Phase Fine-Tuning)}{184}{subsubsection*.194}%
+\contentsline {subsubsection}{ResNet50V2 (Softmax, Partial Fine-Tuning)}{186}{subsubsection*.199}%
+\contentsline {subsubsection}{EfficientNet (SoftMax)}{188}{subsubsection*.204}%
+\contentsline {subsubsection}{VGG-19 (SoftMax)}{189}{subsubsection*.209}%
+\contentsline {subsection}{\numberline {4.2.4}One-vs-Rest Classification Results (OVR / Sigmoid Approach)}{190}{subsection.4.2.4}%
+\contentsline {subsubsection}{ResNet50 OVR (Sigmoid)}{190}{subsubsection*.211}%
+\contentsline {subsubsection}{DenseNet121 OVR (Sigmoid)}{191}{subsubsection*.215}%
+\contentsline {subsection}{\numberline {4.2.5}Federated Learning Results}{193}{subsection.4.2.5}%
+\contentsline {subsubsection}{Federated Learning Framework and Architecture}{193}{subsubsection*.220}%
+\contentsline {subsubsection}{Comparison of Client Configurations}{194}{subsubsection*.223}%
+\contentsline {section}{\numberline {4.3}CT Scans Model Results}{196}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Experimental Setup}{197}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Centralized Model Results}{197}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Federated Learning Model Results}{199}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Comparative Analysis}{199}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{202}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Achievement of Project Objectives}{202}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Discussion of the Proposed Framework}{203}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Discussion of Individual System Components}{204}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Routing Model}{204}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Chest Disease Classification Model}{205}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Lung Cancer Detection Model}{205}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Explainable Artificial Intelligence Component}{206}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Federated Learning Component}{206}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Practical and Clinical Significance}{207}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Project Contributions}{207}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Challenges Encountered During Development}{207}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Limitations}{208}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Future Work}{209}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Final Remarks}{210}{section.5.9}%
+\contentsline {chapter}{References}{211}{chapter*.233}%

@@ -1,0 +1,702 @@
+% Relax float placement constraints for this section to improve page utilization
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+\setcounter{topnumber}{9}
+\setcounter{bottomnumber}{9}
+\setcounter{totalnumber}{20}
+
+\section{Chest Disease Classification Experiments}
+
+This section documents the experimental results obtained from the evaluation of various deep learning architectures for chest disease classification. Both centralized and federated learning paradigms are explored to assess performance, generalization, and privacy-preserving capabilities.
+
+\subsection{Implementation Environment and Development Tools}
+
+This section documents the hardware infrastructure, software environment, and development frameworks employed throughout the experimental evaluation of the proposed chest disease classification system. Reproducibility of results depends critically on the precise specification of the computational environment, and accordingly all relevant configurations are reported below.
+
+\subsubsection{Hardware Environment}
+
+All centralized training experiments (preprocessing, U-Net segmentation, DenseNet121, ResNet50V2, EfficientNet, and VGG-19 classification models) were conducted on a cloud-based GPU accelerated computational environment. The hardware specifications and computed class weights are summarized in Table~\ref{tab:chest_hardware} and Table~\ref{tab:chest_computed_weights}, respectively.
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+    \centering
+    \begin{minipage}[c]{0.52\textwidth}
+        \centering
+        \caption{Hardware specifications.}
+        \label{tab:chest_hardware}
+        \small
+        \begin{tabularx}{\textwidth}{|l|X|}
+            \hline
+            \textbf{Component} & \textbf{Specification} \\
+            \hline
+            Compute Platform & Colab Pro \\
+            \hline
+            GPU & NVIDIA T4 (15 GB) \\
+            \hline
+            CPU & Intel Xeon (2 vCPUs) \\
+            \hline
+            System RAM & 12--51 GB \\
+            \hline
+            Storage & Google Drive \\
+            \hline
+            OS & Ubuntu 20.04 LTS \\
+            \hline
+        \end{tabularx}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.44\textwidth}
+        \centering
+        \caption{Computed class weights.}
+        \label{tab:chest_computed_weights}
+        \small
+        \begin{tabularx}{\textwidth}{|l|c|X|}
+            \hline
+            \textbf{Class} & $N_k$ & \textbf{Weight $w_k$} \\
+            \hline
+            Normal & 4,870 & $\sim$0.78 \\
+            \hline
+            Pneu. & 4,221 & $\sim$0.90 \\
+            \hline
+            COVID & 3,192 & $\sim$1.19 \\
+            \hline
+            TB & 2,946 & $\sim$1.29 \\
+            \hline
+        \end{tabularx}
+    \end{minipage}
+\end{table}
+}
+
+The Federated Learning simulation experiments required more intensive multi-process resource management due to the Ray-based client parallelism used by the Flower framework. Resources were allocated per client using Ray's resource reservation mechanism, as detailed in Section~\ref{sec:federated_results}.
+
+\subsubsection{Software Frameworks and Libraries}
+
+The implementation stack is summarized in Table~\ref{tab:chest_software}. All dependencies were installed within the Colab environment, with version pinning applied where reproducibility was critical.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Software framework and library stack.}
+	\label{tab:chest_software}
+	\small
+	\begin{tabularx}{\textwidth}{|l|l|X|}
+		\hline
+		\textbf{Library / Framework} & \textbf{Version / Source} & \textbf{Purpose} \\
+		\hline
+		Python & 3.10 & Primary programming language \\
+		\hline
+		TensorFlow / Keras & 2.15.1 & Centralized model training (U-Net, DenseNet, ResNet, EfficientNet, VGG) \\
+		\hline
+		PyTorch & 2.1.0 & Federated Learning model backbone (DenseNet121) \\
+		\hline
+		Torchvision & 0.16.1 & Pre-trained model weights, image transforms \\
+		\hline
+		Flower (flwr) & 1.4 (simulation) & Federated Learning framework (FedAvg strategy) \\
+		\hline
+		Ray & 2.1 & Distributed simulation backend for Flower \\
+		\hline
+		OpenCV (cv2) & 4.8.2 & Image preprocessing (CLAHE, Gaussian blur, normalization) \\
+		\hline
+		NumPy & 1.24.0 & Numerical computation \\
+		\hline
+		Scikit-learn & 1.3.0 & Classification reports, confusion matrices, AUC computation \\
+		\hline
+		Matplotlib & 3.7.1 & Training history plots, visualization \\
+		\hline
+		tqdm & 4.66.1 & Training progress bars \\
+		\hline
+		Pandas & 2.0.2 & Misclassification analysis and CSV export \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+\subsubsection{Development Workflow}
+
+All experiments were developed iteratively in Jupyter Notebooks within the Google Colab environment, with datasets mounted from Google Drive. The local preprocessing pipeline (CLAHE, Gaussian blur, normalization) was executed on a local machine equipped with an NVIDIA GPU, and the resulting processed dataset was uploaded to Google Drive for cloud-based training. Model checkpoints, final weights, and evaluation artefacts were saved both locally and to Drive for persistence across Colab session resets.
+
+Mixed precision training (float16 for computations, float32 for master weights) was enabled throughout using TensorFlow's Automatic Mixed Precision (AMP) for TensorFlow experiments, providing approximately 2--3$\times$ speed improvement on Tensor Core-equipped NVIDIA GPUs with negligible accuracy impact.
+
+\subsection{Dataset Preparation and Experimental Setup}
+
+\subsubsection{Dataset Splits and Class Distribution}
+
+The full composite dataset of 17,637 images was partitioned into training, validation, and test sets. The training set (15,229 images) was used exclusively for gradient-based parameter updates. The validation set was used for early stopping, learning rate scheduling, and model selection. The test set was kept strictly held out throughout all training and validation activities and was accessed only once for final performance evaluation.
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+    \centering
+    \begin{minipage}[c]{0.52\textwidth}
+        \centering
+        \caption{Complete dataset split.}
+        \label{tab:chest_dataset_splits}
+        \small
+        \begin{tabularx}{\textwidth}{|l|c|c|c|c|}
+            \hline
+            \textbf{Class} & \textbf{Train} & \textbf{Val} & \textbf{Test} & \textbf{Total} \\
+            \hline
+            Normal & 4,870 & $\sim$610 & $\sim$610 & $\sim$6,090 \\
+            \hline
+            Pneu. & 4,221 & $\sim$528 & $\sim$528 & $\sim$5,277 \\
+            \hline
+            COVID & 3,192 & $\sim$400 & $\sim$400 & $\sim$3,992 \\
+            \hline
+            TB & 2,946 & $\sim$368 & $\sim$368 & $\sim$3,682 \\
+            \hline
+            \textbf{Total} & \textbf{15,229} & \textbf{1,906} & \textbf{1,906} & \textbf{19,041} \\
+            \hline
+        \end{tabularx}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.44\textwidth}
+        \centering
+        \caption{Data augmentation parameters.}
+        \label{tab:chest_augmentation}
+        \small
+        \begin{tabularx}{\textwidth}{|l|l|X|}
+            \hline
+            \textbf{Aug.} & \textbf{Param.} & \textbf{Just.} \\
+            \hline
+            Rotation & $\pm$15$^\circ$ & Position \\
+            \hline
+            W-Shift & $\pm$10\% & Lat. Trans. \\
+            \hline
+            H-Shift & $\pm$10\% & C-C Var. \\
+            \hline
+            Zoom & $\pm$10\% & SID Var. \\
+            \hline
+            H-Flip & $p=0.5$ & Symmetry \\
+            \hline
+            Fill & Zero & Textures \\
+            \hline
+        \end{tabularx}
+    \end{minipage}
+\end{table}
+}
+
+\textbf{Note on Class Imbalance:} The training set exhibits a moderate class imbalance, with Normal (32\%) substantially over-represented relative to Tuberculosis (19.3\%). Inverse-frequency class weights are applied during training for all models to counteract this imbalance and prevent the classifier from developing a bias toward more frequent classes.
+
+\subsubsection{Data Augmentation Strategy}
+
+Online data augmentation is applied exclusively to the training set using Keras's \texttt{ImageDataGenerator} API (for TensorFlow experiments) and \texttt{torchvision.transforms} (for Federated Learning experiments). The augmentation policy was carefully selected to apply only transformations that are plausible within the domain of chest radiography --- preserving diagnostic realism while increasing data diversity.
+
+Notably, vertical flipping and brightness/contrast jitter are excluded to preserve diagnostic realism and avoid conflict with CLAHE preprocessing. Augmentations are applied only at training time; validation and test generators apply only the rescaling operation.
+
+\subsubsection{Class Weighting}
+
+To further address class imbalance beyond augmentation, inverse-frequency class weights are computed from the training set label distribution and passed to the model's \texttt{fit()} call. For each class $k$:
+\begin{equation}
+	w_k = \frac{N_{\text{total}}}{K \cdot N_k}
+	\label{eq:chest_weights}
+\end{equation}
+where $K=4$, $N_{\text{total}}=15,229$, and $N_k$ is the number of training samples of class $k$. The computed weights for the training set are summarized in Table~\ref{tab:chest_computed_weights}.
+
+\subsubsection{Evaluation Metrics}
+
+Model performance is evaluated using a comprehensive set of metrics reflecting both overall and class-specific diagnostic performance:
+\begin{itemize}
+    \item \textbf{Accuracy:} $\frac{TP+TN}{TP+TN+FP+FN}$ --- overall proportion of correct predictions.
+    \item \textbf{Precision (Positive Predictive Value):} $\frac{TP}{TP+FP}$ --- fraction of positive predictions that are correct.
+    \item \textbf{Recall (Sensitivity):} $\frac{TP}{TP+FN}$ --- fraction of true positives correctly detected.
+    \item \textbf{F1-Score:} $2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$ --- harmonic mean of precision and recall.
+    \item \textbf{AUC-ROC:} Area under the Receiver Operating Characteristic curve (for OVR models, evaluated per class and macro-averaged).
+    \item \textbf{Confusion Matrix:} A matrix showing the breakdown of correct and incorrect predictions across all class pairs.
+\end{itemize}
+
+\subsection{Single-Label Classification Results (SoftMax Approach)}
+
+The SoftMax approach treats the four-class chest disease classification as a standard single-label multi-class problem: each image is assigned exactly one diagnostic class, and the output layer applies the SoftMax function to produce a valid probability distribution over the four classes:
+\begin{equation}
+	\hat{y}_k = \frac{e^{z_k}}{\sum_{j=1}^K e^{z_j}}, \quad \sum_{k=1}^K \hat{y}_k = 1
+\end{equation}
+The predicted class is $\hat{k} = \arg\max_k \hat{y}_k$, and the loss function is sparse categorical cross-entropy:
+\begin{equation}
+	\mathcal{L}_{\text{CE}} = -\log \hat{y}_{y_{\text{true}}}
+\end{equation}
+
+\subsubsection{DenseNet121 (SoftMax, Two-Phase Fine-Tuning)}
+
+The first evaluated architecture is DenseNet121 with SoftMax output, trained using a two-phase fine-tuning strategy designed to maximize the transfer learning benefit while progressively adapting the network to the chest disease classification task. Key hyperparameters are detailed in Table~\ref{tab:densenet_softmax_params}. The learning curves, confusion matrix, and classification report for this model are shown in Figure~\ref{fig:densenet_softmax_curves}, Figure~\ref{fig:densenet_softmax_cm}, and Figure~\ref{fig:densenet_softmax_report}, respectively.
+
+\textbf{Phase 1 --- Feature Extraction:} The DenseNet121 base is initialized with ImageNet weights. The last 100 layers are made trainable while all preceding layers are frozen. This selective unfreezing ensures that the early-stage feature extractors (which learn generic low-level features such as edges and textures --- applicable across domains) are preserved, while the deeper, task-specific layers are fine-tuned for chest pathology discrimination. The custom classification head (GAP $\to$ BN $\to$ Dense(512) $\to$ Dropout(0.4) $\to$ Dense(256) $\to$ Dropout(0.3) $\to$ Dense(4, SoftMax)) is trained end-to-end for a maximum of 40 epochs with the Adam optimizer at an initial learning rate of $10^{-4}$.
+
+\textbf{Phase 2 --- Deep Fine-Tuning:} The best Phase 1 checkpoint is loaded, and the trainable scope is extended to the last 200 layers of the DenseNet121 base. The learning rate is significantly reduced to $10^{-6}$ (100$\times$ smaller) to ensure that the pre-trained weights are refined gently rather than disrupted. A maximum of 10 additional epochs are run. This two-phase strategy prevents the "catastrophic forgetting" of ImageNet representations that can occur when fine-tuning with an aggressive learning rate.
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+	\centering
+	\caption{DenseNet121 SoftMax --- Key Hyperparameters.}
+	\label{tab:densenet_softmax_params}
+	\small
+	\begin{tabularx}{0.9\textwidth}{|X|l|l|}
+		\hline
+		\textbf{Parameter} & \textbf{Phase 1} & \textbf{Phase 2} \\
+		\hline
+		Trainable layers & Last 100 & Last 200 \\
+		\hline
+		Optimizer & Adam & Adam \\
+		\hline
+		Learning rate & $10^{-4}$ & $10^{-6}$ \\
+		\hline
+		Max epochs & 40 & 10 \\
+		\hline
+		Loss & \multicolumn{2}{l|}{Sparse Categorical Cross-Entropy} \\
+		\hline
+		Batch size & 32 & 32 \\
+		\hline
+		Early stopping & \multicolumn{2}{l|}{patience=8, monitor=val\_accuracy} \\
+		\hline
+		LR reduction & \multicolumn{2}{l|}{ReduceLROnPlateau (factor=0.2, patience=3)} \\
+		\hline
+	\end{tabularx}
+\end{table}
+}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth, height=7cm, keepaspectratio]{assets/chest_model/image1.png}
+	\caption{Learning curves for DenseNet121 SoftMax.}
+	\label{fig:densenet_softmax_curves}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image2.png}
+	\caption{Confusion matrix for DenseNet121 SoftMax.}
+	\label{fig:densenet_softmax_cm}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth, height=9cm, keepaspectratio]{assets/chest_model/image3.png}
+	\caption{Classification report for DenseNet121 SoftMax.}
+	\label{fig:densenet_softmax_report}
+\end{figure}
+
+\subsubsection{ResNet50V2 (Softmax, Partial Fine-Tuning)}
+
+The second SoftMax baseline employs ResNet50V2 (He et al., 2016, V2 with pre-activation residual blocks), a 50-layer residual network pre-trained on ImageNet. ResNet50V2 introduces significant architectural improvements over the original ResNet50, including full pre-activation order (BN $\to$ ReLU $\to$ Conv rather than Conv $\to$ BN $\to$ ReLU), which leads to improved gradient flow and training stability. The model follows a partial fine-tuning strategy in which the last 40 layers are unfrozen for task-specific adaptation while the earlier layers retain their ImageNet representations.
+
+The classification head follows the same structural template as DenseNet121: GAP $\to$ Dense(512, ReLU) $\to$ Dropout(0.4) $\to$ Dense(256, ReLU) $\to$ Dense(4, SoftMax). A notably lower learning rate of $10^{-4}$ is used from the outset, reflecting the more conservative fine-tuning approach appropriate for ResNet50V2's architecture. Key hyperparameters are listed in Table~\ref{tab:resnet_softmax_params}, with experimental results shown in Figure~\ref{fig:resnet_softmax_curves}, Figure~\ref{fig:resnet_softmax_cm}, and Figure~\ref{fig:resnet_softmax_report}. Training runs for a maximum of 30 epochs with early stopping (patience=7).
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+	\centering
+	\caption{ResNet50V2 SoftMax --- Key Hyperparameters.}
+	\label{tab:resnet_softmax_params}
+	\small
+	\begin{tabularx}{0.85\textwidth}{|X|l|}
+		\hline
+		\textbf{Parameter} & \textbf{Value} \\
+		\hline
+		Base architecture & ResNet50V2 (ImageNet pre-trained) \\
+		\hline
+		Trainable layers & Last 40 layers + head \\
+		\hline
+		Frozen layers & First $\sim$145 layers \\
+		\hline
+		Optimizer & Adam ($10^{-4}$) \\
+		\hline
+		Max epochs & 30 \\
+		\hline
+		Loss & Sparse Categorical Cross-Entropy \\
+		\hline
+		Batch size & 32 \\
+		\hline
+		Early stopping & patience=7, monitor=val\_accuracy \\
+		\hline
+		LR reduction & ReduceLROnPlateau (factor=0.2, patience=3) \\
+		\hline
+	\end{tabularx}
+\end{table}
+}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth, height=7cm, keepaspectratio]{assets/chest_model/image6.png}
+	\caption{Learning curves for ResNet50V2 SoftMax.}
+	\label{fig:resnet_softmax_curves}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image7.png}
+	\caption{Confusion matrix for ResNet50V2 SoftMax.}
+	\label{fig:resnet_softmax_cm}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth, height=9cm, keepaspectratio]{assets/chest_model/image8.png}
+	\caption{Classification report for ResNet50V2 SoftMax.}
+	\label{fig:resnet_softmax_report}
+\end{figure}
+
+\FloatBarrier
+
+\subsubsection{EfficientNet (SoftMax)}
+
+EfficientNet scales network depth, width, and resolution jointly using a compound scaling coefficient, achieving state-of-the-art accuracy with fewer parameters than comparable architectures. The same classification head structure and training strategy are applied. Hyperparameters and results for EfficientNet are provided in Table~\ref{tab:efficientnet_softmax_params}, Figure~\ref{fig:efficientnet_softmax_curves}, Figure~\ref{fig:efficientnet_softmax_cm}, and Figure~\ref{fig:efficientnet_softmax_report}.
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+	\centering
+	\caption{EfficientNet SoftMax --- Key Hyperparameters.}
+	\label{tab:efficientnet_softmax_params}
+	\small
+	\begin{tabularx}{0.85\textwidth}{|X|l|}
+		\hline
+		\textbf{Parameter} & \textbf{Value} \\
+		\hline
+		Base architecture & EfficientNetB0 (ImageNet pre-trained) \\
+		\hline
+		Trainable layers & Last 200 layers \\
+		\hline
+		Optimizer & Adam ($10^{-4}$) \\
+		\hline
+		Max epochs & 30 \\
+		\hline
+		Loss & Sparse Categorical Cross-Entropy \\
+		\hline
+		Batch size & 32 \\
+		\hline
+		Early stopping & patience=7, monitor=val\_accuracy \\
+		\hline
+		LR reduction & ReduceLROnPlateau (factor=0.2, patience=3) \\
+		\hline
+	\end{tabularx}
+\end{table}
+}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth, height=7cm, keepaspectratio]{assets/chest_model/image9.png}
+	\caption{Learning curves for EfficientNet SoftMax.}
+	\label{fig:efficientnet_softmax_curves}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image10.png}
+	\caption{Confusion matrix for EfficientNet SoftMax.}
+	\label{fig:efficientnet_softmax_cm}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth, height=9cm, keepaspectratio]{assets/chest_model/image11.png}
+	\caption{Classification report for EfficientNet SoftMax.}
+	\label{fig:efficientnet_softmax_report}
+\end{figure}
+
+\FloatBarrier
+
+\subsubsection{VGG-19 (SoftMax)}
+
+VGG-19 is a deep convolutional network with 19 weight layers characterized by a uniform architecture of convolutions and max-pooling operations. Despite its comparatively large parameter count, it remains a strong baseline for medical image classification due to its simple and well-understood feature hierarchy. Hyperparameters for VGG-19 are summarized in Table~\ref{tab:vgg_softmax_params}.
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+	\centering
+	\caption{VGG-19 SoftMax --- Key Hyperparameters.}
+	\label{tab:vgg_softmax_params}
+	\small
+	\begin{tabularx}{0.85\textwidth}{|X|l|}
+		\hline
+		\textbf{Parameter} & \textbf{Value} \\
+		\hline
+		Base architecture & VGG-19 (ImageNet pre-trained) \\
+		\hline
+		Trainable layers & Last 5 conv layers + head \\
+		\hline
+		Optimizer & Adam ($10^{-5}$) \\
+		\hline
+		Max epochs & 30 \\
+		\hline
+		Loss & Sparse Categorical Cross-Entropy \\
+		\hline
+		Batch size & 32 \\
+		\hline
+		Early stopping & patience=7, monitor=val\_accuracy \\
+		\hline
+		LR reduction & ReduceLROnPlateau (factor=0.2, patience=3) \\
+		\hline
+	\end{tabularx}
+\end{table}
+}
+
+\textit{Note: Detailed performance plots for VGG-19 were omitted to prioritize more modern architectures, but the model achieved comparable baseline performance.}
+
+\subsection{One-vs-Rest Classification Results (OVR / Sigmoid Approach)}
+
+In the One-vs-Rest (OVR) paradigm, the four-class classification problem is decomposed into four independent binary classification sub-problems. Each output neuron learns to distinguish class $k$ from "all other classes" simultaneously. The output layer applies the sigmoid activation function independently to each logit, producing uncoupled probability scores:
+\begin{equation}
+	\hat{y}_k = \sigma(z_k) = \frac{1}{1 + e^{-z_k}}, \quad k \in \{1,2,3,4\}
+\end{equation}
+A threshold of 0.5 is applied to produce the predicted class: $\hat{k} = \arg\max_k \hat{y}_k$ for single-label inference (the class with the highest sigmoid score is selected when exactly one prediction is required). The training loss is Binary Cross-Entropy computed independently per class and per sample:
+\begin{equation}
+	\mathcal{L}_{\text{OVR}} = -\frac{1}{NK} \sum_{n=1}^N \sum_{k=1}^K \left[ y_{nk} \log \hat{y}_{nk} + (1 - y_{nk}) \log (1 - \hat{y}_{nk}) \right]
+\end{equation}
+Model selection is performed by monitoring the multi-label AUC-ROC metric on the validation set, rather than accuracy, because AUC is more informative for imbalanced multi-label settings.
+
+\subsubsection{ResNet50 OVR (Sigmoid)}
+
+The ResNet50 OVR model uses ResNet50 (original V1 architecture) as the backbone, with the last 40 layers unfrozen for fine-tuning. This is a more targeted fine-tuning scope than the SoftMax ResNet50V2 variant, focusing on the highest-level residual blocks that encode the most abstract and class-discriminative representations. The classification head follows the OVR template: GAP $\to$ BN $\to$ Dense(512, ReLU) $\to$ Dropout(0.4) $\to$ Dense(256, ReLU) $\to$ Dropout(0.3) $\to$ Dense(4, Sigmoid). Implementation details and results are given in Table~\ref{tab:resnet_ovr_params}, Figure~\ref{fig:resnet_ovr_curves}, Figure~\ref{fig:resnet_ovr_cm}, and Table~\ref{tab:resnet_ovr_report}.
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+	\centering
+	\caption{ResNet50 OVR --- Key Hyperparameters.}
+	\label{tab:resnet_ovr_params}
+	\small
+	\begin{tabularx}{0.85\textwidth}{|X|l|}
+		\hline
+		\textbf{Parameter} & \textbf{Value} \\
+		\hline
+		Base architecture & ResNet50 (ImageNet pre-trained) \\
+		\hline
+		Trainable layers & Last 40 layers \\
+		\hline
+		Optimizer & Adam ($10^{-4}$) \\
+		\hline
+		Max epochs & 40 \\
+		\hline
+		Loss & Binary Cross-Entropy \\
+		\hline
+		Output activation & Sigmoid (independent) \\
+		\hline
+		Primary metric & AUC (multi-label) \\
+		\hline
+		Batch size & 32 \\
+		\hline
+	\end{tabularx}
+\end{table}
+}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth, height=7cm, keepaspectratio]{assets/chest_model/image13.png}
+	\caption{Learning curves for ResNet50 OVR.}
+	\label{fig:resnet_ovr_curves}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image14.png}
+	\caption{Confusion matrix for ResNet50 OVR.}
+	\label{fig:resnet_ovr_cm}
+\end{figure}
+
+\subsubsection{DenseNet121 OVR (Sigmoid)}
+
+The DenseNet121 OVR model is the primary proposed classifier of this work and applies the full OVR formulation to the DenseNet121 backbone. The last 100 layers of DenseNet121 are unfrozen, providing a broader fine-tuning scope that accommodates the dense connectivity pattern of DenseNet. The model is trained with binary cross-entropy loss and AUC as the primary monitoring metric. Parameters and performance are summarized in Table~\ref{tab:densenet_ovr_params}, Figure~\ref{fig:densenet_ovr_curves}, Figure~\ref{fig:densenet_ovr_cm}, and Table~\ref{tab:densenet_ovr_report}.
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+	\centering
+	\caption{DenseNet121 OVR --- Key Hyperparameters.}
+	\label{tab:densenet_ovr_params}
+	\small
+	\begin{tabularx}{0.85\textwidth}{|X|l|}
+		\hline
+		\textbf{Parameter} & \textbf{Value} \\
+		\hline
+		Base architecture & DenseNet121 (ImageNet pre-trained) \\
+		\hline
+		Trainable layers & Last 100 layers \\
+		\hline
+		Optimizer & Adam ($10^{-4}$) \\
+		\hline
+		Max epochs & 40 \\
+		\hline
+		Loss & Binary Cross-Entropy \\
+		\hline
+		Output activation & Sigmoid (independent) \\
+		\hline
+		Primary metric & AUC (multi-label) \\
+		\hline
+		Batch size & 32 \\
+		\hline
+	\end{tabularx}
+\end{table}
+}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth, height=7cm, keepaspectratio]{assets/chest_model/image15.png}
+	\caption{Learning curves for DenseNet121 OVR.}
+	\label{fig:densenet_ovr_curves}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image16.png}
+	\caption{Confusion matrix for DenseNet121 OVR.}
+	\label{fig:densenet_ovr_cm}
+\end{figure}
+
+\FloatBarrier
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+    \centering
+    \begin{minipage}[c]{0.48\textwidth}
+        \centering
+        \caption{ResNet50 OVR Report.}
+        \label{tab:resnet_ovr_report}
+        \small
+        \begin{tabularx}{\textwidth}{|X|c|c|c|}
+            \hline
+            \textbf{Class} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} \\
+            \hline
+            COVID & 1.00 & 1.00 & 1.00 \\
+            \hline
+            Normal & 0.93 & 0.97 & 0.95 \\
+            \hline
+            Pneu. & 0.99 & 0.98 & 0.98 \\
+            \hline
+            TB & 0.97 & 0.91 & 0.94 \\
+            \hline
+            \textbf{Acc.} & \multicolumn{3}{c|}{\textbf{0.96}} \\
+            \hline
+        \end{tabularx}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.48\textwidth}
+        \centering
+        \caption{DenseNet121 OVR Report.}
+        \label{tab:densenet_ovr_report}
+        \small
+        \begin{tabularx}{\textwidth}{|X|c|c|c|}
+            \hline
+            \textbf{Class} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} \\
+            \hline
+            COVID & 1.00 & 1.00 & 1.00 \\
+            \hline
+            Normal & 0.98 & 0.99 & 0.98 \\
+            \hline
+            Pneu. & 0.99 & 0.99 & 0.99 \\
+            \hline
+            TB & 0.98 & 0.97 & 0.98 \\
+            \hline
+            \textbf{Acc.} & \multicolumn{3}{c|}{\textbf{0.98}} \\
+            \hline
+        \end{tabularx}
+    \end{minipage}
+\end{table}
+}
+
+
+\subsection{Federated Learning Results}
+\label{sec:federated_results}
+
+Federated Learning (FL) is a distributed machine learning paradigm that enables model training across multiple decentralized data holders (clients) without requiring the centralized aggregation of raw data. In the chest disease classification context, each client represents a hypothetical hospital or imaging center holding a local partition of the radiograph dataset. The trained global model achieves competitive performance while preserving the privacy of each client's patient data --- a critical requirement in real-world clinical deployments.
+
+\subsubsection{Federated Learning Framework and Architecture}
+
+The FL pipeline is implemented using the Flower (\texttt{flwr}) framework with a simulation-based execution model powered by the Ray distributed computing library. This allows all clients and the central server to be simulated within a single physical machine for experimental purposes, with resource isolation enforced by Ray's CPU/GPU reservation system.
+
+The global model architecture is identical to the centralized DenseNet121 OVR model described previously --- a DenseNet121 backbone with ImageNet pre-trained weights and a custom classification head. However, the FL implementation uses PyTorch rather than TensorFlow, enabling more granular control over parameter serialization and the client–server communication protocol required by Flower.
+
+\textbf{Data Partitioning Strategy:} The global training set (15,229 images) is partitioned across clients using a round-robin (interleaved) assignment strategy:
+\begin{equation}
+	D_i = \{x_j, y_j\} \in D_{\text{train}} : j \pmod C = i
+	\label{eq:fl_partition}
+\end{equation}
+where $D_i$ is the local dataset of client $i$, $C$ is the total number of clients, and $i \in \{0, \dots, C-1\}$. This produces approximately IID (Independent and Identically Distributed) data partitions, since every $C$-th sample is assigned to the same client, preserving the overall class distribution within each client's local dataset. Each client shares the same global validation set for local model evaluation.
+
+\textbf{FedAvg Aggregation Strategy:} Model updates from all clients are aggregated at the central server using the FedAvg (Federated Averaging) algorithm. At the end of each communication round $r$, the server receives updated model parameter vectors $w_r^i$ from all clients and computes the weighted average:
+\begin{equation}
+	w_{r+1} = \sum_{i=1}^C \frac{|D_i|}{N_{\text{train}}} w_r^i
+\end{equation}
+Since the data partitioning is balanced (each client holds approximately $N_{\text{train}}/C$ samples), the FedAvg reduces to a simple arithmetic mean: $w_{r+1} = \frac{1}{C} \sum w_r^i$. The aggregated global model is then broadcast to all clients as the initialization for the next round's local training.
+
+\textbf{Local Training Protocol:} At each communication round, each client performs 3 local epochs of SGD-style training on its local partition before returning the updated parameters to the server. The local loss function is \texttt{BCEWithLogitsLoss} with class weights (computed identically to Equation~\ref{eq:chest_weights} but from the full global training set, ensuring consistent weighting across all clients). The local optimizer is Adam with learning rate $10^{-4}$, operating only on the classifier head parameters.
+
+\textbf{Global Early Stopping:} A custom strategy extends Flower's standard FedAvg by implementing server-side global early stopping based on the aggregated validation loss across all clients. If the global validation loss fails to improve for 3 consecutive communication rounds, the simulation is terminated early, and the best global model weights are preserved.
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+	\centering
+	\caption{Common hyperparameters across FL experiments.}
+	\label{tab:fl_hyperparams}
+	\small
+	\begin{tabularx}{0.85\textwidth}{|X|l|}
+		\hline
+		\textbf{Parameter} & \textbf{Value} \\
+		\hline
+		Global model backbone & DenseNet121 (PyTorch) \\
+		\hline
+		Communication rounds & 15 (maximum) \\
+		\hline
+		Local epochs per round & 3 \\
+		\hline
+		Local batch size & 32 \\
+		\hline
+		Local optimiser & Adam (lr=$10^{-4}$) \\
+		\hline
+		Aggregation strategy & FedAvg \\
+		\hline
+		Global early stopping & patience=3 \\
+		\hline
+		Data partitioning & Round-robin IID \\
+		\hline
+	\end{tabularx}
+\end{table}
+}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\linewidth, height=8.5cm, keepaspectratio]{assets/chest_model/image18.png}
+	\caption{Federated Learning architecture for privacy-preserving classification.}
+	\label{fig:fl_architecture}
+\end{figure}
+
+\subsubsection{Comparison of Client Configurations}
+
+Experiments were conducted with 2, 3, and 4 clients to assess the impact of data fragmentation.
+
+\textbf{Federated Learning with 2 Clients:} In the two-client scenario, the global training set is split equally between two clients, each holding approximately 7,615 images. With only two clients, each client's local dataset is the largest of all federated configurations, providing the richest local learning signal. As expected, the two-client scenario achieves the highest federated accuracy of 95.57\%, demonstrating that competitive centralized performance can be approached when each client holds a sufficiently large and representative local dataset.
+
+\textbf{Federated Learning with 3 Clients:} In the three-client configuration, the global training data is distributed across three clients, each holding approximately 5,077 images. The test accuracy of 94.13\% represents a modest decrease of 1.44 percentage points relative to the two-client scenario, reflecting the reduced local dataset size and the additional averaging noise introduced by aggregating three independent gradient trajectories.
+
+\textbf{Federated Learning with 4 Clients:} The four-client configuration is the most extensively distributed scenario explored, representative of a small consortium of four collaborating hospitals. Despite each client holding only $\sim$25\% of the total training data, the four-client federated model achieves a test accuracy of 93.22\%. This modest accuracy degradation confirms the robustness of the FedAvg aggregation strategy. Summary results across configurations are provided in Table~\ref{tab:fl_summary}, with confusion matrices for the 2-client and 4-client cases shown in Figure~\ref{fig:fl_2c_cm} and Figure~\ref{fig:fl_4c_cm}, respectively.
+
+{\renewcommand{\arraystretch}{1.2}
+\begin{table}[htbp]
+	\centering
+	\caption{Summary of FL test accuracy across configurations.}
+	\label{tab:fl_summary}
+	\small
+	\begin{tabularx}{0.9\textwidth}{|l|c|c|c|X|}
+		\hline
+		\textbf{Config} & \textbf{Clients} & \textbf{Images/Client} & \textbf{Accuracy} & \textbf{Drop vs 2-C} \\
+		\hline
+		FL-2 & 2 & $\sim$7,615 & 95.57\% & --- \\
+		\hline
+		FL-3 & 3 & $\sim$5,077 & 94.13\% & -1.44 pp \\
+		\hline
+		FL-4 & 4 & $\sim$3,807 & 93.22\% & -2.35 pp \\
+		\hline
+	\end{tabularx}
+\end{table}
+}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image19.png}
+	\caption{Confusion matrix for Federated DenseNet121 (2 clients, Accuracy: 95.57\%).}
+	\label{fig:fl_2c_cm}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image20.png}
+	\caption{Confusion matrix for Federated DenseNet121 (4 clients, Accuracy: 93.22\%).}
+	\label{fig:fl_4c_cm}
+\end{figure}
+
+\FloatBarrier
+
+A notable finding is that even the lowest-performing configuration (FL-4, 93.22\%) remains a clinically viable classifier, demonstrating that federated learning can be deployed in practice without prohibitive accuracy losses. The graceful accuracy degradation across configurations validates the proposed FL framework as a promising approach for privacy-preserving multi-institution deployment of chest disease screening models.
+
+\FloatBarrier
