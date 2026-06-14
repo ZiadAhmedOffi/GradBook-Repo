@@ -89,67 +89,144 @@ The chest, encompassing the thoracic cavity, houses vital organs such as the lun
 Accurate detection of these diseases via deep learning (DL) models on CXR images is crucial for timely intervention, especially in resource-limited settings \cite{ref8} \cite{ref9}.
 
 \subsection{Target Diseases and Their Radiological Characteristics}
+\label{subsec:target_diseases}
 
-This study focuses on three major respiratory diseases that can be detected through chest X-ray imaging: pneumonia, COVID-19, and tuberculosis. These diseases represent significant public health concerns worldwide and are among the most commonly investigated conditions in computer-aided diagnostic systems. Although all three diseases affect the respiratory system, each exhibits distinct pathological characteristics and radiographic features that can assist clinicians in diagnosis. Understanding their symptoms and appearance in chest X-ray images is essential for accurate interpretation and effective disease detection.
+This study focuses on four major respiratory and thoracic pathological conditions that pose substantial public health concerns worldwide and are among the most heavily investigated diseases in computer-aided diagnostic (CAD) systems: pneumonia, Coronavirus Disease 2019 (COVID-19), tuberculosis (TB), and lung cancer. These diseases represent complex diagnostic challenges due to the diversity of their clinical presentations, etiologies, and progressive courses. While pneumonia, COVID-19, and tuberculosis primarily affect the parenchymal lung architecture and are traditionally evaluated using projectional Chest X-ray (CXR) imaging, lung cancer involves neoplastic tissue transformation that requires cross-sectional imaging through Computed Tomography (CT) scans of the chest for accurate screening, characterization, and staging. 
+
+Although these conditions share overlapping clinical respiratory indicators, they exhibit fundamentally distinct pathological, cellular, and architectural alterations. These manifestations transform into specific radiographic features that can guide deep learning algorithms and clinical practitioners toward precise, differential classification. Understanding the comprehensive pathophysiology, clinical symptomatology, and radiological presentations of these target diseases across different imaging modalities is an absolute prerequisite for engineering robust multi-class automated classification systems.
 
 \subsubsection*{Pneumonia}
 
-Pneumonia is an inflammatory condition of the lungs that primarily affects the alveoli, the small air sacs responsible for gas exchange. The disease is commonly caused by bacterial, viral, or fungal infections, leading to the accumulation of fluid or pus within the affected lung tissue. Pneumonia remains one of the leading causes of respiratory-related morbidity and mortality, particularly among young children, elderly individuals, and immunocompromised patients.
+Pneumonia is an acute inflammatory condition of the lung parenchyma that primarily involves the alveoli, respiratory bronchioles, and interstitial spaces. The condition is triggered by a wide array of pathogenic microorganisms, including bacterial strains (most prominently \textit{Streptococcus pneumoniae}, \textit{Haemophilus influenzae}, and \textit{Mycoplasma pneumoniae}), viral agents (such as influenza viruses and respiratory syncytial virus), and fungal species (such as \textit{Pneumocystis jirovecii}, typically observed in immunocompromised individuals). The entry of these pathogens into the lower respiratory tract incites an intense local immune response, characterized by the recruitment of polymorphonuclear leukocytes, hyperemic vascular engorgement, and cellular exudation. Consequently, the normally air-filled alveolar spaces become progressively inundated with inflammatory exudate, pus, cellular debris, and fibrinous fluid, a pathophysiological state known as consolidation. This cellular process heavily compromises regional gas exchange, producing ventilation-perfusion ($V/Q$) mismatching and subsequent hypoxemia.
 
-Common symptoms of pneumonia include:
+The clinical presentation of pneumonia varies extensively based on the patient's age, immune status, and the specific causative pathogen. Common clinical symptoms include:
 
 \begin{itemize}
-	\item Persistent cough, often accompanied by mucus production.
-	\item Fever and chills.
-	\item Shortness of breath.
-	\item Chest pain, especially during breathing or coughing.
-	\item Fatigue and general weakness.
-	\item Rapid breathing in severe cases.
+	\item \textbf{Persistent Productive Cough:} Often accompanied by the expectoration of thick, purulent, or rust-colored mucus/sputum resulting from active alveolar exudation.
+	\item \textbf{High Fever and Rigors:} Acute onset of elevated core body temperature accompanied by shaking chills, mediated by pyrogenic cytokines (such as IL-1, IL-6, and TNF-$\alpha$) acting on the hypothalamus.
+	\item \textbf{Exertional and Rest Shortness of Breath (Dyspnea):} A direct consequence of decreased lung compliance and reduced functional alveolar surface area for blood oxygenation.
+	\item \textbf{Pleuritic Chest Pain:} A sharp, localized pain that intensifies during deep inspiration or coughing, indicating that the inflammatory process has spread to the visceral and parietal pleura.
+	\item \textbf{Systemic Constitutional Symptoms:} Marked fatigue, generalized malaise, myalgia, arthralgia, and anorexia due to systemic inflammatory cytokine release.
+	\item \textbf{Tachypnea and Tachycardia:} Elevated respiratory rate ($>20$ breaths per minute) and heart rate ($>100$ beats per minute) as compensatory mechanisms to sustain systemic oxygen delivery.
 \end{itemize}
 
-In chest X-ray images, pneumonia typically appears as areas of increased opacity, commonly referred to as consolidations or infiltrates. These opacities occur due to the accumulation of inflammatory fluids within the alveoli, reducing the normal air content of the lungs. Depending on the severity and type of infection, the abnormalities may be localized to a single lobe (lobar pneumonia) or spread across multiple regions of the lungs. The affected areas generally appear whiter than healthy lung tissue, which normally appears dark due to the presence of air.
+On standard projectional chest radiographs, pneumonia manifests primarily as areas of increased attenuation and opacity where the normal black, air-filled pulmonary parenchyma is replaced by white, fluid-dense consolidation. Structurally, pneumonia presents in three main radiographic distributions:
+
+\begin{enumerate}
+	\item \textbf{Lobar Pneumonia:} Characterized by dense, homogeneous opacification sharply delimited by anatomical interlobar fissures, typically signifying a bacterial etiology like \textit{Streptococcus pneumoniae}. Within these consolidations, the "air bronchogram" sign is frequently visible, where air-filled, dark bronchi stand out against the surrounding opacified, fluid-filled alveoli.
+	\item \textbf{Bronchopneumonia (Lobular Pneumonia):} Appears as patchy, ill-defined, multifocal opacities distributed along the bronchial tree, often bilateral and basal, reflecting a centrilobular inflammatory process that originates in the bronchioles and spreads to adjacent alveoli.
+	\item \textbf{Interstitial Pneumonia:} Characterized by diffuse, linear, reticular, or fine reticulonodular infiltrates spreading throughout the lung interstitium, often leaving the alveoli relatively clear. This pattern is classically associated with viral or atypical bacterial pathogens.
+\end{enumerate}
 
 \subsubsection*{COVID-19}
 
-Coronavirus Disease 2019 (COVID-19) is a highly contagious respiratory illness caused by the SARS-CoV-2 virus. Since its emergence, COVID-19 has posed substantial challenges to healthcare systems worldwide due to its rapid transmission and potentially severe respiratory complications.
+Coronavirus Disease 2019 (COVID-19) is a highly infectious respiratory illness caused by the Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2), a novel positive-sense single-stranded RNA virus. The virus primarily targets host cells via the binding of its surface spike ($S$) glycoprotein to the Angiotensin-Converting Enzyme 2 (ACE2) receptors, which are highly expressed on the surface of Type II alveolar epithelial cells (pneumocytes). Following viral entry and replication, the host experiences direct cellular injury alongside an aggressive immune activation that can devolve into a dysregulated "cytokine storm." This hyperinflammatory state leads to diffuse alveolar damage, hyaline membrane formation, severe endothelial cell injury, vascular microthrombosis, and marked interstitial edema, culminating in Acute Respiratory Distress Syndrome (ARDS) in severe cases.
 
-The clinical presentation of COVID-19 varies considerably among patients, ranging from asymptomatic infections to severe respiratory failure. Common symptoms include:
+The clinical profile of COVID-19 is exceptionally broad, exhibiting substantial variation from completely asymptomatic infections to critical, life-threatening respiratory failure. The predominant clinical symptoms include:
 
 \begin{itemize}
-	\item Fever.
-	\item Dry cough.
-	\item Fatigue.
-	\item Shortness of breath.
-	\item Loss of taste or smell.
-	\item Sore throat.
-	\item Muscle and body aches.
-	\item Headache.
+	\item \textbf{Pyrexia (Fever):} Often fluctuating or sustained, acting as a hallmark sign of systemic immune activation.
+	\item \textbf{Persistent Non-productive (Dry) Cough:} Triggered by upper and lower airway irritation and neural sensitization, without significant early sputum production.
+	\item \textbf{Profound Asthenia (Fatigue):} Severe exhaustion and generalized bodily weakness that outlasts the acute febrile phase.
+	\item \textbf{Progressive Dyspnea:} Ranging from mild breathlessness during minimal exertion to acute respiratory distress requiring invasive mechanical ventilation.
+	\item \textbf{Sensory Distortions (Anosmia and Ageusia):} A distinct neurological manifestation involving the sudden, temporary loss or impairment of olfactory and gustatory functions due to sustentacular cell damage.
+	\item \textbf{Upper Respiratory Signs:} Sore throat, rhinorrhea, nasal congestion, and mild headache, often overlapping with common viral upper respiratory infections.
+	\item \textbf{Gastrointestinal and Systemic Manifestations:} Diarrhea, nausea, vomiting, widespread myalgia, and arthralgia, reflecting the systemic distribution of ACE2 receptors.
 \end{itemize}
 
-Chest X-ray findings associated with COVID-19 often include bilateral lung abnormalities, particularly in the peripheral and lower lung regions. The disease commonly manifests as patchy or diffuse opacities that may affect both lungs simultaneously. As the infection progresses, these opacities may increase in size and density, resulting in widespread pulmonary involvement. Severe cases can demonstrate extensive bilateral infiltrates that significantly reduce the visibility of normal lung structures. Although chest X-rays are useful for evaluating disease progression, early-stage COVID-19 infections may not always produce clearly visible abnormalities.
+On chest X-rays, COVID-19 presents with characteristic visual signatures that track the temporal evolution of the pulmonary viral infection. The standard radiographic hallmarks are characterized by:
+
+\begin{itemize}
+	\item \textbf{Bilateral, Peripheral, and Basal Distribution:} The opacities are predominantly localized within the lower lobes and distributed along the peripheral, subpleural zones of both lungs, corresponding to the initial sites of viral interstitial pneumonia.
+	\item \textbf{Ground-Glass Opacities (GGO):} Visualized on radiographs as hazy, ill-defined patches of increased lung density that partially obscure the underlying pulmonary vasculature. These represent alveolar wall thickening, partial alveolar collapse, and intra-alveolar fluid accumulation.
+	\item \textbf{Patchy Consolidations:} As the disease advances toward peak severity, the GGOs coalesce into dense, confluent patches of consolidation that completely hide the underlying blood vessels and bronchial walls.
+	\item \textbf{Reverse Halo ("Atoll") Sign and Linear Bands:} Subpleural curvilinear opacities and thick parenchymal bands frequently emerge during the organizing and healing phases of the disease, representing a combination of organizing pneumonia and focal atelectasis.
+\end{itemize}
+
+It is worth noting that chest radiographs possess limited sensitivity during the hyperacute or early stages (Days 0--2) of the infection, where a significant portion of symptomatic patients may present with normal imaging findings, requiring definitive diagnosis via Reverse Transcription Polymerase Chain Reaction (RT-PCR) assays.
 
 \subsubsection*{Tuberculosis}
 
-Tuberculosis (TB) is a chronic infectious disease caused by the bacterium \textit{Mycobacterium tuberculosis}. The disease primarily affects the lungs, although it can also spread to other organs. Tuberculosis remains a major global health concern, particularly in regions with limited healthcare resources.
+Tuberculosis (TB) is a chronic, granulomatous infectious disease caused by the acid-fast intracellular rod bacterium \textit{Mycobacterium tuberculosis}. Transmission occurs via the inhalation of airborne droplet nuclei generated by individuals with active pulmonary disease. Once inside the alveoli, the bacilli are engulfed by alveolar macrophages. If the initial innate immune response fails to eradicate the pathogen, the bacilli replicate intracellularly, leading to a cell-mediated immune response. This incites the formation of specialized granulomas, known as Ghon foci, composed of a central core of caseous necrosis surrounded by epithelioid histiocytes, Langhans giant cells, and a peripheral rim of T-lymphocytes. The combination of a parenchymal Ghon focus and an involved draining lymph node constitutes the Ranke complex, signifying primary infection. While most individuals contain the infection in a latent state, any decline in cell-mediated immunity can trigger reactivation, leading to extensive tissue liquefaction, cavitary destruction, and severe bronchogenic or hematogenous replication.
 
-The symptoms of pulmonary tuberculosis often develop gradually and may include:
+The clinical onset of pulmonary tuberculosis is characteristically insidious, with symptoms worsening over weeks or months. The classic clinical spectrum includes:
 
 \begin{itemize}
-	\item Persistent cough lasting several weeks.
-	\item Coughing up blood or blood-stained sputum.
-	\item Chest pain.
-	\item Fever.
-	\item Night sweats.
-	\item Unexplained weight loss.
-	\item Fatigue and weakness.
-	\item Loss of appetite.
+	\item \textbf{Chronic, Intractable Cough:} Lasting for three weeks or longer, initially dry but progressively becoming productive of mucoid or purulent sputum.
+	\item \textbf{Hemoptysis:} The expectoration of blood-streaked sputum or frank blood, caused by the erosion of mycobacterial cavitary lesions into adjacent pulmonary blood vessels (such as Rasmussen aneurysms).
+	\item \textbf{Unexplained, Progressive Weight Loss and Anorexia:} Driven by tumor necrosis factor-alpha (TNF-$\alpha$, historically termed cachectin) and other inflammatory mediators that alter metabolic pathways and suppress appetite.
+	\item \textbf{Drenching Night Sweats:} Profuse diaphoresis occurring during sleep, secondary to diurnal variations in cytokine release and body temperature regulation.
+	\item \textbf{Low-grade Evening Pyrexia:} A classic febrific pattern where body temperature rises slowly throughout the day, peaking in the late afternoon or evening.
+	\item \textbf{Constant Chest Pain:} Dull, aching thoracic discomfort related to chronic parenchymal destruction, hilar lymphadenopathy, or chronic pleural involvement.
 \end{itemize}
 
-Tuberculosis exhibits a wide range of radiographic appearances depending on the stage and severity of infection. In chest X-ray images, the disease frequently affects the upper lung regions and may appear as patchy infiltrates, nodular lesions, or areas of consolidation. Advanced cases can produce cavitary lesions, which are hollow spaces formed by tissue destruction within the lungs. Fibrosis and calcified granulomas may also be observed in chronic or healed infections. The diverse presentation of tuberculosis can sometimes complicate diagnosis, as certain imaging features overlap with those of other pulmonary diseases.
+Tuberculosis is known as a "great mimicker" in thoracic radiology due to its exceptionally diverse structural presentations on chest X-rays, which vary depending on whether the disease is primary or post-primary (reactivation):
+
+\begin{itemize}
+	\item \textbf{Upper Lobe Predominance:} Reactivation TB shows a strong preference for the apical and posterior segments of the upper lobes, as well as the superior segments of the lower lobes. These regions possess higher ventilation-perfusion ratios and higher alveolar oxygen tensions ($pO_2$), providing an ideal environment for aerobic mycobacterial replication.
+	\item \textbf{Cavitary Lesions:} The defining feature of advanced post-primary TB, visualized as thick-walled, gas-filled lucent spaces formed by the liquefaction and evacuation of caseous necrotic cores. These cavities can lead to fluid levels and facilitate bronchogenic spread.
+	\item \textbf{Fibronodular Infiltrates and Granulomas:} Appears as well-defined, dense nodules and irregular linear streaks representing scarring, parenchymal fibrosis, and calcified granulomas (Ghon lesions) from past or healing infections.
+	\item \textbf{Hilar and Mediastinal Lymphadenopathy:} Massive nodal enlargement, frequently showing central low-density necrosis, typically observed in pediatric or primary adult tuberculosis.
+	\item \textbf{Miliary Pattern:} Manifests as a uniform distribution of millions of tiny, discrete, 1--3 mm micro-nodules resembling millet seeds scattered throughout both lung fields. This pattern indicates catastrophic hematogenous dissemination of the bacilli.
+\end{itemize}
+
+\subsubsection*{Lung Cancer}
+
+Lung cancer, or bronchogenic carcinoma, is a malignant neoplastic proliferation originating from the epithelial cells lining the respiratory tree. It is the leading cause of oncology-related mortality worldwide, primarily linked to chronic exposure to tobacco smoke, radon gas, asbestos, environmental air pollution, and specific genetic predispositions. Pathologically, lung cancer is broadly bifurcated into two major histological groups: Non-Small Cell Lung Carcinoma (NSCLC, accounting for approximately 85\% of cases) and Small Cell Lung Carcinoma (SCLC, accounting for approximately 15\% of cases). NSCLC is further subdivided into Adenocarcinoma, which typically develops in peripheral bronchial glands; Squamous Cell Carcinoma, which commonly emerges centrally within major segmental bronchi; and Large Cell Carcinoma. SCLC is a central, highly aggressive neuroendocrine tumor characterized by rapid doubling times, early hematogenous dissemination, and frequent association with paraneoplastic syndromes.
+
+The clinical manifestations of lung cancer depend heavily on the anatomical location of the primary tumor (central vs. peripheral), local invasion, regional nodal spread, and distant metastatic involvement. Key clinical symptoms include:
+
+\begin{itemize}
+	\item \textbf{Worsening or Altered Chronic Cough:} A persistent, non-resolving cough or a change in a baseline smoker's cough, caused by tumor growth irritating the mucosal linings of the airways.
+	\item \textbf{Unexplained Hemoptysis:} Intermittent expectoration of blood or blood-tinged sputum due to the ulceration and necrosis of the hypervascular tumor surface.
+	\item \textbf{Deep, Non-pleuritic Thoracic Pain:} A dull, constant, poorly localized chest ache caused by the invasion of the chest wall, mediastinal structures, or parietal pleura by the primary mass or regional lymph nodes.
+	\item \textbf{Persistent Wheezing and Stridor:} Monophonic, localized musical sounds indicating partial airway occlusion or extrinsic compression of a major bronchus.
+	\item \textbf{Progressive Weight Loss and Cachexia:} Profound loss of skeletal muscle mass and adipose tissue driven by tumor-induced metabolic re-engineering and inflammatory responses.
+	\item \textbf{Superior Vena Cava (SVC) Syndrome and Horner's Syndrome:} Central tumors can compress the SVC, causing facial and upper extremity edema and venous distension. Apical lung tumors (Pancoast tumors) can invade the sympathetic chain, causing ipsilateral ptosis, miosis, and anhidrosis.
+\end{itemize}
+
+While chest radiographs can detect advanced lung masses, Computed Tomography (CT) scans of the chest represent the gold standard modality for the detection, precise morphological evaluation, and clinical staging of lung cancer. Chest CT provides excellent spatial and contrast resolution, allowing for detailed evaluation of pulmonary nodules and masses without the anatomical summation artifacts inherent to X-rays. 
+
+The critical radiological characteristics of lung cancer on chest CT scans include:
+
+\begin{itemize}
+	\item \textbf{Solitary Pulmonary Nodule (SPN) or Mass:} Visualized as a focal, discrete round or irregular opacity. Lesions less than 3 cm are defined as nodules, whereas lesions greater than 3 cm are classified as masses and carry a much higher probability of malignancy.
+	\item \textbf{Spiculation and Lobulation:} Malignant nodules characteristically display irregular, lobulated borders and fine, radiating linear strands extending into the surrounding lung parenchyma (spiculation). This pattern reflects micro-invasion along interstitial planes and localized desmoplastic tissue reactions.
+	\item \textbf{Asymmetrical Eccentric Calcification:} Malignant lesions typically lack calcification or show eccentric, irregular, punctuated calcification patterns, distinguishing them from the benign, concentric, laminated, or "popcorn-like" calcifications seen in granulomas or hamartomas.
+	\item \textbf{Pleural Puckering and Tail Sign:} A linear band extending from the outer margin of a peripheral tumor to the visceral pleura, pulling the pleural surface inward due to internal tumor fibrosis.
+	\item \textbf{Air Bronchogram and Cavitation:} Thick, irregular, ragged-walled cavities (typically $>4$ mm wall thickness) with bumpy internal margins can occur due to central ischemic necrosis within large tumor masses, most commonly observed in squamous cell carcinomas.
+	\item \textbf{Mediastinal Lymphadenopathy and Vascular Invasion:} Nodal enlargement (short-axis diameter $>10$ mm) within ipsilateral or contralateral hilar, mediastinal, subcarinal, or supraclavicular stations, often with loss of distinct fat planes between the tumor and major mediastinal structures like the aorta, pulmonary artery, or pericardium.
+\end{itemize}
 
 \subsubsection*{Comparative Radiological Characteristics}
 
-Although pneumonia, COVID-19, and tuberculosis all affect the respiratory system and produce abnormalities in chest X-ray images, their radiographic patterns often differ. Pneumonia commonly presents as localized consolidations caused by fluid-filled alveoli, whereas COVID-19 typically produces bilateral and diffuse opacities that frequently involve the peripheral lung regions. Tuberculosis often demonstrates upper-lung involvement, nodular infiltrates, and cavitary lesions, particularly in advanced stages of the disease. Recognizing these characteristic imaging patterns is crucial for differentiating between conditions and supporting accurate clinical diagnosis.
+Differentiating between pneumonia, COVID-19, tuberculosis, and lung cancer requires a detailed analysis of their specific radiographic patterns, spatial distributions, and primary imaging modalities. Pneumonia is characterized by localized, dense alveolar consolidations that respect lobar boundaries, accompanied by distinct air bronchograms on chest X-rays. COVID-19 presents with a diffuse, patchier, and non-lobar distribution, typically manifesting as bilateral, ground-glass opacities that preferentially involve the peripheral subpleural zones and lower lung fields. Tuberculosis is characterized by its chronicity, upper-lobe tropism, fibronodular scars, calcified granulomas, and the formation of smooth, thin-walled cavitary lesions resulting from caseous tissue liquefaction. Lung cancer, by contrast, is characterized on chest CT by a persistent, expanding focal nodule or mass with irregular, spiculated or lobulated borders, thick-walled eccentric cavitations, pleural retraction, and associated regional mediastinal lymphadenopathy. 
+
+Table~\ref{tab:comparative_radiology} provides a detailed side-by-side comparison of the pathological, clinical, and radiological characteristics of these four thoracic conditions, highlighting how computerized multi-modal image interpretation systems utilize these differing visual signatures to achieve accurate diagnosis.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Comprehensive comparative summary of clinical, pathological, and radiological characteristics of the target diseases.}
+	\label{tab:comparative_radiology}
+	\small % Slightly reduces font to footnotesize/small for a clean look, but keeps it completely readable
+	\begin{tabularx}{\textwidth}{lXXXX}
+		\toprule
+		\textbf{Feature} & \textbf{Pneumonia} & \textbf{COVID-19} & \textbf{Tuberculosis} & \textbf{Lung Cancer} \\
+		\midrule
+		\textbf{Primary Etiology} & Bacterial, viral, or fungal infection & SARS-CoV-2 viral infection & \textit{Mycobacterium tuberculosis} & Malignant epithelial transformation \\
+		\addlinespace
+		\textbf{Pathology} & Alveolar inflammatory exudate & Diffuse alveolar damage, GGO & Caseous granuloma formation & Neoplastic tissue proliferation \\
+		\addlinespace
+		\textbf{Primary Modality} & Chest X-ray (CXR) & Chest X-ray (CXR) / RT-PCR & Chest X-ray (CXR) / Sputum & Chest Computed Tomography (CT) \\
+		\addlinespace
+		\textbf{Anatomical Site} & Lobar, segmental, or bronchic & Bilateral, peripheral, basal & Apical / upper lobe segments & Central bronchi or peripheral parenchyma \\
+		\addlinespace
+		\textbf{Key Signatures} & Homogeneous consolidation, air bronchograms & Patchy GGOs, crazy-paving, bilateral patches & Cavities, calcified nodules, miliary seedings & Spiculated mass, lobulation, thick cavities \\
+		\addlinespace
+		\textbf{Onset / Course} & Acute onset (days) & Acute to subacute onset & Chronic, insidious course & Chronic, progressive course \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
 
 \subsection{Related Work in Lung Cancer Classification}
 \label{subsec:lung_cancer_related_work}
