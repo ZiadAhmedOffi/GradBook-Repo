@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.14)  15 JUN 2026 05:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.14)  15 JUN 2026 09:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1405,7 +1405,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<assets/college-logo.png, id=508, 255.95625pt x 222.8325pt>
+<assets/college-logo.png, id=512, 255.95625pt x 222.8325pt>
 File: assets/college-logo.png Graphic file (type png)
 <use assets/college-logo.png>
 Package pdftex.def Info: assets/college-logo.png  used on input line 14.
@@ -1665,7 +1665,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12]
-<assets/XAI.png, id=1108, 336.25626pt x 150.5625pt>
+<assets/XAI.png, id=1139, 336.25626pt x 150.5625pt>
 File: assets/XAI.png Graphic file (type png)
 <use assets/XAI.png>
 Package pdftex.def Info: assets/XAI.png  used on input line 317.
@@ -1693,7 +1693,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14 <./assets/XAI.png>]
-<assets/federated_learning.png, id=1119, 674.52pt x 377.41pt>
+<assets/federated_learning.png, id=1150, 674.52pt x 377.41pt>
 File: assets/federated_learning.png Graphic file (type png)
 <use assets/federated_learning.png>
 Package pdftex.def Info: assets/federated_learning.png  used on input line 350.
@@ -1879,7 +1879,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [28]
-<assets/lung_cancer_CT_ex.jpg, id=1180, 213.79875pt x 237.88875pt>
+<assets/lung_cancer_CT_ex.jpg, id=1211, 213.79875pt x 237.88875pt>
 File: assets/lung_cancer_CT_ex.jpg Graphic file (type jpg)
 <use assets/lung_cancer_CT_ex.jpg>
 Package pdftex.def Info: assets/lung_cancer_CT_ex.jpg  used on input line 66.
@@ -2144,7 +2144,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [41]
-<assets/pneumonia_heatmap.jpg, id=1269, 238.01967pt x 178.31837pt>
+<assets/pneumonia_heatmap.jpg, id=1300, 238.01967pt x 178.31837pt>
 File: assets/pneumonia_heatmap.jpg Graphic file (type jpg)
 <use assets/pneumonia_heatmap.jpg>
 Package pdftex.def Info: assets/pneumonia_heatmap.jpg  used on input line 278.
@@ -2169,12 +2169,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [43 <./assets/pneumonia_heatmap.jpg>]
-<assets/federated1.jpg, id=1289, 250.317pt x 251.3025pt>
+<assets/federated1.jpg, id=1320, 250.317pt x 251.3025pt>
 File: assets/federated1.jpg Graphic file (type jpg)
 <use assets/federated1.jpg>
 Package pdftex.def Info: assets/federated1.jpg  used on input line 305.
 (pdftex.def)             Requested size: 203.83417pt x 204.63908pt.
-<assets/federated2.png, id=1290, 237.834pt x 147.825pt>
+<assets/federated2.png, id=1321, 237.834pt x 147.825pt>
 File: assets/federated2.png Graphic file (type png)
 <use assets/federated2.png>
 Package pdftex.def Info: assets/federated2.png  used on input line 309.
@@ -3642,7 +3642,7 @@ Overfull \hbox (23.82338pt too wide) in paragraph at lines 485--509
  [][] 
  []
 
-<assets/aidoc.png, id=1438, 391.572pt x 158.994pt>
+<assets/aidoc.png, id=1469, 391.572pt x 158.994pt>
 File: assets/aidoc.png Graphic file (type png)
 <use assets/aidoc.png>
 Package pdftex.def Info: assets/aidoc.png  used on input line 521.
@@ -3650,7 +3650,7 @@ Package pdftex.def Info: assets/aidoc.png  used on input line 521.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<assets/vizai.png, id=1439, 371.862pt x 171.8055pt>
+<assets/vizai.png, id=1470, 371.862pt x 171.8055pt>
 File: assets/vizai.png Graphic file (type png)
 <use assets/vizai.png>
 Package pdftex.def Info: assets/vizai.png  used on input line 528.
@@ -3667,7 +3667,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [59]
-<assets/qure.png, id=1446, 346.239pt x 175.419pt>
+<assets/qure.png, id=1477, 346.239pt x 175.419pt>
 File: assets/qure.png Graphic file (type png)
 <use assets/qure.png>
 Package pdftex.def Info: assets/qure.png  used on input line 535.
@@ -3711,7 +3711,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-<assets/full_project_arch.png, id=1470, 1187.93813pt x 536.75531pt>
+<assets/full_project_arch.png, id=1501, 1187.93813pt x 536.75531pt>
 File: assets/full_project_arch.png Graphic file (type png)
 <use assets/full_project_arch.png>
 Package pdftex.def Info: assets/full_project_arch.png  used on input line 14.
@@ -3736,7 +3736,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [65]
-<assets/classification_tree.png, id=1481, 1339.25343pt x 743.02594pt>
+<assets/classification_tree.png, id=1512, 1339.25343pt x 743.02594pt>
 File: assets/classification_tree.png Graphic file (type png)
 <use assets/classification_tree.png>
 Package pdftex.def Info: assets/classification_tree.png  used on input line 47.
@@ -3787,7 +3787,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [70]
-<assets/resnet50.png, id=1511, 204.765pt x 33.4851pt>
+<assets/resnet50.png, id=1542, 204.765pt x 33.4851pt>
 File: assets/resnet50.png Graphic file (type png)
 <use assets/resnet50.png>
 Package pdftex.def Info: assets/resnet50.png  used on input line 35.
@@ -3801,7 +3801,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [71 <./assets/resnet50.png>] (chapters/Chapter3/DenseNet121.tex
-<assets/DenseNet121.png, id=1521, 509.5035pt x 151.767pt>
+<assets/DenseNet121.png, id=1552, 509.5035pt x 151.767pt>
 File: assets/DenseNet121.png Graphic file (type png)
 <use assets/DenseNet121.png>
 Package pdftex.def Info: assets/DenseNet121.png  used on input line 14.
@@ -3856,7 +3856,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [76]) (chapters/Chapter3/YOLO.tex
-<assets/YOLO_arch.jpeg, id=1560, 1346.02875pt x 1177.39874pt>
+<assets/YOLO_arch.jpeg, id=1591, 1346.02875pt x 1177.39874pt>
 File: assets/YOLO_arch.jpeg Graphic file (type jpg)
 <use assets/YOLO_arch.jpeg>
 Package pdftex.def Info: assets/YOLO_arch.jpeg  used on input line 5.
@@ -3967,7 +3967,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [86]
-<assets/vit-1.png, id=1643, 387.4475pt x 519.9425pt>
+<assets/vit-1.png, id=1674, 387.4475pt x 519.9425pt>
 File: assets/vit-1.png Graphic file (type png)
 <use assets/vit-1.png>
 Package pdftex.def Info: assets/vit-1.png  used on input line 153.
@@ -4125,7 +4125,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [100]
-<assets/chest1.png, id=1725, 444.789pt x 248.346pt>
+<assets/chest1.png, id=1756, 444.789pt x 248.346pt>
 File: assets/chest1.png Graphic file (type png)
 <use assets/chest1.png>
 Package pdftex.def Info: assets/chest1.png  used on input line 78.
@@ -4161,22 +4161,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [103]
-<assets/chest2.jpg, id=1747, 185.931pt x 148.482pt>
+<assets/chest2.jpg, id=1778, 185.931pt x 148.482pt>
 File: assets/chest2.jpg Graphic file (type jpg)
 <use assets/chest2.jpg>
 Package pdftex.def Info: assets/chest2.jpg  used on input line 208.
 (pdftex.def)             Requested size: 203.83417pt x 162.78465pt.
-<assets/chest4.png, id=1748, 179.92218pt x 180.675pt>
+<assets/chest4.png, id=1779, 179.92218pt x 180.675pt>
 File: assets/chest4.png Graphic file (type png)
 <use assets/chest4.png>
 Package pdftex.def Info: assets/chest4.png  used on input line 215.
 (pdftex.def)             Requested size: 203.83417pt x 204.70346pt.
-<assets/chest3.jpg, id=1749, 228.855pt x 149.8097pt>
+<assets/chest3.jpg, id=1780, 228.855pt x 149.8097pt>
 File: assets/chest3.jpg Graphic file (type jpg)
 <use assets/chest3.jpg>
 Package pdftex.def Info: assets/chest3.jpg  used on input line 225.
 (pdftex.def)             Requested size: 203.83417pt x 133.43533pt.
-<assets/chest5.png, id=1750, 186.6975pt x 188.95593pt>
+<assets/chest5.png, id=1781, 186.6975pt x 188.95593pt>
 File: assets/chest5.png Graphic file (type png)
 <use assets/chest5.png>
 Package pdftex.def Info: assets/chest5.png  used on input line 232.
@@ -4202,26 +4202,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [105]
-<assets/chest6.jpg, id=1769, 185.274pt x 164.907pt>
+<assets/chest6.jpg, id=1800, 185.274pt x 164.907pt>
 File: assets/chest6.jpg Graphic file (type jpg)
 <use assets/chest6.jpg>
 Package pdftex.def Info: assets/chest6.jpg  used on input line 314.
 (pdftex.def)             Requested size: 203.83417pt x 181.43347pt.
-<assets/chest7.jpg, id=1770, 192.1725pt x 171.1485pt>
+<assets/chest7.jpg, id=1801, 192.1725pt x 171.1485pt>
 File: assets/chest7.jpg Graphic file (type jpg)
 <use assets/chest7.jpg>
 Package pdftex.def Info: assets/chest7.jpg  used on input line 319.
 (pdftex.def)             Requested size: 203.83417pt x 181.53404pt.
-<assets/chest8.jpg, id=1771, 154.395pt x 157.68pt>
+<assets/chest8.jpg, id=1802, 154.395pt x 157.68pt>
 File: assets/chest8.jpg Graphic file (type jpg)
 <use assets/chest8.jpg>
 Package pdftex.def Info: assets/chest8.jpg  used on input line 330.
 (pdftex.def)             Requested size: 203.83417pt x 208.1743pt.
-<assets/chest9.png, id=1772, 167.12437pt x 156.585pt>
+<assets/chest9.png, id=1803, 167.12437pt x 156.585pt>
 File: assets/chest9.png Graphic file (type png)
 <use assets/chest9.png>
 Package pdftex.def Info: assets/chest9.png  used on input line 335.
 (pdftex.def)             Requested size: 203.83417pt x 190.99518pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4231,18 +4234,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [106 <./assets/chest6.jpg> <./assets/chest7.jpg>]
-<assets/chest10.png, id=1782, 171.64125pt x 172.39406pt>
+<assets/chest10.png, id=1812, 171.64125pt x 172.39406pt>
 File: assets/chest10.png Graphic file (type png)
 <use assets/chest10.png>
 Package pdftex.def Info: assets/chest10.png  used on input line 360.
 (pdftex.def)             Requested size: 203.83417pt x 204.72795pt.
-<assets/chest11.png, id=1783, 173.14688pt x 173.14688pt>
+<assets/chest11.png, id=1813, 173.14688pt x 173.14688pt>
 File: assets/chest11.png Graphic file (type png)
 <use assets/chest11.png>
 Package pdftex.def Info: assets/chest11.png  used on input line 365.
 (pdftex.def)             Requested size: 203.83417pt x 203.83862pt.
 
-Underfull \vbox (badness 1237) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -4253,9 +4256,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [107 <./assets/chest8.jpg> <./assets/chest9.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -4272,7 +4272,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [109]
-<assets/chest12.png, id=1812, 469.00218pt x 255.95625pt>
+<assets/chest12.png, id=1843, 469.00218pt x 255.95625pt>
 File: assets/chest12.png Graphic file (type png)
 <use assets/chest12.png>
 Package pdftex.def Info: assets/chest12.png  used on input line 484.
@@ -4299,17 +4299,17 @@ Overfull \hbox (0.96408pt too wide) in paragraph at lines 593--593
 []|\T1/lmtt/m/n/10.95 lung_segmentation_darwin_montgomery_shenzhen.h5|  
  []
 
-<assets/chest13.png, id=1829, 192.72pt x 177.66376pt>
+<assets/chest13.png, id=1860, 192.72pt x 177.66376pt>
 File: assets/chest13.png Graphic file (type png)
 <use assets/chest13.png>
 Package pdftex.def Info: assets/chest13.png  used on input line 606.
 (pdftex.def)             Requested size: 203.83417pt x 187.9079pt.
-<assets/chest14.png, id=1830, 201.042pt x 185.6025pt>
+<assets/chest14.png, id=1861, 201.042pt x 185.6025pt>
 File: assets/chest14.png Graphic file (type png)
 <use assets/chest14.png>
 Package pdftex.def Info: assets/chest14.png  used on input line 612.
 (pdftex.def)             Requested size: 203.83417pt x 188.1877pt.
-<assets/chest15.png, id=1831, 200.385pt x 173.1195pt>
+<assets/chest15.png, id=1862, 200.385pt x 173.1195pt>
 File: assets/chest15.png Graphic file (type png)
 <use assets/chest15.png>
 Package pdftex.def Info: assets/chest15.png  used on input line 621.
@@ -4343,7 +4343,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [114]
-<assets/chest16.png, id=1857, 495.35063pt x 269.50688pt>
+<assets/chest16.png, id=1888, 495.35063pt x 269.50688pt>
 File: assets/chest16.png Graphic file (type png)
 <use assets/chest16.png>
 Package pdftex.def Info: assets/chest16.png  used on input line 671.
@@ -4373,12 +4373,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [117]
-<assets/chest17.jpg, id=1888, 507.39563pt x 180.675pt>
+<assets/chest17.jpg, id=1919, 507.39563pt x 180.675pt>
 File: assets/chest17.jpg Graphic file (type jpg)
 <use assets/chest17.jpg>
 Package pdftex.def Info: assets/chest17.jpg  used on input line 783.
 (pdftex.def)             Requested size: 452.9679pt x 161.29922pt.
-<assets/chest18.jpg, id=1889, 507.39563pt x 180.675pt>
+<assets/chest18.jpg, id=1920, 507.39563pt x 180.675pt>
 File: assets/chest18.jpg Graphic file (type jpg)
 <use assets/chest18.jpg>
 Package pdftex.def Info: assets/chest18.jpg  used on input line 790.
@@ -4392,7 +4392,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [118 <./assets/chest17.jpg> <./assets/chest18.jpg>]
-<assets/yolo8_arch.png, id=1894, 452.892pt x 317.38576pt>
+<assets/yolo8_arch.png, id=1925, 452.892pt x 317.38576pt>
 File: assets/yolo8_arch.png Graphic file (type png)
 <use assets/yolo8_arch.png>
 Package pdftex.def Info: assets/yolo8_arch.png  used on input line 26.
@@ -4420,7 +4420,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [120 <./assets/yolo8_arch.png>]
-<assets/lung1.jpg, id=1910, 210.03468pt x 210.03468pt>
+<assets/lung1.jpg, id=1941, 210.03468pt x 210.03468pt>
 File: assets/lung1.jpg Graphic file (type jpg)
 <use assets/lung1.jpg>
 Package pdftex.def Info: assets/lung1.jpg  used on input line 59.
@@ -4438,7 +4438,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [121]
-<assets/lung3.jpg, id=1917, 317.68687pt x 317.68687pt>
+<assets/lung3.jpg, id=1948, 317.68687pt x 317.68687pt>
 File: assets/lung3.jpg Graphic file (type jpg)
 <use assets/lung3.jpg>
 Package pdftex.def Info: assets/lung3.jpg  used on input line 76.
@@ -4476,7 +4476,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [125]
-<assets/yolo_imp_arch.png, id=1948, 449.388pt x 224.694pt>
+<assets/yolo_imp_arch.png, id=1979, 449.388pt x 224.694pt>
 File: assets/yolo_imp_arch.png Graphic file (type png)
 <use assets/yolo_imp_arch.png>
 Package pdftex.def Info: assets/yolo_imp_arch.png  used on input line 102.
@@ -4606,7 +4606,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [135]
-<assets/RAG_1.png, id=2031, 518.53725pt x 257.16075pt>
+<assets/RAG_1.png, id=2062, 518.53725pt x 257.16075pt>
 File: assets/RAG_1.png Graphic file (type png)
 <use assets/RAG_1.png>
 Package pdftex.def Info: assets/RAG_1.png  used on input line 248.
@@ -4687,12 +4687,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [139]
-<assets/backend-1.png, id=2063, 507.39563pt x 290.58563pt>
+<assets/backend-1.png, id=2094, 507.39563pt x 290.58563pt>
 File: assets/backend-1.png Graphic file (type png)
 <use assets/backend-1.png>
 Package pdftex.def Info: assets/backend-1.png  used on input line 121.
 (pdftex.def)             Requested size: 430.31812pt x 246.44913pt.
-<assets/backend-2.png, id=2064, 504.38437pt x 287.57437pt>
+<assets/backend-2.png, id=2095, 504.38437pt x 287.57437pt>
 File: assets/backend-2.png Graphic file (type png)
 <use assets/backend-2.png>
 Package pdftex.def Info: assets/backend-2.png  used on input line 128.
@@ -4750,7 +4750,7 @@ Overfull \hbox (19.2602pt too wide) in paragraph at lines 309--310
 -pi-tal nodes with live ON-LINE/OFFLINE
  []
 
-<assets/backend3.png, id=2092, 469.755pt x 313.0605pt>
+<assets/backend3.png, id=2123, 469.755pt x 313.0605pt>
 File: assets/backend3.png Graphic file (type png)
 <use assets/backend3.png>
 Package pdftex.def Info: assets/backend3.png  used on input line 316.
@@ -4778,7 +4778,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [145 <./assets/backend3.png>]
-<assets/backend4.png, id=2101, 468.441pt x 236.1915pt>
+<assets/backend4.png, id=2132, 468.441pt x 236.1915pt>
 File: assets/backend4.png Graphic file (type png)
 <use assets/backend4.png>
 Package pdftex.def Info: assets/backend4.png  used on input line 390.
@@ -4788,7 +4788,7 @@ Overfull \hbox (15.47194pt too wide) in paragraph at lines 390--391
  [][] 
  []
 
-<assets/backend5.png, id=2102, 469.755pt x 236.6588pt>
+<assets/backend5.png, id=2133, 469.755pt x 236.6588pt>
 File: assets/backend5.png Graphic file (type png)
 <use assets/backend5.png>
 Package pdftex.def Info: assets/backend5.png  used on input line 397.
@@ -4814,7 +4814,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [147 <./assets/backend4.png> <./assets/backend5.png>]
-<assets/backend6.png, id=2113, 190.46156pt x 261.97874pt>
+<assets/backend6.png, id=2144, 190.46156pt x 261.97874pt>
 File: assets/backend6.png Graphic file (type png)
 <use assets/backend6.png>
 Package pdftex.def Info: assets/backend6.png  used on input line 426.
@@ -4828,7 +4828,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [148 <./assets/backend6.png>]
-<assets/backend7.png, id=2120, 499.11469pt x 322.20375pt>
+<assets/backend7.png, id=2151, 499.11469pt x 322.20375pt>
 File: assets/backend7.png Graphic file (type png)
 <use assets/backend7.png>
 Package pdftex.def Info: assets/backend7.png  used on input line 441.
@@ -4842,12 +4842,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [149 <./assets/backend7.png>]
-<assets/backend8.png, id=2127, 216.05719pt x 254.45062pt>
+<assets/backend8.png, id=2158, 216.05719pt x 254.45062pt>
 File: assets/backend8.png Graphic file (type png)
 <use assets/backend8.png>
 Package pdftex.def Info: assets/backend8.png  used on input line 468.
 (pdftex.def)             Requested size: 216.05664pt x 254.45pt.
-<assets/backend9.png, id=2128, 284.56313pt x 258.9675pt>
+<assets/backend9.png, id=2159, 284.56313pt x 258.9675pt>
 File: assets/backend9.png Graphic file (type png)
 <use assets/backend9.png>
 Package pdftex.def Info: assets/backend9.png  used on input line 475.
@@ -4876,32 +4876,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Warning: Reference `fig:greeting_' on page 152 undefined on input line 50
 6.
 
-<assets/backend10.png, id=2140, 463.185pt x 219.7665pt>
+<assets/backend10.png, id=2171, 463.185pt x 219.7665pt>
 File: assets/backend10.png Graphic file (type png)
 <use assets/backend10.png>
 Package pdftex.def Info: assets/backend10.png  used on input line 510.
 (pdftex.def)             Requested size: 430.31812pt x 204.18286pt.
-<assets/backend11.png, id=2141, 469.755pt x 148.1535pt>
+<assets/backend11.png, id=2172, 469.755pt x 148.1535pt>
 File: assets/backend11.png Graphic file (type png)
 <use assets/backend11.png>
 Package pdftex.def Info: assets/backend11.png  used on input line 517.
 (pdftex.def)             Requested size: 430.31812pt x 135.7151pt.
-<assets/backend12.png, id=2144, 469.755pt x 238.491pt>
+<assets/backend12.png, id=2175, 469.755pt x 238.491pt>
 File: assets/backend12.png Graphic file (type png)
 <use assets/backend12.png>
 Package pdftex.def Info: assets/backend12.png  used on input line 526.
 (pdftex.def)             Requested size: 430.31812pt x 218.4682pt.
-<assets/backend13.png, id=2145, 469.755pt x 237.88875pt>
+<assets/backend13.png, id=2176, 469.755pt x 237.88875pt>
 File: assets/backend13.png Graphic file (type png)
 <use assets/backend13.png>
 Package pdftex.def Info: assets/backend13.png  used on input line 533.
 (pdftex.def)             Requested size: 430.31812pt x 217.91652pt.
-<assets/backend14.jpg, id=2148, 466.74374pt x 236.38312pt>
+<assets/backend14.jpg, id=2179, 466.74374pt x 236.38312pt>
 File: assets/backend14.jpg Graphic file (type jpg)
 <use assets/backend14.jpg>
 Package pdftex.def Info: assets/backend14.jpg  used on input line 542.
 (pdftex.def)             Requested size: 430.31812pt x 217.944pt.
-<assets/backend15.jpg, id=2149, 469.755pt x 232.61906pt>
+<assets/backend15.jpg, id=2180, 469.755pt x 232.61906pt>
 File: assets/backend15.jpg Graphic file (type jpg)
 <use assets/backend15.jpg>
 Package pdftex.def Info: assets/backend15.jpg  used on input line 549.
@@ -4931,7 +4931,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [154 <./assets/backend14.jpg> <./assets/backend15.jpg>]
-<assets/backend16.png, id=2167, 199.49532pt x 359.84438pt>
+<assets/backend16.png, id=2198, 199.49532pt x 359.84438pt>
 File: assets/backend16.png Graphic file (type png)
 <use assets/backend16.png>
 Package pdftex.def Info: assets/backend16.png  used on input line 563.
@@ -5006,7 +5006,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [158]
-<assets/backend17.png, id=2195, 489.32813pt x 296.60812pt>
+<assets/backend17.png, id=2226, 489.32813pt x 296.60812pt>
 File: assets/backend17.png Graphic file (type png)
 <use assets/backend17.png>
 Package pdftex.def Info: assets/backend17.png  used on input line 696.
@@ -5031,7 +5031,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [160]
-<assets/backend18.png, id=2207, 262.143pt x 392.886pt>
+<assets/backend18.png, id=2238, 262.143pt x 392.886pt>
 File: assets/backend18.png Graphic file (type png)
 <use assets/backend18.png>
 Package pdftex.def Info: assets/backend18.png  used on input line 771.
@@ -5053,12 +5053,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [162 <./assets/backend18.png>]
-<assets/backend19.png, id=2230, 207.77625pt x 310.761pt>
+<assets/backend19.png, id=2261, 207.77625pt x 310.761pt>
 File: assets/backend19.png Graphic file (type png)
 <use assets/backend19.png>
 Package pdftex.def Info: assets/backend19.png  used on input line 836.
 (pdftex.def)             Requested size: 217.42265pt x 325.20383pt.
-<assets/backend20.png, id=2231, 207.77625pt x 308.95425pt>
+<assets/backend20.png, id=2262, 207.77625pt x 308.95425pt>
 File: assets/backend20.png Graphic file (type png)
 <use assets/backend20.png>
 Package pdftex.def Info: assets/backend20.png  used on input line 844.
@@ -5100,7 +5100,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [165]
-<assets/backend21.png, id=2251, 463.13025pt x 264.99pt>
+<assets/backend21.png, id=2282, 463.13025pt x 264.99pt>
 File: assets/backend21.png Graphic file (type png)
 <use assets/backend21.png>
 Package pdftex.def Info: assets/backend21.png  used on input line 948.
@@ -5114,7 +5114,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [166]
-<assets/backend22.jpg, id=2258, 469.755pt x 231.86626pt>
+<assets/backend22.jpg, id=2289, 469.755pt x 231.86626pt>
 File: assets/backend22.jpg Graphic file (type jpg)
 <use assets/backend22.jpg>
 Package pdftex.def Info: assets/backend22.jpg  used on input line 971.
@@ -5207,7 +5207,7 @@ Overfull \hbox (4.65923pt too wide) in paragraph at lines 52--65
  [][] 
  []
 
-<assets/dataset_dist_rm.png, id=2318, 403.2666pt x 284.0211pt>
+<assets/dataset_dist_rm.png, id=2349, 403.2666pt x 284.0211pt>
 File: assets/dataset_dist_rm.png Graphic file (type png)
 <use assets/dataset_dist_rm.png>
 Package pdftex.def Info: assets/dataset_dist_rm.png  used on input line 74.
@@ -5233,7 +5233,7 @@ Overfull \hbox (12.04842pt too wide) in paragraph at lines 150--151
 t121 for the rout-ing task. DenseNet121
  []
 
-<assets/models_acc_rm.png, id=2330, 484.9317pt x 270.2898pt>
+<assets/models_acc_rm.png, id=2361, 484.9317pt x 270.2898pt>
 File: assets/models_acc_rm.png Graphic file (type png)
 <use assets/models_acc_rm.png>
 Package pdftex.def Info: assets/models_acc_rm.png  used on input line 156.
@@ -5246,22 +5246,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [177 <./assets/models_acc_rm.png>]
-<assets/curve_customcnn.png, id=2337, 721.9773pt x 270.2898pt>
+<assets/curve_customcnn.png, id=2368, 721.9773pt x 270.2898pt>
 File: assets/curve_customcnn.png Graphic file (type png)
 <use assets/curve_customcnn.png>
 Package pdftex.def Info: assets/curve_customcnn.png  used on input line 179.
 (pdftex.def)             Requested size: 336.78456pt x 126.08351pt.
-<assets/curve_resnet.png, id=2338, 728.4816pt x 270.2898pt>
+<assets/curve_resnet.png, id=2369, 728.4816pt x 270.2898pt>
 File: assets/curve_resnet.png Graphic file (type png)
 <use assets/curve_resnet.png>
 Package pdftex.def Info: assets/curve_resnet.png  used on input line 195.
 (pdftex.def)             Requested size: 339.81866pt x 126.08351pt.
-<assets/curve_efficient.png, id=2339, 721.9773pt x 270.2898pt>
+<assets/curve_efficient.png, id=2370, 721.9773pt x 270.2898pt>
 File: assets/curve_efficient.png Graphic file (type png)
 <use assets/curve_efficient.png>
 Package pdftex.def Info: assets/curve_efficient.png  used on input line 211.
 (pdftex.def)             Requested size: 336.78456pt x 126.08351pt.
-<assets/curve_densenet.png, id=2340, 728.4816pt x 270.2898pt>
+<assets/curve_densenet.png, id=2371, 728.4816pt x 270.2898pt>
 File: assets/curve_densenet.png Graphic file (type png)
 <use assets/curve_densenet.png>
 Package pdftex.def Info: assets/curve_densenet.png  used on input line 227.
@@ -5271,22 +5271,22 @@ Package pdftex.def Info: assets/curve_densenet.png  used on input line 227.
 LaTeX Warning: Reference `fig:routing_confusion_matrices' on page 178 undefined
  on input line 244.
 
-<assets/customcnn_cm_rm.png, id=2341, 326.6604pt x 284.0211pt>
+<assets/customcnn_cm_rm.png, id=2372, 326.6604pt x 284.0211pt>
 File: assets/customcnn_cm_rm.png Graphic file (type png)
 <use assets/customcnn_cm_rm.png>
 Package pdftex.def Info: assets/customcnn_cm_rm.png  used on input line 256.
 (pdftex.def)             Requested size: 217.42082pt x 189.04066pt.
-<assets/resnet50_cm_rm.png, id=2342, 326.6604pt x 284.0211pt>
+<assets/resnet50_cm_rm.png, id=2373, 326.6604pt x 284.0211pt>
 File: assets/resnet50_cm_rm.png Graphic file (type png)
 <use assets/resnet50_cm_rm.png>
 Package pdftex.def Info: assets/resnet50_cm_rm.png  used on input line 266.
 (pdftex.def)             Requested size: 217.42082pt x 189.04066pt.
-<assets/efficient_cm_rm.png, id=2343, 326.6604pt x 284.0211pt>
+<assets/efficient_cm_rm.png, id=2374, 326.6604pt x 284.0211pt>
 File: assets/efficient_cm_rm.png Graphic file (type png)
 <use assets/efficient_cm_rm.png>
 Package pdftex.def Info: assets/efficient_cm_rm.png  used on input line 279.
 (pdftex.def)             Requested size: 217.42082pt x 189.04066pt.
-<assets/densenet_cm_rm.png, id=2344, 326.6604pt x 284.0211pt>
+<assets/densenet_cm_rm.png, id=2375, 326.6604pt x 284.0211pt>
 File: assets/densenet_cm_rm.png Graphic file (type png)
 <use assets/densenet_cm_rm.png>
 Package pdftex.def Info: assets/densenet_cm_rm.png  used on input line 289.
@@ -5368,19 +5368,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [183]
-<assets/chest_model/image1.png, id=2395, 1394.20876pt x 592.2125pt>
+<assets/chest_model/image1.png, id=2426, 1394.20876pt x 592.2125pt>
 File: assets/chest_model/image1.png Graphic file (type png)
 <use assets/chest_model/image1.png>
 Package pdftex.def Info: assets/chest_model/image1.png  used on input line 256.
 
 (pdftex.def)             Requested size: 385.01477pt x 163.54118pt.
-<assets/chest_model/image2.png, id=2396, 605.26125pt x 525.965pt>
+<assets/chest_model/image2.png, id=2427, 605.26125pt x 525.965pt>
 File: assets/chest_model/image2.png Graphic file (type png)
 <use assets/chest_model/image2.png>
 Package pdftex.def Info: assets/chest_model/image2.png  used on input line 263.
 
 (pdftex.def)             Requested size: 261.93813pt x 227.62119pt.
-<assets/chest_model/image3.png, id=2397, 400.49625pt x 207.02344pt>
+<assets/chest_model/image3.png, id=2428, 400.49625pt x 207.02344pt>
 File: assets/chest_model/image3.png Graphic file (type png)
 <use assets/chest_model/image3.png>
 Package pdftex.def Info: assets/chest_model/image3.png  used on input line 270.
@@ -5413,19 +5413,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [185 <./assets/chest_model/image1.png> <./assets/chest_model/image2.png> <./ass
 ets/chest_model/image3.png>]
-<assets/chest_model/resnet-graphs.png, id=2416, 519.44063pt x 182.93344pt>
+<assets/chest_model/resnet-graphs.png, id=2447, 519.44063pt x 182.93344pt>
 File: assets/chest_model/resnet-graphs.png Graphic file (type png)
 <use assets/chest_model/resnet-graphs.png>
 Package pdftex.def Info: assets/chest_model/resnet-graphs.png  used on input li
 ne 315.
 (pdftex.def)             Requested size: 452.9679pt x 159.52205pt.
-<assets/chest_model/resnet-cm.png, id=2417, 438.8897pt x 313.9228pt>
+<assets/chest_model/resnet-cm.png, id=2448, 438.8897pt x 313.9228pt>
 File: assets/chest_model/resnet-cm.png Graphic file (type png)
 <use assets/chest_model/resnet-cm.png>
 Package pdftex.def Info: assets/chest_model/resnet-cm.png  used on input line 3
 22.
 (pdftex.def)             Requested size: 452.9679pt x 324.00032pt.
-<assets/chest_model/image6.png, id=2418, 410.2828pt x 201.75375pt>
+<assets/chest_model/image6.png, id=2449, 410.2828pt x 201.75375pt>
 File: assets/chest_model/image6.png Graphic file (type png)
 <use assets/chest_model/image6.png>
 Package pdftex.def Info: assets/chest_model/image6.png  used on input line 329.
@@ -5448,19 +5448,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [187 <./assets/chest_model/resnet-cm.png> <./assets/chest_model/image6.png>]
-<assets/chest_model/image9.png, id=2435, 397.485pt x 207.02344pt>
+<assets/chest_model/image9.png, id=2466, 397.485pt x 207.02344pt>
 File: assets/chest_model/image9.png Graphic file (type png)
 <use assets/chest_model/image9.png>
 Package pdftex.def Info: assets/chest_model/image9.png  used on input line 372.
 
 (pdftex.def)             Requested size: 382.41824pt x 199.17616pt.
-<assets/chest_model/image7.png, id=2436, 993.7125pt x 529.98pt>
+<assets/chest_model/image7.png, id=2467, 993.7125pt x 529.98pt>
 File: assets/chest_model/image7.png Graphic file (type png)
 <use assets/chest_model/image7.png>
 Package pdftex.def Info: assets/chest_model/image7.png  used on input line 379.
 
 (pdftex.def)             Requested size: 452.9679pt x 241.58604pt.
-<assets/chest_model/image8.png, id=2437, 605.26125pt x 525.965pt>
+<assets/chest_model/image8.png, id=2468, 605.26125pt x 525.965pt>
 File: assets/chest_model/image8.png Graphic file (type png)
 <use assets/chest_model/image8.png>
 Package pdftex.def Info: assets/chest_model/image8.png  used on input line 386.
@@ -5484,6 +5484,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [189 <./assets/chest_model/image7.png> <./assets/chest_model/image8.png>]
 
+Package caption Warning: \label without proper reference on input line 454.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:vgg_curves' on page 190 undefined on input line 4
+29.
+
+
+Package caption Warning: \label without proper reference on input line 461.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:vgg-cm' on page 190 undefined on input line 429.
+
+
+Package caption Warning: \label without proper reference on input line 468.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:vgg-report' on page 190 undefined on input line 4
+29.
+
+<assets/chest_model/vgg-curves.png, id=2484, 525.46312pt x 222.8325pt>
+File: assets/chest_model/vgg-curves.png Graphic file (type png)
+<use assets/chest_model/vgg-curves.png>
+Package pdftex.def Info: assets/chest_model/vgg-curves.png  used on input line 
+453.
+(pdftex.def)             Requested size: 452.9679pt x 192.09802pt.
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -5491,111 +5520,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [190]
-<assets/chest_model/image10.png, id=2460, 1796.7125pt x 491.8375pt>
-File: assets/chest_model/image10.png Graphic file (type png)
-<use assets/chest_model/image10.png>
-Package pdftex.def Info: assets/chest_model/image10.png  used on input line 501
-.
-(pdftex.def)             Requested size: 452.9679pt x 123.99474pt.
-<assets/chest_model/image11.png, id=2461, 790.955pt x 703.62875pt>
-File: assets/chest_model/image11.png Graphic file (type png)
-<use assets/chest_model/image11.png>
-Package pdftex.def Info: assets/chest_model/image11.png  used on input line 508
-.
-(pdftex.def)             Requested size: 452.9679pt x 402.96217pt.
+<assets/chest_model/vgg-cm.png, id=2490, 322.20375pt x 279.29344pt>
+File: assets/chest_model/vgg-cm.png Graphic file (type png)
+<use assets/chest_model/vgg-cm.png>
+Package pdftex.def Info: assets/chest_model/vgg-cm.png  used on input line 460.
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[191 <./assets/chest_model/image10.png>]
-<assets/chest_model/image12.png, id=2472, 1021.8175pt x 471.7625pt>
-File: assets/chest_model/image12.png Graphic file (type png)
-<use assets/chest_model/image12.png>
-Package pdftex.def Info: assets/chest_model/image12.png  used on input line 549
-.
-(pdftex.def)             Requested size: 452.9679pt x 209.13101pt.
-<assets/chest_model/image13.png, id=2473, 771.88374pt x 684.5575pt>
-File: assets/chest_model/image13.png Graphic file (type png)
-<use assets/chest_model/image13.png>
-Package pdftex.def Info: assets/chest_model/image13.png  used on input line 556
-.
-(pdftex.def)             Requested size: 452.9679pt x 401.7232pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[192 <./assets/chest_model/image11.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[193 <./assets/chest_model/image12.png> <./assets/chest_model/image13.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[194]
-<assets/chest_model/image14.png, id=2491, 1413.28pt x 770.88pt>
-File: assets/chest_model/image14.png Graphic file (type png)
-<use assets/chest_model/image14.png>
-Package pdftex.def Info: assets/chest_model/image14.png  used on input line 650
-.
-(pdftex.def)             Requested size: 452.9679pt x 247.07481pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[195]
-Underfull \vbox (badness 3713) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[196 <./assets/chest_model/image14.png>]
-<assets/chest_model/image15.png, id=2507, 995.72pt x 1089.06876pt>
-File: assets/chest_model/image15.png Graphic file (type png)
-<use assets/chest_model/image15.png>
-Package pdftex.def Info: assets/chest_model/image15.png  used on input line 687
-.
-(pdftex.def)             Requested size: 317.07614pt x 346.79749pt.
-<assets/chest_model/image19.png, id=2508, 514.92375pt x 563.10374pt>
-File: assets/chest_model/image19.png Graphic file (type png)
-<use assets/chest_model/image19.png>
-Package pdftex.def Info: assets/chest_model/image19.png  used on input line 694
-.
-(pdftex.def)             Requested size: 317.07614pt x 346.74925pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[197 <./assets/chest_model/image15.png>]) (chapters/Chapter4/Lung Model Res.tex
+(pdftex.def)             Requested size: 322.20296pt x 279.29276pt.
+<assets/chest_model/vgg-report.png, id=2491, 413.29407pt x 216.05719pt>
+File: assets/chest_model/vgg-report.png Graphic file (type png)
+<use assets/chest_model/vgg-report.png>
+Package pdftex.def Info: assets/chest_model/vgg-report.png  used on input line 
+467.
+(pdftex.def)             Requested size: 413.29305pt x 216.05664pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -5607,17 +5543,209 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[198 <./assets/chest_model/image19.png>]
+[191 <./assets/chest_model/vgg-curves.png> <./assets/chest_model/vgg-cm.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[192 <./assets/chest_model/vgg-report.png>]
+<assets/chest_model/image10.png, id=2511, 1796.7125pt x 491.8375pt>
+File: assets/chest_model/image10.png Graphic file (type png)
+<use assets/chest_model/image10.png>
+Package pdftex.def Info: assets/chest_model/image10.png  used on input line 544
+.
+(pdftex.def)             Requested size: 452.9679pt x 123.99474pt.
+<assets/chest_model/image11.png, id=2512, 790.955pt x 703.62875pt>
+File: assets/chest_model/image11.png Graphic file (type png)
+<use assets/chest_model/image11.png>
+Package pdftex.def Info: assets/chest_model/image11.png  used on input line 551
+.
+(pdftex.def)             Requested size: 452.9679pt x 402.96217pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[193 <./assets/chest_model/image10.png>]
+<assets/chest_model/image12.png, id=2521, 1021.8175pt x 471.7625pt>
+File: assets/chest_model/image12.png Graphic file (type png)
+<use assets/chest_model/image12.png>
+Package pdftex.def Info: assets/chest_model/image12.png  used on input line 592
+.
+(pdftex.def)             Requested size: 452.9679pt x 209.13101pt.
+<assets/chest_model/image13.png, id=2522, 771.88374pt x 684.5575pt>
+File: assets/chest_model/image13.png Graphic file (type png)
+<use assets/chest_model/image13.png>
+Package pdftex.def Info: assets/chest_model/image13.png  used on input line 599
+.
+(pdftex.def)             Requested size: 452.9679pt x 401.7232pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[194 <./assets/chest_model/image11.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[195 <./assets/chest_model/image12.png> <./assets/chest_model/image13.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[196]
+<assets/chest_model/image14.png, id=2540, 1413.28pt x 770.88pt>
+File: assets/chest_model/image14.png Graphic file (type png)
+<use assets/chest_model/image14.png>
+Package pdftex.def Info: assets/chest_model/image14.png  used on input line 693
+.
+(pdftex.def)             Requested size: 452.9679pt x 247.07481pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[197]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[198 <./assets/chest_model/image14.png>]
+<assets/chest_model/fl-2-cm.png, id=2557, 325.96782pt x 322.95656pt>
+File: assets/chest_model/fl-2-cm.png Graphic file (type png)
+<use assets/chest_model/fl-2-cm.png>
+Package pdftex.def Info: assets/chest_model/fl-2-cm.png  used on input line 733
+.
+(pdftex.def)             Requested size: 325.96701pt x 322.95576pt.
+<assets/chest_model/fl-2-report.png, id=2558, 398.99063pt x 225.84375pt>
+File: assets/chest_model/fl-2-report.png Graphic file (type png)
+<use assets/chest_model/fl-2-report.png>
+Package pdftex.def Info: assets/chest_model/fl-2-report.png  used on input line
+ 740.
+(pdftex.def)             Requested size: 398.98965pt x 225.84319pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[199 <./assets/chest_model/fl-2-cm.png> <./assets/chest_model/fl-2-report.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[200]
+<assets/chest_model/fl-3-cm.png, id=2573, 306.39468pt x 335.00156pt>
+File: assets/chest_model/fl-3-cm.png Graphic file (type png)
+<use assets/chest_model/fl-3-cm.png>
+Package pdftex.def Info: assets/chest_model/fl-3-cm.png  used on input line 787
+.
+(pdftex.def)             Requested size: 306.39394pt x 335.00073pt.
+<assets/chest_model/fl-3-report.png, id=2574, 414.04688pt x 199.49532pt>
+File: assets/chest_model/fl-3-report.png Graphic file (type png)
+<use assets/chest_model/fl-3-report.png>
+Package pdftex.def Info: assets/chest_model/fl-3-report.png  used on input line
+ 794.
+(pdftex.def)             Requested size: 414.04585pt x 199.49481pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[201 <./assets/chest_model/fl-3-cm.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[202 <./assets/chest_model/fl-3-report.png>]
+<assets/chest_model/fl-4-cm.png, id=2589, 368.1253pt x 350.05782pt>
+File: assets/chest_model/fl-4-cm.png Graphic file (type png)
+<use assets/chest_model/fl-4-cm.png>
+Package pdftex.def Info: assets/chest_model/fl-4-cm.png  used on input line 842
+.
+(pdftex.def)             Requested size: 368.1244pt x 350.05695pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[203]
+<assets/chest_model/fl-4-report.png, id=2595, 380.17032pt x 184.43906pt>
+File: assets/chest_model/fl-4-report.png Graphic file (type png)
+<use assets/chest_model/fl-4-report.png>
+Package pdftex.def Info: assets/chest_model/fl-4-report.png  used on input line
+ 849.
+(pdftex.def)             Requested size: 380.16939pt x 184.4386pt.
+) (chapters/Chapter4/Lung Model Res.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[204 <./assets/chest_model/fl-4-cm.png> <./assets/chest_model/fl-4-report.png>]
+
 Overfull \hbox (1.68695pt too wide) in paragraph at lines 18--26
  [][] 
  []
 
-<assets/LC_Res_1.png, id=2520, 283.0575pt x 258.9675pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[205]
+<assets/LC_Res_1.png, id=2607, 283.0575pt x 258.9675pt>
 File: assets/LC_Res_1.png Graphic file (type png)
 <use assets/LC_Res_1.png>
 Package pdftex.def Info: assets/LC_Res_1.png  used on input line 32.
 (pdftex.def)             Requested size: 317.07614pt x 290.11667pt.
-<assets/LC_Res_2.png, id=2521, 360.693pt x 240.462pt>
+<assets/LC_Res_2.png, id=2608, 360.693pt x 240.462pt>
 File: assets/LC_Res_2.png Graphic file (type png)
 <use assets/LC_Res_2.png>
 Package pdftex.def Info: assets/LC_Res_2.png  used on input line 39.
@@ -5634,7 +5762,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[199]
+[206 <./assets/LC_Res_1.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5642,7 +5770,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[200 <./assets/LC_Res_1.png> <./assets/LC_Res_2.png>]
+[207 <./assets/LC_Res_2.png>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5650,7 +5778,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[201]))
+[208])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5658,7 +5786,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[202] [203
+[209] [210
 
 
 ]
@@ -5669,87 +5797,13 @@ Chapter 5.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [204
+ [211
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[205]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[206]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[207]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[208]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[209]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[210]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[211])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5758,10 +5812,84 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [212]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[213]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[214]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[215]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[216]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[217]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[218])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[219]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
- [213
+ [220
 
 
 
@@ -5773,7 +5901,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[214]
+[221]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5781,7 +5909,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[215]
+[222]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5789,7 +5917,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[216] (Thesis_book.aux (chapters/chapter1.aux) (chapters/chapter2.aux)
+[223] (Thesis_book.aux (chapters/chapter1.aux) (chapters/chapter2.aux)
 (chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -5800,17 +5928,17 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Thesis_book.out' has not changed.
-(rerunfilecheck)             Checksum: 21DB072EFEAD93077B7D49B49F7FC666;24842.
+(rerunfilecheck)             Checksum: 2DE1CF635876A130363798F4F10AC460;24933.
 Package logreq Info: Writing requests to 'Thesis_book.run.xml'.
 \openout1 = `Thesis_book.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41952 strings out of 474486
- 852122 string characters out of 5744227
+ 42034 strings out of 474486
+ 854495 string characters out of 5744227
  2035542 words of memory out of 5000000
- 62231 multiletter control sequences out of 15000+600000
- 756493 words of font info for 404 fonts, out of 8000000 for 9000
+ 62291 multiletter control sequences out of 15000+600000
+ 756590 words of font info for 405 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,16n,95p,1906b,2071s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb
@@ -5839,9 +5967,9 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Zyad/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Zyad/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Zyad/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on Thesis_book.pdf (230 pages, 14071304 bytes).
+Output written on Thesis_book.pdf (237 pages, 13895150 bytes).
 PDF statistics:
- 2944 PDF objects out of 2984 (max. 8388607)
- 777 named destinations out of 1000 (max. 500000)
- 120250 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 3035 PDF objects out of 3580 (max. 8388607)
+ 797 named destinations out of 1000 (max. 500000)
+ 120293 words of extra memory for PDF output out of 128383 (max. 10000000)
 

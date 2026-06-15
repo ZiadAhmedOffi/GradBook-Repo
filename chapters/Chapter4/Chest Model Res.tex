@@ -424,7 +424,50 @@ VGG-19 is a deep convolutional network with 19 weight layers characterized by a 
 \end{table}
 }
 
-\textit{Note: Detailed performance plots for VGG-19 were omitted to prioritize more modern architectures, but the model achieved comparable baseline performance.}
+Table~\ref{tab:vgg_res} presents the results achieved by the VGG-19 model configured with a Softmax activation function for multi-class chest disease classification. Overall, the model demonstrates strong discriminative capability across the four target classes (COVID-19, Normal, Pneumonia, and Tuberculosis), benefiting from the deep hierarchical feature extraction of the VGG-19 architecture. However, compared to more recent architectures, a slight reduction in generalization performance can be observed, particularly in visually similar classes such as Pneumonia and Tuberculosis, which often share overlapping radiographic patterns and therefore present a more challenging classification boundary.
+
+The training dynamics of the model were recorded during training and are illustrated in Figure~\ref{fig:vgg_curves}, showing a generally stable convergence with steadily improving training and validation accuracy across epochs. A small generalization gap emerges in later epochs, indicating mild overfitting typical of high-capacity CNNs trained on limited medical datasets. The confusion matrix in Figure~\ref{fig:vgg-cm} further details class-wise prediction behavior, highlighting that most misclassifications occur between Pneumonia and Tuberculosis due to their radiographic similarity, while COVID-19 samples are classified more consistently due to more distinctive visual patterns. In addition, the final classification report shown in Figure~\ref{fig:vgg-report} confirms strong precision, recall, and F1-scores across most classes, providing a comprehensive evaluation of the model’s diagnostic performance.
+
+\begin{table}[H]
+	\centering
+	\caption{Training Configuration and Performance Summary}
+	\label{tab:vgg_res}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Parameter} & \textbf{Value} \\
+		\hline
+		Loss & Sparse Categorical Cross-Entropy \\
+		\hline
+		Early stopping & patience = 5, monitor = val\_acc \\
+		\hline
+		LR reduction & factor = 0.1, patience = 4, min\_lr = $1 \times 10^{-7}$ \\
+		\hline
+		Accuracy & \textbf{94.77\%} \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{assets/chest_model/vgg-curves.png}
+	\label{fig:vgg_curves}
+	\caption{Learning curves for VGG-19 SoftMax.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{assets/chest_model/vgg-cm.png}
+	\label{fig:vgg-cm}
+	\caption{Confusion matrix for VGG-19 SoftMax.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{assets/chest_model/vgg-report.png}
+	\label{fig:vgg-report}
+	\caption{Classification report for VGG-19 SoftMax.}
+\end{figure}
 
 \subsection{One-vs-Rest Classification Results (OVR / Sigmoid Approach)}
 
@@ -616,7 +659,7 @@ Since the data partitioning is balanced (each client holds approximately $N_{\te
 Common hyperparameters used across different FL experiments are listed in Table~\ref{tab:fl_hyperparams}, while the overall FL architectures is illustrated in Figure~\ref{fig:fl_architecture}
 
 {\renewcommand{\arraystretch}{1.2}
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
 	\caption{Common hyperparameters across FL experiments.}
 	\label{tab:fl_hyperparams}
@@ -645,55 +688,167 @@ Common hyperparameters used across different FL experiments are listed in Table~
 \end{table}
 }
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{assets/chest_model/image14.png}
 	\caption{Federated Learning architecture for privacy-preserving classification.}
 	\label{fig:fl_architecture}
 \end{figure}
 
-\subsubsection{Comparison of Client Configurations}
+\subsubsection{Federated Learning with 2 Clients}
+In the two-client scenario, the global training set is split equally between two clients, each holding approximately \textbf{\num{7615} images}. The GPU fraction allocated per client is 0.5, ensuring that each client can leverage half of the available GPU memory for its local training. The configuration and result of the trial is shown in Table~\ref{tab:fl_2}
 
-Experiments were conducted with 2, 3, and 4 clients to assess the impact of data fragmentation.
-
-\textbf{Federated Learning with 2 Clients:} In the two-client scenario, the global training set is split equally between two clients, each holding approximately 7,615 images. With only two clients, each client's local dataset is the largest of all federated configurations, providing the richest local learning signal. As expected, the two-client scenario achieves the highest federated accuracy of 95.57\%, demonstrating that competitive centralized performance can be approached when each client holds a sufficiently large and representative local dataset.
-
-\textbf{Federated Learning with 3 Clients:} In the three-client configuration, the global training data is distributed across three clients, each holding approximately 5,077 images. The test accuracy of 94.13\% represents a modest decrease of 1.44 percentage points relative to the two-client scenario, reflecting the reduced local dataset size and the additional averaging noise introduced by aggregating three independent gradient trajectories.
-
-\textbf{Federated Learning with 4 Clients:} The four-client configuration is the most extensively distributed scenario explored, representative of a small consortium of four collaborating hospitals. Despite each client holding only $\sim$25\% of the total training data, the four-client federated model achieves a test accuracy of 93.22\%. This modest accuracy degradation confirms the robustness of the FedAvg aggregation strategy. Summary results across configurations are provided in Table~\ref{tab:fl_summary}, with confusion matrices for the 2-client and 4-client cases shown in Figure~\ref{fig:fl_2c_cm} and Figure~\ref{fig:fl_4c_cm}, respectively.
-
-{\renewcommand{\arraystretch}{1.2}
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
-	\caption{Summary of FL test accuracy across configurations.}
-	\label{tab:fl_summary}
-	\small
-	\begin{tabularx}{0.9\textwidth}{|l|c|c|c|X|}
+	\caption{Federated Learning configuration and results for the 2 client trial.}
+	\label{tab:fl_2}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabularx}{0.7\textwidth}{|l|X|}
 		\hline
-		\textbf{Config} & \textbf{Clients} & \textbf{Images/Client} & \textbf{Accuracy} & \textbf{Drop vs 2-C} \\
+		\textbf{Parameter} & \textbf{Value} \\
 		\hline
-		FL-2 & 2 & $\sim$7,615 & 95.57\% & --- \\
+		Number of clients & 2 \\
 		\hline
-		FL-3 & 3 & $\sim$5,077 & 94.13\% & -1.44 pp \\
+		Training samples per client & $\sim$7,615 \\
 		\hline
-		FL-4 & 4 & $\sim$3,807 & 93.22\% & -2.35 pp \\
+		GPU fraction per client & 0.5 \\
+		\hline
+		CPUs per client & 1 \\
+		\hline
+		Total Ray CPUs & 2 \\
+		\hline
+		Total Ray GPUs & 1.0 \\
+		\hline
+		Final Test Accuracy & \textbf{95.57\%} \\
 		\hline
 	\end{tabularx}
 \end{table}
-}
 
-\begin{figure}[htbp]
+With only two clients, each client's local dataset is the largest of all federated configurations (50\% of total training data), providing the richest local learning signal. The global model benefits from the full representational diversity of the dataset while still maintaining the privacy-preserving federated structure. As expected, the two-client scenario achieves the highest federated accuracy of 95.57\%, demonstrating that competitive centralized performance can be approached through federated aggregation when each client holds a sufficiently large and representative local dataset.
+
+The confusion matrix and classification report of the trial are shown in Figure~\ref{fig:fl_2_cm}, and Figure~\ref{fig:fl_2_report} respectively.
+
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{assets/chest_model/image15.png}
-	\caption{Confusion matrix for Federated DenseNet121 (2 clients, Accuracy: 95.57\%).}
-	\label{fig:fl_2c_cm}
+	\includegraphics{assets/chest_model/fl-2-cm.png}
+	\caption{Confusion matrix for the Federated DenseNet121 model trained with 2 clients on the global held-out test set (accuracy: 95.57\%).}
+	\label{fig:fl_2_cm}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{assets/chest_model/image19.png}
-	\caption{Confusion matrix for Federated DenseNet121 (4 clients, Accuracy: 93.22\%).}
-	\label{fig:fl_4c_cm}
+	\includegraphics{assets/chest_model/fl-2-report.png}
+	\caption{Per-class classification metrics for the Federated DenseNet121 model with 2 clients.}
+	\label{fig:fl_2_report}
+\end{figure}
+
+
+\subsubsection{Federated Learning with 3 Clients}
+In the three-client configuration, the global training data is distributed across three clients, each holding approximately \textbf{\num{5077} images} (one-third of the total training set). The GPU fraction per client is reduced to 0.33 to accommodate the increased concurrency of three parallel simulation workers. The configuration and result of the trial is shown in Table~\ref{tab:fl_3}.
+
+\begin{table}[H]
+	\centering
+	\caption{Federated Learning Configuration and Results (3 Clients)}
+	\label{tab:fl_3}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Parameter} & \textbf{Value} \\
+		\hline
+		Number of clients & 3 \\
+		\hline
+		Training samples per client & $\sim$5,077 \\
+		\hline
+		GPU fraction per client & 0.33 \\
+		\hline
+		CPUs per client & 0.67 \\
+		\hline
+		Total Ray CPUs & 2 \\
+		\hline
+		Total Ray GPUs & 1.0 \\
+		\hline
+		Final Test Accuracy & \textbf{94.13\%} \\
+		\hline
+	\end{tabular}
+\end{table}
+
+The three-client scenario represents a balanced compromise between privacy preservation and predictive performance. By distributing the training dataset across three independent clients rather than two, the amount of data held by any single participant is reduced, thereby strengthening privacy guarantees and decreasing the risk associated with data concentration. This configuration more closely reflects realistic federated learning deployments in healthcare environments, where patient records are often distributed across multiple hospitals, clinics, or medical institutions that are unable or unwilling to share raw data due to regulatory, ethical, and confidentiality constraints.
+
+From a performance perspective, the three-client configuration achieved a final test accuracy of 94.13\%, representing a modest decrease of 1.25 percentage points compared with the two-client scenario. This reduction is expected and can be attributed to several factors inherent to federated learning. First, each client is exposed to a smaller subset of the overall training dataset, reducing the diversity of examples available during local training and potentially limiting the quality of the learned local representations. Second, because each client optimizes its model parameters independently, the resulting gradient updates may follow slightly different optimization trajectories. When these independently learned updates are aggregated through the Federated Averaging (FedAvg) algorithm, additional variance is introduced into the global optimization process, particularly when the local data distributions are not perfectly identical.
+
+Despite these challenges, the observed reduction in performance remains relatively small, demonstrating the robustness of the federated training strategy. The FedAvg algorithm effectively mitigates the effects of distributed learning by periodically combining model parameters from all participating clients into a unified global model. This aggregation process allows the global model to benefit from the collective knowledge learned across all client datasets while maintaining data locality and privacy. Consequently, the model continues to capture the most discriminative radiographic features associated with COVID-19, Pneumonia, Tuberculosis, and Normal chest X-ray images, despite the increased degree of data partitioning.
+
+The results indicate that the three-client configuration successfully preserves most of the predictive capability achieved in less distributed settings while offering stronger privacy characteristics and greater scalability. A final accuracy exceeding 94\% demonstrates that the model remains highly effective for chest disease classification and continues to perform competitively relative to centralized training approaches. These findings suggest that federated learning can maintain strong diagnostic performance even when training data are distributed across multiple institutions, supporting its viability as a practical framework for privacy-preserving medical AI deployment.
+
+The confusion matrix and classification report of the trial are shown in Figure~\ref{fig:fl_3_cm}, and Figure~\ref{fig:fl_3_report} respectively.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{assets/chest_model/fl-3-cm.png}
+	\caption{Confusion matrix for the Federated DenseNet121 model trained with 3 clients.}
+	\label{fig:fl_3_cm}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{assets/chest_model/fl-3-report.png}
+	\caption{Per-class classification metrics for the Federated DenseNet121 model with 3 clients.}
+	\label{fig:fl_3_report}
+\end{figure}
+
+\subsubsection{Federated Learning with 4 Clients}
+The four-client configuration is the most extensively distributed scenario explored in this work, with the training set distributed across four clients holding approximately \textbf{\num{3807} images} each. The GPU fraction per client is further reduced to 0.25. This represents a scenario representative of a small consortium of four collaborating hospitals, each contributing its local data to a jointly trained global model without sharing any patient records. The configuration and result of the trial is shown in Table~\ref{tab:fl_4}.
+
+\begin{table}[H]
+	\centering
+	\caption{Four-Client Federated Learning Configuration}
+	\label{tab:fl_4}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabularx}{0.7\textwidth}{|l|X|}
+		\hline
+		\textbf{Parameter} & \textbf{Value} \\
+		\hline
+		Number of clients & 4 \\
+		\hline
+		Training samples per client & $\sim$3,807 \\
+		\hline
+		GPU fraction per client & 0.25 \\
+		\hline
+		CPUs per client & 0.5 \\
+		\hline
+		Total Ray CPUs & 2 \\
+		\hline
+		Total Ray GPUs & 1.0 \\
+		\hline
+		Final Test Accuracy & \textbf{93.22\%} \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+Despite each client holding only approximately 25\% of the total training dataset, the four-client federated model achieves a test accuracy of 93.22\%, corresponding to a decrease of only 2.35 percentage points relative to the two-client configuration. Considering the substantial increase in data decentralization, this reduction is relatively modest and highlights the effectiveness of the federated learning framework in maintaining predictive performance under increasingly distributed training conditions. The results demonstrate that even when the available data at each client become significantly smaller, the model is still capable of learning robust and clinically relevant representations for chest disease classification.
+
+The four-client configuration represents the most challenging experimental setting evaluated in this study. As the number of participating clients increases, each client receives a smaller subset of the overall dataset, reducing the diversity and volume of examples available during local training. This limitation can lead to greater variability in locally learned model parameters, particularly when individual clients encounter slightly different class distributions or image characteristics. Furthermore, the global model must aggregate updates originating from four independent optimization processes rather than two or three, increasing the likelihood of parameter divergence and introducing additional noise into the federated averaging process.
+
+Nevertheless, the Federated Averaging (FedAvg) algorithm proves highly effective at overcoming these challenges. By periodically aggregating model parameters from all participating clients, FedAvg enables the global model to integrate knowledge acquired from geographically and logically separated datasets without requiring the exchange of raw patient data. The resulting global model benefits from a broader range of learned feature representations than any individual client could achieve independently. This collaborative learning process allows the network to continue identifying the radiographic manifestations of COVID-19, Pneumonia, Tuberculosis, and Normal chest conditions with a high degree of accuracy, despite the increased fragmentation of the training data.
+
+An important factor contributing to the stability of the four-client configuration is the use of a global early stopping mechanism. Because each client trains on a comparatively small local dataset, there is a greater risk of overfitting to client-specific patterns, noise, or sampling artifacts. Without appropriate regularization, these over-specialized local updates could negatively affect the quality of the aggregated global model. The global early stopping strategy mitigates this risk by monitoring validation performance and terminating training once further optimization ceases to provide meaningful improvements. This prevents unnecessary local adaptation and helps preserve the model's ability to generalize to unseen test samples.
+
+From a practical perspective, the four-client scenario is particularly significant because it more closely resembles real-world healthcare deployments. In many medical federated learning environments, data are distributed across numerous hospitals, clinics, and diagnostic centers, each contributing only a fraction of the overall dataset. The ability of the proposed system to retain a test accuracy above 93\% under these conditions demonstrates its scalability and resilience. The relatively small performance decrease observed as the number of clients increases suggests that the proposed framework can support broader collaboration among healthcare institutions while maintaining strong diagnostic effectiveness and preserving patient privacy. These findings provide further evidence that federated learning is a viable and practical approach for large-scale medical image analysis applications where centralized data collection is infeasible or undesirable.
+
+The confusion matrix and classification report of the trial are shown in Figure~\ref{fig:fl_4_cm}, and Figure~\ref{fig:fl_4_report} respectively.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{assets/chest_model/fl-4-cm.png}
+	\caption{Confusion matrix for the Federated DenseNet121 model trained with 4 clients (accuracy: 93.22\%).}
+	\label{fig:fl_4_cm}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics{assets/chest_model/fl-4-report.png}
+	\caption{Per-class classification metrics for the Federated DenseNet121 model with 4 clients.}
+	\label{fig:fl_4_report}
 \end{figure}
 
 \FloatBarrier

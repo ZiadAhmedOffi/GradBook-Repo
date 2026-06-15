@@ -91,9 +91,9 @@
 \contentsline {paragraph}{Step 3: Gaussian Smoothing}{105}{paragraph*.70}%
 \contentsline {paragraph}{Step 4: Min-Max Normalization}{106}{paragraph*.71}%
 \contentsline {paragraph}{Greyscale to RGB Conversion}{106}{paragraph*.72}%
-\contentsline {subsubsection}{Lung Segmentation Dataset}{106}{subsubsection*.75}%
-\contentsline {subsection}{\numberline {3.4.5}Segmentation Model Details}{107}{subsection.3.4.5}%
-\contentsline {subsubsection}{Rationale for Lung Segmentation}{107}{subsubsection*.77}%
+\contentsline {subsubsection}{Lung Segmentation Dataset}{107}{subsubsection*.75}%
+\contentsline {subsection}{\numberline {3.4.5}Segmentation Model Details}{108}{subsection.3.4.5}%
+\contentsline {subsubsection}{Rationale for Lung Segmentation}{108}{subsubsection*.77}%
 \contentsline {subsubsection}{U-Net Architecture}{108}{subsubsection*.78}%
 \contentsline {paragraph}{Convolutional Block}{109}{paragraph*.79}%
 \contentsline {paragraph}{Encoder (Contracting Path)}{109}{paragraph*.80}%
@@ -198,30 +198,33 @@
 \contentsline {subsubsection}{ResNet50V2 (Softmax, Partial Fine-Tuning)}{186}{subsubsection*.199}%
 \contentsline {subsubsection}{EfficientNet (SoftMax)}{188}{subsubsection*.204}%
 \contentsline {subsubsection}{VGG-19 (SoftMax)}{190}{subsubsection*.209}%
-\contentsline {subsection}{\numberline {4.2.4}One-vs-Rest Classification Results (OVR / Sigmoid Approach)}{190}{subsection.4.2.4}%
-\contentsline {subsubsection}{ResNet50 OVR (Sigmoid)}{191}{subsubsection*.211}%
-\contentsline {subsubsection}{DenseNet121 OVR (Sigmoid)}{192}{subsubsection*.216}%
-\contentsline {subsection}{\numberline {4.2.5}Federated Learning Results}{194}{subsection.4.2.5}%
-\contentsline {subsubsection}{Federated Learning Framework and Architecture}{194}{subsubsection*.221}%
-\contentsline {subsubsection}{Comparison of Client Configurations}{195}{subsubsection*.224}%
-\contentsline {section}{\numberline {4.3}CT Scans Model Results}{198}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Experimental Setup}{199}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Centralized Model Results}{199}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Federated Learning Model Results}{199}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Comparative Analysis}{201}{subsection.4.3.4}%
-\contentsline {chapter}{\numberline {5}Conclusion}{204}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Achievement of Project Objectives}{204}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Discussion of the Proposed Framework}{205}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Discussion of Individual System Components}{206}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Routing Model}{206}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Chest Disease Classification Model}{207}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Lung Cancer Detection Model}{207}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Explainable Artificial Intelligence Component}{208}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Federated Learning Component}{208}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Practical and Clinical Significance}{209}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Project Contributions}{209}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Challenges Encountered During Development}{209}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Limitations}{210}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Future Work}{211}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Final Remarks}{212}{section.5.9}%
-\contentsline {chapter}{References}{213}{chapter*.234}%
+\contentsline {subsection}{\numberline {4.2.4}One-vs-Rest Classification Results (OVR / Sigmoid Approach)}{192}{subsection.4.2.4}%
+\contentsline {subsubsection}{ResNet50 OVR (Sigmoid)}{192}{subsubsection*.215}%
+\contentsline {subsubsection}{DenseNet121 OVR (Sigmoid)}{194}{subsubsection*.220}%
+\contentsline {subsection}{\numberline {4.2.5}Federated Learning Results}{196}{subsection.4.2.5}%
+\contentsline {subsubsection}{Federated Learning Framework and Architecture}{196}{subsubsection*.225}%
+\contentsline {subsubsection}{Federated Learning with 2 Clients}{198}{subsubsection*.228}%
+\contentsline {subsubsection}{Federated Learning with 3 Clients}{200}{subsubsection*.232}%
+\contentsline {subsubsection}{Federated Learning with 4 Clients}{202}{subsubsection*.236}%
+\contentsline {section}{\numberline {4.3}CT Scans Model Results}{205}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Experimental Setup}{205}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Centralized Model Results}{205}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Federated Learning Model Results}{206}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Comparative Analysis}{207}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Summary}{208}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{211}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Achievement of Project Objectives}{211}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Discussion of the Proposed Framework}{212}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Discussion of Individual System Components}{213}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Routing Model}{213}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Chest Disease Classification Model}{214}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Lung Cancer Detection Model}{214}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Explainable Artificial Intelligence Component}{215}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Federated Learning Component}{215}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Practical and Clinical Significance}{216}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Project Contributions}{216}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Challenges Encountered During Development}{216}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Limitations}{217}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Future Work}{218}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Final Remarks}{219}{section.5.9}%
+\contentsline {chapter}{References}{220}{chapter*.246}%

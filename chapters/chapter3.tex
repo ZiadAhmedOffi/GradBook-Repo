@@ -68,14 +68,14 @@ In the context of medical image analysis, ResNet50 is well-suited for extracting
 
 \section{Summary}
 
-This chapter presented the proposed end-to-end model for automated detection of chest diseases and bone fractures from medical images. The overall solution architecture was introduced, highlighting the integration of a deep learning–based diagnostic pipeline with supporting backend processes to enable efficient and scalable medical image analysis.
+This chapter presented the proposed end-to-end model for automated detection of chest diseases and lung cancers from medical images. The overall solution architecture was introduced, highlighting the integration of a deep learning–based diagnostic pipeline with supporting backend processes to enable efficient and scalable medical image analysis.
 
 The deep learning pipeline was described in detail, illustrating the sequential flow from image preprocessing and feature extraction to intelligent routing and task-specific inference. Transfer learning was adopted as a core strategy to leverage pre-trained deep neural networks, enabling effective feature representation and improved generalization in the presence of limited labeled medical data.
 
 The chapter also introduced the medical image routing model, which enables dynamic task allocation by directing input images to specialized diagnostic models. This design enhances modularity and allows the system to support multiple medical imaging tasks within a unified framework.
 
-Then, the architecture of the chest disease classification model was discussed in detail. The design was illustrated, and the use of ResNet50 as the main feature extractor was justified. The formulation of the problem and the motivation behind such a model were presented while detailed architectural aspects of the transfer-learning model were omitted to avoid redundancy.
+Then, the architecture of the chest disease classification model was discussed in detail. The design was illustrated, and the use of DenseNet121 as the main feature extractor was justified. The formulation of the problem and the motivation behind such a model were presented while detailed architectural aspects of the transfer-learning model were omitted to avoid redundancy.
 
-Finally, the bone fracture detection model was presented as a task-specific component of the system, implemented using an unmodified YOLOv8 architecture. The formulation of the fracture detection problem and the motivation for adopting a one-stage object detection approach were discussed, while detailed architectural aspects were referenced to earlier sections to avoid redundancy.
+Finally, the chest cancer detection model was presented as a task-specific component of the system, implemented using an unmodified YOLOv8 architecture. The formulation of the fracture detection problem and the motivation for adopting a one-stage object detection approach were discussed, while detailed architectural aspects were referenced to earlier sections to avoid redundancy.
 
 Overall, this chapter established the structural and methodological foundation of the proposed system, providing a clear understanding of its components and design choices. The described models form the basis for the experimental evaluation and performance analysis presented in the subsequent chapter.

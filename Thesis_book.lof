@@ -71,13 +71,20 @@
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Classification report for EfficientNet SoftMax.}}{188}{figure.caption.206}%
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Learning Curves for EfficientNet SoftMax.}}{189}{figure.caption.207}%
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Confusion matrix for EfficientNet SoftMax.}}{189}{figure.caption.208}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Learning curves for ResNet50 OVR.}}{191}{figure.caption.214}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Confusion matrix for ResNet50 OVR.}}{192}{figure.caption.215}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Learning curves for DenseNet121 OVR.}}{193}{figure.caption.218}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Confusion matrix for DenseNet121 OVR.}}{193}{figure.caption.219}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Federated Learning architecture for privacy-preserving classification.}}{196}{figure.caption.223}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Confusion matrix for Federated DenseNet121 (2 clients, Accuracy: 95.57\%).}}{197}{figure.caption.226}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Confusion matrix for Federated DenseNet121 (4 clients, Accuracy: 93.22\%).}}{198}{figure.caption.227}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Normalized confusion matrix of the centralized YOLOv8n model.}}{200}{figure.caption.229}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Precision-Recall curve of the centralized YOLOv8n model.}}{200}{figure.caption.230}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Learning curves for VGG-19 SoftMax.}}{191}{figure.caption.212}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Confusion matrix for VGG-19 SoftMax.}}{191}{figure.caption.213}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Classification report for VGG-19 SoftMax.}}{192}{figure.caption.214}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Learning curves for ResNet50 OVR.}}{193}{figure.caption.218}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Confusion matrix for ResNet50 OVR.}}{194}{figure.caption.219}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Learning curves for DenseNet121 OVR.}}{195}{figure.caption.222}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Confusion matrix for DenseNet121 OVR.}}{195}{figure.caption.223}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Federated Learning architecture for privacy-preserving classification.}}{198}{figure.caption.227}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Confusion matrix for the Federated DenseNet121 model trained with 2 clients on the global held-out test set (accuracy: 95.57\%).}}{199}{figure.caption.230}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 2 clients.}}{199}{figure.caption.231}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Confusion matrix for the Federated DenseNet121 model trained with 3 clients.}}{201}{figure.caption.234}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 3 clients.}}{202}{figure.caption.235}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Confusion matrix for the Federated DenseNet121 model trained with 4 clients (accuracy: 93.22\%).}}{204}{figure.caption.238}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 4 clients.}}{204}{figure.caption.239}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Normalized confusion matrix of the centralized YOLOv8n model.}}{206}{figure.caption.241}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Precision-Recall curve of the centralized YOLOv8n model.}}{207}{figure.caption.242}%
 \addvspace {10\p@ }
