@@ -18,9 +18,9 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Modular schematic layout detailing parameter extraction, input token construction, and feature routing pathways between the frozen base model and the target task head.}}{88}{figure.caption.53}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Two-row architecture of the DenseNet121-based medical image routing model.}}{91}{figure.caption.54}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Architectures and workflow investigated during the implementation of the routing model. Blue blocks represent inputs, green blocks denote processing stages, and orange blocks correspond to classification outputs.}}{95}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Overall architecture of the proposed chest disease multi-class classification system, illustrating the sequential pipeline from raw CXR acquisition through preprocessing, lung segmentation, deep classification, and visual explainability.}}{101}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Representative chest radiograph samples from each of the four target diagnostic classes. The subtle visual differences between COVID-19 and Pneumonia are clear, underscoring the difficulty of the classification task.}}{105}{figure.caption.66}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Comparison of a Pneumonia chest radiograph before (left) and after (right).}}{107}{figure.caption.73}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Overall architecture of the proposed chest disease multi-class classification system, illustrating the sequential pipeline from raw CXR acquisition through preprocessing, lung segmentation, deep classification, and visual explainability.}}{101}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Representative chest radiograph samples from each of the four target diagnostic classes. The subtle visual differences between COVID-19 and Pneumonia are clear, underscoring the difficulty of the classification task.}}{104}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Comparison of a Pneumonia chest radiograph before (left) and after (right).}}{106}{figure.caption.73}%
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Comparison of a Tuberculosis chest radiograph before (left) and after (right) the preprocessing pipeline.}}{107}{figure.caption.74}%
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Representative image–mask pair from the Darwin lung segmentation dataset. The mask precisely delineates both lung fields including regions behind the cardiac shadow.}}{108}{figure.caption.76}%
 \contentsline {figure}{\numberline {3.18}{\ignorespaces U-Net architecture implemented for lung segmentation. The contracting path (left) captures contextual information through successive down sampling, while the expansive path (right) enables precise localization via skip connections. Tensor shapes are annotated at each level.}}{111}{figure.caption.85}%
@@ -68,16 +68,16 @@
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Learning curves for ResNet50V2 SoftMax.}}{186}{figure.caption.201}%
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Confusion matrix for ResNet50V2 SoftMax.}}{187}{figure.caption.202}%
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Classification report for ResNet50V2 SoftMax.}}{187}{figure.caption.203}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Learning curves for EfficientNet SoftMax.}}{188}{figure.caption.206}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Confusion matrix for EfficientNet SoftMax.}}{188}{figure.caption.207}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Classification report for EfficientNet SoftMax.}}{189}{figure.caption.208}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Learning curves for ResNet50 OVR.}}{191}{figure.caption.213}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Confusion matrix for ResNet50 OVR.}}{191}{figure.caption.214}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Learning curves for DenseNet121 OVR.}}{192}{figure.caption.217}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Confusion matrix for DenseNet121 OVR.}}{192}{figure.caption.218}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Federated Learning architecture for privacy-preserving classification.}}{195}{figure.caption.222}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Confusion matrix for Federated DenseNet121 (2 clients, Accuracy: 95.57\%).}}{196}{figure.caption.225}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Confusion matrix for Federated DenseNet121 (4 clients, Accuracy: 93.22\%).}}{196}{figure.caption.226}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Normalized confusion matrix of the centralized YOLOv8n model.}}{198}{figure.caption.228}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Precision-Recall curve of the centralized YOLOv8n model.}}{198}{figure.caption.229}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Classification report for EfficientNet SoftMax.}}{188}{figure.caption.206}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Learning Curves for EfficientNet SoftMax.}}{189}{figure.caption.207}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Confusion matrix for EfficientNet SoftMax.}}{189}{figure.caption.208}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Learning curves for ResNet50 OVR.}}{191}{figure.caption.214}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Confusion matrix for ResNet50 OVR.}}{192}{figure.caption.215}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Learning curves for DenseNet121 OVR.}}{193}{figure.caption.218}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Confusion matrix for DenseNet121 OVR.}}{193}{figure.caption.219}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Federated Learning architecture for privacy-preserving classification.}}{196}{figure.caption.223}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Confusion matrix for Federated DenseNet121 (2 clients, Accuracy: 95.57\%).}}{197}{figure.caption.226}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Confusion matrix for Federated DenseNet121 (4 clients, Accuracy: 93.22\%).}}{198}{figure.caption.227}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Normalized confusion matrix of the centralized YOLOv8n model.}}{200}{figure.caption.229}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Precision-Recall curve of the centralized YOLOv8n model.}}{200}{figure.caption.230}%
 \addvspace {10\p@ }

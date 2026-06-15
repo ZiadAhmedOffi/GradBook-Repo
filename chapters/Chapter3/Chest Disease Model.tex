@@ -60,13 +60,6 @@ over the joint distribution of images and labels, whilst satisfying the constrai
 \subsection{Model Architecture Overview}
 The proposed system is a multi-stage deep learning pipeline designed to address each of the challenges outlined in Section~\ref{sec:chest_challenges}. The pipeline is structured into four principal stages, each of which transforms the input data progressively toward the final classification decision. Figure~\ref{fig:chest_pipeline} provides a high-level architectural overview of the complete system.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{assets/chest1.png}
-	\caption{Overall architecture of the proposed chest disease multi-class classification system, illustrating the sequential pipeline from raw CXR acquisition through preprocessing, lung segmentation, deep classification, and visual explainability.}
-	\label{fig:chest_pipeline}
-\end{figure}
-
 The four stages of the pipeline are as follows:
 \paragraph{Step 1: Image Preprocessing}
 All input radiographs undergo a standardized preprocessing pipeline comprising contrast enhancement via Contrast Limited Adaptive Histogram Equalization (CLAHE), Gaussian smoothing for noise suppression, and min-max intensity normalization. This stage ensures that images drawn from heterogeneous acquisition devices and clinical environments are brought to a consistent, model-friendly representation. The preprocessing procedure is described in full detail in Section~\ref{sec:chest_preprocess}.
@@ -74,11 +67,18 @@ All input radiographs undergo a standardized preprocessing pipeline comprising c
 \paragraph{Stage 2: Lung Segmentation}
 A U-Net-based lung segmentation model is trained on a dedicated lung mask dataset (Darwin, Montgomery, Shenzhen combined) to generate binary lung masks from preprocessed radiographs. These masks are subsequently applied to the classification images to suppress all non-pulmonary anatomical structures, ensuring that the downstream classifier focuses exclusively on lung parenchyma. The segmentation model architecture and training details are provided in Section~\ref{sec:segmentation}.
 
-\paragraph{Classification Model}
+\paragraph{Step 3: Classification Model}
 The segmented lung images are fed into a transfer-learned deep CNN. Multiple backbone architectures are evaluated, including DenseNet121, ResNet50/ResNet50V2, EfficientNet, and VGG-19. Two classification paradigms are explored: (i) a standard single-label softmax approach, and (ii) a One-vs-Rest (OVR) multi-label sigmoid approach, which treats each class as an independent binary classification problem. Additionally, the entire classification pipeline is adapted for Federated Learning using the Flower (flwr) framework. Full architectural details of the classification models are provided in Section~\ref{sec:chest_model} and the experimental configuration in Section~\ref{sec:chest_results}.
 
 \paragraph{Stage 4: Explainability via Grad-CAM}
 To ensure clinical transparency, Gradient-weighted Class Activation Mapping (Grad-CAM) is applied post-hoc to the trained classification models. This produces class-discriminative saliency heatmaps that are superimposed on the original CXR, enabling radiologists and clinical users to verify the anatomical basis of each prediction. Grad-CAM integration details are provided in Section~\ref{sec:chest_xai}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{assets/chest1.png}
+	\caption{Overall architecture of the proposed chest disease multi-class classification system, illustrating the sequential pipeline from raw CXR acquisition through preprocessing, lung segmentation, deep classification, and visual explainability.}
+	\label{fig:chest_pipeline}
+\end{figure}
 
 \subsection{Dataset Description}
 The classification system is trained, validated, and evaluated on a carefully curated composite dataset totaling \textbf{\num{17637} chest X-ray images} spanning four distinct diagnostic classes. This dataset is assembled from two complementary publicly available sources, described in detail below. A second, separate dataset is employed exclusively for training the lung segmentation model.
@@ -103,17 +103,24 @@ The Normal class images within this database originate from patients who present
 \subsubsection{Dataset 2: Chest X-Ray Multiclass Dataset with Non-X-Ray Anomalies}
 The second source is a composite multi-institutional dataset curated specifically to facilitate the training of models for real-world, open-set clinical deployment. A distinguishing and clinically important property of this dataset is the deliberate inclusion of non-X-ray images --- photographs of everyday objects such as animals and bicycles --- alongside genuine chest radiographs. This design enables the training of models with robustness to out-of-distribution inputs and supports open-set recognition, whereby the model can identify inputs that do not belong to any known radiographic class. \textbf{Importantly, the non-X-ray class was excluded from our training pipeline}, as our system targets only genuine CXR inputs.
 
-The dataset integrates chest radiographs from the following globally recognized institutional sources:
+The dataset integrates chest radiographs from globally recognized institutional sources, as illustrated in Table~\ref{tab:chest_datasets}
 
 \begin{table}[htbp]
 	\centering
 	\caption{Datasets Used for Chest Disease Detection}
 	\label{tab:chest_datasets}
+	\small
 	\renewcommand{\arraystretch}{1.2}
-	\begin{tabularx}{\textwidth}{|l|l|l|X|}
+	
+	\begin{tabularx}{\textwidth}{|
+			>{\raggedright\arraybackslash}X|
+			>{\raggedright\arraybackslash}X|
+			>{\raggedright\arraybackslash}X|
+			>{\raggedright\arraybackslash}X|}
 		\hline
 		\textbf{Source} & \textbf{Class(es)} & \textbf{Volume} & \textbf{Notes} \\
 		\hline
+		
 		OCT Dataset (Kermany et al.) &
 		Pneumonia, Normal &
 		4,273 Pneumonia + 1,583 Normal &
@@ -155,6 +162,7 @@ The dataset integrates chest radiographs from the following globally recognized 
 		1,357 object images &
 		Not used in training \\
 		\hline
+		
 	\end{tabularx}
 \end{table}
 
@@ -163,7 +171,7 @@ This dataset is particularly valuable for the Tuberculosis and Pneumonia classes
 \subsubsection{Combined Dataset and Class Distribution}
 After merging both source datasets, applying quality filtering, and removing non-X-ray images, the final combined dataset comprises \textbf{\num{17637} images} distributed across four diagnostic classes. The dataset is partitioned into mutually exclusive training, validation, and test splits following standard machine learning practice.
 
-The training set, used for gradient-based parameter optimization, contains \textbf{\num{15229} images} distributed across the four classes as follows:
+The training set, used for gradient-based parameter optimization, contains \textbf{\num{15229} images} distributed across the four classes as shown in Table~\ref{tab:class_distribution}.
 
 \begin{table}[htbp]
 	\centering
@@ -471,13 +479,13 @@ The full encoder–decoder filter progression is summarized in Table~\ref{tab:un
 	\end{tabular}
 \end{table}
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\linewidth]{assets/chest12.png}
 	\caption{U-Net architecture implemented for lung segmentation. The contracting path (left) captures contextual information through successive down sampling, while the expansive path (right) enables precise localization via skip connections. Tensor shapes are annotated at each level.}
-	\label{fig:unet_pipeline}
+	\label{fig:unet_arch}
 \end{figure}
-
+\FloatBarrier
 \subsubsection{Loss Functions}
 A compound loss function is employed for training the segmentation model, combining Binary Cross-Entropy (BCE) loss and Dice loss. This compound formulation simultaneously optimizes pixel-level probability calibration (via BCE) and the overlap between predicted and ground-truth masks (via Dice), yielding more stable training behavior and improved performance on the class-imbalanced segmentation task, where background pixels vastly outnumber lung pixels.
 
@@ -522,44 +530,67 @@ where $N$ is the total number of pixels per image.
 \end{equation}
 
 \subsubsection{Training Configurations}
-The U-Net segmentation model is trained with the following configuration extracted directly from the implementation.
+The U-Net segmentation model is trained with the configuration shown in Table~\ref{tab:unet_training_config}extracted directly from the implementation.
 
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
 	\caption{U-Net segmentation model training configuration.}
 	\label{tab:unet_training_config}
+	\small
 	\renewcommand{\arraystretch}{1.2}
-	\begin{tabular}{|l|l|}
+	
+	\begin{tabularx}{\textwidth}{|
+			>{\raggedright\arraybackslash}p{0.35\textwidth}|
+			>{\raggedright\arraybackslash}X|}
 		\hline
 		\textbf{Hyperparameter} & \textbf{Value} \\
 		\hline
+		
 		Input shape & $224 \times 224 \times 1$ (grayscale) \\
 		\hline
+		
 		Batch size & 8 \\
 		\hline
+		
 		Initial epochs (Phase 1) & 10 \\
 		\hline
+		
 		Fine-tuning epochs (Phase 2) & 4 \\
 		\hline
+		
 		Optimizer & Adam \\
 		\hline
+		
 		Learning rate & $1 \times 10^{-4}$ \\
 		\hline
+		
 		Loss function & BCE + Dice (combined) \\
 		\hline
+		
 		Evaluation metric & Dice Coefficient, Accuracy \\
 		\hline
-		Early stopping monitor & val\_dice\_coef (patience = 5, mode = max) \\
+		
+		Early stopping monitor &
+		\texttt{val\_dice\_coef} (patience = 5, mode = max) \\
 		\hline
-		LR reduction & ReduceLROnPlateau (factor = 0.1, patience = 5, min LR = $1 \times 10^{-7}$) \\
+		
+		LR reduction &
+		ReduceLROnPlateau (factor = 0.1, patience = 5, min LR = $1 \times 10^{-7}$) \\
 		\hline
-		Precision policy & Mixed float16 (TensorFlow AMP) \\
+		
+		Precision policy &
+		Mixed float16 (TensorFlow AMP) \\
 		\hline
-		Training / validation split & 85\% / 15\% (6,106 Darwin images) \\
+		
+		Training / validation split &
+		85\% / 15\% (6,106 Darwin images) \\
 		\hline
-		Best model checkpoint & lung\_segmentation\_darwin\_montgomery\_shenzhen.h5 \\
+		
+		Best model checkpoint &
+		\texttt{lung\_segmentation\_darwin\_montgomery\_shenzhen.h5} \\
 		\hline
-	\end{tabular}
+		
+	\end{tabularx}
 \end{table}
 
 The dataset is shuffled with a fixed seed of 42 before splitting to ensure reproducibility. The training loop uses data pipelines with prefetching to maximize GPU utilization. Mixed float16 precision is enabled via TensorFlow's Automatic Mixed Precision (AMP) to accelerate training on modern NVIDIA GPU architectures with Tensor Core support.
@@ -635,7 +666,7 @@ where $F$ denotes the final convolutional feature map of DenseNet121, $\mathrm{G
 This One-vs-Rest (OVR) multi-label formulation with sigmoid output offers several advantages over a conventional SoftMax multi-class formulation. In the SoftMax approach, the probabilities of all classes are coupled (they must sum to one), which can suppress the activation of a class when multiple classes co-occur or when the model is uncertain. With sigmoid, each class is modeled independently, allowing the model to assign high confidence to multiple classes simultaneously when the image features are ambiguous or the pathology is mixed.
 
 The model architecture is illustrated in Figure~\ref{fig:chest_model_arch1}.
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{assets/chest16.png}
 	\caption{Proposed DenseNet121 OVR classification model architecture. The base network produces a 1024-dimensional feature vector via Global Average Pooling, which is refined through the custom classification head before producing independent sigmoid probability scores for each diagnostic class.}
@@ -665,8 +696,9 @@ Class imbalance is addressed through inverse-frequency class weights, computed a
 \end{equation}
 
 where $N_{\mathrm{total}}$ is the total number of training samples and $N_k$ is the number of samples in class $k$.
-
+\newpage
 \subsection{Grad-CAM Integration}
+\label{sec:chest_xai}
 \subsubsection{Rationale for Explainability}
 The deployment of any AI-based diagnostic tool in a clinical environment is inseparable from the question of trust and accountability. A classification model, however accurate its aggregate performance metrics, remains clinically unacceptable if its decision-making process is opaque and cannot be scrutinized by the responsible physician. The recognition of this challenge has given rise to the field of Explainable Artificial Intelligence (XAI), which encompasses a broad family of techniques aimed at rendering the internal reasoning of machine learning models interpretable to human observers.
 
@@ -746,14 +778,14 @@ The target convolutional layer for Grad-CAM is the final dense block concatenati
 
 Samples from the process and the output are shown for representative samples from the pneumonia and Tuberculosis scans in Figure~\ref{fig:grad_cam_vis_pneumonia}, and Figure~\ref{fig:grad_cam_vis_tb} respectively.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{assets/chest17.jpg}
 	\caption{Grad-CAM visualization results for Pneumonia representative case. The saliency maps confirm that the model attends to pathologically relevant lung regions.}
 	\label{fig:grad_cam_vis_pneumonia}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{assets/chest18.jpg}
 	\caption{Grad-CAM visualization results for Tuberculosis cases. The upper-lower lobe localization of saliency for TB cases confirms the model's ability to recognize TB-specific radiological patterns.}

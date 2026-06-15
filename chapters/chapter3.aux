@@ -84,89 +84,90 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Problem Statement}{99}{subsection.3.4.2}\protected@file@percent }
 \newlabel{sec:chest_challenges}{{3.4.2}{99}{Problem Statement}{subsection.3.4.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Model Architecture Overview}{100}{subsection.3.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 1: Image Preprocessing}{100}{paragraph*.57}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Stage 2: Lung Segmentation}{100}{paragraph*.58}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Classification Model}{100}{paragraph*.59}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Overall architecture of the proposed chest disease multi-class classification system, illustrating the sequential pipeline from raw CXR acquisition through preprocessing, lung segmentation, deep classification, and visual explainability.}}{101}{figure.caption.56}\protected@file@percent }
-\newlabel{fig:chest_pipeline}{{3.13}{101}{Overall architecture of the proposed chest disease multi-class classification system, illustrating the sequential pipeline from raw CXR acquisition through preprocessing, lung segmentation, deep classification, and visual explainability}{figure.caption.56}{}}
-\@writefile{toc}{\contentsline {paragraph}{Stage 4: Explainability via Grad-CAM}{101}{paragraph*.60}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 1: Image Preprocessing}{100}{paragraph*.56}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stage 2: Lung Segmentation}{100}{paragraph*.57}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 3: Classification Model}{100}{paragraph*.58}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stage 4: Explainability via Grad-CAM}{101}{paragraph*.59}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Overall architecture of the proposed chest disease multi-class classification system, illustrating the sequential pipeline from raw CXR acquisition through preprocessing, lung segmentation, deep classification, and visual explainability.}}{101}{figure.caption.60}\protected@file@percent }
+\newlabel{fig:chest_pipeline}{{3.13}{101}{Overall architecture of the proposed chest disease multi-class classification system, illustrating the sequential pipeline from raw CXR acquisition through preprocessing, lung segmentation, deep classification, and visual explainability}{figure.caption.60}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Dataset Description}{101}{subsection.3.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Dataset 1: COVID-19 Radiography Database}{102}{subsubsection*.61}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Dataset 2: Chest X-Ray Multiclass Dataset with Non-X-Ray Anomalies}{102}{subsubsection*.62}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Datasets Used for Chest Disease Detection}}{103}{table.caption.63}\protected@file@percent }
+\newlabel{tab:chest_datasets}{{3.3}{103}{Datasets Used for Chest Disease Detection}{table.caption.63}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Combined Dataset and Class Distribution}{103}{subsubsection*.64}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Image Preprocessing Pipeline}{103}{subsubsection*.67}\protected@file@percent }
-\newlabel{sec:chest_preprocess}{{3.4.4}{103}{Image Preprocessing Pipeline}{subsubsection*.67}{}}
-\@writefile{toc}{\contentsline {paragraph}{Step 1: Greyscale Loading}{103}{paragraph*.68}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 2: Contrast Limited Adaptive Histogram Equalization (CLAHE)}{103}{paragraph*.69}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Datasets Used for Chest Disease Detection}}{104}{table.caption.63}\protected@file@percent }
-\newlabel{tab:chest_datasets}{{3.3}{104}{Datasets Used for Chest Disease Detection}{table.caption.63}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Class Distribution in the Training Dataset}}{105}{table.caption.65}\protected@file@percent }
-\newlabel{tab:class_distribution}{{3.4}{105}{Class Distribution in the Training Dataset}{table.caption.65}{}}
-\newlabel{fig:normal}{{3.14a}{105}{Normal Chest X-ray}{figure.caption.66}{}}
-\newlabel{sub@fig:normal}{{a}{105}{Normal Chest X-ray}{figure.caption.66}{}}
-\newlabel{fig:covid19}{{3.14b}{105}{COVID-19}{figure.caption.66}{}}
-\newlabel{sub@fig:covid19}{{b}{105}{COVID-19}{figure.caption.66}{}}
-\newlabel{fig:pneumonia}{{3.14c}{105}{Pneumonia}{figure.caption.66}{}}
-\newlabel{sub@fig:pneumonia}{{c}{105}{Pneumonia}{figure.caption.66}{}}
-\newlabel{fig:tuberculosis}{{3.14d}{105}{Tuberculosis}{figure.caption.66}{}}
-\newlabel{sub@fig:tuberculosis}{{d}{105}{Tuberculosis}{figure.caption.66}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Representative chest radiograph samples from each of the four target diagnostic classes. The subtle visual differences between COVID-19 and Pneumonia are clear, underscoring the difficulty of the classification task.}}{105}{figure.caption.66}\protected@file@percent }
-\newlabel{fig:chest_images}{{3.14}{105}{Representative chest radiograph samples from each of the four target diagnostic classes. The subtle visual differences between COVID-19 and Pneumonia are clear, underscoring the difficulty of the classification task}{figure.caption.66}{}}
-\newlabel{eq:clahe}{{3.21}{106}{Step 2: Contrast Limited Adaptive Histogram Equalization (CLAHE)}{equation.3.4.21}{}}
-\@writefile{toc}{\contentsline {paragraph}{Step 3: Gaussian Smoothing}{106}{paragraph*.70}\protected@file@percent }
-\newlabel{eq:gaussian_blur}{{3.22}{106}{Step 3: Gaussian Smoothing}{equation.3.4.22}{}}
-\newlabel{eq:gaussian_kernel}{{3.23}{106}{Step 3: Gaussian Smoothing}{equation.3.4.23}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Class Distribution in the Training Dataset}}{103}{table.caption.65}\protected@file@percent }
+\newlabel{tab:class_distribution}{{3.4}{103}{Class Distribution in the Training Dataset}{table.caption.65}{}}
+\newlabel{fig:normal}{{3.14a}{104}{Normal Chest X-ray}{figure.caption.66}{}}
+\newlabel{sub@fig:normal}{{a}{104}{Normal Chest X-ray}{figure.caption.66}{}}
+\newlabel{fig:covid19}{{3.14b}{104}{COVID-19}{figure.caption.66}{}}
+\newlabel{sub@fig:covid19}{{b}{104}{COVID-19}{figure.caption.66}{}}
+\newlabel{fig:pneumonia}{{3.14c}{104}{Pneumonia}{figure.caption.66}{}}
+\newlabel{sub@fig:pneumonia}{{c}{104}{Pneumonia}{figure.caption.66}{}}
+\newlabel{fig:tuberculosis}{{3.14d}{104}{Tuberculosis}{figure.caption.66}{}}
+\newlabel{sub@fig:tuberculosis}{{d}{104}{Tuberculosis}{figure.caption.66}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Representative chest radiograph samples from each of the four target diagnostic classes. The subtle visual differences between COVID-19 and Pneumonia are clear, underscoring the difficulty of the classification task.}}{104}{figure.caption.66}\protected@file@percent }
+\newlabel{fig:chest_images}{{3.14}{104}{Representative chest radiograph samples from each of the four target diagnostic classes. The subtle visual differences between COVID-19 and Pneumonia are clear, underscoring the difficulty of the classification task}{figure.caption.66}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Image Preprocessing Pipeline}{105}{subsubsection*.67}\protected@file@percent }
+\newlabel{sec:chest_preprocess}{{3.4.4}{105}{Image Preprocessing Pipeline}{subsubsection*.67}{}}
+\@writefile{toc}{\contentsline {paragraph}{Step 1: Greyscale Loading}{105}{paragraph*.68}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 2: Contrast Limited Adaptive Histogram Equalization (CLAHE)}{105}{paragraph*.69}\protected@file@percent }
+\newlabel{eq:clahe}{{3.21}{105}{Step 2: Contrast Limited Adaptive Histogram Equalization (CLAHE)}{equation.3.4.21}{}}
+\@writefile{toc}{\contentsline {paragraph}{Step 3: Gaussian Smoothing}{105}{paragraph*.70}\protected@file@percent }
+\newlabel{eq:gaussian_blur}{{3.22}{105}{Step 3: Gaussian Smoothing}{equation.3.4.22}{}}
+\newlabel{eq:gaussian_kernel}{{3.23}{105}{Step 3: Gaussian Smoothing}{equation.3.4.23}{}}
 \@writefile{toc}{\contentsline {paragraph}{Step 4: Min-Max Normalization}{106}{paragraph*.71}\protected@file@percent }
 \newlabel{eq:normalization}{{3.24}{106}{Step 4: Min-Max Normalization}{equation.3.4.24}{}}
 \@writefile{toc}{\contentsline {paragraph}{Greyscale to RGB Conversion}{106}{paragraph*.72}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Comparison of a Pneumonia chest radiograph before (left) and after (right).}}{107}{figure.caption.73}\protected@file@percent }
-\newlabel{fig:pneumonia_preprocessing}{{3.15}{107}{Comparison of a Pneumonia chest radiograph before (left) and after (right)}{figure.caption.73}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Comparison of a Pneumonia chest radiograph before (left) and after (right).}}{106}{figure.caption.73}\protected@file@percent }
+\newlabel{fig:pneumonia_preprocessing}{{3.15}{106}{Comparison of a Pneumonia chest radiograph before (left) and after (right)}{figure.caption.73}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Lung Segmentation Dataset}{106}{subsubsection*.75}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces Comparison of a Tuberculosis chest radiograph before (left) and after (right) the preprocessing pipeline.}}{107}{figure.caption.74}\protected@file@percent }
 \newlabel{fig:tb_preprocessing}{{3.16}{107}{Comparison of a Tuberculosis chest radiograph before (left) and after (right) the preprocessing pipeline}{figure.caption.74}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Lung Segmentation Dataset}{107}{subsubsection*.75}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Segmentation Model Details}{107}{subsection.3.4.5}\protected@file@percent }
+\newlabel{sec:segmentation}{{3.4.5}{107}{Segmentation Model Details}{subsection.3.4.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Rationale for Lung Segmentation}{107}{subsubsection*.77}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces Representative image–mask pair from the Darwin lung segmentation dataset. The mask precisely delineates both lung fields including regions behind the cardiac shadow.}}{108}{figure.caption.76}\protected@file@percent }
 \newlabel{fig:segmenation}{{3.17}{108}{Representative image–mask pair from the Darwin lung segmentation dataset. The mask precisely delineates both lung fields including regions behind the cardiac shadow}{figure.caption.76}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Segmentation Model Details}{108}{subsection.3.4.5}\protected@file@percent }
-\newlabel{sec:segmentation}{{3.4.5}{108}{Segmentation Model Details}{subsection.3.4.5}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Rationale for Lung Segmentation}{108}{subsubsection*.77}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{U-Net Architecture}{109}{subsubsection*.78}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{U-Net Architecture}{108}{subsubsection*.78}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Convolutional Block}{109}{paragraph*.79}\protected@file@percent }
 \newlabel{eq:conv_block}{{3.25}{109}{Convolutional Block}{equation.3.4.25}{}}
 \@writefile{toc}{\contentsline {paragraph}{Encoder (Contracting Path)}{109}{paragraph*.80}\protected@file@percent }
 \newlabel{eq:encoder_block}{{3.26}{109}{Encoder (Contracting Path)}{equation.3.4.26}{}}
-\@writefile{toc}{\contentsline {paragraph}{Bridge (Bottleneck)}{110}{paragraph*.81}\protected@file@percent }
-\newlabel{eq:bridge_layer}{{3.27}{110}{Bridge (Bottleneck)}{equation.3.4.27}{}}
-\@writefile{toc}{\contentsline {paragraph}{Decoder (Expansive Path)}{110}{paragraph*.82}\protected@file@percent }
-\newlabel{eq:decoder_block}{{3.28}{110}{Decoder (Expansive Path)}{equation.3.4.28}{}}
+\@writefile{toc}{\contentsline {paragraph}{Bridge (Bottleneck)}{109}{paragraph*.81}\protected@file@percent }
+\newlabel{eq:bridge_layer}{{3.27}{109}{Bridge (Bottleneck)}{equation.3.4.27}{}}
+\@writefile{toc}{\contentsline {paragraph}{Decoder (Expansive Path)}{109}{paragraph*.82}\protected@file@percent }
+\newlabel{eq:decoder_block}{{3.28}{109}{Decoder (Expansive Path)}{equation.3.4.28}{}}
 \@writefile{toc}{\contentsline {paragraph}{Output}{110}{paragraph*.83}\protected@file@percent }
 \newlabel{eq:final_output}{{3.29}{110}{Output}{equation.3.4.29}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Loss Functions}{110}{subsubsection*.86}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces U-Net encoder–decoder filter progression and spatial resolutions (input: $224 \times 224 \times 1$).}}{111}{table.caption.84}\protected@file@percent }
-\newlabel{tab:unet_arch}{{3.5}{111}{U-Net encoder–decoder filter progression and spatial resolutions (input: $224 \times 224 \times 1$)}{table.caption.84}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces U-Net encoder–decoder filter progression and spatial resolutions (input: $224 \times 224 \times 1$).}}{110}{table.caption.84}\protected@file@percent }
+\newlabel{tab:unet_arch}{{3.5}{110}{U-Net encoder–decoder filter progression and spatial resolutions (input: $224 \times 224 \times 1$)}{table.caption.84}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.18}{\ignorespaces U-Net architecture implemented for lung segmentation. The contracting path (left) captures contextual information through successive down sampling, while the expansive path (right) enables precise localization via skip connections. Tensor shapes are annotated at each level.}}{111}{figure.caption.85}\protected@file@percent }
-\newlabel{fig:unet_pipeline}{{3.18}{111}{U-Net architecture implemented for lung segmentation. The contracting path (left) captures contextual information through successive down sampling, while the expansive path (right) enables precise localization via skip connections. Tensor shapes are annotated at each level}{figure.caption.85}{}}
-\newlabel{eq:dice_coefficient}{{3.30}{112}{Loss Functions}{equation.3.4.30}{}}
-\newlabel{eq:dice_loss}{{3.31}{112}{Loss Functions}{equation.3.4.31}{}}
+\newlabel{fig:unet_arch}{{3.18}{111}{U-Net architecture implemented for lung segmentation. The contracting path (left) captures contextual information through successive down sampling, while the expansive path (right) enables precise localization via skip connections. Tensor shapes are annotated at each level}{figure.caption.85}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Loss Functions}{111}{subsubsection*.86}\protected@file@percent }
+\newlabel{eq:dice_coefficient}{{3.30}{111}{Loss Functions}{equation.3.4.30}{}}
+\newlabel{eq:dice_loss}{{3.31}{111}{Loss Functions}{equation.3.4.31}{}}
 \newlabel{eq:bce_loss}{{3.32}{112}{Loss Functions}{equation.3.4.32}{}}
 \newlabel{eq:total_loss}{{3.33}{112}{Loss Functions}{equation.3.4.33}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Training Configurations}{112}{subsubsection*.87}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{112}{subsubsection*.90}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces U-Net segmentation model training configuration.}}{112}{table.caption.88}\protected@file@percent }
+\newlabel{tab:unet_training_config}{{3.6}{112}{U-Net segmentation model training configuration}{table.caption.88}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.19}{\ignorespaces U-Net segmentation results. From left to right: the preprocessed input radiograph, the predicted binary lung mask, and the masked output image passed to the classification stage.}}{113}{figure.caption.89}\protected@file@percent }
 \newlabel{fig:segmentation_example}{{3.19}{113}{U-Net segmentation results. From left to right: the preprocessed input radiograph, the predicted binary lung mask, and the masked output image passed to the classification stage}{figure.caption.89}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces U-Net segmentation model training configuration.}}{114}{table.caption.88}\protected@file@percent }
-\newlabel{tab:unet_training_config}{{3.6}{114}{U-Net segmentation model training configuration}{table.caption.88}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{114}{subsubsection*.90}\protected@file@percent }
 \newlabel{eq:classification_head}{{3.34}{114}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.4.34}{}}
+\newlabel{eq:ovr_output}{{3.35}{114}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.4.35}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.20}{\ignorespaces Proposed DenseNet121 OVR classification model architecture. The base network produces a 1024-dimensional feature vector via Global Average Pooling, which is refined through the custom classification head before producing independent sigmoid probability scores for each diagnostic class.}}{115}{figure.caption.91}\protected@file@percent }
 \newlabel{fig:chest_model_arch1}{{3.20}{115}{Proposed DenseNet121 OVR classification model architecture. The base network produces a 1024-dimensional feature vector via Global Average Pooling, which is refined through the custom classification head before producing independent sigmoid probability scores for each diagnostic class}{figure.caption.91}{}}
-\newlabel{eq:ovr_output}{{3.35}{115}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.4.35}{}}
 \newlabel{eq:bce_ovr}{{3.36}{115}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.4.36}{}}
-\newlabel{eq:class_weights}{{3.37}{116}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.4.37}{}}
+\newlabel{eq:class_weights}{{3.37}{115}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.4.37}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.6}Grad-CAM Integration}{116}{subsection.3.4.6}\protected@file@percent }
+\newlabel{sec:chest_xai}{{3.4.6}{116}{Grad-CAM Integration}{subsection.3.4.6}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Rationale for Explainability}{116}{subsubsection*.92}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Gradient-weighted Class Activation Mapping (Grad-CAM)}{116}{subsubsection*.93}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Step 1: Compute Class-Discriminative Gradient}{116}{paragraph*.94}\protected@file@percent }
-\newlabel{eq:gradcam_gradient}{{3.38}{117}{Step 1: Compute Class-Discriminative Gradient}{equation.3.4.38}{}}
-\@writefile{toc}{\contentsline {paragraph}{Step 2: Global Average Pool the Gradients}{117}{paragraph*.95}\protected@file@percent }
+\newlabel{eq:gradcam_gradient}{{3.38}{116}{Step 1: Compute Class-Discriminative Gradient}{equation.3.4.38}{}}
+\@writefile{toc}{\contentsline {paragraph}{Step 2: Global Average Pool the Gradients}{116}{paragraph*.95}\protected@file@percent }
 \newlabel{eq:gradcam_alpha}{{3.39}{117}{Step 2: Global Average Pool the Gradients}{equation.3.4.39}{}}
 \@writefile{toc}{\contentsline {paragraph}{Step 3: Compute Weighted Combination and Apply ReLU}{117}{paragraph*.96}\protected@file@percent }
 \newlabel{eq:gradcam_heatmap}{{3.40}{117}{Step 3: Compute Weighted Combination and Apply ReLU}{equation.3.4.40}{}}
@@ -174,29 +175,29 @@
 \newlabel{eq:gradcam_normalization}{{3.41}{117}{Step 4: Resize and Normalize}{equation.3.4.41}{}}
 \@writefile{toc}{\contentsline {paragraph}{Step 5: Color Mapping and Overlay}{117}{paragraph*.98}\protected@file@percent }
 \newlabel{eq:gradcam_final}{{3.42}{117}{Step 5: Color Mapping and Overlay}{equation.3.4.42}{}}
+\@writefile{toc}{\contentsline {subsubsection}{OVR Grad-CAM for Multi-Class Visualization}{117}{subsubsection*.99}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.21}{\ignorespaces Grad-CAM visualization results for Pneumonia representative case. The saliency maps confirm that the model attends to pathologically relevant lung regions.}}{118}{figure.caption.100}\protected@file@percent }
 \newlabel{fig:grad_cam_vis_pneumonia}{{3.21}{118}{Grad-CAM visualization results for Pneumonia representative case. The saliency maps confirm that the model attends to pathologically relevant lung regions}{figure.caption.100}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.22}{\ignorespaces Grad-CAM visualization results for Tuberculosis cases. The upper-lower lobe localization of saliency for TB cases confirms the model's ability to recognize TB-specific radiological patterns.}}{118}{figure.caption.101}\protected@file@percent }
 \newlabel{fig:grad_cam_vis_tb}{{3.22}{118}{Grad-CAM visualization results for Tuberculosis cases. The upper-lower lobe localization of saliency for TB cases confirms the model's ability to recognize TB-specific radiological patterns}{figure.caption.101}{}}
-\@writefile{toc}{\contentsline {subsubsection}{OVR Grad-CAM for Multi-Class Visualization}{118}{subsubsection*.99}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Lung Cancer Detection Model}{119}{section.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Lung Cancer Detection Model}{118}{section.3.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Motivation}{119}{subsection.3.5.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Problem Statement}{119}{subsection.3.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Model Architecture}{120}{subsection.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Model Architecture}{119}{subsection.3.5.3}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.23}{\ignorespaces YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities.}}{120}{figure.caption.102}\protected@file@percent }
 \newlabel{fig:yolov8_architecture}{{3.23}{120}{YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities}{figure.caption.102}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Mask-to-Bounding-Box Conversion}{120}{subsubsection*.103}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Dataset Preparation and Splitting}{121}{subsubsection*.104}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{YOLOv8 Detection Architecture}{121}{subsubsection*.105}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Interpretability Considerations}{121}{subsection.3.5.4}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.24}{\ignorespaces Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice.}}{122}{figure.caption.106}\protected@file@percent }
 \newlabel{fig:qualitative_ct_1}{{3.24}{122}{Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice}{figure.caption.106}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.25}{\ignorespaces Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice.}}{122}{figure.caption.106}\protected@file@percent }
 \newlabel{fig:qualitative_ct_2}{{3.25}{122}{Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice}{figure.caption.106}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Interpretability Considerations}{122}{subsection.3.5.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5.5}CT Model Implementation}{122}{subsection.3.5.5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.26}{\ignorespaces Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques.}}{123}{figure.caption.107}\protected@file@percent }
 \newlabel{fig:interpretability_example}{{3.26}{123}{Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques}{figure.caption.107}{}}
-\@writefile{toc}{\contentsline {paragraph}{Step 1: Mask Loading}{124}{paragraph*.108}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 1: Mask Loading}{123}{paragraph*.108}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Step 2: Contour Extraction}{124}{paragraph*.109}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Step 3: Bounding Box Generation}{124}{paragraph*.110}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Step 4: YOLO Coordinate Conversion}{124}{paragraph*.111}\protected@file@percent }

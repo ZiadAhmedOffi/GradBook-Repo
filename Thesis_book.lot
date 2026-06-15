@@ -10,10 +10,10 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Layer distribution within DenseNet121.}}{76}{table.caption.29}%
 \contentsline {table}{\numberline {3.2}{\ignorespaces Structural and mathematical parameter configurations of the CheXFound ViT-Large/16 backbone layout.}}{85}{table.caption.49}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Datasets Used for Chest Disease Detection}}{104}{table.caption.63}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Class Distribution in the Training Dataset}}{105}{table.caption.65}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces U-Net encoder–decoder filter progression and spatial resolutions (input: $224 \times 224 \times 1$).}}{111}{table.caption.84}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces U-Net segmentation model training configuration.}}{114}{table.caption.88}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Datasets Used for Chest Disease Detection}}{103}{table.caption.63}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Class Distribution in the Training Dataset}}{103}{table.caption.65}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces U-Net encoder–decoder filter progression and spatial resolutions (input: $224 \times 224 \times 1$).}}{110}{table.caption.84}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces U-Net segmentation model training configuration.}}{112}{table.caption.88}%
 \contentsline {table}{\numberline {3.7}{\ignorespaces Key Federated Learning Parameters and Their Clinical Implications}}{130}{table.caption.117}%
 \contentsline {table}{\numberline {3.8}{\ignorespaces Privacy and Security: Centralized vs.\ Federated Learning}}{131}{table.caption.118}%
 \contentsline {table}{\numberline {3.9}{\ignorespaces Configuration of the deployed language model.}}{136}{table.caption.120}%
@@ -45,15 +45,15 @@
 \contentsline {table}{\numberline {4.10}{\ignorespaces DenseNet121 SoftMax --- Key Hyperparameters.}}{184}{table.caption.195}%
 \contentsline {table}{\numberline {4.11}{\ignorespaces ResNet50V2 SoftMax --- Key Hyperparameters.}}{186}{table.caption.200}%
 \contentsline {table}{\numberline {4.12}{\ignorespaces EfficientNet SoftMax --- Key Hyperparameters.}}{188}{table.caption.205}%
-\contentsline {table}{\numberline {4.13}{\ignorespaces VGG-19 SoftMax --- Key Hyperparameters.}}{189}{table.caption.210}%
-\contentsline {table}{\numberline {4.14}{\ignorespaces ResNet50 OVR --- Key Hyperparameters.}}{190}{table.caption.212}%
-\contentsline {table}{\numberline {4.15}{\ignorespaces DenseNet121 OVR --- Key Hyperparameters.}}{192}{table.caption.216}%
-\contentsline {table}{\numberline {4.16}{\ignorespaces ResNet50 OVR Report.}}{193}{table.caption.219}%
-\contentsline {table}{\numberline {4.17}{\ignorespaces DenseNet121 OVR Report.}}{193}{table.caption.219}%
-\contentsline {table}{\numberline {4.18}{\ignorespaces Common hyperparameters across FL experiments.}}{194}{table.caption.221}%
-\contentsline {table}{\numberline {4.19}{\ignorespaces Summary of FL test accuracy across configurations.}}{195}{table.caption.224}%
-\contentsline {table}{\numberline {4.20}{\ignorespaces Per-class detection results of the centralized YOLOv8n model on the test set (253 images, 759 instances).}}{197}{table.caption.227}%
-\contentsline {table}{\numberline {4.21}{\ignorespaces Evaluation results of the federated YOLOv8n (FedAvg) model on validation and test sets.}}{199}{table.caption.230}%
-\contentsline {table}{\numberline {4.22}{\ignorespaces Side-by-side comparison of centralized vs. federated YOLOv8n on the test set.}}{199}{table.caption.231}%
-\contentsline {table}{\numberline {4.23}{\ignorespaces Absolute and relative performance gap between centralized and federated models (test set).}}{199}{table.caption.232}%
+\contentsline {table}{\numberline {4.13}{\ignorespaces VGG-19 SoftMax --- Key Hyperparameters.}}{190}{table.caption.210}%
+\contentsline {table}{\numberline {4.14}{\ignorespaces ResNet50 OVR --- Key Hyperparameters.}}{191}{table.caption.212}%
+\contentsline {table}{\numberline {4.15}{\ignorespaces ResNet50 OVR Report.}}{191}{table.caption.213}%
+\contentsline {table}{\numberline {4.16}{\ignorespaces DenseNet121 OVR --- Key Hyperparameters.}}{194}{table.caption.217}%
+\contentsline {table}{\numberline {4.17}{\ignorespaces DenseNet121 OVR Report.}}{194}{table.caption.220}%
+\contentsline {table}{\numberline {4.18}{\ignorespaces Common hyperparameters across FL experiments.}}{196}{table.caption.222}%
+\contentsline {table}{\numberline {4.19}{\ignorespaces Summary of FL test accuracy across configurations.}}{197}{table.caption.225}%
+\contentsline {table}{\numberline {4.20}{\ignorespaces Per-class detection results of the centralized YOLOv8n model on the test set (253 images, 759 instances).}}{199}{table.caption.228}%
+\contentsline {table}{\numberline {4.21}{\ignorespaces Evaluation results of the federated YOLOv8n (FedAvg) model on validation and test sets.}}{200}{table.caption.231}%
+\contentsline {table}{\numberline {4.22}{\ignorespaces Side-by-side comparison of centralized vs. federated YOLOv8n on the test set.}}{201}{table.caption.232}%
+\contentsline {table}{\numberline {4.23}{\ignorespaces Absolute and relative performance gap between centralized and federated models (test set).}}{201}{table.caption.233}%
 \addvspace {10\p@ }

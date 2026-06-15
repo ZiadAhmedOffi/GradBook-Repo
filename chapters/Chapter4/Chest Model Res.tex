@@ -312,21 +312,21 @@ The classification head follows the same structural template as DenseNet121: GAP
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.85\textwidth, height=7cm, keepaspectratio]{assets/chest_model/image6.png}
+	\includegraphics[width=\textwidth]{assets/chest_model/resnet-graphs.png}
 	\caption{Learning curves for ResNet50V2 SoftMax.}
 	\label{fig:resnet_softmax_curves}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image7.png}
+	\includegraphics[width=\textwidth]{assets/chest_model/resnet-cm.png}
 	\caption{Confusion matrix for ResNet50V2 SoftMax.}
 	\label{fig:resnet_softmax_cm}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.85\textwidth, height=9cm, keepaspectratio]{assets/chest_model/image8.png}
+	\includegraphics[width=0.85\textwidth, height=9cm, keepaspectratio]{assets/chest_model/image6.png}
 	\caption{Classification report for ResNet50V2 SoftMax.}
 	\label{fig:resnet_softmax_report}
 \end{figure}
@@ -370,22 +370,22 @@ EfficientNet scales network depth, width, and resolution jointly using a compoun
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.85\textwidth, height=7cm, keepaspectratio]{assets/chest_model/image9.png}
-	\caption{Learning curves for EfficientNet SoftMax.}
+	\caption{Classification report for EfficientNet SoftMax.}
+	\label{fig:efficientnet_softmax_report}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{assets/chest_model/image7.png}
+	\caption{Learning Curves for EfficientNet SoftMax.}
 	\label{fig:efficientnet_softmax_curves}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image10.png}
+	\includegraphics[width=\textwidth]{assets/chest_model/image8.png}
 	\caption{Confusion matrix for EfficientNet SoftMax.}
 	\label{fig:efficientnet_softmax_cm}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.85\textwidth, height=9cm, keepaspectratio]{assets/chest_model/image11.png}
-	\caption{Classification report for EfficientNet SoftMax.}
-	\label{fig:efficientnet_softmax_report}
 \end{figure}
 
 \FloatBarrier
@@ -472,20 +472,44 @@ The ResNet50 OVR model uses ResNet50 (original V1 architecture) as the backbone,
 \end{table}
 }
 
+\renewcommand{\arraystretch}{1.2}
+
+\begin{table}[htbp]
+	\centering
+	\caption{ResNet50 OVR Report.}
+	\label{tab:resnet_ovr_report}
+	\small
+	\begin{tabularx}{0.6\textwidth}{|X|c|c|c|}
+		\hline
+		\textbf{Class} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} \\
+		\hline
+		COVID & 1.00 & 1.00 & 1.00 \\
+		\hline
+		Normal & 0.93 & 0.97 & 0.95 \\
+		\hline
+		Pneu. & 0.99 & 0.98 & 0.98 \\
+		\hline
+		TB & 0.97 & 0.91 & 0.94 \\
+		\hline
+		\textbf{Acc.} & \multicolumn{3}{c|}{\textbf{0.96}} \\
+		\hline
+	\end{tabularx}
+\end{table}
+
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.85\textwidth, height=7cm, keepaspectratio]{assets/chest_model/image13.png}
+	\includegraphics[width=\textwidth]{assets/chest_model/image10.png}
 	\caption{Learning curves for ResNet50 OVR.}
 	\label{fig:resnet_ovr_curves}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image14.png}
+	\includegraphics[width=\textwidth]{assets/chest_model/image11.png}
 	\caption{Confusion matrix for ResNet50 OVR.}
 	\label{fig:resnet_ovr_cm}
 \end{figure}
-
+\FloatBarrier
 \subsubsection{DenseNet121 OVR (Sigmoid)}
 
 The DenseNet121 OVR model is the primary proposed classifier of this work and applies the full OVR formulation to the DenseNet121 backbone. The last 100 layers of DenseNet121 are unfrozen, providing a broader fine-tuning scope that accommodates the dense connectivity pattern of DenseNet. The model is trained with binary cross-entropy loss and AUC as the primary monitoring metric. Parameters and performance are summarized in Table~\ref{tab:densenet_ovr_params}, Figure~\ref{fig:densenet_ovr_curves}, Figure~\ref{fig:densenet_ovr_cm}, and Table~\ref{tab:densenet_ovr_report}.
@@ -522,68 +546,43 @@ The DenseNet121 OVR model is the primary proposed classifier of this work and ap
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.85\textwidth, height=7cm, keepaspectratio]{assets/chest_model/image15.png}
+	\includegraphics[width=\textwidth]{assets/chest_model/image12.png}
 	\caption{Learning curves for DenseNet121 OVR.}
 	\label{fig:densenet_ovr_curves}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image16.png}
+	\includegraphics[width=\textwidth]{assets/chest_model/image13.png}
 	\caption{Confusion matrix for DenseNet121 OVR.}
 	\label{fig:densenet_ovr_cm}
 \end{figure}
 
 \FloatBarrier
 
-{\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.2}
+
 \begin{table}[htbp]
-    \centering
-    \begin{minipage}[c]{0.48\textwidth}
-        \centering
-        \caption{ResNet50 OVR Report.}
-        \label{tab:resnet_ovr_report}
-        \small
-        \begin{tabularx}{\textwidth}{|X|c|c|c|}
-            \hline
-            \textbf{Class} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} \\
-            \hline
-            COVID & 1.00 & 1.00 & 1.00 \\
-            \hline
-            Normal & 0.93 & 0.97 & 0.95 \\
-            \hline
-            Pneu. & 0.99 & 0.98 & 0.98 \\
-            \hline
-            TB & 0.97 & 0.91 & 0.94 \\
-            \hline
-            \textbf{Acc.} & \multicolumn{3}{c|}{\textbf{0.96}} \\
-            \hline
-        \end{tabularx}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[c]{0.48\textwidth}
-        \centering
-        \caption{DenseNet121 OVR Report.}
-        \label{tab:densenet_ovr_report}
-        \small
-        \begin{tabularx}{\textwidth}{|X|c|c|c|}
-            \hline
-            \textbf{Class} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} \\
-            \hline
-            COVID & 1.00 & 1.00 & 1.00 \\
-            \hline
-            Normal & 0.98 & 0.99 & 0.98 \\
-            \hline
-            Pneu. & 0.99 & 0.99 & 0.99 \\
-            \hline
-            TB & 0.98 & 0.97 & 0.98 \\
-            \hline
-            \textbf{Acc.} & \multicolumn{3}{c|}{\textbf{0.98}} \\
-            \hline
-        \end{tabularx}
-    \end{minipage}
+	\centering
+	\caption{DenseNet121 OVR Report.}
+	\label{tab:densenet_ovr_report}
+	\small
+	\begin{tabularx}{0.6\textwidth}{|X|c|c|c|}
+		\hline
+		\textbf{Class} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} \\
+		\hline
+		COVID & 1.00 & 1.00 & 1.00 \\
+		\hline
+		Normal & 0.98 & 0.99 & 0.98 \\
+		\hline
+		Pneu. & 0.99 & 0.99 & 0.99 \\
+		\hline
+		TB & 0.98 & 0.97 & 0.98 \\
+		\hline
+		\textbf{Acc.} & \multicolumn{3}{c|}{\textbf{0.98}} \\
+		\hline
+	\end{tabularx}
 \end{table}
-}
 
 
 \subsection{Federated Learning Results}
@@ -613,6 +612,8 @@ Since the data partitioning is balanced (each client holds approximately $N_{\te
 \textbf{Local Training Protocol:} At each communication round, each client performs 3 local epochs of SGD-style training on its local partition before returning the updated parameters to the server. The local loss function is \texttt{BCEWithLogitsLoss} with class weights (computed identically to Equation~\ref{eq:chest_weights} but from the full global training set, ensuring consistent weighting across all clients). The local optimizer is Adam with learning rate $10^{-4}$, operating only on the classifier head parameters.
 
 \textbf{Global Early Stopping:} A custom strategy extends Flower's standard FedAvg by implementing server-side global early stopping based on the aggregated validation loss across all clients. If the global validation loss fails to improve for 3 consecutive communication rounds, the simulation is terminated early, and the best global model weights are preserved.
+
+Common hyperparameters used across different FL experiments are listed in Table~\ref{tab:fl_hyperparams}, while the overall FL architectures is illustrated in Figure~\ref{fig:fl_architecture}
 
 {\renewcommand{\arraystretch}{1.2}
 \begin{table}[htbp]
@@ -646,7 +647,7 @@ Since the data partitioning is balanced (each client holds approximately $N_{\te
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.85\linewidth, height=8.5cm, keepaspectratio]{assets/chest_model/image18.png}
+	\includegraphics[width=\linewidth]{assets/chest_model/image14.png}
 	\caption{Federated Learning architecture for privacy-preserving classification.}
 	\label{fig:fl_architecture}
 \end{figure}
@@ -683,14 +684,14 @@ Experiments were conducted with 2, 3, and 4 clients to assess the impact of data
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image19.png}
+	\includegraphics[width=0.7\textwidth]{assets/chest_model/image15.png}
 	\caption{Confusion matrix for Federated DenseNet121 (2 clients, Accuracy: 95.57\%).}
 	\label{fig:fl_2c_cm}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth, height=8cm, keepaspectratio]{assets/chest_model/image20.png}
+	\includegraphics[width=0.7\textwidth]{assets/chest_model/image19.png}
 	\caption{Confusion matrix for Federated DenseNet121 (4 clients, Accuracy: 93.22\%).}
 	\label{fig:fl_4c_cm}
 \end{figure}
