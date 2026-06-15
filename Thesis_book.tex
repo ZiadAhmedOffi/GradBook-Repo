@@ -57,8 +57,8 @@
 				
 				{\Large \textbf{Supervised by}} \\
 				\vspace{0.2cm}
-				{\large \textbf{Prof. Shaimaa Yousry}\\
-					\large \textbf{Prof. Walaa Gouda}}
+				{\large \textbf{Assoc Prof. Walaa Gouda}\\
+					\large \textbf{Dr. Shaimaa Yousry}}
 				
 				\vfill
 				
@@ -115,11 +115,15 @@
 		
 		\chapter*{Abstract}
 		\addcontentsline{toc}{section}{Abstract}
-			Medical image analysis plays a critical role in the early detection and diagnosis of various diseases. However, manual interpretation of radiographic images is time-consuming and subject to inter-observer variability. This project presents an end-to-end deep learning–based system for the automated detection of chest diseases and bone fractures from X-ray images. The proposed solution integrates multiple transfer learning models within a unified diagnostic framework, enabling efficient and scalable analysis of heterogeneous medical images.
+			Medical image analysis has become an essential component of modern healthcare, enabling earlier disease detection and supporting clinical decision-making. However, conventional AI-based diagnostic systems face significant challenges related to data privacy, model interpretability, and generalization across institutions. This project presents X-Fed NeuroScan, a comprehensive medical imaging framework that integrates Computer Vision, Federated Learning (FL), and Explainable Artificial Intelligence (XAI) for the automated analysis of chest X-ray and CT images. The proposed system employs a hierarchical architecture consisting of a medical image routing model, a chest disease classification module, a lung cancer detection model, federated learning infrastructure, and explainability components based on Grad-CAM visualizations.
 			
-			The system architecture consists of a deep learning pipeline that includes image preprocessing, feature extraction using pre-trained convolutional neural networks, an intelligent medical image routing model, and task-specific diagnostic models. ResNet50 is employed as a core feature extractor due to its residual learning mechanism and suitability for medical image analysis, while YOLOv8 is utilized for bone fracture detection using a one-stage object detection approach. The chest disease detection task is addressed using a dedicated classification model optimized for thoracic imaging.
+			The first stage of the framework is a DenseNet121-based routing model responsible for distinguishing between chest X-rays, chest CT scans, and out-of-distribution images. Experimental evaluation demonstrated outstanding routing performance, achieving 100\% accuracy, precision, recall, and F1-score, with no observed misclassifications on the test set, confirming its reliability as the entry point of the diagnostic pipeline.
 			
-			Preliminary experimental results demonstrate the feasibility of the proposed approach and indicate promising performance in detecting both bone fractures and chest-related conditions. The modular design of the system allows for extensibility and supports the integration of additional diagnostic tasks. This work highlights the potential of deep learning and transfer learning techniques to assist clinical decision-making and improve the efficiency of medical image diagnosis.
+			For chest disease diagnosis, the system classifies four clinically important categories: COVID-19, Pneumonia, Tuberculosis, and Normal. Multiple deep learning architectures were evaluated, including DenseNet121, ResNet50V2, EfficientNet, and VGG-19. The proposed DenseNet121 One-vs-Rest (OVR) classifier achieved the best overall performance, reaching 98\% classification accuracy, with per-class F1-scores of 1.00 for COVID-19, 0.98 for Normal, 0.99 for Pneumonia, and 0.98 for Tuberculosis. In comparison, the VGG-19 SoftMax baseline achieved 94.77\% accuracy, demonstrating the superiority of the proposed DenseNet121 OVR approach.
+			
+			To address healthcare data privacy concerns, the classification model was further evaluated under a federated learning setting using the FedAvg aggregation strategy. Results showed that the framework maintained strong predictive performance despite increasing levels of data decentralization. The federated model achieved 95.57\% accuracy with two clients, 94.13\% accuracy with three clients, and 93.22\% accuracy with four clients, demonstrating that collaborative training can preserve diagnostic effectiveness while keeping patient data localized within participating institutions.
+			
+			In addition to classification, the framework incorporates explainability mechanisms through Grad-CAM visualizations and a YOLOv8-based CT analysis pipeline for lesion localization. Together, these components provide transparent and clinically interpretable predictions that can assist healthcare professionals in verifying model decisions. The experimental results demonstrate that X-Fed NeuroScan successfully combines high diagnostic accuracy, explainability, and privacy-preserving learning within a unified medical AI platform, highlighting its potential for deployment in real-world healthcare environments.
 		
 	}
 	\newpage

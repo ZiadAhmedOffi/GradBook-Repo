@@ -15,9 +15,9 @@ global model converges.
 The motivation for adopting FL in this work is rooted in the fundamental
 tension between data-driven model development and patient privacy. Healthcare
 institutions collect large volumes of annotated medical images, yet regulatory
-frameworks — including the Health Insurance Portability and Accountability Act
+frameworks --- including the Health Insurance Portability and Accountability Act
 (HIPAA) in the United States and the General Data Protection Regulation (GDPR)
-in the European Union — impose strict constraints on cross-institutional data
+in the European Union --- impose strict constraints on cross-institutional data
 sharing. Negotiating data transfer agreements is costly, time-consuming, and
 in many cases legally impractical. FL resolves this tension by enabling
 institutions to contribute to a shared model without relinquishing data
@@ -184,58 +184,431 @@ drift}~\cite{li2020}. The selection of $E$ therefore requires careful
 empirical tuning for each deployment scenario.
  
 % -----------------------------------------------------------------------------
+\subsection{System Architecture Overview}
+\subsubsection{Client--Server Design}
+
+The system follows a two-tier federated learning architecture implemented using the Flower (\texttt{flwr}) framework. A single Federated Learning (FL) Server process hosts both the Flower gRPC server and a FastAPI-based REST management API within the same Python process. The Flower server operates on port \texttt{50051}, while the REST management layer operates on port \texttt{8001}. Both services share a common \texttt{SharedState} singleton object that stores the current round status, active model type, round identifier, and the reference to the active Flower thread. This co-location eliminates additional network overhead between the aggregation engine and the management layer and enables efficient coordination between both services.
+
+Each participating hospital deploys an FL Client as a Docker container. Upon startup, the client continuously polls the server's health endpoint until a federated learning round becomes active. Once the server signals round activation, the client initializes the appropriate model according to the task being executed. For chest disease classification tasks, a DenseNet-121 model is instantiated, whereas YOLOv8n is used for lung cancer detection tasks. The client subsequently waits for the gRPC service to become available before connecting through Flower's \texttt{NumPyClient} interface.
+
+A key design principle of the architecture is data locality. Medical images and patient records remain exclusively within the hospital infrastructure and are never transmitted to the central server. Instead, only serialized NumPy arrays containing model parameters are exchanged during federated learning rounds. This design significantly reduces privacy risks while maintaining collaborative model training across institutions.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{assets/fl_system_architecture.png}
+	\caption{Two-tier federated learning system architecture. Hospital clients communicate with the central federated learning server through TLS-secured gRPC channels, while the REST management layer provides round lifecycle management and monitoring. Raw medical data remains within each hospital boundary.}
+	\label{fig:fl_system_architecture}
+\end{figure}
+
+\subsubsection{Communication Protocol}
+
+All model parameter exchanges between federated learning clients and the central server are performed using gRPC, Google's high-performance remote procedure call framework built on HTTP/2 and Protocol Buffers. The Flower framework serializes model weight tensors into Protocol Buffer messages before transmission, providing an efficient and platform-independent communication mechanism.
+
+To ensure secure communication, the production deployment uses Transport Layer Security (TLS). Before any model parameters are exchanged, a complete TLS handshake is performed involving a trusted Certificate Authority (CA) certificate, a server certificate, and the server's private key. This process guarantees encrypted communication channels and prevents unauthorized interception or modification of model updates during transmission.
+
+In addition to the gRPC communication channel, the system incorporates a secondary REST-based heartbeat mechanism. Each client periodically sends status reports to the FastAPI management API at a configurable interval, with a default period of 15 seconds. These heartbeat messages include metadata such as the currently active model type and the active federated learning round identifier.
+
+The heartbeat channel provides real-time visibility into client participation and system health while maintaining patient privacy. No medical images, patient records, or other sensitive clinical information are transmitted through this channel. Instead, it serves exclusively for monitoring, synchronization, and lifecycle management purposes.
+
+The server broadcasts the active model type to all clients before the start of each federated learning round. This ensures that all participating institutions instantiate and train identical model architectures, thereby maintaining consistency during the aggregation process.
+
+\subsection{Model Architecture}
+\subsubsection{Chest Disease Classification Model (DenseNet-121)}
+
+For the chest disease classification task, the system employs the DenseNet-121 convolutional neural network architecture. The model is initialized using weights pre-trained on the ImageNet dataset and subsequently fine-tuned for medical image analysis. DenseNet-121 was selected due to its dense connectivity pattern, where each layer receives feature maps from all preceding layers within the network. This architectural design promotes feature reuse, improves gradient propagation, and mitigates the vanishing gradient problem commonly encountered in deep neural networks.
+
+An additional advantage of DenseNet-121 is its relatively compact parameter count compared to other deep convolutional architectures with similar performance. This characteristic is particularly important in federated learning environments, where communication costs are directly proportional to the size of the model parameters exchanged between clients and the central server.
+
+The model is designed to classify chest radiographs into four clinically relevant categories:
+
+\begin{itemize}
+	\item COVID-19
+	\item Normal
+	\item Pneumonia
+	\item Tuberculosis
+\end{itemize}
+
+The network is trained locally on each participating client before its parameters are transmitted to the federated server for aggregation. By leveraging transfer learning and the dense feature propagation mechanism of DenseNet-121, the model achieves high classification performance while maintaining communication efficiency across distributed healthcare institutions.
+
+\subsubsection{Input and Preprocessing}
+
+Prior to training, all chest X-ray images undergo a standardized preprocessing pipeline to ensure consistency across participating clients and improve model generalization. Images are resized to a fixed spatial resolution and normalized before being provided as input to the DenseNet-121 backbone.
+
+\paragraph{Input Configuration}
+The model receives RGB images with a fixed input resolution of:
+
+\begin{itemize}
+	\item Input size: $224 \times 224$ pixels
+	\item Color channels: 3 (RGB)
+\end{itemize}
+
+\paragraph{Training Augmentation}
+To improve robustness and reduce overfitting, data augmentation techniques are applied during training. These transformations increase data diversity and help the model generalize better to unseen clinical images.
+
+\begin{itemize}
+	\item Random augmentation operations
+	\item Image transformations applied only during training
+	\item Increased variability in the training distribution
+\end{itemize}
+
+\paragraph{Normalization}
+Input images are normalized before being fed into the network. Normalization stabilizes the optimization process and ensures that pixel intensity distributions remain consistent across different healthcare institutions and imaging devices.
+
+\paragraph{Validation Pipeline}
+No augmentation operations are applied during validation. Validation images are only resized and normalized to ensure that performance metrics accurately reflect the model's ability to generalize to unseen data without introducing artificial variations.
+
+This preprocessing pipeline guarantees that all federated learning participants operate on a consistent input representation, thereby reducing variability introduced by differences in local datasets and acquisition protocols.
+
+\subsubsection{Output Head}
+
+The DenseNet-121 backbone is followed by a task-specific classification head designed to identify four chest disease categories: COVID-19, Normal, Pneumonia, and Tuberculosis. Since the dataset exhibits class imbalance, the model employs a weighted loss function to ensure that underrepresented classes contribute appropriately during optimization.
+
+\paragraph{Classification Output}
+
+The output layer consists of four neurons corresponding to the target disease categories:
+
+\begin{itemize}
+	\item COVID-19
+	\item Normal
+	\item Pneumonia
+	\item Tuberculosis
+\end{itemize}
+
+Each output neuron produces a logit value that is transformed into a probability through a sigmoid activation function during inference.
+
+\paragraph{Loss Function}
+
+Training is performed using Binary Cross-Entropy with Logits Loss (\texttt{BCEWithLogitsLoss}), which combines the sigmoid activation and binary cross-entropy computation into a numerically stable formulation.
+
+To mitigate the effects of class imbalance, class-specific weights are incorporated into the loss calculation. This weighting strategy increases the penalty associated with misclassifying minority classes and improves overall predictive performance.
+
+\paragraph{Inference Strategy}
+
+During inference, the output probabilities are compared against a threshold of 0.5. Predictions with probabilities greater than or equal to this threshold are considered positive detections for the corresponding class.
+
+\begin{itemize}
+	\item Activation Function: Sigmoid
+	\item Decision Threshold: 0.5
+	\item Loss Function: BCEWithLogitsLoss
+	\item Class Weighting: Enabled
+\end{itemize}
+
+\paragraph{Best-Model Checkpointing}
+
+Each client implements a best-model checkpoint strategy during local training. Validation loss is monitored after every epoch, and the model parameters corresponding to the lowest validation loss are preserved. At the end of local training, these optimal parameters are restored before being transmitted to the federated server.
+
+This approach ensures that the model updates contributed to federated aggregation represent the best-performing local model rather than the final epoch, which may suffer from overfitting. Consequently, the aggregated global model benefits from improved generalization across participating institutions.
+
+\subsubsection{Lung Cancer Detection Model (YOLOv8n)}
+
+For the lung cancer detection task, the system utilizes YOLOv8n (You Only Look Once Version 8 -- Nano), a lightweight single-stage object detection architecture designed for real-time inference. The model is initialized using the official Ultralytics pre-trained weights and subsequently fine-tuned to detect two clinically relevant lesion categories: lung tumors and tuberculosis lesions.
+
+YOLOv8n was selected because of its small parameter footprint, containing approximately 3.2 million parameters. This compact architecture significantly reduces communication overhead in federated learning environments, where model parameters must be exchanged repeatedly between clients and the central server.
+
+Unlike traditional two-stage detectors, YOLOv8n performs localization and classification simultaneously, enabling efficient detection while maintaining competitive accuracy. The architecture combines a CSP-based backbone, feature aggregation layers, and a detection head capable of identifying lesions at multiple spatial scales.
+
+The model is deployed locally within each participating institution and contributes only its learned parameters to the federated aggregation process, ensuring that sensitive medical images remain within the originating hospital.
+
+\subsubsection{Detection Configuration}
+
+The YOLOv8n detector is configured specifically for medical lesion detection in chest CT scans. The network processes high-resolution images and predicts bounding boxes corresponding to suspicious pathological regions.
+
+The primary detection settings are summarized as follows:
+
+\begin{itemize}
+	\item Input resolution: $640 \times 640$ pixels
+	\item Number of classes: 2
+	\begin{itemize}
+		\item Lung Tumor
+		\item Tuberculosis Lesion
+	\end{itemize}
+	\item Backbone: Cross Stage Partial (CSP) architecture with C2f blocks
+	\item Neck: PANet Feature Pyramid Network
+\end{itemize}
+
+The multi-scale feature extraction capability enables the detector to identify lesions of varying sizes while maintaining computational efficiency suitable for federated deployment.
+
+\subsubsection{Training Setup}
+
+Training data is organized using the standard YOLO annotation format, where each image is associated with a text file containing normalized bounding box coordinates and class labels.
+
+The training configuration includes:
+
+\begin{itemize}
+	\item Annotation format: YOLO text-based bounding boxes
+	\item Image source linkage through read-only filesystem symbolic links
+	\item Evaluation metric: mAP@50
+	\item Federated optimization objective:
+	\[
+	\text{Loss} = 1 - \text{mAP}_{50}
+	\]
+\end{itemize}
+
+Before the first federated learning round, a warm-up training stage consisting of one local epoch is executed. This initialization phase ensures that the detection head is properly resized and configured for the two-class detection task.
+
+The warm-up procedure occurs only once during the lifetime of each client and does not contribute to the federated aggregation process.
+
+\subsubsection{Federated Parameter Exchange Strategy}
+
+Both DenseNet-121 and YOLOv8n exchange model parameters as collections of NumPy \texttt{float32} arrays. The Flower framework serializes these parameter arrays into Protocol Buffer messages before transmission through the gRPC communication channel.
+
+Upon receiving global parameters from the server, each client deserializes the transmitted arrays and loads them into the model state dictionary using strict parameter-name matching. This procedure ensures that only the intended layers are updated and prevents inconsistencies between model versions.
+
+At the server side, aggregation is performed using a customized Federated Averaging (FedAvg) strategy. The aggregation process computes a weighted average of all received parameter sets according to the number of training samples available at each participating institution.
+
+The global parameter update is computed as:
+
+\[
+w_{global} =
+\frac{\sum_{i=1}^{N} n_i w_i}
+{\sum_{i=1}^{N} n_i}
+\]
+
+where:
+
+\begin{itemize}
+	\item $w_i$ denotes the model parameters received from client $i$,
+	\item $n_i$ denotes the number of training samples at client $i$,
+	\item $N$ denotes the number of participating clients.
+\end{itemize}
+
+This weighted aggregation mechanism allows institutions with larger and more representative datasets to exert proportionally greater influence on the global model while preserving the collaborative nature of federated learning.
+
 \subsection{Privacy and Security}
-\label{subsec:fl_privacy}
- 
-The primary privacy guarantee of federated learning is that raw data never
-leaves its source institution. The server observes only model weight tensors,
-which are orders of magnitude smaller than the original imaging data and
-contain no explicit patient identifiers. This stands in contrast to
-centralized approaches, where a single data breach exposes the entire
-training corpus. Table~\ref{tab:privacy_comparison} summarizes the key
-differences.
- 
+
+\subsubsection{Core Privacy Guarantee}
+
+The primary privacy advantage of federated learning is that raw patient data never leaves the originating healthcare institution. Medical images, metadata, and associated clinical records remain stored locally, while only model parameters are exchanged during training.
+
+Compared to centralized machine learning approaches, this architecture substantially reduces the risk associated with large-scale data breaches and simplifies compliance with healthcare regulations such as HIPAA and GDPR.
+
+Only model weight tensors are transmitted between clients and the central server, ensuring that explicit patient identifiers are never exposed during the learning process.
+
+\subsubsection{Centralized vs. Federated Comparison}
+
+Table~\ref{tab:centralized_federated} summarizes the major privacy and security differences between centralized and federated learning approaches.
+
 \begin{table}[H]
-\centering
-\caption{Privacy and Security: Centralized vs.\ Federated Learning}
-\label{tab:privacy_comparison}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Property} & \textbf{Centralized} & \textbf{Federated} \\
-\hline
-Raw data leaves institution   & Yes        & No              \\
-Single point of data breach   & Yes        & No              \\
-HIPAA / GDPR compliance       & Difficult  & Easier          \\
-Shared artifact               & Full dataset & Model weights \\
-Supports differential privacy & N/A        & Yes             \\
-Resilient to server breach    & No         & Partial         \\
-\hline
-\end{tabular}
+	\centering
+	\caption{Privacy and Security Comparison Between Centralized and Federated Learning}
+	\label{tab:centralized_federated}
+	\begin{tabular}{|l|c|c|}
+		\hline
+		\textbf{Property} & \textbf{Centralized} & \textbf{Federated} \\
+		\hline
+		Raw data leaves institution & Yes & No \\
+		Single point of data breach & Yes & No \\
+		HIPAA/GDPR compliance & Difficult & Easier \\
+		Shared artifact & Full dataset & Model weights only \\
+		Supports differential privacy & N/A & Yes \\
+		Resilient to server breach & No & Partial \\
+		\hline
+	\end{tabular}
 \end{table}
- 
-It is important to acknowledge that gradient sharing is not unconditionally
-private. Gradient inversion attacks~\cite{zhu2019} have demonstrated that
-an adversarial server can reconstruct approximate training images from shared
-weight updates, particularly at small batch sizes. Two complementary
-mitigations are incorporated into the design of the proposed system:
- 
-\textbf{Batch size selection.} Using a sufficiently large mini-batch (e.g.,
-$B \geq 32$) aggregates gradient information across many samples, significantly
-reducing the fidelity of any reconstruction attempt.
- 
-\textbf{Differential Privacy (DP).} For deployments requiring formal privacy
-guarantees, the system supports $(\varepsilon, \delta)$-DP~\cite{dwork2014}
-by adding calibrated Gaussian noise to client updates before transmission:
-\begin{equation}
-    \tilde{\mathbf{w}}_t^k \;=\; \mathbf{w}_t^k \;+\;
-    \mathcal{N}\!\left(0,\;\sigma^2 C^2 \mathbf{I}\right),
-\end{equation}
-where $C$ is the gradient clipping threshold and $\sigma$ is the noise
-multiplier. The privacy budget $\varepsilon$ quantifies the worst-case
-privacy loss: smaller $\varepsilon$ implies stronger privacy at the cost
-of model utility.
- 
-% -----------------------------------------------------------------------------
+
+Federated learning eliminates the need for centralized storage of medical imaging datasets, thereby reducing regulatory burden and minimizing exposure of sensitive patient information.
+
+\subsubsection{Known Threats and Mitigations}
+
+Although federated learning significantly improves privacy, it does not completely eliminate all attack vectors. Several threats remain relevant, particularly those attempting to reconstruct information from shared model updates.
+
+The system incorporates multiple mitigation mechanisms designed to reduce the effectiveness of such attacks while preserving model utility.
+
+\subsubsection{Gradient Inversion Attacks}
+
+Gradient inversion attacks attempt to reconstruct training samples from model updates shared during federated learning.
+
+An adversary with access to model gradients may iteratively optimize synthetic inputs until their gradients resemble the observed updates, potentially revealing information about the original training data.
+
+The effectiveness of these attacks decreases substantially as batch size increases because gradients become aggregated across multiple samples.
+
+The system therefore enforces minimum batch sizes:
+
+\begin{itemize}
+	\item DenseNet-121: $B \ge 32$
+	\item YOLOv8n (CPU): $B \ge 8$
+	\item YOLOv8n (GPU): $B \ge 16$
+\end{itemize}
+
+These constraints reduce the feasibility of reconstructing individual patient images from shared updates.
+
+\subsubsection{Differential Privacy}
+
+For deployments requiring stronger privacy guarantees, the architecture supports Differential Privacy (DP) through Gaussian perturbation of model updates before transmission.
+
+The private update rule is defined as:
+
+\[
+\tilde{w}_{k}^{t}
+=
+w_{k}^{t}
++
+\mathcal{N}
+\left(
+0,\,
+\sigma^{2}C^{2}I
+\right)
+\]
+
+where:
+
+\begin{itemize}
+	\item $w_k^t$ is the original model update,
+	\item $C$ is the clipping threshold,
+	\item $\sigma$ is the noise multiplier,
+	\item $\epsilon$ represents the privacy budget,
+	\item $\delta$ represents the failure probability.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{assets/privacy_utility_tradeoff.png}
+	\caption{Privacy--utility tradeoff under $(\epsilon,\delta)$-differential privacy. Smaller values of $\epsilon$ provide stronger privacy guarantees but may reduce model performance.}
+	\label{fig:dp_tradeoff}
+\end{figure}
+
+\subsubsection{Additional Privacy Considerations}
+
+Beyond gradient inversion attacks, model inversion and membership inference attacks represent additional privacy concerns.
+
+Model inversion attempts to reconstruct representative training samples from a trained model, while membership inference seeks to determine whether a specific record was used during training.
+
+Federated aggregation, large batch sizes, and differential privacy collectively reduce the effectiveness of these attack vectors.
+
+\subsubsection{Transport-Layer Security (TLS)}
+
+All model parameter exchanges are protected using mutual Transport Layer Security (mTLS) over gRPC.
+
+The security infrastructure consists of:
+
+\begin{itemize}
+	\item Certificate Authority certificate (\texttt{ca.crt})
+	\item Server certificate (\texttt{server.pem})
+	\item Server private key (\texttt{server.key})
+\end{itemize}
+
+Mutual authentication ensures confidentiality, integrity, server authentication, and client authentication during communication.
+
+In production deployments, TLS is mandatory and protects all federated learning traffic against interception and tampering.
+
+\subsubsection{Authentication and Access Control}
+
+Each participating institution receives a unique client identifier and API key during enrollment.
+
+These credentials are required before client startup and are validated for every REST API request.
+
+The authentication framework ensures:
+
+\begin{itemize}
+	\item Only authorized hospitals can participate.
+	\item Unauthorized clients cannot submit updates.
+	\item Client activity can be audited through server logs.
+	\item Credentials remain external to source code repositories.
+\end{itemize}
+
+\subsubsection{Round Integrity and Liveness Controls}
+
+The system continuously verifies round status before and during local training.
+
+If a round is cancelled or completed, participating clients immediately terminate local computation and prevent obsolete updates from reaching the aggregation server.
+
+Heartbeat messages are transmitted every fifteen seconds, enabling real-time monitoring of client availability and participation status.
+
+These mechanisms improve both system integrity and operational reliability.
+
+\subsubsection{Security Implementation Status Summary}
+
+Table~\ref{tab:security_controls} summarizes the implementation status of all security controls incorporated into the federated learning platform.
+
+\begin{table}[H]
+	\centering
+	\caption{Security Controls -- Implementation Status}
+	\label{tab:security_controls}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabularx}{\textwidth}{|p{3.8cm}|p{2cm}|p{1.8cm}|X|}
+		\hline
+		\textbf{Security Control} &
+		\textbf{Category} &
+		\textbf{Status} &
+		\textbf{Notes} \\
+		\hline
+		
+		Data locality (no raw data transmitted) &
+		Privacy &
+		Done &
+		Core FL design property; only weight tensors transmitted \\
+		\hline
+		
+		TLS encryption on gRPC channel &
+		Transport &
+		Done &
+		\texttt{ca.crt} + \texttt{server.pem} + \texttt{server.key}; mutual TLS \\
+		\hline
+		
+		API key authentication &
+		Access Control &
+		Done &
+		\texttt{CLIENT\_API\_KEY} required; validated on every REST call \\
+		\hline
+		
+		Client identity validation &
+		Access Control &
+		Done &
+		\texttt{CLIENT\_ID} required; startup exit if absent \\
+		\hline
+		
+		Large batch size ($B \geq 32$) &
+		Privacy &
+		Done &
+		Mitigates gradient inversion attack fidelity \\
+		\hline
+		
+		Heartbeat liveness monitoring &
+		Integrity &
+		Done &
+		Continuous per-client liveness signal every 15 seconds \\
+		\hline
+		
+		Per-epoch round-active check &
+		Integrity &
+		Done &
+		Aborts training on cancelled round; covers both model types \\
+		\hline
+		
+		Best-model checkpoint (local) &
+		Robustness &
+		Done &
+		Restores best validation-loss weights before uploading to server \\
+		\hline
+		
+		Selective YOLO federation (no head) &
+		Integrity &
+		Done &
+		\texttt{cv3} detection head excluded from aggregation to prevent shape mismatch \\
+		\hline
+		
+		Differential Privacy (DP noise) &
+		Privacy &
+		CONFIGURABLE &
+		Architecture supports $(\epsilon,\delta)$-DP; not yet enabled by default \\
+		\hline
+		
+		Secure credential storage &
+		Access Control &
+		Done &
+		\texttt{.env.template} pattern; credentials never stored in source code or container images \\
+		\hline
+		
+		Shutdown-on-breach notification &
+		Resilience &
+		Done &
+		Server sends \texttt{round-failed} webhook on unexpected shutdown \\
+		\hline
+		
+	\end{tabularx}
+\end{table}
+
+The current implementation includes fully operational transport security, authentication, access control, liveness monitoring, and round integrity mechanisms. Differential privacy remains available as a configurable enhancement for deployments requiring stronger formal privacy guarantees.
 \subsection{What Makes the Proposed System Distinctive}
 \label{subsec:fl_novelty}
  

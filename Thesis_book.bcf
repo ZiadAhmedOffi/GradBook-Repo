@@ -2448,9 +2448,7 @@
     <bcf:citekey order="85" intorder="1">mcmahan2017</bcf:citekey>
     <bcf:citekey order="86" intorder="1">li2020</bcf:citekey>
     <bcf:citekey order="87" intorder="1">li2020</bcf:citekey>
-    <bcf:citekey order="88" intorder="1">zhu2019</bcf:citekey>
-    <bcf:citekey order="89" intorder="1">dwork2014</bcf:citekey>
-    <bcf:citekey order="90" intorder="1">beutel2022</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">beutel2022</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

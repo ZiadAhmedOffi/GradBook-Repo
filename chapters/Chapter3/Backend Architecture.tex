@@ -118,14 +118,14 @@ To provide a clearer understanding of the overall system structure, Figures~\ref
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.95\linewidth]{assets/backend-1.png}
+	\includegraphics[width=0.95\linewidth]{assets/backend-1-ag.jpeg}
 	\caption{End-to-end logical architecture of the proposed X-Fed NeuroScan framework, illustrating the interaction between users, backend services, AI models, explainability components, federated learning infrastructure, and data storage systems.}
 	\label{fig:system_architecture_overview}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.95\linewidth]{assets/backend-2.png}
+	\includegraphics[width=0.95\linewidth]{assets/backend-2-ag.jpeg}
 	\caption{Deployment architecture of the proposed system showing the frontend application, backend services, model-serving infrastructure, federated learning server, databases, storage components, and external integrations.}
 	\label{fig:deployment_architecture_overview}
 \end{figure}
@@ -1014,7 +1014,7 @@ Each hospital node is assigned a unique Client API key, which is used solely for
 
 Hospitals communicate with the system only through outbound connections to port 8001 for REST heartbeats and port 50051 for gRPC-based training, eliminating the need for direct inbound access. Importantly, admin users never interact directly with the FL Server; instead, all operations are securely routed through centralized Backend using JWT authentication, maintaining a centralized and controlled security layer.
 
-The various key types and their roles are shown and explained in great detail in Table~\ref{tab:f1_keys}.
+The various key types and their roles are shown and explained in great detail in Table~\ref{tab:fl_keys}.
 
 \begin{table}[htbp]
 	\centering
