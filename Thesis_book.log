@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.14)  16 JUN 2026 00:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  16 JUN 2026 11:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4702,8 +4702,8 @@ Underfull \hbox (badness 4084) in paragraph at lines 608--608
  []
 
 
-Overfull \hbox (44.31432pt too wide) in paragraph at lines 608--608
-[]|\T1/lmr/m/n/12 (-20) CONFIGURABLE| 
+Underfull \hbox (badness 10000) in paragraph at lines 608--608
+[]|\T1/lmr/m/n/12 (+20) CONFIG-
  []
 
 
@@ -6106,11 +6106,6 @@ LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Thesis_book.out' has not changed.
 (rerunfilecheck)             Checksum: 0215F4CBD0027F1F41586A042E453BBE;25298.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Thesis_book
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'Thesis_book.run.xml'.
 \openout1 = `Thesis_book.run.xml'.
 
@@ -6149,7 +6144,7 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Zyad/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Zyad/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Zyad/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on Thesis_book.pdf (248 pages, 14052919 bytes).
+Output written on Thesis_book.pdf (248 pages, 14052615 bytes).
 PDF statistics:
  3139 PDF objects out of 3580 (max. 8388607)
  839 named destinations out of 1000 (max. 500000)
