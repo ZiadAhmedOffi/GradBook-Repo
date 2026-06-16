@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  16 JUN 2026 16:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  16 JUN 2026 19:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6071,6 +6071,12 @@ Package microtype Info: Character `029' is missing
 
 
 ]
+Overfull \hbox (60.40358pt too wide) in paragraph at lines 232--232
+\T1/lmtt/m/n/12 102470$[]\T1/lmr/m/n/12 (-20) . \T1/lmr/m/sc/12 (-20) url\T1/lm
+r/m/n/12 (-20) : []$\T1/lmtt/m/n/12 https : / / www . sciencedirect . com / sci
+ence / article / pii / S1361841522001177$[]\T1/lmr/m/n/12 (-20) . 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -6111,13 +6117,13 @@ Package logreq Info: Writing requests to 'Thesis_book.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42093 strings out of 474486
- 855812 string characters out of 5744227
+ 42095 strings out of 474486
+ 855742 string characters out of 5744227
  2036542 words of memory out of 5000000
- 62308 multiletter control sequences out of 15000+600000
- 756586 words of font info for 405 fonts, out of 8000000 for 9000
+ 62306 multiletter control sequences out of 15000+600000
+ 756889 words of font info for 408 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,16n,95p,1906b,2071s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,16n,95p,1906b,2072s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb
 ><C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb>
 <C:/Users/Zyad/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb><C
@@ -6144,9 +6150,9 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Zyad/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Zyad/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Zyad/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on Thesis_book.pdf (248 pages, 14052519 bytes).
+Output written on Thesis_book.pdf (248 pages, 14058066 bytes).
 PDF statistics:
- 3139 PDF objects out of 3580 (max. 8388607)
- 839 named destinations out of 1000 (max. 500000)
+ 3153 PDF objects out of 3580 (max. 8388607)
+ 837 named destinations out of 1000 (max. 500000)
  120319 words of extra memory for PDF output out of 128383 (max. 10000000)
 
