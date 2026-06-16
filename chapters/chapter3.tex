@@ -2,7 +2,7 @@
 \pagestyle{default}
 \thispagestyle{default}
 
-This chapter presents the proposed end-to-end solution developed for the automated detection of chest diseases and bone fractures from medical imaging data. The chapter aims to provide a comprehensive description of the overall system architecture as well as a detailed explanation of the individual models that constitute the proposed solution.
+This chapter presents the proposed end-to-end solution developed for the automated detection of chest diseases and lung cancer from medical imaging data. The chapter aims to provide a comprehensive description of the overall system architecture as well as a detailed explanation of the individual models that constitute the proposed solution.
 
 The chapter begins by outlining the solution architecture, which describes the complete pipelines of the system, including the high-level data flow and processing in the DL pipeline, and the backend processes and structure. This section illustrates how both the DL pipeline and the system's backend operate cohesively to form a unified diagnostic framework.
 
@@ -10,7 +10,7 @@ Subsequently, the chapter discusses the transfer learning models used in the pro
 
 The medical image routing model is then introduced, which serves as an intelligent intermediary responsible for directing input images to the appropriate diagnostic model based on anatomical or modality-specific characteristics. This component plays a critical role in enabling the downstream models to act on an expected input image modality and anatomical region, it is also crucial in dropping out-of-distribution input data from being processed by the diagnostic models.
 
-Following this, the bone fracture detection model is presented in detail. This section describes the model architecture, and classification approach used to identify bone fractures from radiographic images.
+Following this, the lung cancer detection model is presented in detail. This section describes the model architecture, and classification approach used to identify lung nodules from CT scans.
 
 Then, an in-depth explanation of the chest disease detection model, which focuses on identifying various thoracic conditions from chest X-ray images, is presented. The section covers the model design, feature extraction process, and classification methodology employed to achieve robust disease detection.
 
@@ -76,6 +76,6 @@ The chapter also introduced the medical image routing model, which enables dynam
 
 Then, the architecture of the chest disease classification model was discussed in detail. The design was illustrated, and the use of DenseNet121 as the main feature extractor was justified. The formulation of the problem and the motivation behind such a model were presented while detailed architectural aspects of the transfer-learning model were omitted to avoid redundancy.
 
-Finally, the chest cancer detection model was presented as a task-specific component of the system, implemented using an unmodified YOLOv8 architecture. The formulation of the fracture detection problem and the motivation for adopting a one-stage object detection approach were discussed, while detailed architectural aspects were referenced to earlier sections to avoid redundancy.
+Finally, the lung cancer detection model was presented as a task-specific component of the system, implemented using an unmodified YOLOv8 architecture. The formulation of the fracture detection problem and the motivation for adopting a one-stage object detection approach were discussed, while detailed architectural aspects were referenced to earlier sections to avoid redundancy.
 
 Overall, this chapter established the structural and methodological foundation of the proposed system, providing a clear understanding of its components and design choices. The described models form the basis for the experimental evaluation and performance analysis presented in the subsequent chapter.

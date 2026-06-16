@@ -2,7 +2,7 @@
 \pagestyle{default}
 \chapter{Introduction}
 \thispagestyle{default}
-Medical imaging plays a critical role in modern healthcare, supporting clinicians in diagnosing a wide range of conditions, from bone fractures to chest tumors and other life-threatening emergencies. As imaging technologies become more advanced and widely available, the volume of medical scans produced each day continues to grow. This rapid increase has intensified the need for efficient, reliable, and scalable diagnostic support systems that can assist healthcare professionals in interpreting complex visual data. \par
+Medical imaging plays a critical role in modern healthcare, supporting clinicians in diagnosing a wide range of conditions, from lung tumors to chest diseases and other life-threatening emergencies. As imaging technologies become more advanced and widely available, the volume of medical scans produced each day continues to grow. This rapid increase has intensified the need for efficient, reliable, and scalable diagnostic support systems that can assist healthcare professionals in interpreting complex visual data. \par
 
 Recent advances in computer vision have made automated medical image analysis a promising tool for improving diagnostic accuracy and reducing clinical workload. Deep learning models, in particular, have demonstrated exceptional performance in tasks such as classification, localization, and segmentation across many imaging modalities. However, despite their capabilities, traditional centralized learning approaches often face critical limitations—especially in sensitive domains like healthcare, where data privacy, institutional policies, and regulatory constraints restrict the sharing of patient information. \par
 
@@ -15,7 +15,7 @@ This project aims to integrate these three powerful components—computer vision
 
 Accurate diagnosis, precise segmentation, and localized identification of multi-class thoracic pathologies from projectional radiography (X-ray) and cross-sectional computed tomography (CT) images remain a critical, life-saving bottleneck in contemporary emergency and clinical healthcare systems. In high-volume triage environments, intensive care units, and resource-constrained medical centers, clinicians and radiologists are subjected to immense cognitive fatigue, psychological stress, and severe time constraints. Under these taxing diagnostic conditions, many clinically critical anomalies can be visually subtle, transient, or easily obscured by surrounding dense anatomical architectures. 
 
-For instance, early-stage alveolar consolidations, hidden or subpleural tuberculous granulomas, micro-nodular viral patterns, or tiny, solitary tumor-like pulmonary lesions are inherently faint and frequently masked by overlying bone structures (such as the ribs, clavicles, and scapulae), complex central vascular configurations, or soft-tissue summation artifacts. Overlooking these fine radiological indicators can lead to severe diagnostic delays, inappropriate patient discharge, cross-infection risks in hospital wards, uncontrolled systemic disease progression, and significantly compromised long-term patient survival outcomes.
+For instance, early-stage alveolar consolidations, hidden or subpleural tuberculous granulomas, micro-nodular viral patterns, or tiny, solitary tumor-like pulmonary lesions are inherently faint and frequently masked by overlying  structures (such as the ribs, clavicles, and scapulae), complex central vascular configurations, or soft-tissue summation artifacts. Overlooking these fine radiological indicators can lead to severe diagnostic delays, inappropriate patient discharge, cross-infection risks in hospital wards, uncontrolled systemic disease progression, and significantly compromised long-term patient survival outcomes.
 
 While modern deep learning architectures, particularly Convolutional Neural Networks (CNNs) and Vision Transformers (ViTs), have achieved state-of-the-art performance in isolated computer-aided diagnostic benchmarks, their meaningful clinical integration within hospital workflows remains profoundly limited by two overarching, systemic barriers:
 \begin{enumerate}
@@ -383,7 +383,7 @@ Several technical boundaries are explicitly designated as out-of-scope for the c
 		\toprule
 		\textbf{Scope Category} & \textbf{Explicit Technical Inclusions} & \textbf{Explicit Technical Exclusions} \\
 		\midrule
-		\textbf{Target Pathologies} & Pneumonia, COVID-19, Pulmonary Tuberculosis (TB), and Lung Cancer/Chest Masses. & Pneumothorax, Emphysema, Pleural Effusions, Scoliosis, and Bone Fractures. \\
+		\textbf{Target Pathologies} & Pneumonia, COVID-19, Pulmonary Tuberculosis (TB), and Lung Cancer/Chest Masses. & Pneumothorax, Emphysema, Pleural Effusions, Scoliosis, and Lung Nodules. \\
 		\addlinespace
 		\textbf{Imaging Modalities} & High-resolution projectional Chest X-rays (CXR) and cross-sectional chest CT scans. & Magnetic Resonance Imaging (MRI), Ultrasound, and Positron Emission Tomography (PET). \\
 		\addlinespace
@@ -396,7 +396,7 @@ Several technical boundaries are explicitly designated as out-of-scope for the c
 
 \section{Project Objectives} \label{sec:objectives}
 
-The objectives of this project are centered around creating a reliable, accurate, and accessible diagnostic support system for bone-fracture and chest tumor identification. The project aims to ensure that the system not only performs well in terms of machine learning metrics but also provides practical value to clinicians through usability, efficiency, and cost-effectiveness. Achieving clinical-level performance requires a well-defined set of goals that align both with technical constraints and real-world medical needs.
+The objectives of this project are centered around creating a reliable, accurate, and accessible diagnostic support system for lung tumor and chest diseases identification. The project aims to ensure that the system not only performs well in terms of machine learning metrics but also provides practical value to clinicians through usability, efficiency, and cost-effectiveness. Achieving clinical-level performance requires a well-defined set of goals that align both with technical constraints and real-world medical needs.
 
 A primary objective is to develop a computer vision model capable of achieving high diagnostic performance. In particular, the system is designed to reach an accuracy above 90\% across its targeted conditions while maintaining a recall rate that minimizes the risk of missed fractures or tumors. Since false negatives can lead to severe clinical consequences, optimizing recall is essential for ensuring the safety and reliability of the system.
 
@@ -407,7 +407,7 @@ Operational efficiency is also a key objective. The system must be designed in a
 To summarize, the project seeks to meet the following objectives:
 
 \begin{itemize}
-	\item Achieve a diagnostic accuracy exceeding 90\% on bone-fracture and chest tumor detection tasks.
+	\item Achieve a diagnostic accuracy exceeding 90\% on lung tumor and chest diseases detection tasks.
 	\item Maintain a high recall rate to reduce the likelihood of missed abnormalities.
 	\item Provide a user-friendly, accessible, and engaging web interface suitable for non-technical clinical staff.
 	\item Develop an efficient system that minimizes operational and computational costs.

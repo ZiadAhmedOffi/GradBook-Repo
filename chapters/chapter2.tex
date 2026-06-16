@@ -7,7 +7,7 @@ In this chapter, a literature review is provided in project-related areas. To bu
 The chapter is organized as follows:
 
 \begin{itemize}
-	\item Section 2.1: Medical image history and challenges, with subsections on bone fractures and chest diseases.
+	\item Section 2.1: Medical image history and challenges, with subsections on lung cancer and chest diseases.
 	\item Section 2.2: Explainable AI (XAI) in medical image detection.
 	\item Section 2.3: Federated Learning (FL) in medical image detection.
 	\item Section 2.4: Combined approaches integrating detection with XAI and FL.
@@ -20,11 +20,11 @@ The chapter is organized as follows:
 
 \textbf{Medical imaging} is the cornerstone of modern diagnosis, providing non-invasive visualization of the body’s interior using techniques like X-rays, Computed Tomography (CT), and Ultrasound. Due to the high volume and complexity of medical scans, interpretation is often time-consuming and subject to human variability. This process is increasingly enhanced by \textbf{Artificial Intelligence (AI)}, particularly \textbf{Computer Vision (CV)} and Deep Learning (DL) methods.
 
-While traditional Deep Learning (DL) approaches have achieved high accuracy in radiological analysis for disease detection and bone fracture localization, their clinical deployment is significantly hindered. The primary issues stem from two critical needs: the strict requirement for \textbf{data privacy} and the \textbf{black-box nature} of AI decision-making. These barriers prevent the widespread, trustworthy adoption of powerful AI models in healthcare settings.
+While traditional Deep Learning (DL) approaches have achieved high accuracy in radiological analysis for chest disease detection and lung cancer  localization, their clinical deployment is significantly hindered. The primary issues stem from two critical needs: the strict requirement for \textbf{data privacy} and the \textbf{black-box nature} of AI decision-making. These barriers prevent the widespread, trustworthy adoption of powerful AI models in healthcare settings.
 
 Consequently, the research focus has shifted toward specialized solutions: \textbf{Federated Learning (FL)}, a privacy-preserving paradigm, and \textbf{Explainable AI (XAI)}, a necessary component for model transparency. This work provides a systematic review of the state-of-the-art in these domains. It begins by examining advanced deep learning architectures, analyzing the role of FL in data collaboration, and reviewing XAI techniques.
 
-We will first detail the related work in chest X-ray diagnosis and bone fracture detection. Subsequently, it will explore the use of XAI and FL specifically within these two application areas, identifying the gap that this research aims to bridge.
+We will first detail the related work in chest X-ray diagnosis and lung cancer detection. Subsequently, it will explore the use of XAI and FL specifically within these two application areas, identifying the gap that this research aims to bridge.
 
 \subsection{Lung Cancer Detection}
 \label{subsec:lung_cancer_detection}
@@ -271,7 +271,7 @@ Interpreting Chest X-rays (CXRs) is vital for diagnosing various thoracic diseas
 
 \section{Explainable AI (XAI) in Medical Image Diagnosis}
 
-Explainable AI (XAI) refers to techniques that make the decision-making process of AI models transparent and interpretable, addressing the "black-box" nature of DL models by providing insights into why a prediction was made. In this project, XAI is integrated using methods like Gradient-weighted Class Activation Mapping (GradCAM), which generates heatmaps highlighting regions in medical images (e.g., fracture lines in bone X-rays or opacities in CXR) that influenced the model's classification. This linkage enhances trust in diagnostics for both bone fractures and chest diseases, allowing clinicians to verify AI outputs against radiological features, reducing misdiagnosis risks, and facilitating model debugging.
+Explainable AI (XAI) refers to techniques that make the decision-making process of AI models transparent and interpretable, addressing the "black-box" nature of DL models by providing insights into why a prediction was made. In this project, XAI is integrated using methods like Gradient-weighted Class Activation Mapping (GradCAM), which generates heatmaps highlighting regions in medical images (e.g., X-rays or opacities in CXR) that influenced the model's classification. This linkage enhances trust in diagnostics for both lung cancer and chest diseases, allowing clinicians to verify AI outputs against radiological features, reducing misdiagnosis risks, and facilitating model debugging.
 
 \begin{figure}[htb]
 	\centering
@@ -297,7 +297,7 @@ Explainable AI (XAI) refers to techniques that make the decision-making process 
 
 \section{Federated Learning}
 
-Federated Learning (FL) is a decentralized ML approach where models are trained collaboratively across multiple devices or institutions without sharing raw data, preserving privacy through local updates aggregated centrally. In medical imaging like bone X-rays and CXR classification, FL is used to train on distributed datasets from hospitals, mitigating data silos and complying with regulations like GDPR or HIPAA. It involves clients training on local data, sending model weights to a server for aggregation (e.g., via FedAvg), and is quickly implemented for real-time applications, reducing communication overhead while handling heterogeneous data.
+Federated Learning (FL) is a decentralized ML approach where models are trained collaboratively across multiple devices or institutions without sharing raw data, preserving privacy through local updates aggregated centrally. In medical imaging like chest CT scans and CXR classification, FL is used to train on distributed datasets from hospitals, mitigating data silos and complying with regulations like GDPR or HIPAA. It involves clients training on local data, sending model weights to a server for aggregation (e.g., via FedAvg), and is quickly implemented for real-time applications, reducing communication overhead while handling heterogeneous data.
 
 \begin{figure}[htb]
 	\centering
@@ -340,7 +340,7 @@ Federated Learning (FL) is a decentralized ML approach where models are trained 
 
 \section[Combined Approaches]{Combined Approaches: Medical Image Diagnosis with XAI and Federated Learning}
 
-Integrating XAI and FL in medical image diagnosis combines privacy with interpretability, enabling collaborative training on bone X-rays and CXR while explaining predictions, with potential for broader medical domains. This section details key papers that merge these elements.
+Integrating XAI and FL in medical image diagnosis combines privacy with interpretability, enabling collaborative training on chest CT scans and CXR while explaining predictions, with potential for broader medical domains. This section details key papers that merge these elements.
 
 \subsection*{Related Papers on Combined Approaches for Chest Diseases Detection with XAI and Federated Learning}
 \begin{itemize} \itemsep 10pt
@@ -512,7 +512,7 @@ Integrating XAI and FL in medical image diagnosis combines privacy with interpre
 
 \section{Similar Commercial Applications}
 
-Several commercial applications leverage AI for medical image diagnosis, providing tools for clinicians to detect conditions like bone fractures and chest diseases. These applications often use DL models for classification but may lack advanced XAI or FL features for interpretability and privacy. Below, we discuss some notable examples.
+Several commercial applications leverage AI for medical image diagnosis, providing tools for clinicians to detect conditions like lung cancer and chest diseases. These applications often use DL models for classification but may lack advanced XAI or FL features for interpretability and privacy. Below, we discuss some notable examples.
 
 \subsection{Aidoc (aiOS™)}
 Aidoc is a leading clinical AI software company that utilizes its proprietary aiOS™ platform to deliver high-performance AI solutions for medical imaging interpretation and workflow optimization. The platform automatically analyzes medical scans, prioritizing critical findings like stroke, pulmonary embolism, and intracranial hemorrhage, and then notifies care teams in real-time. By integrating seamlessly with existing systems like EHR and PACS, Aidoc's solutions help radiologists streamline workflows, enhance diagnostic accuracy, and accelerate time-to-treatment for patients with acute conditions across radiology, cardiology, and neurovascular specialties.
@@ -544,4 +544,4 @@ Lunit is a global leader in medical AI software with a singular mission to conqu
 
 \section{Summary}
 
-In this chapter, we presented the background on bone fractures and chest diseases as initial focus areas for medical image diagnosis, emphasizing multiclassification. We discussed similar commercial applications, reviewed related works on detection using DL for each domain, explainable AI techniques like GradCAM for interpretability (with potential image insertions for heatmaps), federated learning for privacy-preserving training, and combined approaches integrating these elements. We also evaluated tools for development. These insights form the foundation for our extensible project's development, highlighting gaps in interpretability and data privacy that our system aims to address for bone fracture detection, chest disease detection, and future expansions. \newpage
+In this chapter, we presented the background on lung cancer and chest diseases as initial focus areas for medical image diagnosis, emphasizing multiclassification. We discussed similar commercial applications, reviewed related works on detection using DL for each domain, explainable AI techniques like GradCAM for interpretability (with potential image insertions for heatmaps), federated learning for privacy-preserving training, and combined approaches integrating these elements. We also evaluated tools for development. These insights form the foundation for our extensible project's development, highlighting gaps in interpretability and data privacy that our system aims to address for lung cancer detection, chest disease detection, and future expansions. \newpage
