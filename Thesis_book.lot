@@ -16,46 +16,46 @@
 \contentsline {table}{\numberline {3.6}{\ignorespaces Privacy and Security Comparison Between Centralized and Federated Learning}}{115}{table.caption.69}%
 \contentsline {table}{\numberline {3.7}{\ignorespaces Security Controls -- Implementation Status}}{118}{table.caption.71}%
 \contentsline {table}{\numberline {3.8}{\ignorespaces Configuration of the deployed language model.}}{123}{table.caption.73}%
-\contentsline {table}{\numberline {3.9}{\ignorespaces Summary of the proposed X-Fed NeuroScan framework.}}{125}{table.caption.75}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces Summary of the proposed X-Fed NeuroScan framework.}}{126}{table.caption.75}%
 \contentsline {table}{\numberline {3.10}{\ignorespaces Technological components of the proposed system architecture.}}{126}{table.caption.76}%
 \contentsline {table}{\numberline {3.11}{\ignorespaces Supporting infrastructure and external services used by the proposed system.}}{127}{table.caption.77}%
 \contentsline {table}{\numberline {3.12}{\ignorespaces Frontend technologies used in the implementation of the proposed system.}}{129}{table.caption.80}%
 \contentsline {table}{\numberline {3.13}{\ignorespaces User roles and capabilities within the proposed X-Fed NeuroScan system.}}{130}{table.caption.81}%
 \contentsline {table}{\numberline {3.14}{\ignorespaces Access control policy for system pages and administrative modules.}}{131}{table.caption.82}%
 \contentsline {table}{\numberline {3.15}{\ignorespaces Backend technologies used in the implementation of the proposed system.}}{133}{table.caption.88}%
-\contentsline {table}{\numberline {3.16}{\ignorespaces Backend service modules and their responsibilities within the system.}}{143}{table.caption.105}%
-\contentsline {table}{\numberline {3.17}{\ignorespaces Machine learning components and their corresponding frameworks and purposes within the proposed system.}}{144}{table.caption.106}%
-\contentsline {table}{\numberline {3.18}{\ignorespaces Categories of input handled by the RAG-based medical chatbot.}}{148}{table.caption.113}%
-\contentsline {table}{\numberline {3.19}{\ignorespaces Configuration parameters of the RAG-based LLM engine.}}{150}{table.caption.119}%
-\contentsline {table}{\numberline {3.20}{\ignorespaces Computational performance and execution environment of the proposed system components.}}{151}{table.caption.122}%
-\contentsline {table}{\numberline {3.21}{\ignorespaces Core design principles and their implementation in the federated learning framework.}}{153}{table.caption.123}%
-\contentsline {table}{\numberline {3.22}{\ignorespaces Federated learning server execution states and their meanings.}}{155}{table.caption.126}%
-\contentsline {table}{\numberline {3.23}{\ignorespaces Authentication key types and their roles within the federated learning system.}}{156}{table.caption.127}%
+\contentsline {table}{\numberline {3.16}{\ignorespaces Backend service modules and their responsibilities within the system.}}{144}{table.caption.105}%
+\contentsline {table}{\numberline {3.17}{\ignorespaces Machine learning components and their corresponding frameworks and purposes within the proposed system.}}{145}{table.caption.106}%
+\contentsline {table}{\numberline {3.18}{\ignorespaces Categories of input handled by the RAG-based medical chatbot.}}{149}{table.caption.113}%
+\contentsline {table}{\numberline {3.19}{\ignorespaces Configuration parameters of the RAG-based LLM engine.}}{151}{table.caption.119}%
+\contentsline {table}{\numberline {3.20}{\ignorespaces Computational performance and execution environment of the proposed system components.}}{152}{table.caption.122}%
+\contentsline {table}{\numberline {3.21}{\ignorespaces Core design principles and their implementation in the federated learning framework.}}{154}{table.caption.123}%
+\contentsline {table}{\numberline {3.22}{\ignorespaces Federated learning server execution states and their meanings.}}{156}{table.caption.126}%
+\contentsline {table}{\numberline {3.23}{\ignorespaces Authentication key types and their roles within the federated learning system.}}{157}{table.caption.127}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Software and hardware environment used for implementing the routing model.}}{162}{table.caption.128}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Class distribution of the routing dataset.}}{162}{figure.caption.129}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Optimal learning rates identified during hyperparameter tuning.}}{163}{table.caption.130}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Performance comparison of candidate routing architectures.}}{164}{table.caption.131}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Hardware specifications.}}{168}{table.caption.135}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Computed class weights.}}{168}{table.caption.135}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Software framework and library stack.}}{169}{table.caption.136}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Complete dataset split.}}{169}{table.caption.137}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces Data augmentation parameters.}}{169}{table.caption.137}%
-\contentsline {table}{\numberline {4.10}{\ignorespaces DenseNet121 SoftMax --- Key Hyperparameters.}}{171}{table.caption.138}%
-\contentsline {table}{\numberline {4.11}{\ignorespaces ResNet50V2 SoftMax --- Key Hyperparameters.}}{173}{table.caption.142}%
-\contentsline {table}{\numberline {4.12}{\ignorespaces EfficientNet SoftMax --- Key Hyperparameters.}}{175}{table.caption.146}%
-\contentsline {table}{\numberline {4.13}{\ignorespaces VGG-19 SoftMax --- Key Hyperparameters.}}{177}{table.caption.150}%
-\contentsline {table}{\numberline {4.14}{\ignorespaces Training Configuration and Performance Summary}}{177}{table.caption.151}%
-\contentsline {table}{\numberline {4.15}{\ignorespaces ResNet50 OVR --- Key Hyperparameters.}}{180}{table.caption.155}%
-\contentsline {table}{\numberline {4.16}{\ignorespaces ResNet50 OVR Report.}}{180}{table.caption.156}%
-\contentsline {table}{\numberline {4.17}{\ignorespaces DenseNet121 OVR --- Key Hyperparameters.}}{183}{table.caption.159}%
-\contentsline {table}{\numberline {4.18}{\ignorespaces DenseNet121 OVR Report.}}{183}{table.caption.162}%
-\contentsline {table}{\numberline {4.19}{\ignorespaces Common hyperparameters across FL experiments.}}{184}{table.caption.163}%
-\contentsline {table}{\numberline {4.20}{\ignorespaces Federated Learning configuration and results for the 2 client trial.}}{185}{table.caption.165}%
-\contentsline {table}{\numberline {4.21}{\ignorespaces Federated Learning Configuration and Results (3 Clients)}}{187}{table.caption.168}%
-\contentsline {table}{\numberline {4.22}{\ignorespaces Four-Client Federated Learning Configuration}}{189}{table.caption.171}%
-\contentsline {table}{\numberline {4.23}{\ignorespaces Detection results of the centralized YOLOv8 model on the test set (253 images, 759 instances)[cite: 17].}}{193}{table.caption.174}%
-\contentsline {table}{\numberline {4.24}{\ignorespaces Evaluation results of the optimized federated YOLOv8 (FedAvg) model on validation and test sets[cite: 26].}}{193}{table.caption.175}%
-\contentsline {table}{\numberline {4.25}{\ignorespaces Side-by-side comparison of optimized centralized vs. federated YOLOv8 on the test set[cite: 32].}}{194}{table.caption.176}%
-\contentsline {table}{\numberline {4.26}{\ignorespaces Absolute and relative performance gap between optimized centralized and federated models (test set)[cite: 34].}}{194}{table.caption.177}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Software and hardware environment used for implementing the routing model.}}{163}{table.caption.128}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Class distribution of the routing dataset.}}{163}{figure.caption.129}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Optimal learning rates identified during hyperparameter tuning.}}{164}{table.caption.130}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Performance comparison of candidate routing architectures.}}{165}{table.caption.131}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Hardware specifications.}}{169}{table.caption.135}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Computed class weights.}}{169}{table.caption.135}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Software framework and library stack.}}{170}{table.caption.136}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Complete dataset split.}}{170}{table.caption.137}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Data augmentation parameters.}}{170}{table.caption.137}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces DenseNet121 SoftMax --- Key Hyperparameters.}}{172}{table.caption.138}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces ResNet50V2 SoftMax --- Key Hyperparameters.}}{174}{table.caption.142}%
+\contentsline {table}{\numberline {4.12}{\ignorespaces EfficientNet SoftMax --- Key Hyperparameters.}}{176}{table.caption.146}%
+\contentsline {table}{\numberline {4.13}{\ignorespaces VGG-19 SoftMax --- Key Hyperparameters.}}{178}{table.caption.150}%
+\contentsline {table}{\numberline {4.14}{\ignorespaces Training Configuration and Performance Summary}}{178}{table.caption.151}%
+\contentsline {table}{\numberline {4.15}{\ignorespaces ResNet50 OVR --- Key Hyperparameters.}}{181}{table.caption.155}%
+\contentsline {table}{\numberline {4.16}{\ignorespaces ResNet50 OVR Report.}}{181}{table.caption.156}%
+\contentsline {table}{\numberline {4.17}{\ignorespaces DenseNet121 OVR --- Key Hyperparameters.}}{184}{table.caption.159}%
+\contentsline {table}{\numberline {4.18}{\ignorespaces DenseNet121 OVR Report.}}{184}{table.caption.162}%
+\contentsline {table}{\numberline {4.19}{\ignorespaces Common hyperparameters across FL experiments.}}{185}{table.caption.163}%
+\contentsline {table}{\numberline {4.20}{\ignorespaces Federated Learning configuration and results for the 2 client trial.}}{186}{table.caption.165}%
+\contentsline {table}{\numberline {4.21}{\ignorespaces Federated Learning Configuration and Results (3 Clients)}}{188}{table.caption.168}%
+\contentsline {table}{\numberline {4.22}{\ignorespaces Four-Client Federated Learning Configuration}}{190}{table.caption.171}%
+\contentsline {table}{\numberline {4.23}{\ignorespaces Detection results of the centralized YOLOv8 model on the test set (253 images, 759 instances)[cite: 17].}}{194}{table.caption.174}%
+\contentsline {table}{\numberline {4.24}{\ignorespaces Evaluation results of the optimized federated YOLOv8 (FedAvg) model on validation and test sets[cite: 26].}}{194}{table.caption.175}%
+\contentsline {table}{\numberline {4.25}{\ignorespaces Side-by-side comparison of optimized centralized vs. federated YOLOv8 on the test set[cite: 32].}}{195}{table.caption.176}%
+\contentsline {table}{\numberline {4.26}{\ignorespaces Absolute and relative performance gap between optimized centralized and federated models (test set)[cite: 34].}}{195}{table.caption.177}%
 \addvspace {10\p@ }

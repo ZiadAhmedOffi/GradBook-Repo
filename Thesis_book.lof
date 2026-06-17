@@ -30,54 +30,54 @@
 \contentsline {figure}{\numberline {3.22}{\ignorespaces Privacy--utility tradeoff under $(\epsilon ,\delta )$-differential privacy. Smaller values of $\epsilon $ provide stronger privacy guarantees but may reduce model performance.}}{116}{figure.caption.70}%
 \contentsline {figure}{\numberline {3.23}{\ignorespaces Overall architecture of the proposed Retrieval-Augmented Generation (RAG) model. The user query is transformed into vector embeddings, relevant medical knowledge is retrieved from the FAISS vector database, and the retrieved context is supplied to the Qwen 2.5 language model to generate a grounded and source-aware response.}}{121}{figure.caption.72}%
 \contentsline {figure}{\numberline {3.24}{\ignorespaces Query processing workflow of the proposed RAG system.}}{123}{figure.caption.74}%
-\contentsline {figure}{\numberline {3.25}{\ignorespaces End-to-end logical architecture of the proposed X-Fed NeuroScan framework, illustrating the interaction between users, backend services, AI models, explainability components, federated learning infrastructure, and data storage systems.}}{127}{figure.caption.78}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces End-to-end logical architecture of the proposed X-Fed NeuroScan framework, illustrating the interaction between users, backend services, AI models, explainability components, federated learning infrastructure, and data storage systems.}}{128}{figure.caption.78}%
 \contentsline {figure}{\numberline {3.26}{\ignorespaces Deployment architecture of the proposed system showing the frontend application, backend services, model-serving infrastructure, federated learning server, databases, storage components, and external integrations.}}{128}{figure.caption.79}%
-\contentsline {figure}{\numberline {3.27}{\ignorespaces A visualization of the roles and pages implemented in the web application.}}{132}{figure.caption.87}%
-\contentsline {figure}{\numberline {3.28}{\ignorespaces An image of the Create Account interaction from the web application.}}{133}{figure.caption.89}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces A visualization of the roles and pages implemented in the web application.}}{133}{figure.caption.87}%
+\contentsline {figure}{\numberline {3.28}{\ignorespaces An image of the Create Account interaction from the web application.}}{134}{figure.caption.89}%
 \contentsline {figure}{\numberline {3.29}{\ignorespaces An image of the Login interaction from the web application.}}{134}{figure.caption.90}%
-\contentsline {figure}{\numberline {3.30}{\ignorespaces An image of the Add User interaction from the web application.}}{135}{figure.caption.91}%
-\contentsline {figure}{\numberline {3.31}{\ignorespaces An image of the User Management tab from the web application.}}{136}{figure.caption.92}%
-\contentsline {figure}{\numberline {3.32}{\ignorespaces An image of the Add Hospital interaction from the web application.}}{137}{figure.caption.93}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces An image of the Add User interaction from the web application.}}{136}{figure.caption.91}%
+\contentsline {figure}{\numberline {3.31}{\ignorespaces An image of the User Management tab from the web application.}}{137}{figure.caption.92}%
+\contentsline {figure}{\numberline {3.32}{\ignorespaces An image of the Add Hospital interaction from the web application.}}{138}{figure.caption.93}%
 \contentsline {figure}{\numberline {3.33}{\ignorespaces An image of the client hospital getting a confidential API key interaction from the web application.}}{138}{figure.caption.94}%
-\contentsline {figure}{\numberline {3.34}{\ignorespaces An image greeting page of the web application.}}{139}{figure.caption.95}%
-\contentsline {figure}{\numberline {3.35}{\ignorespaces An image of the system asking the user to upload a scan to diagnose.}}{139}{figure.caption.96}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces An image greeting page of the web application.}}{140}{figure.caption.95}%
+\contentsline {figure}{\numberline {3.35}{\ignorespaces An image of the system asking the user to upload a scan to diagnose.}}{140}{figure.caption.96}%
 \contentsline {figure}{\numberline {3.36}{\ignorespaces An image of the system showing the prediction history of the logged-in user.}}{140}{figure.caption.97}%
-\contentsline {figure}{\numberline {3.37}{\ignorespaces An image of the system showing the details of one of the user's historical predictions.}}{140}{figure.caption.98}%
+\contentsline {figure}{\numberline {3.37}{\ignorespaces An image of the system showing the details of one of the user's historical predictions.}}{141}{figure.caption.98}%
 \contentsline {figure}{\numberline {3.38}{\ignorespaces One of the of the examples of using the system on the a lung cancer image.}}{141}{figure.caption.99}%
-\contentsline {figure}{\numberline {3.39}{\ignorespaces Another example of using the system on the a lung cancer image.}}{141}{figure.caption.100}%
-\contentsline {figure}{\numberline {3.40}{\ignorespaces An image of the Schedule Appointment interaction from the system.}}{142}{figure.caption.101}%
-\contentsline {figure}{\numberline {3.41}{\ignorespaces A simple visualization of the overall image processing pipeline from the backend's perspective.}}{146}{figure.caption.110}%
-\contentsline {figure}{\numberline {3.42}{\ignorespaces A simple visualization of the overall RAG architecture.}}{149}{figure.caption.115}%
-\contentsline {figure}{\numberline {3.43}{\ignorespaces Illustrative examples of the behavior of the retrieval-augmented generation (RAG) agent in different query scenarios. The system adapts its response strategy depending on whether the input is medical or general in nature.}}{151}{figure.caption.121}%
-\contentsline {figure}{\numberline {3.44}{\ignorespaces The federated learning dashboard of the web application.}}{154}{figure.caption.124}%
-\contentsline {figure}{\numberline {3.45}{\ignorespaces The federated learning management tab.}}{154}{figure.caption.125}%
+\contentsline {figure}{\numberline {3.39}{\ignorespaces Another example of using the system on the a lung cancer image.}}{142}{figure.caption.100}%
+\contentsline {figure}{\numberline {3.40}{\ignorespaces An image of the Schedule Appointment interaction from the system.}}{143}{figure.caption.101}%
+\contentsline {figure}{\numberline {3.41}{\ignorespaces A simple visualization of the overall image processing pipeline from the backend's perspective.}}{147}{figure.caption.110}%
+\contentsline {figure}{\numberline {3.42}{\ignorespaces A simple visualization of the overall RAG architecture.}}{150}{figure.caption.115}%
+\contentsline {figure}{\numberline {3.43}{\ignorespaces Illustrative examples of the behavior of the retrieval-augmented generation (RAG) agent in different query scenarios. The system adapts its response strategy depending on whether the input is medical or general in nature.}}{152}{figure.caption.121}%
+\contentsline {figure}{\numberline {3.44}{\ignorespaces The federated learning dashboard of the web application.}}{155}{figure.caption.124}%
+\contentsline {figure}{\numberline {3.45}{\ignorespaces The federated learning management tab.}}{155}{figure.caption.125}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribution of the routing dataset classes.}}{162}{figure.caption.129}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Summary of the routing dataset distribution.}}{162}{figure.caption.129}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison of classification accuracy across all evaluated routing architectures.}}{164}{figure.caption.132}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Training and validation performance curves for all evaluated routing model architectures. Each figure illustrates the evolution of accuracy and loss throughout the training process and provides insight into model convergence, optimization stability, and generalization behavior.}}{166}{figure.caption.133}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Confusion matrices for all evaluated routing models across the three classes.}}{167}{figure.caption.134}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Learning curves for DenseNet121 SoftMax.}}{172}{figure.caption.139}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Confusion matrix for DenseNet121 SoftMax.}}{172}{figure.caption.140}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Classification report for DenseNet121 SoftMax.}}{172}{figure.caption.141}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Learning curves for ResNet50V2 SoftMax.}}{173}{figure.caption.143}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Confusion matrix for ResNet50V2 SoftMax.}}{174}{figure.caption.144}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Classification report for ResNet50V2 SoftMax.}}{174}{figure.caption.145}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Classification report for EfficientNet SoftMax.}}{175}{figure.caption.147}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Learning Curves for EfficientNet SoftMax.}}{176}{figure.caption.148}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Confusion matrix for EfficientNet SoftMax.}}{176}{figure.caption.149}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Learning curves for VGG-19 SoftMax.}}{178}{figure.caption.152}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Confusion matrix for VGG-19 SoftMax.}}{178}{figure.caption.153}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Classification report for VGG-19 SoftMax.}}{179}{figure.caption.154}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Learning curves for ResNet50 OVR.}}{180}{figure.caption.157}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Confusion matrix for ResNet50 OVR.}}{181}{figure.caption.158}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Learning curves for DenseNet121 OVR.}}{182}{figure.caption.160}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Confusion matrix for DenseNet121 OVR.}}{182}{figure.caption.161}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Federated Learning architecture for privacy-preserving classification.}}{185}{figure.caption.164}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Confusion matrix for the Federated DenseNet121 model trained with 2 clients on the global held-out test set (accuracy: 95.57\%).}}{186}{figure.caption.166}%
-\contentsline {figure}{\numberline {4.24}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 2 clients.}}{186}{figure.caption.167}%
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Confusion matrix for the Federated DenseNet121 model trained with 3 clients.}}{188}{figure.caption.169}%
-\contentsline {figure}{\numberline {4.26}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 3 clients.}}{189}{figure.caption.170}%
-\contentsline {figure}{\numberline {4.27}{\ignorespaces Confusion matrix for the Federated DenseNet121 model trained with 4 clients (accuracy: 93.22\%).}}{191}{figure.caption.172}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 4 clients.}}{191}{figure.caption.173}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Distribution of the routing dataset classes.}}{163}{figure.caption.129}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Summary of the routing dataset distribution.}}{163}{figure.caption.129}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison of classification accuracy across all evaluated routing architectures.}}{165}{figure.caption.132}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Training and validation performance curves for all evaluated routing model architectures. Each figure illustrates the evolution of accuracy and loss throughout the training process and provides insight into model convergence, optimization stability, and generalization behavior.}}{167}{figure.caption.133}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Confusion matrices for all evaluated routing models across the three classes.}}{168}{figure.caption.134}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Learning curves for DenseNet121 SoftMax.}}{173}{figure.caption.139}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Confusion matrix for DenseNet121 SoftMax.}}{173}{figure.caption.140}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Classification report for DenseNet121 SoftMax.}}{173}{figure.caption.141}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Learning curves for ResNet50V2 SoftMax.}}{174}{figure.caption.143}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Confusion matrix for ResNet50V2 SoftMax.}}{175}{figure.caption.144}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Classification report for ResNet50V2 SoftMax.}}{175}{figure.caption.145}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Classification report for EfficientNet SoftMax.}}{176}{figure.caption.147}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Learning Curves for EfficientNet SoftMax.}}{177}{figure.caption.148}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Confusion matrix for EfficientNet SoftMax.}}{177}{figure.caption.149}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Learning curves for VGG-19 SoftMax.}}{179}{figure.caption.152}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Confusion matrix for VGG-19 SoftMax.}}{179}{figure.caption.153}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Classification report for VGG-19 SoftMax.}}{180}{figure.caption.154}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Learning curves for ResNet50 OVR.}}{181}{figure.caption.157}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Confusion matrix for ResNet50 OVR.}}{182}{figure.caption.158}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Learning curves for DenseNet121 OVR.}}{183}{figure.caption.160}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Confusion matrix for DenseNet121 OVR.}}{183}{figure.caption.161}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Federated Learning architecture for privacy-preserving classification.}}{186}{figure.caption.164}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Confusion matrix for the Federated DenseNet121 model trained with 2 clients on the global held-out test set (accuracy: 95.57\%).}}{187}{figure.caption.166}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 2 clients.}}{187}{figure.caption.167}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Confusion matrix for the Federated DenseNet121 model trained with 3 clients.}}{189}{figure.caption.169}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 3 clients.}}{190}{figure.caption.170}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Confusion matrix for the Federated DenseNet121 model trained with 4 clients (accuracy: 93.22\%).}}{192}{figure.caption.172}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 4 clients.}}{192}{figure.caption.173}%
 \addvspace {10\p@ }
