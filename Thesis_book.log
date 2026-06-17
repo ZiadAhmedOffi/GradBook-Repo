@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  17 JUN 2026 20:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  17 JUN 2026 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1566,7 +1566,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.156 	\include{chapters/chapter1}
+l.155 	\include{chapters/chapter1}
                                    [1]
 \openout2 = `chapters/chapter1.aux'.
 
@@ -5884,7 +5884,7 @@ Package microtype Info: Character `029' is missing
 
 
 ]
-Overfull \hbox (60.40358pt too wide) in paragraph at lines 232--232
+Overfull \hbox (60.40358pt too wide) in paragraph at lines 231--231
 \T1/lmtt/m/n/12 102470$[]\T1/lmr/m/n/12 (-20) . \T1/lmr/m/sc/12 (-20) url\T1/lm
 r/m/n/12 (-20) : []$\T1/lmtt/m/n/12 https : / / www . sciencedirect . com / sci
 ence / article / pii / S1361841522001177$[]\T1/lmr/m/n/12 (-20) . 
@@ -5963,7 +5963,7 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Zyad/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Zyad/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Zyad/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on Thesis_book.pdf (227 pages, 12888390 bytes).
+Output written on Thesis_book.pdf (227 pages, 12888148 bytes).
 PDF statistics:
  3313 PDF objects out of 3580 (max. 8388607)
  767 named destinations out of 1000 (max. 500000)
