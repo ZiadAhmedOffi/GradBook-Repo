@@ -208,7 +208,7 @@ Figure~\ref{fig:chest_images} presents representative sample radiographs from ea
 		\includegraphics[
 		width=\linewidth,
 		height=5cm,
-		keepaspectratio
+		keepaspectratio=false
 		]{assets/chest2.jpg}
 		\caption{Normal Chest X-ray}
 		\label{fig:normal}
@@ -219,7 +219,7 @@ Figure~\ref{fig:chest_images} presents representative sample radiographs from ea
 		\includegraphics[
 		width=\linewidth,
 		height=5cm,
-		keepaspectratio
+		keepaspectratio=false
 		]{assets/chest4.png}
 		\caption{COVID-19}
 		\label{fig:covid19}
@@ -233,7 +233,7 @@ Figure~\ref{fig:chest_images} presents representative sample radiographs from ea
 		\includegraphics[
 		width=\linewidth,
 		height=5cm,
-		keepaspectratio
+		keepaspectratio=false
 		]{assets/chest3.jpg}
 		\caption{Pneumonia}
 		\label{fig:pneumonia}
@@ -244,7 +244,7 @@ Figure~\ref{fig:chest_images} presents representative sample radiographs from ea
 		\includegraphics[
 		width=\linewidth,
 		height=5cm,
-		keepaspectratio
+		keepaspectratio=false
 		]{assets/chest5.png}
 		\caption{Tuberculosis}
 		\label{fig:tuberculosis}
@@ -327,12 +327,12 @@ Figures~\ref{fig:pneumonia_preprocessing} and~\ref{fig:tb_preprocessing} illustr
 	% First row
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest6.jpg}
+		\includegraphics[width=\textwidth, height=4cm, keepaspectratio=false]{assets/chest6.jpg}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest7.jpg}
+		\includegraphics[width=\textwidth, height=4cm, keepaspectratio=false]{assets/chest7.jpg}
 	\end{subfigure}
 	\caption{Comparison of a Pneumonia chest radiograph before (left) and after (right).}
 	\label{fig:pneumonia_preprocessing}
@@ -343,12 +343,12 @@ Figures~\ref{fig:pneumonia_preprocessing} and~\ref{fig:tb_preprocessing} illustr
 	% First row
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest8.jpg}
+		\includegraphics[width=\textwidth, height=4cm, keepaspectratio=false]{assets/chest8.jpg}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest9.png}
+		\includegraphics[width=\textwidth, height=4cm, keepaspectratio=false]{assets/chest9.png}
 	\end{subfigure}
 	\caption{Comparison of a Tuberculosis chest radiograph before (left) and after (right) the preprocessing pipeline.}
 	\label{fig:tb_preprocessing}
@@ -620,13 +620,13 @@ A two-phase training strategy is adopted: in Phase 1, the model is trained from 
 	% First row
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest13.png}
+		\includegraphics[width=\textwidth, height=4cm, keepaspectratio=false]{assets/chest13.png}
 		\caption{Original}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest14.png}
+		\includegraphics[width=\textwidth, height=4cm, keepaspectratio=false]{assets/chest11.jpeg}
 		\caption{Binary Mask}
 	\end{subfigure}
 	
@@ -635,7 +635,7 @@ A two-phase training strategy is adopted: in Phase 1, the model is trained from 
 	% Second row
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest15.png}
+		\includegraphics[width=\textwidth, height=4cm, keepaspectratio=false]{assets/chest15.png}
 		\caption{Segmented Image}
 	\end{subfigure}
 	
@@ -682,7 +682,6 @@ A custom classification head is appended to the Global Average Pooling (GAP) out
 where $F$ denotes the final convolutional feature map of DenseNet121, $\mathrm{GAP}(\cdot)$ denotes Global Average Pooling, $\mathrm{BN}(\cdot)$ denotes Batch Normalization, and $\sigma(\cdot)$ denotes the sigmoid activation. Each of the $K = 4$ output neurons operates as an independent binary classifier, producing a probability score $\hat{y}_k \in [0,1]$ for each class $k$.
 
 This One-vs-Rest (OVR) multi-label formulation with sigmoid output offers several advantages over a conventional SoftMax multi-class formulation. In the SoftMax approach, the probabilities of all classes are coupled (they must sum to one), which can suppress the activation of a class when multiple classes co-occur or when the model is uncertain. With sigmoid, each class is modeled independently, allowing the model to assign high confidence to multiple classes simultaneously when the image features are ambiguous or the pathology is mixed.
-
 The model architecture is illustrated in Figure~\ref{fig:chest_model_arch1}.
 \begin{figure}[H]
 	\centering

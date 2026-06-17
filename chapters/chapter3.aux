@@ -82,246 +82,246 @@
 \@writefile{toc}{\contentsline {paragraph}{Convolutional Block}{89}{paragraph*.41}\protected@file@percent }
 \newlabel{eq:conv_block}{{3.10}{89}{Convolutional Block}{equation.3.3.10}{}}
 \@writefile{toc}{\contentsline {paragraph}{Encoder (Contracting Path)}{89}{paragraph*.42}\protected@file@percent }
-\newlabel{eq:encoder_block}{{3.11}{90}{Encoder (Contracting Path)}{equation.3.3.11}{}}
+\newlabel{eq:encoder_block}{{3.11}{89}{Encoder (Contracting Path)}{equation.3.3.11}{}}
 \@writefile{toc}{\contentsline {paragraph}{Bridge (Bottleneck)}{90}{paragraph*.43}\protected@file@percent }
 \newlabel{eq:bridge_layer}{{3.12}{90}{Bridge (Bottleneck)}{equation.3.3.12}{}}
 \@writefile{toc}{\contentsline {paragraph}{Decoder (Expansive Path)}{90}{paragraph*.44}\protected@file@percent }
 \newlabel{eq:decoder_block}{{3.13}{90}{Decoder (Expansive Path)}{equation.3.3.13}{}}
 \@writefile{toc}{\contentsline {paragraph}{Output}{90}{paragraph*.45}\protected@file@percent }
 \newlabel{eq:final_output}{{3.14}{90}{Output}{equation.3.3.14}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces U-Net encoder–decoder filter progression and spatial resolutions (input: $224 \times 224 \times 1$).}}{91}{table.caption.46}\protected@file@percent }
-\newlabel{tab:unet_arch}{{3.3}{91}{U-Net encoder–decoder filter progression and spatial resolutions (input: $224 \times 224 \times 1$)}{table.caption.46}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces U-Net encoder–decoder filter progression and spatial resolutions (input: $224 \times 224 \times 1$).}}{90}{table.caption.46}\protected@file@percent }
+\newlabel{tab:unet_arch}{{3.3}{90}{U-Net encoder–decoder filter progression and spatial resolutions (input: $224 \times 224 \times 1$)}{table.caption.46}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces U-Net architecture implemented for lung segmentation. The contracting path (left) captures contextual information through successive down sampling, while the expansive path (right) enables precise localization via skip connections. Tensor shapes are annotated at each level.}}{91}{figure.caption.47}\protected@file@percent }
 \newlabel{fig:unet_arch}{{3.11}{91}{U-Net architecture implemented for lung segmentation. The contracting path (left) captures contextual information through successive down sampling, while the expansive path (right) enables precise localization via skip connections. Tensor shapes are annotated at each level}{figure.caption.47}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.5.3}Loss Functions}{92}{subsubsection.3.3.5.3}\protected@file@percent }
-\newlabel{eq:dice_coefficient}{{3.15}{92}{Loss Functions}{equation.3.3.15}{}}
-\newlabel{eq:dice_loss}{{3.16}{92}{Loss Functions}{equation.3.3.16}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.5.3}Loss Functions}{91}{subsubsection.3.3.5.3}\protected@file@percent }
+\newlabel{eq:dice_coefficient}{{3.15}{91}{Loss Functions}{equation.3.3.15}{}}
+\newlabel{eq:dice_loss}{{3.16}{91}{Loss Functions}{equation.3.3.16}{}}
 \newlabel{eq:bce_loss}{{3.17}{92}{Loss Functions}{equation.3.3.17}{}}
 \newlabel{eq:total_loss}{{3.18}{92}{Loss Functions}{equation.3.3.18}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.5.4}Training Configurations}{92}{subsubsection.3.3.5.4}\protected@file@percent }
 \newlabel{sec:chest_config}{{3.3.5.4}{92}{Training Configurations}{subsubsection.3.3.5.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces U-Net segmentation model training configuration.}}{93}{table.caption.48}\protected@file@percent }
-\newlabel{tab:unet_training_config}{{3.4}{93}{U-Net segmentation model training configuration}{table.caption.48}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces U-Net segmentation model training configuration.}}{92}{table.caption.48}\protected@file@percent }
+\newlabel{tab:unet_training_config}{{3.4}{92}{U-Net segmentation model training configuration}{table.caption.48}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces U-Net segmentation results. From left to right: the preprocessed input radiograph, the predicted binary lung mask, and the masked output image passed to the classification stage.}}{93}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:segmentation_example}{{3.12}{93}{U-Net segmentation results. From left to right: the preprocessed input radiograph, the predicted binary lung mask, and the masked output image passed to the classification stage}{figure.caption.49}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.5.5}Classification Model: DenseNet121 with One-vs-Rest (OVR)}{93}{subsubsection.3.3.5.5}\protected@file@percent }
 \newlabel{sec:chest_model_arch}{{3.3.5.5}{93}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{subsubsection.3.3.5.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces U-Net segmentation results. From left to right: the preprocessed input radiograph, the predicted binary lung mask, and the masked output image passed to the classification stage.}}{94}{figure.caption.49}\protected@file@percent }
-\newlabel{fig:segmentation_example}{{3.12}{94}{U-Net segmentation results. From left to right: the preprocessed input radiograph, the predicted binary lung mask, and the masked output image passed to the classification stage}{figure.caption.49}{}}
-\newlabel{eq:classification_head}{{3.19}{95}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.3.19}{}}
-\newlabel{eq:ovr_output}{{3.20}{95}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.3.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Proposed DenseNet121 OVR classification model architecture. The base network produces a 1024-dimensional feature vector via Global Average Pooling, which is refined through the custom classification head before producing independent sigmoid probability scores for each diagnostic class.}}{96}{figure.caption.50}\protected@file@percent }
-\newlabel{fig:chest_model_arch1}{{3.13}{96}{Proposed DenseNet121 OVR classification model architecture. The base network produces a 1024-dimensional feature vector via Global Average Pooling, which is refined through the custom classification head before producing independent sigmoid probability scores for each diagnostic class}{figure.caption.50}{}}
-\newlabel{eq:bce_ovr}{{3.21}{96}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.3.21}{}}
-\newlabel{eq:class_weights}{{3.22}{96}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.3.22}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.6}Grad-CAM Integration}{97}{subsection.3.3.6}\protected@file@percent }
-\newlabel{sec:chest_xai}{{3.3.6}{97}{Grad-CAM Integration}{subsection.3.3.6}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.6.1}Rationale for Explainability}{97}{subsubsection.3.3.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.6.2}Gradient-weighted Class Activation Mapping (Grad-CAM)}{97}{subsubsection.3.3.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 1: Compute Class-Discriminative Gradient}{97}{paragraph*.51}\protected@file@percent }
-\newlabel{eq:gradcam_gradient}{{3.23}{97}{Step 1: Compute Class-Discriminative Gradient}{equation.3.3.23}{}}
-\@writefile{toc}{\contentsline {paragraph}{Step 2: Global Average Pool the Gradients}{97}{paragraph*.52}\protected@file@percent }
-\newlabel{eq:gradcam_alpha}{{3.24}{98}{Step 2: Global Average Pool the Gradients}{equation.3.3.24}{}}
-\@writefile{toc}{\contentsline {paragraph}{Step 3: Compute Weighted Combination and Apply ReLU}{98}{paragraph*.53}\protected@file@percent }
-\newlabel{eq:gradcam_heatmap}{{3.25}{98}{Step 3: Compute Weighted Combination and Apply ReLU}{equation.3.3.25}{}}
-\@writefile{toc}{\contentsline {paragraph}{Step 4: Resize and Normalize}{98}{paragraph*.54}\protected@file@percent }
-\newlabel{eq:gradcam_normalization}{{3.26}{98}{Step 4: Resize and Normalize}{equation.3.3.26}{}}
-\@writefile{toc}{\contentsline {paragraph}{Step 5: Color Mapping and Overlay}{98}{paragraph*.55}\protected@file@percent }
-\newlabel{eq:gradcam_final}{{3.27}{98}{Step 5: Color Mapping and Overlay}{equation.3.3.27}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.6.3}OVR Grad-CAM for Multi-Class Visualization}{98}{subsubsection.3.3.6.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Grad-CAM visualization results for Pneumonia representative case. The saliency maps confirm that the model attends to pathologically relevant lung regions.}}{99}{figure.caption.56}\protected@file@percent }
-\newlabel{fig:grad_cam_vis_pneumonia}{{3.14}{99}{Grad-CAM visualization results for Pneumonia representative case. The saliency maps confirm that the model attends to pathologically relevant lung regions}{figure.caption.56}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Grad-CAM visualization results for Tuberculosis cases. The upper-lower lobe localization of saliency for TB cases confirms the model's ability to recognize TB-specific radiological patterns.}}{99}{figure.caption.57}\protected@file@percent }
-\newlabel{fig:grad_cam_vis_tb}{{3.15}{99}{Grad-CAM visualization results for Tuberculosis cases. The upper-lower lobe localization of saliency for TB cases confirms the model's ability to recognize TB-specific radiological patterns}{figure.caption.57}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Lung Cancer Detection Model}{99}{section.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Motivation}{100}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Problem Statement}{100}{subsection.3.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Model Architecture}{100}{subsection.3.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities.}}{101}{figure.caption.58}\protected@file@percent }
-\newlabel{fig:yolov8_architecture}{{3.16}{101}{YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities}{figure.caption.58}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3.1}Mask-to-Bounding-Box Conversion}{101}{subsubsection.3.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3.2}Dataset Preparation and Splitting}{102}{subsubsection.3.4.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3.3}YOLOv8 Detection Architecture}{102}{subsubsection.3.4.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Interpretability Considerations}{102}{subsection.3.4.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice.}}{103}{figure.caption.59}\protected@file@percent }
-\newlabel{fig:qualitative_ct_1}{{3.17}{103}{Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice}{figure.caption.59}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.18}{\ignorespaces Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice.}}{103}{figure.caption.59}\protected@file@percent }
-\newlabel{fig:qualitative_ct_2}{{3.18}{103}{Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice}{figure.caption.59}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4.1}Dataset Preparation and Annotation Generation}{103}{subsubsection.3.4.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 1: Mask Loading}{103}{paragraph*.61}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.19}{\ignorespaces Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques.}}{104}{figure.caption.60}\protected@file@percent }
-\newlabel{fig:interpretability_example}{{3.19}{104}{Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques}{figure.caption.60}{}}
-\@writefile{toc}{\contentsline {paragraph}{Step 2: Contour Extraction}{104}{paragraph*.62}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 3: Bounding Box Generation}{104}{paragraph*.63}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 4: YOLO Coordinate Conversion}{105}{paragraph*.64}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Step 5: Label File Generation}{105}{paragraph*.65}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Dataset Organization}{105}{subsection.3.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5.1}YOLOv8 Detection Architecture}{106}{subsubsection.3.4.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.20}{\ignorespaces Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction.}}{106}{figure.caption.66}\protected@file@percent }
-\newlabel{fig:yolov8_detailed_architecture}{{3.20}{106}{Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction}{figure.caption.66}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5.2}Transfer Learning Strategy}{107}{subsubsection.3.4.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5.3}Training Configuration}{107}{subsubsection.3.4.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Federated Learning}{107}{section.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Concept and Motivation}{107}{subsection.3.5.1}\protected@file@percent }
-\newlabel{subsec:fl_concept}{{3.5.1}{107}{Concept and Motivation}{subsection.3.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Federated Learning in Medical Imaging}{108}{subsection.3.5.2}\protected@file@percent }
-\newlabel{subsec:fl_medical}{{3.5.2}{108}{Federated Learning in Medical Imaging}{subsection.3.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}The Federated Averaging Algorithm}{108}{subsection.3.5.3}\protected@file@percent }
-\newlabel{subsec:fedavg}{{3.5.3}{108}{The Federated Averaging Algorithm}{subsection.3.5.3}{}}
-\newlabel{eq:fedavg}{{3.39}{109}{The Federated Averaging Algorithm}{equation.3.5.39}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Key Parameters of a Federated Learning System}{109}{subsection.3.5.4}\protected@file@percent }
-\newlabel{subsec:fl_parameters}{{3.5.4}{109}{Key Parameters of a Federated Learning System}{subsection.3.5.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.5}System Architecture Overview}{109}{subsection.3.5.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.5.1}Client--Server Design}{109}{subsubsection.3.5.5.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Key Federated Learning Parameters and Their Clinical Implications}}{110}{table.caption.67}\protected@file@percent }
-\newlabel{tab:fl_params}{{3.5}{110}{Key Federated Learning Parameters and Their Clinical Implications}{table.caption.67}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.21}{\ignorespaces Two-tier federated learning system architecture. Hospital clients communicate with the central federated learning server through TLS-secured gRPC channels, while the REST management layer provides round lifecycle management and monitoring. Raw medical data remains within each hospital boundary.}}{111}{figure.caption.68}\protected@file@percent }
-\newlabel{fig:fl_system_architecture}{{3.21}{111}{Two-tier federated learning system architecture. Hospital clients communicate with the central federated learning server through TLS-secured gRPC channels, while the REST management layer provides round lifecycle management and monitoring. Raw medical data remains within each hospital boundary}{figure.caption.68}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.5.2}Communication Protocol}{111}{subsubsection.3.5.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.6}Model Architecture}{112}{subsection.3.5.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6.1}Federated Learning Workflow}{112}{subsubsection.3.5.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6.2}Local Data Processing}{113}{subsubsection.3.5.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6.3}Local Training and Model Updates}{113}{subsubsection.3.5.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6.4}Global Aggregation}{113}{subsubsection.3.5.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6.5}Model Evaluation and Checkpointing}{114}{subsubsection.3.5.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.7}Privacy and Security}{114}{subsection.3.5.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.1}Core Privacy Guarantee}{114}{subsubsection.3.5.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.2}Centralized vs. Federated Comparison}{115}{subsubsection.3.5.7.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces Privacy and Security Comparison Between Centralized and Federated Learning}}{115}{table.caption.69}\protected@file@percent }
-\newlabel{tab:centralized_federated}{{3.6}{115}{Privacy and Security Comparison Between Centralized and Federated Learning}{table.caption.69}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.3}Known Threats and Mitigations}{115}{subsubsection.3.5.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.4}Gradient Inversion Attacks}{115}{subsubsection.3.5.7.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.5}Differential Privacy}{116}{subsubsection.3.5.7.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.22}{\ignorespaces Privacy--utility tradeoff under $(\epsilon ,\delta )$-differential privacy. Smaller values of $\epsilon $ provide stronger privacy guarantees but may reduce model performance.}}{116}{figure.caption.70}\protected@file@percent }
-\newlabel{fig:dp_tradeoff}{{3.22}{116}{Privacy--utility tradeoff under $(\epsilon ,\delta )$-differential privacy. Smaller values of $\epsilon $ provide stronger privacy guarantees but may reduce model performance}{figure.caption.70}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.6}Additional Privacy Considerations}{116}{subsubsection.3.5.7.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.7}Transport-Layer Security (TLS)}{117}{subsubsection.3.5.7.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.8}Authentication and Access Control}{117}{subsubsection.3.5.7.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.9}Round Integrity and Liveness Controls}{117}{subsubsection.3.5.7.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.10}Security Implementation Status Summary}{118}{subsubsection.3.5.7.10}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.7}{\ignorespaces Security Controls -- Implementation Status}}{118}{table.caption.71}\protected@file@percent }
-\newlabel{tab:security_controls}{{3.7}{118}{Security Controls -- Implementation Status}{table.caption.71}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.8}What Makes the Proposed System Distinctive}{119}{subsection.3.5.8}\protected@file@percent }
-\newlabel{subsec:fl_novelty}{{3.5.8}{119}{What Makes the Proposed System Distinctive}{subsection.3.5.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Retrieval-Augmented Generation (RAG) Model}{119}{section.3.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Motivation}{120}{subsection.3.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Overview of the Proposed RAG Architecture}{120}{subsection.3.6.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.23}{\ignorespaces Overall architecture of the proposed Retrieval-Augmented Generation (RAG) model. The user query is transformed into vector embeddings, relevant medical knowledge is retrieved from the FAISS vector database, and the retrieved context is supplied to the Qwen 2.5 language model to generate a grounded and source-aware response.}}{121}{figure.caption.72}\protected@file@percent }
-\newlabel{fig:rag_architecture}{{3.23}{121}{Overall architecture of the proposed Retrieval-Augmented Generation (RAG) model. The user query is transformed into vector embeddings, relevant medical knowledge is retrieved from the FAISS vector database, and the retrieved context is supplied to the Qwen 2.5 language model to generate a grounded and source-aware response}{figure.caption.72}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}Knowledge Base Construction}{121}{subsection.3.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.4}Vector Embedding Generation}{122}{subsection.3.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.5}FAISS Vector Database}{122}{subsection.3.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.6}Large Language Model Integration}{122}{subsection.3.6.6}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.8}{\ignorespaces Configuration of the deployed language model.}}{123}{table.caption.73}\protected@file@percent }
-\newlabel{tab:rag_model_configuration}{{3.8}{123}{Configuration of the deployed language model}{table.caption.73}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.7}Query Processing Workflow}{123}{subsection.3.6.7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.24}{\ignorespaces Query processing workflow of the proposed RAG system.}}{123}{figure.caption.74}\protected@file@percent }
-\newlabel{fig:rag_workflow}{{3.24}{123}{Query processing workflow of the proposed RAG system}{figure.caption.74}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.8}Source Attribution and Explainability}{124}{subsection.3.6.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.9}Advantages of the Proposed Approach}{124}{subsection.3.6.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}Platform Architecture}{124}{section.3.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.1}End-to-End System Architecture}{125}{subsection.3.7.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.9}{\ignorespaces Summary of the proposed X-Fed NeuroScan framework.}}{126}{table.caption.75}\protected@file@percent }
-\newlabel{tab:framework_summary}{{3.9}{126}{Summary of the proposed X-Fed NeuroScan framework}{table.caption.75}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.10}{\ignorespaces Technological components of the proposed system architecture.}}{126}{table.caption.76}\protected@file@percent }
-\newlabel{tab:system_components}{{3.10}{126}{Technological components of the proposed system architecture}{table.caption.76}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.11}{\ignorespaces Supporting infrastructure and external services used by the proposed system.}}{127}{table.caption.77}\protected@file@percent }
-\newlabel{tab:supporting_infrastructure}{{3.11}{127}{Supporting infrastructure and external services used by the proposed system}{table.caption.77}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.1.1}Architecture Visualization}{127}{subsubsection.3.7.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.2}Frontend}{127}{subsection.3.7.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.25}{\ignorespaces End-to-end logical architecture of the proposed X-Fed NeuroScan framework, illustrating the interaction between users, backend services, AI models, explainability components, federated learning infrastructure, and data storage systems.}}{128}{figure.caption.78}\protected@file@percent }
-\newlabel{fig:system_architecture_overview}{{3.25}{128}{End-to-end logical architecture of the proposed X-Fed NeuroScan framework, illustrating the interaction between users, backend services, AI models, explainability components, federated learning infrastructure, and data storage systems}{figure.caption.78}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.26}{\ignorespaces Deployment architecture of the proposed system showing the frontend application, backend services, model-serving infrastructure, federated learning server, databases, storage components, and external integrations.}}{128}{figure.caption.79}\protected@file@percent }
-\newlabel{fig:deployment_architecture_overview}{{3.26}{128}{Deployment architecture of the proposed system showing the frontend application, backend services, model-serving infrastructure, federated learning server, databases, storage components, and external integrations}{figure.caption.79}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.12}{\ignorespaces Frontend technologies used in the implementation of the proposed system.}}{129}{table.caption.80}\protected@file@percent }
-\newlabel{tab:frontend_technologies}{{3.12}{129}{Frontend technologies used in the implementation of the proposed system}{table.caption.80}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.13}{\ignorespaces User roles and capabilities within the proposed X-Fed NeuroScan system.}}{130}{table.caption.81}\protected@file@percent }
-\newlabel{tab:user_roles_capabilities}{{3.13}{130}{User roles and capabilities within the proposed X-Fed NeuroScan system}{table.caption.81}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.14}{\ignorespaces Access control policy for system pages and administrative modules.}}{131}{table.caption.82}\protected@file@percent }
-\newlabel{tab:system_page_access_control}{{3.14}{131}{Access control policy for system pages and administrative modules}{table.caption.82}{}}
-\@writefile{toc}{\contentsline {paragraph}{Authentication \& Session Management}{132}{paragraph*.83}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Medical Image Analysis}{132}{paragraph*.84}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Federated Learning Management}{132}{paragraph*.85}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{AI Chatbot (RAG)}{132}{paragraph*.86}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.3}Centralized Backend (Spring Boot)}{132}{subsection.3.7.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.27}{\ignorespaces A visualization of the roles and pages implemented in the web application.}}{133}{figure.caption.87}\protected@file@percent }
-\newlabel{fig:roles_pages_summary}{{3.27}{133}{A visualization of the roles and pages implemented in the web application}{figure.caption.87}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.15}{\ignorespaces Backend technologies used in the implementation of the proposed system.}}{133}{table.caption.88}\protected@file@percent }
-\newlabel{tab:backend_technologies}{{3.15}{133}{Backend technologies used in the implementation of the proposed system}{table.caption.88}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.28}{\ignorespaces An image of the Create Account interaction from the web application.}}{134}{figure.caption.89}\protected@file@percent }
-\newlabel{fig:create_account}{{3.28}{134}{An image of the Create Account interaction from the web application}{figure.caption.89}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.29}{\ignorespaces An image of the Login interaction from the web application.}}{134}{figure.caption.90}\protected@file@percent }
-\newlabel{fig:login}{{3.29}{134}{An image of the Login interaction from the web application}{figure.caption.90}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.30}{\ignorespaces An image of the Add User interaction from the web application.}}{136}{figure.caption.91}\protected@file@percent }
-\newlabel{fig:add_user}{{3.30}{136}{An image of the Add User interaction from the web application}{figure.caption.91}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.31}{\ignorespaces An image of the User Management tab from the web application.}}{137}{figure.caption.92}\protected@file@percent }
-\newlabel{fig:user_mgmt}{{3.31}{137}{An image of the User Management tab from the web application}{figure.caption.92}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.32}{\ignorespaces An image of the Add Hospital interaction from the web application.}}{138}{figure.caption.93}\protected@file@percent }
-\newlabel{fig:add_hospital}{{3.32}{138}{An image of the Add Hospital interaction from the web application}{figure.caption.93}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.33}{\ignorespaces An image of the client hospital getting a confidential API key interaction from the web application.}}{138}{figure.caption.94}\protected@file@percent }
-\newlabel{fig:hospital_api}{{3.33}{138}{An image of the client hospital getting a confidential API key interaction from the web application}{figure.caption.94}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.3.1}Medical Image Pipeline}{139}{subsubsection.3.7.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.34}{\ignorespaces An image greeting page of the web application.}}{140}{figure.caption.95}\protected@file@percent }
-\newlabel{fig:greeting_1}{{3.34}{140}{An image greeting page of the web application}{figure.caption.95}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.35}{\ignorespaces An image of the system asking the user to upload a scan to diagnose.}}{140}{figure.caption.96}\protected@file@percent }
-\newlabel{fig:greeting_2}{{3.35}{140}{An image of the system asking the user to upload a scan to diagnose}{figure.caption.96}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.36}{\ignorespaces An image of the system showing the prediction history of the logged-in user.}}{140}{figure.caption.97}\protected@file@percent }
-\newlabel{fig:pred_history}{{3.36}{140}{An image of the system showing the prediction history of the logged-in user}{figure.caption.97}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.37}{\ignorespaces An image of the system showing the details of one of the user's historical predictions.}}{141}{figure.caption.98}\protected@file@percent }
-\newlabel{fig:pred_review}{{3.37}{141}{An image of the system showing the details of one of the user's historical predictions}{figure.caption.98}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.38}{\ignorespaces One of the of the examples of using the system on the a lung cancer image.}}{141}{figure.caption.99}\protected@file@percent }
-\newlabel{fig:lung1}{{3.38}{141}{One of the of the examples of using the system on the a lung cancer image}{figure.caption.99}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.39}{\ignorespaces Another example of using the system on the a lung cancer image.}}{142}{figure.caption.100}\protected@file@percent }
-\newlabel{fig:lung2}{{3.39}{142}{Another example of using the system on the a lung cancer image}{figure.caption.100}{}}
-\@writefile{toc}{\contentsline {paragraph}{Real-Time WebSocket}{142}{paragraph*.102}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Email Service}{142}{paragraph*.103}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Core API Modules}{142}{paragraph*.104}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.40}{\ignorespaces An image of the Schedule Appointment interaction from the system.}}{143}{figure.caption.101}\protected@file@percent }
-\newlabel{fig:appointment_mgmt}{{3.40}{143}{An image of the Schedule Appointment interaction from the system}{figure.caption.101}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.16}{\ignorespaces Backend service modules and their responsibilities within the system.}}{144}{table.caption.105}\protected@file@percent }
-\newlabel{tab:backend_modules}{{3.16}{144}{Backend service modules and their responsibilities within the system}{table.caption.105}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.4}ML Service - ModelBackend}{145}{subsection.3.7.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.17}{\ignorespaces Machine learning components and their corresponding frameworks and purposes within the proposed system.}}{145}{table.caption.106}\protected@file@percent }
-\newlabel{tab:ml_components}{{3.17}{145}{Machine learning components and their corresponding frameworks and purposes within the proposed system}{table.caption.106}{}}
-\@writefile{toc}{\contentsline {paragraph}{Unified Routing}{146}{paragraph*.107}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Chest Pipeline}{146}{paragraph*.108}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Lung Cancer Pipeline}{146}{paragraph*.109}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.41}{\ignorespaces A simple visualization of the overall image processing pipeline from the backend's perspective.}}{147}{figure.caption.110}\protected@file@percent }
-\newlabel{fig:backend_overall}{{3.41}{147}{A simple visualization of the overall image processing pipeline from the backend's perspective}{figure.caption.110}{}}
-\@writefile{toc}{\contentsline {paragraph}{Standard RAG Pipeline}{148}{paragraph*.111}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Categories}{149}{paragraph*.112}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.18}{\ignorespaces Categories of input handled by the RAG-based medical chatbot.}}{149}{table.caption.113}\protected@file@percent }
-\newlabel{tab:rag_input_categories}{{3.18}{149}{Categories of input handled by the RAG-based medical chatbot}{table.caption.113}{}}
-\@writefile{toc}{\contentsline {paragraph}{Model Architecture}{149}{paragraph*.114}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Bilingual Tokenizer}{149}{paragraph*.116}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.42}{\ignorespaces A simple visualization of the overall RAG architecture.}}{150}{figure.caption.115}\protected@file@percent }
-\newlabel{fig:rag_arch}{{3.42}{150}{A simple visualization of the overall RAG architecture}{figure.caption.115}{}}
-\@writefile{toc}{\contentsline {paragraph}{Training Configuration}{151}{paragraph*.117}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{LLM Configuration}{151}{paragraph*.118}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.19}{\ignorespaces Configuration parameters of the RAG-based LLM engine.}}{151}{table.caption.119}\protected@file@percent }
-\newlabel{tab:llm_parameters}{{3.19}{151}{Configuration parameters of the RAG-based LLM engine}{table.caption.119}{}}
-\@writefile{toc}{\contentsline {paragraph}{Prompt Design}{151}{paragraph*.120}\protected@file@percent }
-\newlabel{fig:rag_example_1}{{3.43a}{152}{Example of a medical query processed by the RAG agent, showing retrieval of relevant documents and generated response}{figure.caption.121}{}}
-\newlabel{sub@fig:rag_example_1}{{a}{152}{Example of a medical query processed by the RAG agent, showing retrieval of relevant documents and generated response}{figure.caption.121}{}}
-\newlabel{fig:rag_example_2}{{3.43b}{152}{Example of a general/off-topic query handled by the RAG agent with a conversational response without medical retrieval}{figure.caption.121}{}}
-\newlabel{sub@fig:rag_example_2}{{b}{152}{Example of a general/off-topic query handled by the RAG agent with a conversational response without medical retrieval}{figure.caption.121}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.43}{\ignorespaces Illustrative examples of the behavior of the retrieval-augmented generation (RAG) agent in different query scenarios. The system adapts its response strategy depending on whether the input is medical or general in nature.}}{152}{figure.caption.121}\protected@file@percent }
-\newlabel{fig:rag_examples}{{3.43}{152}{Illustrative examples of the behavior of the retrieval-augmented generation (RAG) agent in different query scenarios. The system adapts its response strategy depending on whether the input is medical or general in nature}{figure.caption.121}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.20}{\ignorespaces Computational performance and execution environment of the proposed system components.}}{152}{table.caption.122}\protected@file@percent }
-\newlabel{tab:performance_overview}{{3.20}{152}{Computational performance and execution environment of the proposed system components}{table.caption.122}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.5}Federated Learning Server}{153}{subsection.3.7.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.21}{\ignorespaces Core design principles and their implementation in the federated learning framework.}}{154}{table.caption.123}\protected@file@percent }
-\newlabel{tab:fl_principles}{{3.21}{154}{Core design principles and their implementation in the federated learning framework}{table.caption.123}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.44}{\ignorespaces The federated learning dashboard of the web application.}}{155}{figure.caption.124}\protected@file@percent }
-\newlabel{fig:fed_db}{{3.44}{155}{The federated learning dashboard of the web application}{figure.caption.124}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.45}{\ignorespaces The federated learning management tab.}}{155}{figure.caption.125}\protected@file@percent }
-\newlabel{fig:fed_mgmt}{{3.45}{155}{The federated learning management tab}{figure.caption.125}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.22}{\ignorespaces Federated learning server execution states and their meanings.}}{156}{table.caption.126}\protected@file@percent }
-\newlabel{tab:fl_status}{{3.22}{156}{Federated learning server execution states and their meanings}{table.caption.126}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.23}{\ignorespaces Authentication key types and their roles within the federated learning system.}}{157}{table.caption.127}\protected@file@percent }
-\newlabel{tab:fl_keys}{{3.23}{157}{Authentication key types and their roles within the federated learning system}{table.caption.127}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.6}End-to-End Data Flows}{157}{subsection.3.7.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.8}Summary}{158}{section.3.8}\protected@file@percent }
+\newlabel{eq:classification_head}{{3.19}{94}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.3.19}{}}
+\newlabel{eq:ovr_output}{{3.20}{94}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.3.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Proposed DenseNet121 OVR classification model architecture. The base network produces a 1024-dimensional feature vector via Global Average Pooling, which is refined through the custom classification head before producing independent sigmoid probability scores for each diagnostic class.}}{94}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:chest_model_arch1}{{3.13}{94}{Proposed DenseNet121 OVR classification model architecture. The base network produces a 1024-dimensional feature vector via Global Average Pooling, which is refined through the custom classification head before producing independent sigmoid probability scores for each diagnostic class}{figure.caption.50}{}}
+\newlabel{eq:bce_ovr}{{3.21}{95}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.3.21}{}}
+\newlabel{eq:class_weights}{{3.22}{95}{Classification Model: DenseNet121 with One-vs-Rest (OVR)}{equation.3.3.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.6}Grad-CAM Integration}{96}{subsection.3.3.6}\protected@file@percent }
+\newlabel{sec:chest_xai}{{3.3.6}{96}{Grad-CAM Integration}{subsection.3.3.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.6.1}Rationale for Explainability}{96}{subsubsection.3.3.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.6.2}Gradient-weighted Class Activation Mapping (Grad-CAM)}{96}{subsubsection.3.3.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 1: Compute Class-Discriminative Gradient}{96}{paragraph*.51}\protected@file@percent }
+\newlabel{eq:gradcam_gradient}{{3.23}{96}{Step 1: Compute Class-Discriminative Gradient}{equation.3.3.23}{}}
+\@writefile{toc}{\contentsline {paragraph}{Step 2: Global Average Pool the Gradients}{96}{paragraph*.52}\protected@file@percent }
+\newlabel{eq:gradcam_alpha}{{3.24}{97}{Step 2: Global Average Pool the Gradients}{equation.3.3.24}{}}
+\@writefile{toc}{\contentsline {paragraph}{Step 3: Compute Weighted Combination and Apply ReLU}{97}{paragraph*.53}\protected@file@percent }
+\newlabel{eq:gradcam_heatmap}{{3.25}{97}{Step 3: Compute Weighted Combination and Apply ReLU}{equation.3.3.25}{}}
+\@writefile{toc}{\contentsline {paragraph}{Step 4: Resize and Normalize}{97}{paragraph*.54}\protected@file@percent }
+\newlabel{eq:gradcam_normalization}{{3.26}{97}{Step 4: Resize and Normalize}{equation.3.3.26}{}}
+\@writefile{toc}{\contentsline {paragraph}{Step 5: Color Mapping and Overlay}{97}{paragraph*.55}\protected@file@percent }
+\newlabel{eq:gradcam_final}{{3.27}{97}{Step 5: Color Mapping and Overlay}{equation.3.3.27}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.6.3}OVR Grad-CAM for Multi-Class Visualization}{97}{subsubsection.3.3.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Grad-CAM visualization results for Pneumonia representative case. The saliency maps confirm that the model attends to pathologically relevant lung regions.}}{98}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:grad_cam_vis_pneumonia}{{3.14}{98}{Grad-CAM visualization results for Pneumonia representative case. The saliency maps confirm that the model attends to pathologically relevant lung regions}{figure.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Grad-CAM visualization results for Tuberculosis cases. The upper-lower lobe localization of saliency for TB cases confirms the model's ability to recognize TB-specific radiological patterns.}}{98}{figure.caption.57}\protected@file@percent }
+\newlabel{fig:grad_cam_vis_tb}{{3.15}{98}{Grad-CAM visualization results for Tuberculosis cases. The upper-lower lobe localization of saliency for TB cases confirms the model's ability to recognize TB-specific radiological patterns}{figure.caption.57}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Lung Cancer Detection Model}{98}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Motivation}{99}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Problem Statement}{99}{subsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Model Architecture}{99}{subsection.3.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities.}}{100}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:yolov8_architecture}{{3.16}{100}{YOLOv8 architecture pipeline for automated localization and classification of pulmonary abnormalities}{figure.caption.58}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3.1}Mask-to-Bounding-Box Conversion}{100}{subsubsection.3.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3.2}Dataset Preparation and Splitting}{101}{subsubsection.3.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3.3}YOLOv8 Detection Architecture}{101}{subsubsection.3.4.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Interpretability Considerations}{101}{subsection.3.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice.}}{102}{figure.caption.59}\protected@file@percent }
+\newlabel{fig:qualitative_ct_1}{{3.17}{102}{Qualitative evaluation showing tumor localization (confidence scores 0.72 and 0.60) on an axial CT slice}{figure.caption.59}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.18}{\ignorespaces Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice.}}{102}{figure.caption.59}\protected@file@percent }
+\newlabel{fig:qualitative_ct_2}{{3.18}{102}{Qualitative evaluation showing tumor localization (confidence score 0.87) on an axial CT slice}{figure.caption.59}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4.1}Dataset Preparation and Annotation Generation}{102}{subsubsection.3.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 1: Mask Loading}{102}{paragraph*.61}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.19}{\ignorespaces Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques.}}{103}{figure.caption.60}\protected@file@percent }
+\newlabel{fig:interpretability_example}{{3.19}{103}{Example of an interpretable YOLO detection result on a chest CT image. The model localizes a suspected lesion using a bounding box and reports a confidence score of 0.87. Such spatial predictions provide inherent interpretability by explicitly identifying the anatomical region associated with the model's decision, reducing the need for post-hoc visualization techniques}{figure.caption.60}{}}
+\@writefile{toc}{\contentsline {paragraph}{Step 2: Contour Extraction}{103}{paragraph*.62}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 3: Bounding Box Generation}{103}{paragraph*.63}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 4: YOLO Coordinate Conversion}{104}{paragraph*.64}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Step 5: Label File Generation}{104}{paragraph*.65}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Dataset Organization}{104}{subsection.3.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5.1}YOLOv8 Detection Architecture}{105}{subsubsection.3.4.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.20}{\ignorespaces Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction.}}{105}{figure.caption.66}\protected@file@percent }
+\newlabel{fig:yolov8_detailed_architecture}{{3.20}{105}{Detailed architectural diagram of the YOLOv8 object detection framework, illustrating the Backbone, Neck (FPN + PAN), and Detection Head stages for multi-scale prediction}{figure.caption.66}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5.2}Transfer Learning Strategy}{106}{subsubsection.3.4.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.5.3}Training Configuration}{106}{subsubsection.3.4.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Federated Learning}{106}{section.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Concept and Motivation}{106}{subsection.3.5.1}\protected@file@percent }
+\newlabel{subsec:fl_concept}{{3.5.1}{106}{Concept and Motivation}{subsection.3.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Federated Learning in Medical Imaging}{107}{subsection.3.5.2}\protected@file@percent }
+\newlabel{subsec:fl_medical}{{3.5.2}{107}{Federated Learning in Medical Imaging}{subsection.3.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}The Federated Averaging Algorithm}{107}{subsection.3.5.3}\protected@file@percent }
+\newlabel{subsec:fedavg}{{3.5.3}{107}{The Federated Averaging Algorithm}{subsection.3.5.3}{}}
+\newlabel{eq:fedavg}{{3.39}{108}{The Federated Averaging Algorithm}{equation.3.5.39}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Key Parameters of a Federated Learning System}{108}{subsection.3.5.4}\protected@file@percent }
+\newlabel{subsec:fl_parameters}{{3.5.4}{108}{Key Parameters of a Federated Learning System}{subsection.3.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.5}System Architecture Overview}{108}{subsection.3.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.5.1}Client--Server Design}{108}{subsubsection.3.5.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Key Federated Learning Parameters and Their Clinical Implications}}{109}{table.caption.67}\protected@file@percent }
+\newlabel{tab:fl_params}{{3.5}{109}{Key Federated Learning Parameters and Their Clinical Implications}{table.caption.67}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.21}{\ignorespaces Two-tier federated learning system architecture. Hospital clients communicate with the central federated learning server through TLS-secured gRPC channels, while the REST management layer provides round lifecycle management and monitoring. Raw medical data remains within each hospital boundary.}}{110}{figure.caption.68}\protected@file@percent }
+\newlabel{fig:fl_system_architecture}{{3.21}{110}{Two-tier federated learning system architecture. Hospital clients communicate with the central federated learning server through TLS-secured gRPC channels, while the REST management layer provides round lifecycle management and monitoring. Raw medical data remains within each hospital boundary}{figure.caption.68}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.5.2}Communication Protocol}{110}{subsubsection.3.5.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.6}Model Architecture}{111}{subsection.3.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6.1}Federated Learning Workflow}{111}{subsubsection.3.5.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6.2}Local Data Processing}{112}{subsubsection.3.5.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6.3}Local Training and Model Updates}{112}{subsubsection.3.5.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6.4}Global Aggregation}{112}{subsubsection.3.5.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6.5}Model Evaluation and Checkpointing}{113}{subsubsection.3.5.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.7}Privacy and Security}{113}{subsection.3.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.1}Core Privacy Guarantee}{113}{subsubsection.3.5.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.2}Centralized vs. Federated Comparison}{114}{subsubsection.3.5.7.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces Privacy and Security Comparison Between Centralized and Federated Learning}}{114}{table.caption.69}\protected@file@percent }
+\newlabel{tab:centralized_federated}{{3.6}{114}{Privacy and Security Comparison Between Centralized and Federated Learning}{table.caption.69}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.3}Known Threats and Mitigations}{114}{subsubsection.3.5.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.4}Gradient Inversion Attacks}{114}{subsubsection.3.5.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.5}Differential Privacy}{115}{subsubsection.3.5.7.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.22}{\ignorespaces Privacy--utility tradeoff under $(\epsilon ,\delta )$-differential privacy. Smaller values of $\epsilon $ provide stronger privacy guarantees but may reduce model performance.}}{115}{figure.caption.70}\protected@file@percent }
+\newlabel{fig:dp_tradeoff}{{3.22}{115}{Privacy--utility tradeoff under $(\epsilon ,\delta )$-differential privacy. Smaller values of $\epsilon $ provide stronger privacy guarantees but may reduce model performance}{figure.caption.70}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.6}Additional Privacy Considerations}{115}{subsubsection.3.5.7.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.7}Transport-Layer Security (TLS)}{116}{subsubsection.3.5.7.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.8}Authentication and Access Control}{116}{subsubsection.3.5.7.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.9}Round Integrity and Liveness Controls}{116}{subsubsection.3.5.7.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.7.10}Security Implementation Status Summary}{117}{subsubsection.3.5.7.10}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.7}{\ignorespaces Security Controls -- Implementation Status}}{117}{table.caption.71}\protected@file@percent }
+\newlabel{tab:security_controls}{{3.7}{117}{Security Controls -- Implementation Status}{table.caption.71}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.8}What Makes the Proposed System Distinctive}{118}{subsection.3.5.8}\protected@file@percent }
+\newlabel{subsec:fl_novelty}{{3.5.8}{118}{What Makes the Proposed System Distinctive}{subsection.3.5.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Retrieval-Augmented Generation (RAG) Model}{118}{section.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Motivation}{119}{subsection.3.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.2}Overview of the Proposed RAG Architecture}{119}{subsection.3.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.23}{\ignorespaces Overall architecture of the proposed Retrieval-Augmented Generation (RAG) model. The user query is transformed into vector embeddings, relevant medical knowledge is retrieved from the FAISS vector database, and the retrieved context is supplied to the Qwen 2.5 language model to generate a grounded and source-aware response.}}{120}{figure.caption.72}\protected@file@percent }
+\newlabel{fig:rag_architecture}{{3.23}{120}{Overall architecture of the proposed Retrieval-Augmented Generation (RAG) model. The user query is transformed into vector embeddings, relevant medical knowledge is retrieved from the FAISS vector database, and the retrieved context is supplied to the Qwen 2.5 language model to generate a grounded and source-aware response}{figure.caption.72}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.3}Knowledge Base Construction}{120}{subsection.3.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.4}Vector Embedding Generation}{121}{subsection.3.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.5}FAISS Vector Database}{121}{subsection.3.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.6}Large Language Model Integration}{121}{subsection.3.6.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.8}{\ignorespaces Configuration of the deployed language model.}}{122}{table.caption.73}\protected@file@percent }
+\newlabel{tab:rag_model_configuration}{{3.8}{122}{Configuration of the deployed language model}{table.caption.73}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.7}Query Processing Workflow}{122}{subsection.3.6.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.24}{\ignorespaces Query processing workflow of the proposed RAG system.}}{122}{figure.caption.74}\protected@file@percent }
+\newlabel{fig:rag_workflow}{{3.24}{122}{Query processing workflow of the proposed RAG system}{figure.caption.74}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.8}Source Attribution and Explainability}{123}{subsection.3.6.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.9}Advantages of the Proposed Approach}{123}{subsection.3.6.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Platform Architecture}{123}{section.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.1}End-to-End System Architecture}{124}{subsection.3.7.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.9}{\ignorespaces Summary of the proposed X-Fed NeuroScan framework.}}{125}{table.caption.75}\protected@file@percent }
+\newlabel{tab:framework_summary}{{3.9}{125}{Summary of the proposed X-Fed NeuroScan framework}{table.caption.75}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.10}{\ignorespaces Technological components of the proposed system architecture.}}{125}{table.caption.76}\protected@file@percent }
+\newlabel{tab:system_components}{{3.10}{125}{Technological components of the proposed system architecture}{table.caption.76}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.11}{\ignorespaces Supporting infrastructure and external services used by the proposed system.}}{126}{table.caption.77}\protected@file@percent }
+\newlabel{tab:supporting_infrastructure}{{3.11}{126}{Supporting infrastructure and external services used by the proposed system}{table.caption.77}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.1.1}Architecture Visualization}{126}{subsubsection.3.7.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.2}Frontend}{126}{subsection.3.7.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.25}{\ignorespaces End-to-end logical architecture of the proposed X-Fed NeuroScan framework, illustrating the interaction between users, backend services, AI models, explainability components, federated learning infrastructure, and data storage systems.}}{127}{figure.caption.78}\protected@file@percent }
+\newlabel{fig:system_architecture_overview}{{3.25}{127}{End-to-end logical architecture of the proposed X-Fed NeuroScan framework, illustrating the interaction between users, backend services, AI models, explainability components, federated learning infrastructure, and data storage systems}{figure.caption.78}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.26}{\ignorespaces Deployment architecture of the proposed system showing the frontend application, backend services, model-serving infrastructure, federated learning server, databases, storage components, and external integrations.}}{127}{figure.caption.79}\protected@file@percent }
+\newlabel{fig:deployment_architecture_overview}{{3.26}{127}{Deployment architecture of the proposed system showing the frontend application, backend services, model-serving infrastructure, federated learning server, databases, storage components, and external integrations}{figure.caption.79}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.12}{\ignorespaces Frontend technologies used in the implementation of the proposed system.}}{128}{table.caption.80}\protected@file@percent }
+\newlabel{tab:frontend_technologies}{{3.12}{128}{Frontend technologies used in the implementation of the proposed system}{table.caption.80}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.13}{\ignorespaces User roles and capabilities within the proposed X-Fed NeuroScan system.}}{129}{table.caption.81}\protected@file@percent }
+\newlabel{tab:user_roles_capabilities}{{3.13}{129}{User roles and capabilities within the proposed X-Fed NeuroScan system}{table.caption.81}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.14}{\ignorespaces Access control policy for system pages and administrative modules.}}{130}{table.caption.82}\protected@file@percent }
+\newlabel{tab:system_page_access_control}{{3.14}{130}{Access control policy for system pages and administrative modules}{table.caption.82}{}}
+\@writefile{toc}{\contentsline {paragraph}{Authentication \& Session Management}{131}{paragraph*.83}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Medical Image Analysis}{131}{paragraph*.84}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Federated Learning Management}{131}{paragraph*.85}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{AI Chatbot (RAG)}{131}{paragraph*.86}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.3}Centralized Backend (Spring Boot)}{131}{subsection.3.7.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.27}{\ignorespaces A visualization of the roles and pages implemented in the web application.}}{132}{figure.caption.87}\protected@file@percent }
+\newlabel{fig:roles_pages_summary}{{3.27}{132}{A visualization of the roles and pages implemented in the web application}{figure.caption.87}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.15}{\ignorespaces Backend technologies used in the implementation of the proposed system.}}{132}{table.caption.88}\protected@file@percent }
+\newlabel{tab:backend_technologies}{{3.15}{132}{Backend technologies used in the implementation of the proposed system}{table.caption.88}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.28}{\ignorespaces An image of the Create Account interaction from the web application.}}{133}{figure.caption.89}\protected@file@percent }
+\newlabel{fig:create_account}{{3.28}{133}{An image of the Create Account interaction from the web application}{figure.caption.89}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.29}{\ignorespaces An image of the Login interaction from the web application.}}{133}{figure.caption.90}\protected@file@percent }
+\newlabel{fig:login}{{3.29}{133}{An image of the Login interaction from the web application}{figure.caption.90}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.30}{\ignorespaces An image of the Add User interaction from the web application.}}{135}{figure.caption.91}\protected@file@percent }
+\newlabel{fig:add_user}{{3.30}{135}{An image of the Add User interaction from the web application}{figure.caption.91}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.31}{\ignorespaces An image of the User Management tab from the web application.}}{136}{figure.caption.92}\protected@file@percent }
+\newlabel{fig:user_mgmt}{{3.31}{136}{An image of the User Management tab from the web application}{figure.caption.92}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.32}{\ignorespaces An image of the Add Hospital interaction from the web application.}}{137}{figure.caption.93}\protected@file@percent }
+\newlabel{fig:add_hospital}{{3.32}{137}{An image of the Add Hospital interaction from the web application}{figure.caption.93}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.33}{\ignorespaces An image of the client hospital getting a confidential API key interaction from the web application.}}{137}{figure.caption.94}\protected@file@percent }
+\newlabel{fig:hospital_api}{{3.33}{137}{An image of the client hospital getting a confidential API key interaction from the web application}{figure.caption.94}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.3.1}Medical Image Pipeline}{138}{subsubsection.3.7.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.34}{\ignorespaces An image greeting page of the web application.}}{139}{figure.caption.95}\protected@file@percent }
+\newlabel{fig:greeting_1}{{3.34}{139}{An image greeting page of the web application}{figure.caption.95}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.35}{\ignorespaces An image of the system asking the user to upload a scan to diagnose.}}{139}{figure.caption.96}\protected@file@percent }
+\newlabel{fig:greeting_2}{{3.35}{139}{An image of the system asking the user to upload a scan to diagnose}{figure.caption.96}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.36}{\ignorespaces An image of the system showing the prediction history of the logged-in user.}}{139}{figure.caption.97}\protected@file@percent }
+\newlabel{fig:pred_history}{{3.36}{139}{An image of the system showing the prediction history of the logged-in user}{figure.caption.97}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.37}{\ignorespaces An image of the system showing the details of one of the user's historical predictions.}}{140}{figure.caption.98}\protected@file@percent }
+\newlabel{fig:pred_review}{{3.37}{140}{An image of the system showing the details of one of the user's historical predictions}{figure.caption.98}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.38}{\ignorespaces One of the of the examples of using the system on the a lung cancer image.}}{140}{figure.caption.99}\protected@file@percent }
+\newlabel{fig:lung1}{{3.38}{140}{One of the of the examples of using the system on the a lung cancer image}{figure.caption.99}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.39}{\ignorespaces Another example of using the system on the a lung cancer image.}}{141}{figure.caption.100}\protected@file@percent }
+\newlabel{fig:lung2}{{3.39}{141}{Another example of using the system on the a lung cancer image}{figure.caption.100}{}}
+\@writefile{toc}{\contentsline {paragraph}{Real-Time WebSocket}{141}{paragraph*.102}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Email Service}{141}{paragraph*.103}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Core API Modules}{141}{paragraph*.104}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.40}{\ignorespaces An image of the Schedule Appointment interaction from the system.}}{142}{figure.caption.101}\protected@file@percent }
+\newlabel{fig:appointment_mgmt}{{3.40}{142}{An image of the Schedule Appointment interaction from the system}{figure.caption.101}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.16}{\ignorespaces Backend service modules and their responsibilities within the system.}}{143}{table.caption.105}\protected@file@percent }
+\newlabel{tab:backend_modules}{{3.16}{143}{Backend service modules and their responsibilities within the system}{table.caption.105}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.4}ML Service - ModelBackend}{144}{subsection.3.7.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.17}{\ignorespaces Machine learning components and their corresponding frameworks and purposes within the proposed system.}}{144}{table.caption.106}\protected@file@percent }
+\newlabel{tab:ml_components}{{3.17}{144}{Machine learning components and their corresponding frameworks and purposes within the proposed system}{table.caption.106}{}}
+\@writefile{toc}{\contentsline {paragraph}{Unified Routing}{145}{paragraph*.107}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Chest Pipeline}{145}{paragraph*.108}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Lung Cancer Pipeline}{145}{paragraph*.109}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.41}{\ignorespaces A simple visualization of the overall image processing pipeline from the backend's perspective.}}{146}{figure.caption.110}\protected@file@percent }
+\newlabel{fig:backend_overall}{{3.41}{146}{A simple visualization of the overall image processing pipeline from the backend's perspective}{figure.caption.110}{}}
+\@writefile{toc}{\contentsline {paragraph}{Standard RAG Pipeline}{147}{paragraph*.111}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Categories}{148}{paragraph*.112}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.18}{\ignorespaces Categories of input handled by the RAG-based medical chatbot.}}{148}{table.caption.113}\protected@file@percent }
+\newlabel{tab:rag_input_categories}{{3.18}{148}{Categories of input handled by the RAG-based medical chatbot}{table.caption.113}{}}
+\@writefile{toc}{\contentsline {paragraph}{Model Architecture}{148}{paragraph*.114}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Bilingual Tokenizer}{148}{paragraph*.116}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.42}{\ignorespaces A simple visualization of the overall RAG architecture.}}{149}{figure.caption.115}\protected@file@percent }
+\newlabel{fig:rag_arch}{{3.42}{149}{A simple visualization of the overall RAG architecture}{figure.caption.115}{}}
+\@writefile{toc}{\contentsline {paragraph}{Training Configuration}{150}{paragraph*.117}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{LLM Configuration}{150}{paragraph*.118}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.19}{\ignorespaces Configuration parameters of the RAG-based LLM engine.}}{150}{table.caption.119}\protected@file@percent }
+\newlabel{tab:llm_parameters}{{3.19}{150}{Configuration parameters of the RAG-based LLM engine}{table.caption.119}{}}
+\@writefile{toc}{\contentsline {paragraph}{Prompt Design}{150}{paragraph*.120}\protected@file@percent }
+\newlabel{fig:rag_example_1}{{3.43a}{151}{Example of a medical query processed by the RAG agent, showing retrieval of relevant documents and generated response}{figure.caption.121}{}}
+\newlabel{sub@fig:rag_example_1}{{a}{151}{Example of a medical query processed by the RAG agent, showing retrieval of relevant documents and generated response}{figure.caption.121}{}}
+\newlabel{fig:rag_example_2}{{3.43b}{151}{Example of a general/off-topic query handled by the RAG agent with a conversational response without medical retrieval}{figure.caption.121}{}}
+\newlabel{sub@fig:rag_example_2}{{b}{151}{Example of a general/off-topic query handled by the RAG agent with a conversational response without medical retrieval}{figure.caption.121}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.43}{\ignorespaces Illustrative examples of the behavior of the retrieval-augmented generation (RAG) agent in different query scenarios. The system adapts its response strategy depending on whether the input is medical or general in nature.}}{151}{figure.caption.121}\protected@file@percent }
+\newlabel{fig:rag_examples}{{3.43}{151}{Illustrative examples of the behavior of the retrieval-augmented generation (RAG) agent in different query scenarios. The system adapts its response strategy depending on whether the input is medical or general in nature}{figure.caption.121}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.20}{\ignorespaces Computational performance and execution environment of the proposed system components.}}{151}{table.caption.122}\protected@file@percent }
+\newlabel{tab:performance_overview}{{3.20}{151}{Computational performance and execution environment of the proposed system components}{table.caption.122}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.5}Federated Learning Server}{152}{subsection.3.7.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.21}{\ignorespaces Core design principles and their implementation in the federated learning framework.}}{153}{table.caption.123}\protected@file@percent }
+\newlabel{tab:fl_principles}{{3.21}{153}{Core design principles and their implementation in the federated learning framework}{table.caption.123}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.44}{\ignorespaces The federated learning dashboard of the web application.}}{154}{figure.caption.124}\protected@file@percent }
+\newlabel{fig:fed_db}{{3.44}{154}{The federated learning dashboard of the web application}{figure.caption.124}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.45}{\ignorespaces The federated learning management tab.}}{154}{figure.caption.125}\protected@file@percent }
+\newlabel{fig:fed_mgmt}{{3.45}{154}{The federated learning management tab}{figure.caption.125}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.22}{\ignorespaces Federated learning server execution states and their meanings.}}{155}{table.caption.126}\protected@file@percent }
+\newlabel{tab:fl_status}{{3.22}{155}{Federated learning server execution states and their meanings}{table.caption.126}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.23}{\ignorespaces Authentication key types and their roles within the federated learning system.}}{156}{table.caption.127}\protected@file@percent }
+\newlabel{tab:fl_keys}{{3.23}{156}{Authentication key types and their roles within the federated learning system}{table.caption.127}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.6}End-to-End Data Flows}{156}{subsection.3.7.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Summary}{157}{section.3.8}\protected@file@percent }
 \@setckpt{chapters/chapter3}{
-\setcounter{page}{160}
+\setcounter{page}{159}
 \setcounter{equation}{40}
 \setcounter{enumi}{7}
 \setcounter{enumii}{0}
