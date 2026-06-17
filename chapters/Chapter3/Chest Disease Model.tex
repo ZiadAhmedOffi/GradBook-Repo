@@ -68,7 +68,7 @@ All input radiographs undergo a standardized preprocessing pipeline comprising c
 A U-Net-based lung segmentation model is trained on a dedicated lung mask dataset (Darwin, Montgomery, Shenzhen combined) to generate binary lung masks from preprocessed radiographs. These masks are subsequently applied to the classification images to suppress all non-pulmonary anatomical structures, ensuring that the downstream classifier focuses exclusively on lung parenchyma. The segmentation model architecture and training details are provided in Section~\ref{sec:segmentation}.
 
 \paragraph{Step 3: Classification Model}
-The segmented lung images are fed into a transfer-learned deep CNN. Multiple backbone architectures are evaluated, including DenseNet121, ResNet50/ResNet50V2, EfficientNet, and VGG-19. Two classification paradigms are explored: (i) a standard single-label softmax approach, and (ii) a One-vs-Rest (OVR) multi-label sigmoid approach, which treats each class as an independent binary classification problem. Additionally, the entire classification pipeline is adapted for Federated Learning using the Flower (flwr) framework. Full architectural details of the classification models are provided in Section~\ref{sec:chest_model} and the experimental configuration in Section~\ref{sec:chest_results}.
+The segmented lung images are fed into a transfer-learned deep CNN. Multiple backbone architectures are evaluated, including DenseNet121, ResNet50/ResNet50V2, EfficientNet, and VGG-19. Two classification paradigms are explored: (i) a standard single-label softmax approach, and (ii) a One-vs-Rest (OVR) multi-label sigmoid approach, which treats each class as an independent binary classification problem. Additionally, the entire classification pipeline is adapted for Federated Learning using the Flower (flwr) framework. Full architectural details of the classification models are provided in Section~\ref{sec:chest_model_arch} and the experimental configuration in Section~\ref{sec:chest_config}.
 
 \paragraph{Stage 4: Explainability via Grad-CAM}
 To ensure clinical transparency, Gradient-weighted Class Activation Mapping (Grad-CAM) is applied post-hoc to the trained classification models. This produces class-discriminative saliency heatmaps that are superimposed on the original CXR, enabling radiologists and clinical users to verify the anatomical basis of each prediction. Grad-CAM integration details are provided in Section~\ref{sec:chest_xai}.
@@ -199,20 +199,28 @@ The remaining approximately \textbf{\num{2408} images} are equally divided betwe
 
 Figure~\ref{fig:chest_images} presents representative sample radiographs from each of the four diagnostic classes, illustrating the distinctive visual characteristics and the degree of inter-class similarity that the classification model must learn to resolve.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\centering
 	
 	% First row
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest2.jpg}
+		\includegraphics[
+		width=\linewidth,
+		height=5cm,
+		keepaspectratio
+		]{assets/chest2.jpg}
 		\caption{Normal Chest X-ray}
 		\label{fig:normal}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest4.png}
+		\includegraphics[
+		width=\linewidth,
+		height=5cm,
+		keepaspectratio
+		]{assets/chest4.png}
 		\caption{COVID-19}
 		\label{fig:covid19}
 	\end{subfigure}
@@ -222,14 +230,22 @@ Figure~\ref{fig:chest_images} presents representative sample radiographs from ea
 	% Second row
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest3.jpg}
+		\includegraphics[
+		width=\linewidth,
+		height=5cm,
+		keepaspectratio
+		]{assets/chest3.jpg}
 		\caption{Pneumonia}
 		\label{fig:pneumonia}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{assets/chest5.png}
+		\includegraphics[
+		width=\linewidth,
+		height=5cm,
+		keepaspectratio
+		]{assets/chest5.png}
 		\caption{Tuberculosis}
 		\label{fig:tuberculosis}
 	\end{subfigure}
@@ -530,6 +546,7 @@ where $N$ is the total number of pixels per image.
 \end{equation}
 
 \subsubsection{Training Configurations}
+\label{sec:chest_config}
 The U-Net segmentation model is trained with the configuration shown in Table~\ref{tab:unet_training_config}extracted directly from the implementation.
 
 \begin{table}[H]
@@ -627,6 +644,7 @@ A two-phase training strategy is adopted: in Phase 1, the model is trained from 
 \end{figure}
 
 \subsubsection{Classification Model: DenseNet121 with One-vs-Rest (OVR)}
+\label{sec:chest_model_arch}
 The primary classification backbone is DenseNet121 (Densely Connected Convolutional Networks, Huang et al., 2017), a 121-layer deep CNN pre-trained on the ImageNet dataset. DenseNet121 is particularly well-suited for medical image classification for several reasons:
 
 \begin{itemize}
@@ -696,6 +714,8 @@ Class imbalance is addressed through inverse-frequency class weights, computed a
 \end{equation}
 
 where $N_{\mathrm{total}}$ is the total number of training samples and $N_k$ is the number of samples in class $k$.
+
+For more information regarding the DenseNet121 architecture used refer to Section~\ref{sec:densenet121}
 \newpage
 \subsection{Grad-CAM Integration}
 \label{sec:chest_xai}

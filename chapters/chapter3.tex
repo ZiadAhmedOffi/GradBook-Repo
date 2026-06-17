@@ -18,41 +18,6 @@ Finally, the chapter ends with a summary to conclude all the information present
 
 \input{chapters/Chapter3/Solution Architecture.tex}
 
-\section{Transfer-Learning Models Used}
-This section presents the transfer learning models employed in the proposed system and discusses the rationale behind their selection. Transfer learning is adopted to leverage pre-trained deep neural networks that have been trained on large-scale datasets, enabling effective feature extraction and improved generalization in medical imaging tasks with limited labeled data. The section provides an overview of the selected architectures and highlights their suitability for different components of the proposed diagnostic pipeline.
-
-\subsection{ResNet50 Model} \label{subsec:resnet50-arch}
-Residual Networks (ResNets) were introduced to address the degradation problem observed in deep convolutional neural networks, where increasing network depth leads to saturation or decline in training accuracy. This issue emerges due to optimization difficulties such as vanishing gradients. ResNet addresses this limitation through the concept of residual learning, which allows the training of substantially deeper networks by enabling more effective gradient propagation.
-
-The key idea of residual learning is to reformulate the learning objective of a neural network block. Instead of directly learning a desired underlying mapping \( H(x) \), a residual block learns a residual function \( F(x) \) such that:
-\[
-H(x) = F(x) + x
-\]
-where \( x \) represents the input to the residual block and \( F(x) \) represents the output of the stacked convolutional layers within the block. The identity shortcut connection that performs the addition allows gradients to flow directly through the network during backpropagation, thereby minimizing vanishing gradient effects and improving training stability.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{assets/resnet50.png}
-	\caption{Architecture of the ResNet50 illustrating the successive stages of the model.}
-	\label{fig:resnet50-arch}
-\end{figure}
-
-As illustrated in Figure~\ref{fig:resnet50-arch}, the ResNet50 architecture begins with an initial convolutional layer preceded by zero padding, followed by batch normalization, a ReLU activation function, and a max pooling operation. This initial stage is responsible for extracting low-level visual features from the input image. The network then proceeds through five sequential stages composed of convolutional blocks and identity blocks, each incorporating residual connections that bypass multiple convolutional layers.
-
-ResNet50 employs a bottleneck design within its residual blocks, consisting of a sequence of \(1 \times 1\), \(3 \times 3\), and \(1 \times 1\) convolutional layers. The \(1 \times 1\) convolutions are used to reduce and subsequently restore feature dimensionality, thereby decreasing computational complexity while preserving representational power. This design enables ResNet50 to achieve substantial depth without incurring prohibitive computational costs.
-
-Compared to shallower variants such as ResNet18 and ResNet34, ResNet50 offers increased representational capacity and improved ability to capture complex and abstract visual patterns. While deeper variants such as ResNet101 and ResNet152 further extend network depth, they introduce higher computational overhead and an increased risk of overfitting, particularly in medical imaging applications where annotated data is often limited. Consequently, ResNet50 represents a balanced trade-off between depth, efficiency, and performance within the ResNet family.
-
-As shown in Figure~\ref{fig:resnet50-arch}, the final stages of ResNet50 consist of a global average pooling layer, followed by feature flattening and a fully connected layer. In transfer learning scenarios, this classification head can be replaced or fine-tuned to adapt the network to domain-specific medical tasks.
-
-In the context of medical image analysis, ResNet50 is well-suited for extracting both low-level structural features and high-level semantic representations relevant to pathological patterns. The residual connections promote feature reuse and robust optimization, which is particularly important for detecting subtle abnormalities in medical images such as fractures or thoracic diseases. These characteristics make ResNet50 a reliable and widely adopted backbone for medical image classification tasks.
-
-\input{chapters/Chapter3/DenseNet121}
-
-\input{chapters/Chapter3/YOLO}
-
-\input{chapters/Chapter3/CheXFound}
-
 \input{chapters/Chapter3/Routing Model}
 
 \input{chapters/Chapter3/Chest Disease Model}

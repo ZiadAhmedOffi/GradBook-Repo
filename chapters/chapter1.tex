@@ -80,67 +80,67 @@ Medical imaging plays a fundamental role in modern healthcare, providing clinici
 
 Medical image analysis traditionally relies on the expertise of radiologists and physicians who must examine large volumes of imaging data and identify subtle patterns that may indicate disease. The complexity of anatomical structures, variability among patients, and limitations of human perception can make accurate diagnosis difficult. These challenges can affect diagnostic accuracy, increase workload, and potentially delay clinical decision-making.
 
-\subsection*{Complex Anatomical Structures}
+\subsection{Complex Anatomical Structures}
 
 The human thoracic cavity contains numerous overlapping anatomical structures, including the lungs, heart, ribs, blood vessels, diaphragm, and surrounding soft tissues. In chest X-ray images, these structures are projected onto a two-dimensional plane, causing different tissues to overlap and potentially obscure important pathological findings.
 
 The presence of overlapping structures makes it difficult for clinicians to accurately distinguish between normal anatomical variations and disease-related abnormalities. Small lesions, nodules, or early-stage infections may be hidden behind ribs or other dense structures, increasing the likelihood of missed diagnoses.
 
-\subsection*{Subtle Appearance of Early-Stage Diseases}
+\subsection{Subtle Appearance of Early-Stage Diseases}
 
 Many thoracic diseases initially manifest as subtle visual changes that are difficult to detect through routine examination. Early-stage lung cancer, for example, may appear as a small pulmonary nodule that is barely distinguishable from surrounding tissue. Similarly, mild pneumonia or early tuberculosis infections may produce only faint abnormalities within the lung fields.
 
 Detecting these subtle findings requires significant expertise and experience. Even highly trained radiologists may encounter difficulties when abnormalities are small, poorly defined, or located in anatomically complex regions.
 
-\subsection*{Variability in Disease Presentation}
+\subsection{Variability in Disease Presentation}
 
 The same disease can appear differently across patients due to factors such as age, disease stage, genetic characteristics, and the presence of other medical conditions. Furthermore, different diseases may exhibit similar radiological appearances, making differential diagnosis challenging.
 
 For example, pulmonary infections, inflammatory conditions, and certain types of lung cancer can produce similar opacities in chest X-rays. Likewise, benign and malignant lung nodules may share similar characteristics in CT scans. This variability increases diagnostic complexity and may lead to uncertainty during image interpretation.
 
-\subsection*{Dependence on Radiologist Expertise}
+\subsection{Dependence on Radiologist Expertise}
 
 Accurate medical image interpretation requires extensive education, training, and clinical experience. Radiologists must possess detailed knowledge of anatomy, pathology, imaging physics, and disease progression in order to make reliable assessments.
 
 However, diagnostic performance can vary among clinicians depending on their level of expertise and familiarity with specific conditions. Less experienced practitioners may overlook subtle findings or misinterpret complex cases. As a result, diagnostic consistency can differ between healthcare professionals and institutions.
 
-\subsection*{Inter-Observer and Intra-Observer Variability}
+\subsection{Inter-Observer and Intra-Observer Variability}
 
 One of the well-known challenges in medical imaging is the variability in interpretation among radiologists. Different specialists may provide different assessments when evaluating the same image, a phenomenon known as inter-observer variability.
 
 Additionally, the same radiologist may occasionally reach different conclusions when reviewing an image at different times, which is referred to as intra-observer variability. Such inconsistencies can affect diagnostic reliability and complicate treatment planning, particularly in borderline or ambiguous cases.
 
-\subsection*{Large Volume of Imaging Data}
+\subsection{Large Volume of Imaging Data}
 
 Modern healthcare systems generate enormous quantities of medical images on a daily basis. Radiologists are often required to review hundreds of imaging studies during a single workday, creating significant workload pressures.
 
 CT examinations present an additional challenge because a single scan may contain hundreds of image slices that must be carefully reviewed. Thorough examination of such large datasets is time-consuming and can contribute to fatigue, potentially increasing the risk of oversight or diagnostic errors.
 
-\subsection*{Time Constraints in Clinical Practice}
+\subsection{Time Constraints in Clinical Practice}
 
 Healthcare professionals frequently operate under strict time constraints, particularly in busy hospitals and emergency departments. Rapid diagnosis is often essential for initiating timely treatment and improving patient outcomes.
 
 The need to balance speed with diagnostic accuracy can be challenging, especially when dealing with complex imaging studies. Under time pressure, subtle abnormalities may be overlooked, and difficult cases may require additional consultation or follow-up examinations.
 
-\subsection*{Image Quality Limitations}
+\subsection{Image Quality Limitations}
 
 The diagnostic quality of medical images can be affected by several factors, including patient movement, improper positioning, low contrast, imaging noise, and equipment-related artifacts. Poor image quality may obscure important pathological findings and make interpretation more difficult.
 
 In chest X-ray imaging, underexposure or overexposure can reduce visibility of anatomical details. In CT imaging, motion artifacts caused by breathing or patient movement can degrade image clarity. Such limitations may reduce diagnostic confidence and necessitate repeat imaging procedures.
 
-\subsection*{Diagnostic Errors and Missed Findings}
+\subsection{Diagnostic Errors and Missed Findings}
 
 Despite advances in medical imaging technology, diagnostic errors remain an unavoidable challenge. Errors may occur due to perceptual limitations, cognitive biases, fatigue, distraction, or the inherently complex nature of certain cases.
 
 Missed lung nodules, overlooked fractures, and undetected early-stage diseases represent some of the most common diagnostic challenges in thoracic imaging. Because delayed diagnosis can significantly impact patient outcomes, minimizing such errors remains a major objective within radiology.
 
-\subsection*{Challenges in Lung Cancer Detection}
+\subsection{Challenges in Lung Cancer Detection}
 
 Lung cancer detection presents particularly significant difficulties due to the diverse appearance of pulmonary nodules. Nodules may vary greatly in size, shape, texture, density, and location. Small malignant nodules can closely resemble benign lesions or normal anatomical structures.
 
 Furthermore, certain tumors may be partially obscured by blood vessels, ribs, or surrounding tissues. Accurate identification and characterization of suspicious nodules often require careful examination across multiple CT slices and comparison with previous studies, making the diagnostic process both complex and time-intensive.
 
-\subsection*{Increasing Demand for Radiological Services}
+\subsection{Increasing Demand for Radiological Services}
 
 The global demand for medical imaging services continues to grow due to population growth, aging demographics, and increased utilization of diagnostic imaging technologies. However, many healthcare systems face shortages of trained radiologists and imaging specialists.
 
@@ -149,7 +149,7 @@ This imbalance between demand and available expertise can lead to increased work
 
 \section{Background and Motivation}
 The rapid growth of medical imaging data, coupled with increased clinical workloads, has made conventional diagnostic workflows increasingly insufficient. Although automated analysis using computer vision holds considerable promise in improving diagnostic accuracy and efficiency, practical implementation is hindered by challenges such as patient privacy restrictions, limited data set diversity, and substantial computational and data transfer demands. Therefore, a thorough understanding of both the potential benefits and inherent limitations of AI in medical imaging is essential for the design of systems that are accurate, interpretable, and scalable in heterogeneous clinical environments.
-\subsection*{Rise of Computer Vision in Automated Analysis}
+\subsection{Rise of Computer Vision in Automated Analysis}
 
 The rapid digitization of healthcare has led to a dramatic increase in medical imaging data, including X-ray, CT, MRI, and ultrasound scans. Radiologists now face the dual challenges of handling large patient loads and interpreting large volumes of images quickly and accurately. Computer vision has emerged as a crucial tool for addressing these demands by enhancing diagnostic efficiency and accuracy.
 
@@ -210,7 +210,7 @@ A concise summary of computer vision benefits in medical imaging is outlined in 
 
 
 
-\subsection*{Limitations of Centralized Machine Learning}
+\subsection{Limitations of Centralized Machine Learning}
 
 Despite the promise of AI-based diagnostic systems, models trained in a centralized manner face several constraints. These limitations arise mainly from restrictions on data availability, data diversity, and practical constraints in medical settings.
 
@@ -289,7 +289,7 @@ These three components work together to form a robust, scalable, and clinically 
 
 
 
-\subsection*{Explainable Artificial Intelligence (XAI) in Thoracic Diagnostics}
+\subsection{Explainable Artificial Intelligence (XAI) in Thoracic Diagnostics}
 \label{subsec:explainable_ai}
 
 Explainable Artificial Intelligence (XAI) encompasses a robust suite of mathematical formulations, post-hoc algorithmic frameworks, and intrinsic architectural designs engineered to systematically dismantle the "black-box" paradigm of deep neural networks. By transforming opaque, multi-layered statistical representations into highly transparent, human-interpretable, and clinically auditable insights, XAI bridges the gap between advanced deep learning and clinical practice. 
@@ -320,7 +320,7 @@ Furthermore, with the introduction of Vision Transformers (ViTs) in medical imag
 \end{figure}
 
 
-\subsection*{Federated Learning Frameworks for Decentralized Thoracic Imaging}
+\subsection{Federated Learning Frameworks for Decentralized Thoracic Imaging}
 \label{subsec:federated_learning}
 
 Federated Learning (FL) represents a transformative decentralized optimization paradigm designed to facilitate collaborative, multi-institutional machine learning model development while guaranteeing complete local data sovereignty. In classical centralized deep learning frameworks, large-scale medical imaging repositories must be aggregated from multiple disparate clinical sites into a singular, central cloud repository or a unified computing infrastructure. This centralized architectural model introduces massive single-point-of-failure vulnerabilities, extreme network bandwidth consumption, and significant regulatory hurdles. 
@@ -419,7 +419,7 @@ Collectively, these objectives define the criteria by which the success of the p
 
 Despite the remarkable progress achieved in recent years, medical image analysis remains a challenging field. The complexity of medical data, the critical nature of clinical decision-making, and the variability of imaging procedures introduce numerous obstacles that must be addressed to develop reliable and clinically applicable systems. The following subsections discuss the major challenges associated with medical image analysis, particularly in the context of chest disease detection using X-ray images and lung cancer detection using CT scans.
 
-\subsection*{Limited Availability of High-Quality Medical Data}
+\subsection{Limited Availability of High-Quality Medical Data}
 
 One of the most significant challenges in medical image analysis is the limited availability of large, high-quality, and well-annotated datasets. Deep learning models generally require substantial amounts of labeled data to achieve high performance and robust generalization. However, obtaining medical images with accurate annotations is often difficult and expensive.
 
@@ -427,7 +427,7 @@ Medical image annotation requires the expertise of trained radiologists or medic
 
 In the context of chest X-ray analysis, some diseases may occur infrequently, leading to severe class imbalance within datasets. Similarly, for lung cancer detection from CT scans, obtaining sufficiently large collections of confirmed malignant and benign cases can be challenging. These limitations can negatively affect model training and reduce diagnostic performance.
 
-\subsection*{Variability in Image Acquisition}
+\subsection{Variability in Image Acquisition}
 
 Medical images are acquired using different imaging devices, protocols, and settings across hospitals and healthcare facilities. As a result, images may exhibit significant variations in quality, resolution, contrast, brightness, noise levels, and anatomical positioning.
 
@@ -435,7 +435,7 @@ Chest X-ray images obtained from different institutions may vary due to differen
 
 Such variability can lead to distribution shifts between training and deployment environments. A model trained on data from one institution may experience performance degradation when applied to images acquired in another clinical setting. Ensuring robustness across diverse imaging conditions remains a major challenge for medical image analysis systems.
 
-\subsection*{Image Noise and Artifacts}
+\subsection{Image Noise and Artifacts}
 
 Medical images frequently contain noise and artifacts that can obscure important anatomical structures and pathological findings. These imperfections may arise from patient movement, hardware limitations, acquisition errors, or environmental factors during image capture.
 
@@ -443,7 +443,7 @@ In chest X-ray imaging, artifacts such as medical devices, implants, external ob
 
 The presence of noise and artifacts can significantly reduce image quality and negatively affect the performance of automated detection systems. Consequently, effective preprocessing techniques, including image enhancement, denoising, and artifact removal, are often required before analysis.
 
-\subsection*{Complexity of Disease Manifestations}
+\subsection{Complexity of Disease Manifestations}
 
 Many thoracic diseases exhibit highly variable visual characteristics, making automated detection particularly challenging. Diseases may present differently depending on their severity, progression stage, patient demographics, and coexisting medical conditions.
 
@@ -451,7 +451,7 @@ For example, pneumonia, tuberculosis, pulmonary edema, and COVID-19 may produce 
 
 Additionally, certain diseases may manifest as subtle changes that are difficult to detect even for experienced radiologists. Developing models capable of recognizing both obvious and subtle pathological patterns remains a critical research challenge.
 
-\subsection*{Class Imbalance in Medical Datasets}
+\subsection{Class Imbalance in Medical Datasets}
 
 Medical datasets often suffer from class imbalance, where healthy cases significantly outnumber disease-positive cases or where some diseases occur much less frequently than others. This imbalance can lead machine learning models to favor majority classes during training.
 
@@ -459,7 +459,7 @@ For instance, in chest X-ray datasets, normal scans may constitute a large propo
 
 Class imbalance can result in poor sensitivity for detecting rare but clinically important conditions. Addressing this issue often requires specialized techniques such as data augmentation, oversampling, synthetic data generation, weighted loss functions, and balanced training strategies.
 
-\subsection*{Interpretability and Explainability}
+\subsection{Interpretability and Explainability}
 
 Healthcare professionals require transparency and trust when using artificial intelligence systems in clinical practice. Many state-of-the-art deep learning models function as black-box systems, producing predictions without providing clear explanations for their decisions.
 
@@ -467,7 +467,7 @@ In medical diagnosis, explainability is particularly important because clinician
 
 To address this challenge, researchers employ explainable AI techniques such as saliency maps, Grad-CAM visualizations, attention mechanisms, and feature attribution methods. These approaches help identify image regions that contribute most strongly to model predictions, thereby improving transparency and clinical confidence.
 
-\subsection*{Generalization and Robustness}
+\subsection{Generalization and Robustness}
 
 A medical image analysis system must perform reliably across different patient populations, imaging devices, healthcare institutions, and geographical regions. However, models trained on specific datasets may inadvertently learn dataset-specific characteristics rather than clinically meaningful features.
 
@@ -475,7 +475,7 @@ This issue can lead to reduced performance when models encounter unseen data dur
 
 Ensuring robustness requires diverse training datasets, rigorous validation procedures, external testing across multiple institutions, and continuous performance monitoring after deployment.
 
-\subsection*{Three-Dimensional Nature of CT Data}
+\subsection{Three-Dimensional Nature of CT Data}
 
 Unlike chest X-rays, which provide two-dimensional projections, CT scans generate three-dimensional volumetric data. While this additional information improves diagnostic capabilities, it also introduces substantial computational and analytical challenges.
 
@@ -483,7 +483,7 @@ CT volumes may contain hundreds of slices for a single patient examination. Proc
 
 Advanced techniques such as 3D convolutional neural networks, volumetric segmentation algorithms, and multi-view learning approaches are commonly employed to address these challenges. However, these methods generally demand greater computational complexity and longer training times.
 
-\subsection*{Accurate Segmentation of Anatomical Structures}
+\subsection{Accurate Segmentation of Anatomical Structures}
 
 Segmentation is a fundamental step in many medical image analysis pipelines. It involves identifying and isolating relevant anatomical structures such as lungs, airways, lesions, tumors, and nodules.
 
@@ -491,7 +491,7 @@ Accurate segmentation is particularly challenging when boundaries are unclear, t
 
 Segmentation errors can propagate through subsequent analysis stages and adversely affect disease detection and classification performance. Therefore, robust segmentation algorithms remain an important area of ongoing research.
 
-\subsection*{Clinical Validation and Regulatory Requirements}
+\subsection{Clinical Validation and Regulatory Requirements}
 
 Developing an accurate machine learning model is only one step toward clinical adoption. Medical image analysis systems must undergo extensive validation to demonstrate safety, reliability, and effectiveness in real-world healthcare environments.
 
@@ -499,7 +499,7 @@ Clinical validation typically involves testing models on large and diverse patie
 
 Meeting these regulatory and clinical validation requirements can be a lengthy and resource-intensive process, but it is essential for ensuring patient safety and maintaining trust in AI-assisted diagnostic systems.
 
-\subsection*{Ethical and Privacy Considerations}
+\subsection{Ethical and Privacy Considerations}
 
 Medical image analysis systems operate on highly sensitive patient information. Protecting patient privacy and ensuring compliance with healthcare regulations are critical responsibilities throughout the development lifecycle.
 
@@ -507,7 +507,7 @@ Issues such as data security, informed consent, data ownership, and algorithmic 
 
 Consequently, ethical AI development requires responsible data management practices, fairness assessments, transparency, and continuous evaluation to ensure that diagnostic systems benefit all patient populations.
 
-\subsection*{Computational Resource Requirements}
+\subsection{Computational Resource Requirements}
 
 Modern deep learning architectures used in medical image analysis often contain millions of trainable parameters and require substantial computational resources for training and inference. High-resolution chest X-ray images and volumetric CT scans further increase computational demands.
 

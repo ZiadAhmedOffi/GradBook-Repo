@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{ragged2e}
 \usepackage{placeins}
+\usepackage{adjustbox}
 \usepackage{microtype}
 \usepackage{helvet}
 \usepackage[T1]{fontenc}
@@ -91,7 +92,7 @@
 
 \titleformat{\subsection}[block]{\fontsize{18}{20}\bfseries\color{RoyalBlue}}{\thesubsection}{1.5ex}{}
 
-\titleformat{\subsubsection}[block]{\fontsize{14}{20}\bfseries\color{RoyalBlue}}{\thesubsection}{1.5ex}{}
+\titleformat{\subsubsection}[block]{\fontsize{14}{20}\bfseries\color{RoyalBlue}}{\thesubsubsection}{1.5ex}{}
 
 \renewcommand*\contentsname{Table of Contents}
 \renewcommand{\cfttoctitlefont}{\normalfont\Huge\bfseries\color{RoyalBlue}}
@@ -151,3 +152,7 @@
 		thick
 	}
 }
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}

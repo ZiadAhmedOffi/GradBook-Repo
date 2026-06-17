@@ -185,4 +185,182 @@ Images classified as chest X-rays are forwarded to the multi-label chest disease
 
 The successful operation of this routing stage is fundamental to the effectiveness of the proposed hierarchical architecture. Since all subsequent diagnostic decisions depend on accurate modality recognition, errors introduced at this stage may propagate throughout the remainder of the system. Therefore, the routing model acts not only as a classifier but also as a reliability and safety mechanism that enhances the robustness of the overall framework. The following sections describe the specialized diagnostic models that receive images from the routing component and perform disease-specific analysis.
 
-\input{chapters/Chapter3/Routing Model Imp}
+The final routing dataset was constructed by aggregating images originating from multiple sources. After dataset integration, the X-ray category contained 7,123 images, the CT category contained 2,534 images, and the OOD category contained 9,958 images. Although this aggregation process provided a sufficiently diverse collection of samples, it also introduced a noticeable class imbalance problem. The CT class represented a considerably smaller portion of the dataset compared to the other categories, creating a risk that the trained model would become biased toward the more frequently represented classes.
+
+To mitigate this issue, several balancing strategies were incorporated into the training pipeline. Data augmentation techniques were applied to increase the effective diversity of minority-class samples while simultaneously improving model generalization. Augmentation operations included random rotations, horizontal flipping, zoom transformations, and intensity variations. These transformations were selected because they preserve medically relevant structures while exposing the model to realistic image variations that may occur across different acquisition settings. In addition to augmentation, class balancing procedures were employed during dataset preparation to reduce the influence of class distribution disparities on the learning process. These measures contributed to a more stable training process and improved the model's ability to recognize underrepresented classes.
+
+The complete routing workflow implemented within the framework is illustrated in Figure~\ref{fig:routing_model_overview}. The figure summarizes both the operational behavior of the routing model and the architectures investigated during the model selection process.
+\begin{figure}[htbp]
+	\centering
+	
+	%================ TOP ROW ==================
+	\begin{subfigure}{0.48\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}[node distance=0.8cm]
+				
+				\node[block] (input) {Input Image};
+				\node[process, below=of input] (prep) {Preprocessing};
+				\node[process, below=of prep] (router) {Routing Model};
+				
+				\node[output, below left=1cm and 1.1cm of router] (xray) {X-Ray};
+				\node[output, below=1.3cm of router] (ct) {CT};
+				\node[output, below right=1cm and 1.1cm of router] (ood) {OOD};
+				
+				\draw[arrow] (input)--(prep);
+				\draw[arrow] (prep)--(router);
+				
+				\draw[arrow] (router)--(xray);
+				\draw[arrow] (router)--(ct);
+				\draw[arrow] (router)--(ood);
+				
+			\end{tikzpicture}
+		}
+		\caption{Routing workflow.}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.48\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}[node distance=0.6cm]
+				
+				\node[block] (input)
+				{224$\times$224 Image};
+				
+				\node[process, below=of input]
+				(prep) {Preprocessing};
+				
+				\node[process, below=of prep]
+				(backbone)
+				{DenseNet121 / ResNet50 / EfficientNetB3};
+				
+				\node[process, below=of backbone]
+				(gap) {Global Avg Pooling};
+				
+				\node[process, below=of gap]
+				(fc) {Dense(128)};
+				
+				\node[output, below=of fc]
+				(out) {Softmax(3)};
+				
+				\draw[arrow] (input)--(prep);
+				\draw[arrow] (prep)--(backbone);
+				\draw[arrow] (backbone)--(gap);
+				\draw[arrow] (gap)--(fc);
+				\draw[arrow] (fc)--(out);
+				
+			\end{tikzpicture}
+		}
+		\caption{Transfer learning models.}
+	\end{subfigure}
+	
+	\vspace{0.4cm}
+	
+	%================ BOTTOM ROW ==================
+	\begin{subfigure}{0.95\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}[
+				font=\large,
+				node distance=1.0cm,
+				cnnblock/.style={
+					draw,
+					rounded corners,
+					thick,
+					fill=green!10,
+					minimum width=2.8cm,
+					minimum height=1.2cm,
+					align=center
+				},
+				outputblock/.style={
+					draw,
+					rounded corners,
+					thick,
+					fill=orange!15,
+					minimum width=3cm,
+					minimum height=1.2cm,
+					align=center
+				},
+				inputblock/.style={
+					draw,
+					rounded corners,
+					thick,
+					fill=blue!10,
+					minimum width=3cm,
+					minimum height=1.2cm,
+					align=center
+				}
+				]
+				
+				% ---------- Top Row ----------
+				\node[inputblock] (input)
+				{224$\times$224\\RGB};
+				
+				\node[cnnblock, right=of input]
+				(c1) {Conv2D\\32 Filters};
+				
+				\node[cnnblock, right=of c1]
+				(p1) {MaxPool};
+				
+				\node[cnnblock, right=of p1]
+				(c2) {Conv2D\\64 Filters};
+				
+				\node[cnnblock, right=of c2]
+				(p2) {MaxPool};
+				
+				% ---------- Bottom Row ----------
+				\node[cnnblock, below=2cm of p2]
+				(c3) {Conv2D\\128 Filters};
+				
+				\node[cnnblock, left=of c3]
+				(p3) {MaxPool};
+				
+				\node[cnnblock, left=of p3]
+				(fc) {Dense\\128};
+				
+				\node[outputblock, left=of fc]
+				(out) {Softmax\\3 Classes};
+				
+				% ---------- Arrows ----------
+				\draw[arrow] (input) -- (c1);
+				\draw[arrow] (c1) -- (p1);
+				\draw[arrow] (p1) -- (c2);
+				\draw[arrow] (c2) -- (p2);
+				
+				% Down arrow
+				\draw[arrow] (p2) -- (c3);
+				
+				% Bottom row (right to left)
+				\draw[arrow] (c3) -- (p3);
+				\draw[arrow] (p3) -- (fc);
+				\draw[arrow] (fc) -- (out);
+				
+			\end{tikzpicture}
+		}
+		\caption{Custom CNN architecture used as a baseline model for modality routing.}
+	\end{subfigure}
+	
+	\caption{Architectures and workflow investigated during the implementation of the routing model. Blue blocks represent inputs, green blocks denote processing stages, and orange blocks correspond to classification outputs.}
+	\label{fig:routing_model_overview}
+	
+\end{figure}
+
+\subsection{DenseNet121 Architecture}
+\label{sec:densenet121}
+
+DenseNet121 is a convolutional neural network (CNN) architecture introduced by \textit{Huang et al.} that addresses several limitations of very deep neural networks through a dense connectivity pattern. Unlike traditional CNNs, where each layer receives input only from the immediately preceding layer, DenseNet connects every layer to all subsequent layers within the same dense block. As a result, the feature maps produced by earlier layers are directly reused throughout the network, improving information flow and gradient propagation.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\linewidth]{assets/DenseNet121.png}
+	\caption{Overview of the DenseNet121 architecture showing dense blocks, transition layers, and the final classification stage.}
+	\label{fig:densenet121}
+\end{figure}
+
+DenseNet121 consists of 121 layers organized into four dense blocks separated by transition layers. Within each dense block, the output of every layer is concatenated with the outputs of all preceding layers and used as input to subsequent layers. Transition layers perform feature compression and spatial downsampling using $1 \times 1$ convolutions followed by pooling operations, reducing computational complexity while preserving informative representations.
+
+The dense connectivity mechanism offers several advantages. First, it mitigates the vanishing-gradient problem by providing shorter paths between the loss function and earlier layers. Second, extensive feature reuse enables the network to learn compact and discriminative representations with significantly fewer parameters than many alternative deep architectures. Third, the architecture encourages the preservation of both low-level and high-level features, which is particularly beneficial when analyzing complex visual patterns.
+
+These characteristics make DenseNet121 highly effective for medical image analysis. Medical imaging tasks often require the detection of subtle anatomical structures and pathological changes that may be difficult to capture using conventional CNNs. By reusing features across multiple network depths, DenseNet121 can simultaneously leverage fine-grained texture information and high-level semantic features, leading to improved classification and diagnostic performance. Furthermore, its parameter efficiency reduces the risk of overfitting when training on medical datasets, which are frequently limited in size compared to large-scale natural image datasets.
+
+Due to its strong feature extraction capabilities, efficient parameter utilization, and robust gradient flow, DenseNet121 has become a widely adopted backbone architecture for a variety of medical imaging applications, including disease classification, lesion detection, and radiological image interpretation.

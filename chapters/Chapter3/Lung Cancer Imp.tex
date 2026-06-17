@@ -1,18 +1,4 @@
-\subsection[CT Model Implementation]{Implementation of the Lung Cancer Detection Model}
-The second major component implemented within the proposed framework is the lung lesion detection model. Unlike conventional image classification systems that only determine whether an abnormality is present, the proposed approach performs object detection, enabling simultaneous identification and localization of suspicious pulmonary lesions within CT images. The model predicts both the spatial coordinates of lesion regions and the confidence associated with each prediction, thereby providing clinically meaningful visual outputs that can assist radiologists during image interpretation.
-
-The detection pipeline was developed using the YOLOv8 architecture, which belongs to the family of single-stage object detectors. Single-stage detectors perform localization and classification simultaneously within a unified network, eliminating the need for separate region proposal and classification stages. This design significantly reduces computational complexity and inference time while maintaining competitive detection performance.
-
-The complete implementation workflow consists of five primary stages:
-\begin{enumerate}
-	\item Dataset preprocessing
-	\item Annotation generation
-	\item Dataset partitioning
-	\item YOLOv8 model training
-	\item Performance evaluation and visualization
-\end{enumerate}
-
-\subsubsection*{Dataset Preparation and Annotation Generation}
+\subsubsection{Dataset Preparation and Annotation Generation}
 The original dataset contains CT images together with binary segmentation masks that identify lesion regions. Although segmentation masks provide pixel-level information regarding lesion boundaries, the YOLO detection framework requires object-level annotations represented by bounding boxes. Consequently, a dedicated annotation generation pipeline was implemented to automatically convert segmentation masks into YOLO-compatible labels.
 
 For every image-mask pair, the following operations were performed:
@@ -89,7 +75,7 @@ Maintaining this structure allows direct integration with the Ultralytics YOLO t
 \end{verbatim}
 The YAML file serves as the interface between the dataset and the YOLO training engine.
 
-\subsubsection*{YOLOv8 Detection Architecture}
+\subsubsection{YOLOv8 Detection Architecture}
 The proposed detection model employs YOLOv8 as the underlying deep learning architecture. The network consists of three major components:
 \begin{itemize}
 	\item \textbf{Backbone:} The backbone is responsible for hierarchical feature extraction. Low-level layers capture edges, textures, and intensity gradients, while deeper layers learn lesion morphology, shape characteristics, and contextual lung structures.
@@ -104,10 +90,10 @@ The proposed detection model employs YOLOv8 as the underlying deep learning arch
 	\label{fig:yolov8_detailed_architecture}
 \end{figure}
 
-\subsubsection*{Transfer Learning Strategy}
+\subsubsection{Transfer Learning Strategy}
 Training a deep object detector entirely from scratch typically requires extremely large medical imaging datasets. To overcome this limitation, transfer learning was employed. The detector was initialized using pretrained YOLOv8 weights trained on large-scale image datasets. The pretrained model already possesses strong low-level feature extraction capabilities, including detection of edges, contours, textures, and spatial patterns. Fine-tuning these representations on lung CT images significantly accelerates convergence while reducing the risk of overfitting.
 
-\subsubsection*{Training Configuration}
+\subsubsection{Training Configuration}
 Model training was performed using the Ultralytics implementation of YOLOv8. The training pipeline automatically performs image loading, resizing, batching, label matching, loss computation, and weight optimization. Input images were resized to $640 \times 640$ pixels to ensure uniform tensor dimensions throughout training.
 
 The optimization process simultaneously minimizes:
@@ -121,28 +107,3 @@ The total loss is defined as:
 	L_{\text{total}} = L_{\text{box}} + L_{\text{cls}} + L_{\text{DFL}}
 \end{equation}
 During training, stochastic gradient optimization updates network weights through backpropagation until convergence.
-
-\subsubsection*{Evaluation Methodology}
-After training, the best-performing model checkpoint was selected automatically according to validation performance. Performance was evaluated using standard object detection metrics:
-
-\paragraph{Precision} Measures the proportion of predicted lesions that are truly lesions.
-\begin{equation}
-	\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}
-\end{equation}
-
-\paragraph{Recall} Measures the proportion of true lesions successfully detected.
-\begin{equation}
-	\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}
-\end{equation}
-
-\paragraph{Mean Average Precision (mAP)} The primary detection metric used for evaluation. Two variants were reported:
-\begin{itemize}
-	\item $\text{mAP@50}$
-	\item $\text{mAP@50--95}$
-\end{itemize}
-$\text{mAP@50}$ evaluates detections using a single IoU threshold of 0.50, whereas $\text{mAP@50--95}$ provides a more stringent evaluation across multiple thresholds.
-
-\subsubsection*{Prediction Visualization and Model Interpretability}
-A key advantage of the proposed detection framework is its inherent interpretability. Each prediction generated by YOLOv8 contains bounding box coordinates, a confidence score, and a class label. The confidence score reflects the model's certainty regarding the presence of a lesion within the predicted region.
-
-Unlike classification-only approaches that require external explainability methods such as Grad-CAM or saliency maps, the detector directly highlights suspicious anatomical regions through bounding boxes. This spatial localization capability allows clinicians to visually inspect the exact image regions influencing the model's decision, thereby improving transparency and facilitating clinical validation of automated predictions.

@@ -189,7 +189,7 @@ empirical tuning for each deployment scenario.
 
 The system follows a two-tier federated learning architecture implemented using the Flower (\texttt{flwr}) framework. A single Federated Learning (FL) Server process hosts both the Flower gRPC server and a FastAPI-based REST management API within the same Python process. The Flower server operates on port \texttt{50051}, while the REST management layer operates on port \texttt{8001}. Both services share a common \texttt{SharedState} singleton object that stores the current round status, active model type, round identifier, and the reference to the active Flower thread. This co-location eliminates additional network overhead between the aggregation engine and the management layer and enables efficient coordination between both services.
 
-Each participating hospital deploys an FL Client as a Docker container. Upon startup, the client continuously polls the server's health endpoint until a federated learning round becomes active. Once the server signals round activation, the client initializes the appropriate model according to the task being executed. For chest disease classification tasks, a DenseNet-121 model is instantiated, whereas YOLOv8n is used for lung cancer detection tasks. The client subsequently waits for the gRPC service to become available before connecting through Flower's \texttt{NumPyClient} interface.
+Each participating hospital deploys an FL Client as a Docker container. Upon startup, the client continuously polls the server's health endpoint until a federated learning round becomes active. Once the server signals round activation, the client initializes the appropriate model according to the task being executed. For any task a client model is instantiated. The client subsequently waits for the gRPC service to become available before connecting through Flower's \texttt{NumPyClient} interface.
 
 A key design principle of the architecture is data locality. Medical images and patient records remain exclusively within the hospital infrastructure and are never transmitted to the central server. Instead, only serialized NumPy arrays containing model parameters are exchanged during federated learning rounds. This design significantly reduces privacy risks while maintaining collaborative model training across institutions.
 
@@ -213,166 +213,75 @@ The heartbeat channel provides real-time visibility into client participation an
 The server broadcasts the active model type to all clients before the start of each federated learning round. This ensures that all participating institutions instantiate and train identical model architectures, thereby maintaining consistency during the aggregation process.
 
 \subsection{Model Architecture}
-\subsubsection{Chest Disease Classification Model (DenseNet-121)}
+\subsubsection{Federated Learning Workflow}
 
-For the chest disease classification task, the system employs the DenseNet-121 convolutional neural network architecture. The model is initialized using weights pre-trained on the ImageNet dataset and subsequently fine-tuned for medical image analysis. DenseNet-121 was selected due to its dense connectivity pattern, where each layer receives feature maps from all preceding layers within the network. This architectural design promotes feature reuse, improves gradient propagation, and mitigates the vanishing gradient problem commonly encountered in deep neural networks.
+Federated Learning (FL) is a distributed machine learning paradigm that enables multiple clients to collaboratively train a shared global model without directly exchanging their local data. Instead of transferring datasets to a centralized location, each client performs training locally and only shares model updates with a coordinating server. This approach preserves data privacy while allowing the model to benefit from knowledge learned across multiple data sources.
 
-An additional advantage of DenseNet-121 is its relatively compact parameter count compared to other deep convolutional architectures with similar performance. This characteristic is particularly important in federated learning environments, where communication costs are directly proportional to the size of the model parameters exchanged between clients and the central server.
+The federated learning process proceeds iteratively through a sequence of communication rounds. At the beginning of each round, the central server distributes the current global model to participating clients. Each client then trains the model on its local dataset and computes updated model parameters. These parameters are subsequently transmitted back to the server, where they are aggregated to produce a new global model.
 
-The model is designed to classify chest radiographs into four clinically relevant categories:
+This collaborative training framework offers several advantages, including improved privacy, reduced data-sharing requirements, and the ability to leverage geographically distributed datasets. As a result, federated learning has become an attractive solution in domains where data governance, confidentiality, or regulatory constraints limit centralized data collection.
 
-\begin{itemize}
-	\item COVID-19
-	\item Normal
-	\item Pneumonia
-	\item Tuberculosis
-\end{itemize}
+\subsubsection{Local Data Processing}
 
-The network is trained locally on each participating client before its parameters are transmitted to the federated server for aggregation. By leveraging transfer learning and the dense feature propagation mechanism of DenseNet-121, the model achieves high classification performance while maintaining communication efficiency across distributed healthcare institutions.
+Prior to local training, each client performs preprocessing on its own dataset according to a predefined and consistent pipeline. Standardized preprocessing ensures that data representations remain compatible across clients and that model updates are learned under similar conditions.
 
-\subsubsection{Input and Preprocessing}
-
-Prior to training, all chest X-ray images undergo a standardized preprocessing pipeline to ensure consistency across participating clients and improve model generalization. Images are resized to a fixed spatial resolution and normalized before being provided as input to the DenseNet-121 backbone.
-
-\paragraph{Input Configuration}
-The model receives RGB images with a fixed input resolution of:
+Typical preprocessing operations may include:
 
 \begin{itemize}
-	\item Input size: $224 \times 224$ pixels
-	\item Color channels: 3 (RGB)
+	\item Data cleaning and quality control
+	\item Feature normalization or standardization
+	\item Input resizing or formatting when required
+	\item Training-time augmentation or transformation strategies
 \end{itemize}
 
-\paragraph{Training Augmentation}
-To improve robustness and reduce overfitting, data augmentation techniques are applied during training. These transformations increase data diversity and help the model generalize better to unseen clinical images.
+During validation and evaluation, only deterministic preprocessing operations are applied to ensure that performance metrics accurately reflect the model's generalization capability.
+
+By maintaining a consistent preprocessing procedure across all participating clients, federated learning systems reduce variability introduced by differences in local data sources and collection procedures.
+
+\subsubsection{Local Training and Model Updates}
+
+Each participating client receives the current global model from the federated server and performs training on its local dataset for a predefined number of epochs or optimization steps. The training process follows the same objective function and optimization strategy across all clients to ensure consistency during aggregation.
+
+After local training is completed, the client generates a set of updated model parameters representing knowledge learned from its local data. Rather than transmitting raw data samples, only these model updates are communicated to the federated server.
+
+The use of local training provides several benefits:
 
 \begin{itemize}
-	\item Random augmentation operations
-	\item Image transformations applied only during training
-	\item Increased variability in the training distribution
+	\item Data remains within the client environment.
+	\item Communication involves model parameters rather than datasets.
+	\item Learning can exploit knowledge from diverse and distributed data sources.
+	\item Privacy risks associated with centralized data storage are reduced.
 \end{itemize}
 
-\paragraph{Normalization}
-Input images are normalized before being fed into the network. Normalization stabilizes the optimization process and ensures that pixel intensity distributions remain consistent across different healthcare institutions and imaging devices.
+\subsubsection{Global Aggregation}
 
-\paragraph{Validation Pipeline}
-No augmentation operations are applied during validation. Validation images are only resized and normalized to ensure that performance metrics accurately reflect the model's ability to generalize to unseen data without introducing artificial variations.
+Upon receiving updates from participating clients, the federated server combines the local model parameters to produce an improved global model. The most common aggregation strategy is Federated Averaging (FedAvg), where client updates are weighted according to the amount of local training data available at each client.
 
-This preprocessing pipeline guarantees that all federated learning participants operate on a consistent input representation, thereby reducing variability introduced by differences in local datasets and acquisition protocols.
-
-\subsubsection{Output Head}
-
-The DenseNet-121 backbone is followed by a task-specific classification head designed to identify four chest disease categories: COVID-19, Normal, Pneumonia, and Tuberculosis. Since the dataset exhibits class imbalance, the model employs a weighted loss function to ensure that underrepresented classes contribute appropriately during optimization.
-
-\paragraph{Classification Output}
-
-The output layer consists of four neurons corresponding to the target disease categories:
-
-\begin{itemize}
-	\item COVID-19
-	\item Normal
-	\item Pneumonia
-	\item Tuberculosis
-\end{itemize}
-
-Each output neuron produces a logit value that is transformed into a probability through a sigmoid activation function during inference.
-
-\paragraph{Loss Function}
-
-Training is performed using Binary Cross-Entropy with Logits Loss (\texttt{BCEWithLogitsLoss}), which combines the sigmoid activation and binary cross-entropy computation into a numerically stable formulation.
-
-To mitigate the effects of class imbalance, class-specific weights are incorporated into the loss calculation. This weighting strategy increases the penalty associated with misclassifying minority classes and improves overall predictive performance.
-
-\paragraph{Inference Strategy}
-
-During inference, the output probabilities are compared against a threshold of 0.5. Predictions with probabilities greater than or equal to this threshold are considered positive detections for the corresponding class.
-
-\begin{itemize}
-	\item Activation Function: Sigmoid
-	\item Decision Threshold: 0.5
-	\item Loss Function: BCEWithLogitsLoss
-	\item Class Weighting: Enabled
-\end{itemize}
-
-\paragraph{Best-Model Checkpointing}
-
-Each client implements a best-model checkpoint strategy during local training. Validation loss is monitored after every epoch, and the model parameters corresponding to the lowest validation loss are preserved. At the end of local training, these optimal parameters are restored before being transmitted to the federated server.
-
-This approach ensures that the model updates contributed to federated aggregation represent the best-performing local model rather than the final epoch, which may suffer from overfitting. Consequently, the aggregated global model benefits from improved generalization across participating institutions.
-
-\subsubsection{Lung Cancer Detection Model (YOLOv8n)}
-
-For the lung cancer detection task, the system utilizes YOLOv8n (You Only Look Once Version 8 -- Nano), a lightweight single-stage object detection architecture designed for real-time inference. The model is initialized using the official Ultralytics pre-trained weights and subsequently fine-tuned to detect two clinically relevant lesion categories: lung tumors and tuberculosis lesions.
-
-YOLOv8n was selected because of its small parameter footprint, containing approximately 3.2 million parameters. This compact architecture significantly reduces communication overhead in federated learning environments, where model parameters must be exchanged repeatedly between clients and the central server.
-
-Unlike traditional two-stage detectors, YOLOv8n performs localization and classification simultaneously, enabling efficient detection while maintaining competitive accuracy. The architecture combines a CSP-based backbone, feature aggregation layers, and a detection head capable of identifying lesions at multiple spatial scales.
-
-The model is deployed locally within each participating institution and contributes only its learned parameters to the federated aggregation process, ensuring that sensitive medical images remain within the originating hospital.
-
-\subsubsection{Detection Configuration}
-
-The YOLOv8n detector is configured specifically for medical lesion detection in chest CT scans. The network processes high-resolution images and predicts bounding boxes corresponding to suspicious pathological regions.
-
-The primary detection settings are summarized as follows:
-
-\begin{itemize}
-	\item Input resolution: $640 \times 640$ pixels
-	\item Number of classes: 2
-	\begin{itemize}
-		\item Lung Tumor
-		\item Tuberculosis Lesion
-	\end{itemize}
-	\item Backbone: Cross Stage Partial (CSP) architecture with C2f blocks
-	\item Neck: PANet Feature Pyramid Network
-\end{itemize}
-
-The multi-scale feature extraction capability enables the detector to identify lesions of varying sizes while maintaining computational efficiency suitable for federated deployment.
-
-\subsubsection{Training Setup}
-
-Training data is organized using the standard YOLO annotation format, where each image is associated with a text file containing normalized bounding box coordinates and class labels.
-
-The training configuration includes:
-
-\begin{itemize}
-	\item Annotation format: YOLO text-based bounding boxes
-	\item Image source linkage through read-only filesystem symbolic links
-	\item Evaluation metric: mAP@50
-	\item Federated optimization objective:
-	\[
-	\text{Loss} = 1 - \text{mAP}_{50}
-	\]
-\end{itemize}
-
-Before the first federated learning round, a warm-up training stage consisting of one local epoch is executed. This initialization phase ensures that the detection head is properly resized and configured for the two-class detection task.
-
-The warm-up procedure occurs only once during the lifetime of each client and does not contribute to the federated aggregation process.
-
-\subsubsection{Federated Parameter Exchange Strategy}
-
-Both DenseNet-121 and YOLOv8n exchange model parameters as collections of NumPy \texttt{float32} arrays. The Flower framework serializes these parameter arrays into Protocol Buffer messages before transmission through the gRPC communication channel.
-
-Upon receiving global parameters from the server, each client deserializes the transmitted arrays and loads them into the model state dictionary using strict parameter-name matching. This procedure ensures that only the intended layers are updated and prevents inconsistencies between model versions.
-
-At the server side, aggregation is performed using a customized Federated Averaging (FedAvg) strategy. The aggregation process computes a weighted average of all received parameter sets according to the number of training samples available at each participating institution.
-
-The global parameter update is computed as:
+The aggregation process can be expressed as:
 
 \[
-w_{global} =
-\frac{\sum_{i=1}^{N} n_i w_i}
-{\sum_{i=1}^{N} n_i}
+w^{(t+1)} = \sum_{k=1}^{K} \frac{n_k}{N} w_k^{(t)},
 \]
 
 where:
 
 \begin{itemize}
-	\item $w_i$ denotes the model parameters received from client $i$,
-	\item $n_i$ denotes the number of training samples at client $i$,
-	\item $N$ denotes the number of participating clients.
+	\item $w^{(t+1)}$ denotes the updated global model parameters,
+	\item $w_k^{(t)}$ represents the parameters received from client $k$,
+	\item $n_k$ is the number of training samples at client $k$,
+	\item $N = \sum_{k=1}^{K} n_k$ is the total number of samples across all participating clients,
+	\item $K$ is the number of participating clients.
 \end{itemize}
 
-This weighted aggregation mechanism allows institutions with larger and more representative datasets to exert proportionally greater influence on the global model while preserving the collaborative nature of federated learning.
+After aggregation, the updated global model is redistributed to clients, and the next communication round begins. Through repeated rounds of local training and global aggregation, the model gradually converges toward a solution that reflects information learned from all participating clients.
+
+\subsubsection{Model Evaluation and Checkpointing}
+
+To monitor training progress and ensure model quality, each client performs validation using a local validation dataset. Evaluation metrics are computed after training intervals and can be used to assess convergence and generalization performance.
+
+A common practice is to employ best-model checkpointing, where the model parameters corresponding to the best validation performance are preserved during local training. At the conclusion of a training round, the selected parameters are used to generate the client update transmitted to the federated server.
+
+This strategy helps prevent the propagation of overfitted local models and improves the overall stability and generalization of the aggregated global model. By combining locally optimized updates from multiple participants, federated learning achieves collaborative model improvement while maintaining data locality and privacy.
 
 \subsection{Privacy and Security}
 
