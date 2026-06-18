@@ -110,7 +110,7 @@
 \contentsline {paragraph}{Output}{90}{paragraph*.45}%
 \contentsline {subsubsection}{\numberline {3.3.5.3}Loss Functions}{91}{subsubsection.3.3.5.3}%
 \contentsline {subsubsection}{\numberline {3.3.5.4}Training Configurations}{92}{subsubsection.3.3.5.4}%
-\contentsline {subsubsection}{\numberline {3.3.5.5}Classification Model: DenseNet121 with One-vs-Rest (OVR)}{93}{subsubsection.3.3.5.5}%
+\contentsline {subsubsection}{\numberline {3.3.5.5}Classification Model: DenseNet121 with One-vs-Rest (OVR)}{94}{subsubsection.3.3.5.5}%
 \contentsline {subsection}{\numberline {3.3.6}Grad-CAM Integration}{96}{subsection.3.3.6}%
 \contentsline {subsubsection}{\numberline {3.3.6.1}Rationale for Explainability}{96}{subsubsection.3.3.6.1}%
 \contentsline {subsubsection}{\numberline {3.3.6.2}Gradient-weighted Class Activation Mapping (Grad-CAM)}{96}{subsubsection.3.3.6.2}%

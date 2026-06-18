@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  17 JUN 2026 21:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  18 JUN 2026 07:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4120,17 +4120,17 @@ Overfull \hbox (0.96408pt too wide) in paragraph at lines 610--610
 File: assets/chest13.png Graphic file (type png)
 <use assets/chest13.png>
 Package pdftex.def Info: assets/chest13.png  used on input line 623.
-(pdftex.def)             Requested size: 203.83229pt x 113.81284pt.
-<assets/chest11.jpeg, id=2140, 1114.1625pt x 963.6pt>
+(pdftex.def)             Requested size: 203.83229pt x 170.72063pt.
+<assets/chest11.jpeg, id=2140, 1075.01625pt x 860.21375pt>
 File: assets/chest11.jpeg Graphic file (type jpg)
 <use assets/chest11.jpeg>
 Package pdftex.def Info: assets/chest11.jpeg  used on input line 629.
-(pdftex.def)             Requested size: 203.82173pt x 113.80379pt.
+(pdftex.def)             Requested size: 203.82872pt x 170.71399pt.
 <assets/chest15.png, id=2141, 200.385pt x 173.1195pt>
 File: assets/chest15.png Graphic file (type png)
 <use assets/chest15.png>
 Package pdftex.def Info: assets/chest15.png  used on input line 638.
-(pdftex.def)             Requested size: 203.84265pt x 113.81013pt.
+(pdftex.def)             Requested size: 203.84265pt x 170.72578pt.
 
 Overfull \hbox (3.70251pt too wide) in paragraph at lines 646--646
 |\T1/lmr/bx/n/14 (-20) 3.3.5.5 Clas-si-fi-ca-tion Model: DenseNet121 with One-v
@@ -4145,15 +4145,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [92]
-Overfull \hbox (10.03526pt too wide) in paragraph at lines 658--659
-[]\T1/lmr/m/n/12 (-20) The model fol-lows a trans-fer learn-ing ap-proach with 
-par-tial fine-tuning. The DenseNet121
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -4162,12 +4153,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [93 <./assets/chest13.png> <./assets/chest11.jpeg> <./assets/chest15.png>]
+Overfull \hbox (10.03526pt too wide) in paragraph at lines 658--659
+[]\T1/lmr/m/n/12 (-20) The model fol-lows a trans-fer learn-ing ap-proach with 
+par-tial fine-tuning. The DenseNet121
+ []
+
 <assets/chest16.png, id=2158, 495.35063pt x 269.50688pt>
 File: assets/chest16.png Graphic file (type png)
 <use assets/chest16.png>
 Package pdftex.def Info: assets/chest16.png  used on input line 688.
 (pdftex.def)             Requested size: 452.9679pt x 246.44832pt.
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[94]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -4175,15 +4178,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[94 <./assets/chest16.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[95]
+[95 <./assets/chest16.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5952,7 +5947,7 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Zyad/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Zyad/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Zyad/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on Thesis_book.pdf (226 pages, 12880809 bytes).
+Output written on Thesis_book.pdf (226 pages, 12877644 bytes).
 PDF statistics:
  3308 PDF objects out of 3580 (max. 8388607)
  766 named destinations out of 1000 (max. 500000)

@@ -620,13 +620,13 @@ A two-phase training strategy is adopted: in Phase 1, the model is trained from 
 	% First row
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth, height=4cm, keepaspectratio=false]{assets/chest13.png}
+		\includegraphics[width=\textwidth, height=6cm, keepaspectratio=false]{assets/chest13.png}
 		\caption{Original}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth, height=4cm, keepaspectratio=false]{assets/chest11.jpeg}
+		\includegraphics[width=\textwidth, height=6cm, keepaspectratio=false]{assets/chest11.jpeg}
 		\caption{Binary Mask}
 	\end{subfigure}
 	
@@ -635,7 +635,7 @@ A two-phase training strategy is adopted: in Phase 1, the model is trained from 
 	% Second row
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth, height=4cm, keepaspectratio=false]{assets/chest15.png}
+		\includegraphics[width=\textwidth, height=6cm, keepaspectratio=false]{assets/chest15.png}
 		\caption{Segmented Image}
 	\end{subfigure}
 	
@@ -683,7 +683,7 @@ where $F$ denotes the final convolutional feature map of DenseNet121, $\mathrm{G
 
 This One-vs-Rest (OVR) multi-label formulation with sigmoid output offers several advantages over a conventional SoftMax multi-class formulation. In the SoftMax approach, the probabilities of all classes are coupled (they must sum to one), which can suppress the activation of a class when multiple classes co-occur or when the model is uncertain. With sigmoid, each class is modeled independently, allowing the model to assign high confidence to multiple classes simultaneously when the image features are ambiguous or the pathology is mixed.
 The model architecture is illustrated in Figure~\ref{fig:chest_model_arch1}.
-\begin{figure}[H]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\linewidth]{assets/chest16.png}
 	\caption{Proposed DenseNet121 OVR classification model architecture. The base network produces a 1024-dimensional feature vector via Global Average Pooling, which is refined through the custom classification head before producing independent sigmoid probability scores for each diagnostic class.}
