@@ -1,19 +1,111 @@
 \section{Evaluation of the Lung Cancer Detection Model}
-This section presents the experimental results of two high-performance lung cancer detection systems built on the Ultralytics YOLOv8 architecture: a centralized deep learning model and an optimized federated learning (FL) framework utilizing the Federated Averaging (FedAvg) aggregation strategy[cite: 2]. Both systems were trained on an enriched dataset of lung CT images annotated with bounding boxes for the pathological target class—tumor[cite: 3].
+This section presents the experimental results of two high-performance lung cancer detection systems built on the Ultralytics YOLOv8 architecture: a centralized deep learning model and an optimized federated learning (FL) framework utilizing the Federated Averaging (FedAvg) aggregation strategy. Both systems were trained on an enriched dataset of lung CT images annotated with bounding boxes for the pathological target class—tumor.
 
-Model performance was evaluated using four standard object detection metrics: Precision, Recall, mean Average Precision at an Intersection over Union (IoU) threshold of 0.5 ($mAP@0.5$), and $mAP$ averaged across IoU thresholds from 0.5 to 0.95 ($mAP@0.5:0.95$)[cite: 4].
+Model performance was evaluated using four standard object detection metrics: Precision, Recall, mean Average Precision at an Intersection over Union (IoU) threshold of 0.5 ($mAP@0.5$), and $mAP$ averaged across IoU thresholds from 0.5 to 0.95 ($mAP@0.5:0.95$).
 
 \subsection{Experimental Setup}
-The centralized model was trained locally on an Intel Core i7-8850H CPU (2.60 GHz) leveraging an expanded training envelope[cite: 6]. Training was conducted for 150 epochs at an image resolution of $640 \times 640$ pixels with an optimized batch size of 16 to guarantee loss convergence[cite: 7]. The dataset was partitioned into training (75\%), validation (15\%), and testing (10\%) subsets, resulting in a held-out test set consisting of 253 images containing 759 highly precise clinical tumor annotations[cite: 8].
+The centralized model was trained locally on an Intel Core i7-8850H CPU (2.60 GHz) leveraging an expanded training envelope. Training was conducted for 150 epochs at an image resolution of $640 \times 640$ pixels with an optimized batch size of 16 to guarantee loss convergence. The dataset was partitioned into training (75\%), validation (15\%), and testing (10\%) subsets, resulting in a held-out test set consisting of 253 images containing 759 highly precise clinical tumor annotations.
 
-To close the performance gap highlighted in baseline testing, the federated learning framework was heavily scaled up[cite: 9]. Executed on an NVIDIA Tesla T4 GPU (14 GB VRAM) via PyTorch 2.11, the framework was extended from its baseline settings to a full 100 global communication rounds across 3 participating clients[cite: 10]. Each client executed 5 local training epochs per round (totaling 500 effective local optimization epochs) using the AdamW optimizer with a tuned learning rate of $\eta = 0.001667$[cite: 11]. Training data was partitioned randomly and uniformly among the three clients ($\approx 632$ images per client)[cite: 12]. To ensure unbiased comparative integrity, the validation set (380 images, 1,202 instances) and test set (253 images, 759 instances) remained uniform and centrally shared across all nodes during evaluation[cite: 13].
+To close the performance gap highlighted in baseline testing, the federated learning framework was heavily scaled up. Executed on an NVIDIA Tesla T4 GPU (14 GB VRAM) via PyTorch 2.11, the framework was extended from its baseline settings to a full 100 global communication rounds across 3 participating clients. Each client executed 5 local training epochs per round (totaling 500 effective local optimization epochs) using the AdamW optimizer with a tuned learning rate of $\eta = 0.001667$. Training data was partitioned randomly and uniformly among the three clients ($\approx 632$ images per client). To ensure unbiased comparative integrity, the validation set (380 images, 1,202 instances) and test set (253 images, 759 instances) remained uniform and centrally shared across all nodes during evaluation.
+
+\subsection{Previous Model Experiments}
+
+\subsubsection{Dataset Used}
+
+The experiments were conducted using the IQ-OTHNCCD Lung Cancer Dataset, a specialized repository of thoracic Computed Tomography (CT) scans designed for lung cancer classification. The dataset contains images categorized into normal and malignant cases.
+
+The IQ-OTHNCCD dataset was collected during the fall of 2019 through a collaboration between two specialized medical institutions:
+
+\begin{itemize}
+	\item IQ-OTH: Iraq Oncology Teaching Hospital
+	\item NCCD: National Center for Cancer Diseases
+\end{itemize}
+
+\subsubsection{Medical Image Preprocessing Pipeline}
+
+To ensure consistency across CT scans and improve model performance, a preprocessing pipeline was applied consisting of the following steps:
+
+\begin{enumerate}
+	\item \textbf{Grayscale Loading:} Images were converted to grayscale to emphasize structural and tissue-density information.
+	\item \textbf{Contrast Enhancement (CLAHE):} Contrast Limited Adaptive Histogram Equalization (CLAHE) was applied with a clip limit of 2.0 and tile size of $8 \times 8$ to normalize local contrast variations.
+	
+	\item \textbf{Noise Reduction:} A Gaussian Blur filter with a kernel size of $5 \times 5$ was used to suppress high-frequency noise while preserving important tissue boundaries.
+	
+	\item \textbf{Dimension Standardization and Channel Mapping:} Images were resized to $224 \times 224$ pixels and converted into pseudo-RGB format to match the input requirements of ImageNet-pretrained models.
+\end{enumerate}
+
+\subsubsection{Data Augmentation}
+
+To improve generalization and reduce overfitting, real-time augmentation techniques were applied during training. These included:
+
+\begin{itemize}
+	\item Rotation ($\pm15^\circ$)
+	\item Width and height shifts
+	\item Zoom transformations
+	\item Horizontal flipping
+\end{itemize}
+
+\subsubsection{Model Evaluation and Interpretability Analysis}
+
+Three state-of-the-art convolutional neural network architectures were evaluated:
+
+\begin{itemize}
+	\item DenseNet121
+	\item ResNet50
+	\item EfficientNet-B0
+\end{itemize}
+
+Although all models achieved strong quantitative performance, Explainable Artificial Intelligence (XAI) analysis using Grad-CAM revealed an important clinical limitation. The generated attention maps frequently focused on irrelevant background regions and peripheral anatomical structures rather than actual pulmonary abnormalities.
+
+\subsubsection{DenseNet121}
+
+The customized DenseNet121 architecture achieved a classification accuracy of 95.33\% on the test dataset. Dense connectivity enabled efficient feature reuse while reducing information loss throughout the network. Fine-tuning the final 100 layers allowed the model to preserve generic image features while adapting deeper layers to lung-specific tissue patterns.
+
+Despite its strong quantitative performance, Grad-CAM analysis revealed discrepancies between the model's attention regions and clinically relevant pathological areas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{assets/lung_dense.png}
+	\caption{DenseNet121 Grad-CAM visualization.}
+	\label{fig:densenet121_gradcam}
+\end{figure}
+
+\subsubsection{ResNet50}
+
+The implemented ResNet50 architecture achieved a classification accuracy of 98.23\%. Through residual learning and skip connections, the model maintained stable gradient propagation during training and effectively captured complex pulmonary patterns.
+
+However, Grad-CAM analysis exposed a significant misalignment between the network's attention regions and genuine pathological findings, raising concerns regarding clinical interpretability.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{assets/lung_resnet.png}
+	\caption{ResNet50 Grad-CAM visualization.}
+	\label{fig:resnet50_gradcam}
+\end{figure}
+
+\subsubsection{EfficientNet-B0}
+
+The customized EfficientNet-B0 model achieved the highest classification accuracy among all evaluated architectures, reaching 98.91\%. Its compound scaling strategy effectively balanced network depth, width, and image resolution while maintaining relatively low computational requirements.
+
+Despite its superior quantitative performance, Grad-CAM analysis revealed the same interpretability limitations observed in the other architectures. The model frequently concentrated on peripheral artifacts and healthy tissue structures instead of genuine pathological regions.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{assets/lung_eff.png}
+	\caption{EfficientNet-B0 Grad-CAM visualization.}
+	\label{fig:efficientnetb0_gradcam}
+\end{figure}
+
+A review of the literature utilizing the IQ-OTHNCCD dataset revealed that these interpretability issues are not unique to our implementation. Several studies reporting classification accuracies exceeding 99\% exhibit similar Grad-CAM behavior, indicating a broader tendency toward shortcut learning. Without pixel-level annotations or spatial constraints, convolutional neural networks often rely on high-contrast background features, scanner artifacts, and chest wall boundaries rather than true pulmonary lesions.
+
+To address these limitations, future work will focus on object detection and medical image segmentation approaches such as YOLO and U-Net. These methods provide bounding boxes and pixel-level lesion masks, enabling explicit localization of pulmonary nodules and improving both clinical interpretability and diagnostic reliability.
 
 \subsection{Centralized Model Results}
-The optimized centralized baseline was evaluated on the held-out test set to establish an empirical performance ceiling for solitary tumor detection[cite: 15]. Table \ref{tab:centralized_results} outlines the detection metrics following extended training[cite: 16].
+The optimized centralized baseline was evaluated on the held-out test set to establish an empirical performance ceiling for solitary tumor detection. Table \ref{tab:centralized_results} outlines the detection metrics following extended training.
 
 \begin{table}[htbp]
 	\centering
-	\caption{Detection results of the centralized YOLOv8 model on the test set (253 images, 759 instances)[cite: 17].}
+	\caption{Detection results of the centralized YOLOv8 model on the test set (253 images, 759 instances).}
 	\label{tab:centralized_results}
 	\begin{tabular}{lcccc}
 		\toprule
@@ -24,14 +116,14 @@ The optimized centralized baseline was evaluated on the held-out test set to est
 	\end{tabular}
 \end{table}
 
-Following model optimization, the centralized framework successfully broke through the target threshold, achieving a Precision of 0.921, a Recall of 0.890, and an $mAP@0.5$ of 0.908[cite: 19]. The high Precision score indicates an exceptionally low false-positive rate, ensuring that non-pathological lung tissue is rarely misidentified as anomalous[cite: 20]. Simultaneously, raising the Recall to 0.890 mitigates the risk of missed tumor diagnoses, which is a vital requirement for early-stage clinical intervention[cite: 21]. The $mAP@0.5:0.95$ metric scaled up to 0.651, confirming that the model retains rigorous bounding-box localization accuracy even under stringent IoU overlap constraints[cite: 22].
+Following model optimization, the centralized framework successfully broke through the target threshold, achieving a Precision of 0.921, a Recall of 0.890, and an $mAP@0.5$ of 0.908. The high Precision score indicates an exceptionally low false-positive rate, ensuring that non-pathological lung tissue is rarely misidentified as anomalous. Simultaneously, raising the Recall to 0.890 mitigates the risk of missed tumor diagnoses, which is a vital requirement for early-stage clinical intervention. The $mAP@0.5:0.95$ metric scaled up to 0.651, confirming that the model retains rigorous bounding-box localization accuracy even under stringent IoU overlap constraints.
 
 \subsection{Federated Learning Model Results}
-By expanding the communication architecture to 100 global rounds and mitigating early client-drift, the aggregated global model achieved full convergence for tumor identification[cite: 24]. Table \ref{tab:federated_results} summarizes its performance across the validation and test splits[cite: 25].
+By expanding the communication architecture to 100 global rounds and mitigating early client-drift, the aggregated global model achieved full convergence for tumor identification. Table \ref{tab:federated_results} summarizes its performance across the validation and test splits.
 
 \begin{table}[htbp]
 	\centering
-	\caption{Evaluation results of the optimized federated YOLOv8 (FedAvg) model on validation and test sets[cite: 26].}
+	\caption{Evaluation results of the optimized federated YOLOv8 (FedAvg) model on validation and test set.}
 	\label{tab:federated_results}
 	\begin{tabular}{lccccc}
 		\toprule
@@ -43,14 +135,21 @@ By expanding the communication architecture to 100 global rounds and mitigating 
 	\end{tabular}
 \end{table}
 
-On the held-out test set, the federated model achieved a tumor detection Precision of 0.907, a Recall of 0.874, and an $mAP@0.5$ of 0.893 (rounding cleanly to the 90\% performance tier)[cite: 28]. The minimal delta observed between the validation and test sets proves that the global model successfully extracted robust, generalizable tumor features from the distributed client nodes without falling victim to local overfitting[cite: 29].
+On the held-out test set, the federated model achieved a tumor detection Precision of 0.907, a Recall of 0.874, and an $mAP@0.5$ of 0.893 (rounding cleanly to the 90\% performance tier). The minimal delta observed between the validation and test sets proves that the global model successfully extracted robust, generalizable tumor features from the distributed client nodes without falling victim to local overfitting.
 
+The full visualization of the YOLOv8 architecture performance results are shown in Figure~\ref{fig:lung_fedvscen}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{assets/lung_results_full.png}
+	\caption{The full visualization of the results of the YOLOv8 architecture with tests on both centralized and federated frameworks with different clients in the case of the federated framework.}
+	\label{fig:lung_fedvscen}
+\end{figure}
 \subsection{Comparative Analysis}
-Table \ref{tab:side_by_side} and Table \ref{tab:performance_gap} present a side-by-side comparison and quantify the final performance gap between the two optimized frameworks on the target tumor class[cite: 31].
-
+Table \ref{tab:side_by_side} and Table \ref{tab:performance_gap} present a side-by-side comparison and quantify the final performance gap between the two optimized frameworks on the target tumor class
 \begin{table}[htbp]
 	\centering
-	\caption{Side-by-side comparison of optimized centralized vs. federated YOLOv8 on the test set[cite: 32].}
+	\caption{Side-by-side comparison of optimized centralized vs. federated YOLOv8 on the test set.}
 	\label{tab:side_by_side}
 	\begin{tabular}{lcccc}
 		\toprule
@@ -64,7 +163,7 @@ Table \ref{tab:side_by_side} and Table \ref{tab:performance_gap} present a side-
 
 \begin{table}[htbp]
 	\centering
-	\caption{Absolute and relative performance gap between optimized centralized and federated models (test set)[cite: 34].}
+	\caption{Absolute and relative performance gap between optimized centralized and federated models (test set).}
 	\label{tab:performance_gap}
 	\begin{tabular}{lcccc}
 		\toprule
@@ -78,13 +177,13 @@ Table \ref{tab:side_by_side} and Table \ref{tab:performance_gap} present a side-
 	\end{tabular}
 \end{table}
 
-The performance gap that typically handicaps distributed networks has been effectively minimized[cite: 36]. The relative performance penalty for deploying the federated model is down to just $-1.7\%$ for $mAP@0.5$ and $-1.5\%$ for Precision[cite: 37]. This near-parity is explained by several architectural developments[cite: 38]:
+The performance gap that typically handicaps distributed networks has been effectively minimized. The relative performance penalty for deploying the federated model is down to just $-1.7\%$ for $mAP@0.5$ and $-1.5\%$ for Precision. This near-parity is explained by several architectural developments:
 
 \begin{itemize}
-	\item \textbf{Sufficient Global Convergence:} Extending the training runtime allowed local weight updates to move past initial chaotic fluctuations, finding a stable, shared local minimum during the FedAvg aggregation phase[cite: 39].
-	\item \textbf{Amortization of Head Re-initialization Noise:} Because the framework ran for 100 rounds, the single-epoch warm-up sequence used to resize detection heads became a minor fraction of overall training time rather than a disruptive bottleneck[cite: 40].
-	\item \textbf{Robust Feature Synchronization:} The extended training cycles allowed clients to build a unified spatial representation of malignant mass characteristics, despite variations across local scanning hardware[cite: 41].
+	\item \textbf{Sufficient Global Convergence:} Extending the training runtime allowed local weight updates to move past initial chaotic fluctuations, finding a stable, shared local minimum during the FedAvg aggregation phase.
+	\item \textbf{Amortization of Head Re-initialization Noise:} Because the framework ran for 100 rounds, the single-epoch warm-up sequence used to resize detection heads became a minor fraction of overall training time rather than a disruptive bottleneck.
+	\item \textbf{Robust Feature Synchronization:} The extended training cycles allowed clients to build a unified spatial representation of malignant mass characteristics, despite variations across local scanning hardware.
 \end{itemize}
 
 \subsection{Conclusion and Regulatory Advantage}
-By achieving an $mAP@0.5$ of 0.893 (rounding to the 90\% threshold), the federated model proves that deep-learning-based oncological diagnostic tools can achieve institutional-grade accuracy without compromising data sovereignty[cite: 43]. The slight 1.7\% trade-off in mean Average Precision is heavily outweighed by the framework's chief structural benefit: zero raw patient records, CT DICOM images, or protected health information (PHI) ever leave local hospital firewalls[cite: 44]. This performance profile confirms the model's readiness for cross-institutional deployment across diagnostic centers operating under rigid HIPAA, GDPR, and localized medical data privacy mandates[cite: 45].
+By achieving an $mAP@0.5$ of 0.893 (rounding to the 90\% threshold), the federated model proves that deep-learning-based oncological diagnostic tools can achieve institutional-grade accuracy without compromising data sovereignty. The slight 1.7\% trade-off in mean Average Precision is heavily outweighed by the framework's chief structural benefit: zero raw patient records, CT DICOM images, or protected health information (PHI) ever leave local hospital firewalls. This performance profile confirms the model's readiness for cross-institutional deployment across diagnostic centers operating under rigid HIPAA, GDPR, and localized medical data privacy mandates.

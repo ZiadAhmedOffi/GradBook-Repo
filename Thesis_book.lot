@@ -54,8 +54,8 @@
 \contentsline {table}{\numberline {4.20}{\ignorespaces Federated Learning configuration and results for the 2 client trial.}}{185}{table.caption.165}%
 \contentsline {table}{\numberline {4.21}{\ignorespaces Federated Learning Configuration and Results (3 Clients)}}{187}{table.caption.168}%
 \contentsline {table}{\numberline {4.22}{\ignorespaces Four-Client Federated Learning Configuration}}{189}{table.caption.171}%
-\contentsline {table}{\numberline {4.23}{\ignorespaces Detection results of the centralized YOLOv8 model on the test set (253 images, 759 instances)[cite: 17].}}{193}{table.caption.174}%
-\contentsline {table}{\numberline {4.24}{\ignorespaces Evaluation results of the optimized federated YOLOv8 (FedAvg) model on validation and test sets[cite: 26].}}{193}{table.caption.175}%
-\contentsline {table}{\numberline {4.25}{\ignorespaces Side-by-side comparison of optimized centralized vs. federated YOLOv8 on the test set[cite: 32].}}{194}{table.caption.176}%
-\contentsline {table}{\numberline {4.26}{\ignorespaces Absolute and relative performance gap between optimized centralized and federated models (test set)[cite: 34].}}{194}{table.caption.177}%
+\contentsline {table}{\numberline {4.23}{\ignorespaces Detection results of the centralized YOLOv8 model on the test set (253 images, 759 instances).}}{195}{table.caption.177}%
+\contentsline {table}{\numberline {4.24}{\ignorespaces Evaluation results of the optimized federated YOLOv8 (FedAvg) model on validation and test set.}}{196}{table.caption.178}%
+\contentsline {table}{\numberline {4.25}{\ignorespaces Side-by-side comparison of optimized centralized vs. federated YOLOv8 on the test set.}}{197}{table.caption.180}%
+\contentsline {table}{\numberline {4.26}{\ignorespaces Absolute and relative performance gap between optimized centralized and federated models (test set).}}{197}{table.caption.181}%
 \addvspace {10\p@ }

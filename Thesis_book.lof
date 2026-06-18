@@ -80,4 +80,8 @@
 \contentsline {figure}{\numberline {4.26}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 3 clients.}}{189}{figure.caption.170}%
 \contentsline {figure}{\numberline {4.27}{\ignorespaces Confusion matrix for the Federated DenseNet121 model trained with 4 clients (accuracy: 93.22\%).}}{191}{figure.caption.172}%
 \contentsline {figure}{\numberline {4.28}{\ignorespaces Per-class classification metrics for the Federated DenseNet121 model with 4 clients.}}{191}{figure.caption.173}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces DenseNet121 Grad-CAM visualization.}}{194}{figure.caption.174}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces ResNet50 Grad-CAM visualization.}}{194}{figure.caption.175}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces EfficientNet-B0 Grad-CAM visualization.}}{195}{figure.caption.176}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces The full visualization of the results of the YOLOv8 architecture with tests on both centralized and federated frameworks with different clients in the case of the federated framework.}}{196}{figure.caption.179}%
 \addvspace {10\p@ }

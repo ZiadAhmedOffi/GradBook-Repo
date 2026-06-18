@@ -38,7 +38,7 @@ Together, these components provide a complete healthcare platform that combines 
 
 \subsection{End-to-End System Architecture}The system follows a microservices architecture. Four independent services communicate over well-defined APIs. The frontend is the only entry point for human users; all backend services are internal.
 
-\subsubsection*{Service Map}
+\subsubsection{Service Map}
 Table~\ref{tab:system_components} lists all the different components and services of the proposed system.
 \begin{table}[htbp]
 	\centering
@@ -74,7 +74,7 @@ Table~\ref{tab:system_components} lists all the different components and service
 	\end{tabular}
 \end{table}
 
-\subsubsection*{External Infrastructure}
+\subsubsection{External Infrastructure}
 During system implementation, we  have also relied on external components to not reinvent the wheel  and leverage already existing powerful and free infrastructure, those components are listed in Table~\ref{tab:supporting_infrastructure}
 \begin{table}[htbp]
 	\centering
@@ -133,7 +133,7 @@ To provide a clearer understanding of the overall system structure, Figures~\ref
 \subsection{Frontend}
 The frontend is a React 18 single-page application built with Vite 6 and TypeScript. It serves three user roles — Patient, Doctor, and Admin — through role-gated dashboards, and is the sole human interface into the platform.
 
-\subsubsection*{Technology Stack}
+\subsubsection{Technology Stack}
 Different technologies were used during the development and implementation of the frontend components of the proposed system. They have been listed in Table~\ref{tab:frontend_technologies}.
 \begin{table}[htbp]
 	\centering
@@ -187,7 +187,7 @@ Different technologies were used during the development and implementation of th
 	\end{tabular}
 \end{table}
 
-\subsubsection*{User Roles \& Capabilities}
+\subsubsection{User Roles \& Capabilities}
 The system is designed as a role-based healthcare to ensure that each type of user interacts with the platform according to their responsibilities, permissions, and level of access. The system defines three main roles: Patient, Doctor, and Administrator, each serving a distinct purpose within the healthcare workflow.
 
 Patients represent the end users of the system. Their role is limited to personal healthcare management, including registering accounts, booking appointments, viewing medical history, and accessing their own diagnostic results. This restricted access ensures that patients can interact with their healthcare data securely without modifying clinical or system-level information.
@@ -221,7 +221,7 @@ The separation of roles is essential for maintaining security, privacy, and oper
 	\end{tabular}
 \end{table}
 
-\subsubsection*{Key Pages and Routing}
+\subsubsection{Key Pages and Routing}
 Frontend is structured as a single-page application with role-based routing to ensure secure and organized access to system features. Each user type is directed to specific pages depending on their permissions and responsibilities within the platform.
 
 Public users can access the landing page and authentication-related pages, including login, signup, password recovery, and invite-based account activation. These pages are only available to guests who are not yet authenticated.
@@ -292,7 +292,7 @@ Overall, the routing structure enforces strict role-based access control, ensuri
 	\end{tabular}
 \end{table}
 
-\subsubsection*{Core Features}
+\subsubsection{Core Features}
 \paragraph{Authentication \& Session Management}
 The frontend implements a full authentication lifecycle using JWT access tokens are stored in memory (not localStorage); refresh tokens are stored in HttpOnly cookies. On app load, the context attempts a silent token refresh to restore sessions without requiring re-login. GuestRoute prevents authenticated users from visiting auth. pages; Require Dashboard Role guards all dashboard routes.
 
@@ -321,7 +321,7 @@ A floating chat widget  is available on every page. Responses are streamed from 
 \subsection{Centralized Backend (Spring Boot)}
 Centralized backend is a Spring Boot 3.5 application written in Java 21. It serves as the central API gateway and system of record for authentication, user management, medical image orchestration, appointments, federated learning coordination, and real-time WebSocket broadcasts. 
 
-\subsubsection*{Technology Stack}
+\subsubsection{Technology Stack}
 Various technologies were utilized in the implementation of the backend of the proposed end-to-end system. All of these technologies are listed in Table~\ref{tab:backend_technologies}.
 \begin{table}[htbp]
 	\centering
@@ -383,7 +383,7 @@ Various technologies were utilized in the implementation of the backend of the p
 	\end{tabular}
 \end{table}
 
-\subsubsection*{Security \& Authentication}
+\subsubsection{Security \& Authentication}
 
 \begin{figure}[htbp]
 	\centering
@@ -551,7 +551,7 @@ Some examples of the Lung Cancer model in action are shown in Figure~\ref{fig:lu
 	\label{fig:lung2}
 \end{figure}
 
-\subsubsection*{Appointment Management}
+\subsubsection{Appointment Management}
 The appointment management module enables patients and doctors to coordinate medical consultations through a structured workflow. Patients can create appointments by selecting a doctor, choosing a date and time, specifying the appointment type, and providing optional notes or supporting attachments. Once submitted, the appointment information is stored in the database and becomes available to the assigned doctor.
 
 Doctors can view their scheduled appointments, review patient details, and update the appointment status as needed. They can mark appointments as completed, add consultation notes, or cancel appointments when necessary. Patients can also view the status of their appointments and track any updates made by the doctor.
@@ -621,7 +621,7 @@ The core modules exposed by the API and implemented in it a re listed in Table~\
 \subsection{ML Service - ModelBackend}
 ModelBackend is a FastAPI microservice that hosts all AI capabilities. At startup it loads four ML components into memory and exposes a unified image-processing endpoint plus a RAG chatbot. It runs on port 8000 and is called by centralized Backend for image analysis and directly by the frontend for chatbot interactions.
 
-\subsubsection*{ML Models}
+\subsubsection{ML Models}
 Different backbone models were used for the different tasks the proposed system performs. All the AI models and architectures used are listed in Table~\ref{tab:ml_components}.
 
 \begin{table}[htbp]
@@ -665,7 +665,7 @@ FastAPI serves as the AI engine of XFed NeuroScan and relies on Spring Boot to i
 
 Separating Spring Boot and FastAPI into two services improves scalability and maintainability, allowing the healthcare system and AI models to be developed, updated, and deployed independently without affecting each other.
 
-\subsubsection*{Image Processing Pipeline}
+\subsubsection{Image Processing Pipeline}
 The image processing module is designed to automatically analyze uploaded medical images and route them to the appropriate AI model based on their content. This architecture allows the system to support multiple diagnostic pipelines while maintaining a single entry point for image analysis.
 
 \paragraph{Unified Routing}
@@ -698,14 +698,14 @@ An overall visualization of the image processing pipeline is shown in Figure~\re
 	\label{fig:backend_overall}
 \end{figure}
 
-\subsubsection*{Grad-CAM Explainability and Localization}
+\subsubsection{Grad-CAM Explainability and Localization}
 For every chest X-ray prediction, the system generates a Grad-CAM (Gradient-weighted Class Activation Mapping) heatmap to provide interpretability for the AI decision. This mechanism highlights the regions of the image that most influenced the model’s prediction by tracing gradients flowing into the final convolutional layers of the DenseNet network.
 
 The generated heatmap is visualized using a JET colormap and overlaid on the original X-ray image , allowing both the anatomical structure and the activated regions to remain clearly visible. This overlay helps radiologists and clinicians visually verify whether the model is focusing on medically relevant areas such as lung opacities, consolidations, or abnormal tissue patterns rather than irrelevant regions.
 
 To support persistence and later retrieval, both the original Grad-CAM output and the processed overlay image are stored in Cloudflare R2 under the \texttt{heatmaps/} directory. These images are served to the frontend using secure presigned URLs, ensuring controlled and time-limited access to sensitive medical data.
 
-\subsubsection*{Localization Capability}Beyond explainability, Grad-CAM also provides a form of weak localization for disease regions within the chest X-ray. Although the DenseNet model is primarily designed for classification, Grad-CAM transforms it into a pseudo-localization system by identifying spatial regions that contribute most strongly to the predicted class.
+\subsubsection{Localization Capability}Beyond explainability, Grad-CAM also provides a form of weak localization for disease regions within the chest X-ray. Although the DenseNet model is primarily designed for classification, Grad-CAM transforms it into a pseudo-localization system by identifying spatial regions that contribute most strongly to the predicted class.
 
 This allows the system to:
 \begin{itemize}
@@ -718,7 +718,7 @@ In practice, this means the system not only predicts the presence of a disease b
 
 Overall, Grad-CAM serves as both an explainability mechanism and a lightweight localization method, enhancing transparency and clinical usability of the AI predictions.
 
-\subsubsection*{RAG Chatbot Module}
+\subsubsection{RAG Chatbot Module}
 Retrieval-Augmented Generation (RAG) is an AI technique that enhances LLM responses by grounding them in a private document corpus rather than relying solely on the model's pre-trained knowledge. This is critical for domain-specific applications — such as medical systems,  where accuracy, traceability, and up-to-date information are essential.
 
 \paragraph{Standard RAG Pipeline}
@@ -851,7 +851,7 @@ Examples of using the RAG agent implemented in the system are shown in Figure~\r
 \end{figure}
 
 
-\subsubsection*{Performance Profile}
+\subsubsection{Performance Profile}
 The performance profile of the proposed system is discussed in Table~\ref{tab:performance_overview}.
 \begin{table}[htbp]
 	\centering
@@ -896,7 +896,7 @@ The system is built using a hybrid architecture that combines a FastAPI REST ser
 
 Both components are synchronized through an in-memory SharedState singleton, which maintains the current training status, active clients, and round coordination signals. This design allows seamless communication between REST-based administrative actions and gRPC-based training execution, ensuring that federated learning rounds are executed in a coordinated and efficient manner across all participating hospitals.
 
-\subsubsection*{Design Principles}
+\subsubsection{Design Principles}
 The design principles of the federated learning server are listed in Table~\ref{tab:fl_principles}.
 \begin{table}[htbp]
 	\centering
@@ -930,7 +930,7 @@ The Federated-Learning-Server follows a dual-process architecture where two inte
 
 This separation allows the system to clearly divide responsibilities between control-plane operations (handled by FastAPI) and training-plane execution (handled by Flower). Both processes share a common in-memory SharedState, ensuring synchronization between REST actions and federated learning events while maintaining efficient and real-time coordination.
 
-\subsubsection*{Training Round Lifecycle}
+\subsubsection{Training Round Lifecycle}
 A complete federated training round follows these steps:
 \begin{itemize}
 	\item Step 1: Admin selects online hospitals and initiates a round
@@ -973,7 +973,7 @@ Once the container is running and sending heartbeat signals, the hospital is mar
 	\label{fig:fed_mgmt}
 \end{figure}
 
-\subsubsection*{Round Status States}
+\subsubsection{Round Status States}
 The full states and status code for the federated learning server are listed and explained in Table~\ref{tab:fl_status}
 \begin{table}[htbp]
 	\centering
@@ -1007,7 +1007,7 @@ The full states and status code for the federated learning server are listed and
 	\end{tabular}
 \end{table}
 
-\subsubsection*{Security}
+\subsubsection{Security}
 The Federated Learning security model is designed to ensure strict isolation between hospitals, the platform backend, and the training infrastructure. A Platform API key is used exclusively by the centralized Backend to securely register new hospital clients, retrieve client lists, and initiate federated learning rounds, ensuring that only the trusted backend can control system-level operations.
 
 Each hospital node is assigned a unique Client API key, which is used solely for heartbeat authentication to confirm that the hospital is online and eligible to participate in training. In addition, a Webhook secret is shared between the FL Server and centralized  Backend to verify and secure all outbound callbacks related to training round completion and status updates.
@@ -1044,7 +1044,7 @@ The various key types and their roles are shown and explained in great detail in
 \end{table}
 
 \subsection{End-to-End Data Flows}
-\subsubsection*{Medical Image Analysis Flow}
+\subsubsection{Medical Image Analysis Flow}
 \begin{enumerate}
 	\item The frontend user selects an image and requests a presigned URL from the Spring Backend.
 	
@@ -1063,7 +1063,7 @@ The various key types and their roles are shown and explained in great detail in
 	\item The frontend displays the prediction results, confidence scores, and visual explanations such as Grad-CAM overlays or bounding box annotations to the user.
 \end{enumerate}
 
-\subsubsection*{User Authentication Flow}
+\subsubsection{User Authentication Flow}
 \begin{enumerate}
 	\item The user logs in via the login page, where credentials are verified by Spring Security.
 	
@@ -1078,7 +1078,7 @@ The various key types and their roles are shown and explained in great detail in
 	\item During logout, the access token is blacklisted and the refresh token is removed from Redis, fully invalidating the user session.
 \end{enumerate}
 
-\subsubsection*{Federated Learning Hospital Status Flow}
+\subsubsection{Federated Learning Hospital Status Flow}
 \begin{enumerate}
 	\item The administrator registers a hospital through the frontend interface, and the Spring forwards the registration request to the Federated Learning (FL) Server.
 	
