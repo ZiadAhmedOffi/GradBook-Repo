@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  18 JUN 2026 07:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  18 JUN 2026 13:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4247,10 +4247,11 @@ File: assets/lung1.jpg Graphic file (type jpg)
 <use assets/lung1.jpg>
 Package pdftex.def Info: assets/lung1.jpg  used on input line 59.
 (pdftex.def)             Requested size: 217.42265pt x 217.42458pt.
-File: assets/lung1.jpg Graphic file (type jpg)
-<use assets/lung1.jpg>
-Package pdftex.def Info: assets/lung1.jpg  used on input line 65.
-(pdftex.def)             Requested size: 217.42265pt x 217.42458pt.
+<assets/lung2.jpg, id=2215, 210.7875pt x 210.7875pt>
+File: assets/lung2.jpg Graphic file (type jpg)
+<use assets/lung2.jpg>
+Package pdftex.def Info: assets/lung2.jpg  used on input line 65.
+(pdftex.def)             Requested size: 217.42265pt x 217.42554pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -4260,7 +4261,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [101]
-<assets/lung3.jpg, id=2220, 317.68687pt x 317.68687pt>
+<assets/lung3.jpg, id=2221, 317.68687pt x 317.68687pt>
 File: assets/lung3.jpg Graphic file (type jpg)
 <use assets/lung3.jpg>
 Package pdftex.def Info: assets/lung3.jpg  used on input line 76.
@@ -4276,7 +4277,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[102 <./assets/lung1.jpg>]
+[102 <./assets/lung1.jpg> <./assets/lung2.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -4293,7 +4294,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [104]
-<assets/yolo_arch.jpeg, id=2241, 1268.74pt x 846.16125pt>
+<assets/yolo_arch.jpeg, id=2242, 1268.74pt x 846.16125pt>
 File: assets/yolo_arch.jpeg Graphic file (type jpg)
 <use assets/yolo_arch.jpeg>
 Package pdftex.def Info: assets/yolo_arch.jpeg  used on input line 88.
@@ -4363,7 +4364,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [109]
-<assets/fl_system_architecture.png, id=2283, 469.755pt x 255.95625pt>
+<assets/fl_system_architecture.png, id=2284, 469.755pt x 255.95625pt>
 File: assets/fl_system_architecture.png Graphic file (type png)
 <use assets/fl_system_architecture.png>
 Package pdftex.def Info: assets/fl_system_architecture.png  used on input line 
@@ -4416,7 +4417,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [114]
-<assets/privacy_utility_tradeoff.png, id=2307, 469.755pt x 255.95625pt>
+<assets/privacy_utility_tradeoff.png, id=2308, 469.755pt x 255.95625pt>
 File: assets/privacy_utility_tradeoff.png Graphic file (type png)
 <use assets/privacy_utility_tradeoff.png>
 Package pdftex.def Info: assets/privacy_utility_tradeoff.png  used on input lin
@@ -4560,7 +4561,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [121]
-<assets/RAG_1.png, id=2349, 518.53725pt x 257.16075pt>
+<assets/RAG_1.png, id=2350, 518.53725pt x 257.16075pt>
 File: assets/RAG_1.png Graphic file (type png)
 <use assets/RAG_1.png>
 Package pdftex.def Info: assets/RAG_1.png  used on input line 248.
@@ -4641,12 +4642,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [125]
-<assets/backend-1-ag.jpeg, id=2381, 1027.84pt x 684.5575pt>
+<assets/backend-1-ag.jpeg, id=2382, 1541.76pt x 1027.84pt>
 File: assets/backend-1-ag.jpeg Graphic file (type jpg)
 <use assets/backend-1-ag.jpeg>
 Package pdftex.def Info: assets/backend-1-ag.jpeg  used on input line 121.
-(pdftex.def)             Requested size: 430.31812pt x 286.60342pt.
-<assets/backend-2-ag.jpeg, id=2382, 1027.84pt x 590.205pt>
+(pdftex.def)             Requested size: 430.31812pt x 286.8679pt.
+<assets/backend-2-ag.jpeg, id=2383, 1027.84pt x 590.205pt>
 File: assets/backend-2-ag.jpeg Graphic file (type jpg)
 <use assets/backend-2-ag.jpeg>
 Package pdftex.def Info: assets/backend-2-ag.jpeg  used on input line 128.
@@ -4719,7 +4720,7 @@ Overfull \hbox (19.2602pt too wide) in paragraph at lines 309--310
 -pi-tal nodes with live ON-LINE/OFFLINE
  []
 
-<assets/backend3.png, id=2405, 469.755pt x 313.0605pt>
+<assets/backend3.png, id=2406, 469.755pt x 313.0605pt>
 File: assets/backend3.png Graphic file (type png)
 <use assets/backend3.png>
 Package pdftex.def Info: assets/backend3.png  used on input line 316.
@@ -4739,7 +4740,7 @@ Underfull \hbox (badness 1107) in paragraph at lines 367--367
 []|\T1/lmr/m/n/12 (+20) Object Stor-age In-te-
  []
 
-<assets/backend4.png, id=2407, 468.441pt x 236.1915pt>
+<assets/backend4.png, id=2408, 468.441pt x 236.1915pt>
 File: assets/backend4.png Graphic file (type png)
 <use assets/backend4.png>
 Package pdftex.def Info: assets/backend4.png  used on input line 390.
@@ -4749,7 +4750,7 @@ Overfull \hbox (15.47194pt too wide) in paragraph at lines 390--391
  [][] 
  []
 
-<assets/backend5.png, id=2408, 469.755pt x 236.6588pt>
+<assets/backend5.png, id=2409, 469.755pt x 236.6588pt>
 File: assets/backend5.png Graphic file (type png)
 <use assets/backend5.png>
 Package pdftex.def Info: assets/backend5.png  used on input line 397.
@@ -4783,7 +4784,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [133 <./assets/backend4.png> <./assets/backend5.png>]
-<assets/backend6.png, id=2428, 190.46156pt x 261.97874pt>
+<assets/backend6.png, id=2429, 190.46156pt x 261.97874pt>
 File: assets/backend6.png Graphic file (type png)
 <use assets/backend6.png>
 Package pdftex.def Info: assets/backend6.png  used on input line 426.
@@ -4800,7 +4801,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [134]
-<assets/backend7.png, id=2434, 499.11469pt x 322.20375pt>
+<assets/backend7.png, id=2435, 499.11469pt x 322.20375pt>
 File: assets/backend7.png Graphic file (type png)
 <use assets/backend7.png>
 Package pdftex.def Info: assets/backend7.png  used on input line 441.
@@ -4817,12 +4818,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [135 <./assets/backend6.png>]
-<assets/backend8.png, id=2441, 216.05719pt x 254.45062pt>
+<assets/backend8.png, id=2442, 216.05719pt x 254.45062pt>
 File: assets/backend8.png Graphic file (type png)
 <use assets/backend8.png>
 Package pdftex.def Info: assets/backend8.png  used on input line 468.
 (pdftex.def)             Requested size: 216.05664pt x 254.45pt.
-<assets/backend9.png, id=2442, 284.56313pt x 258.9675pt>
+<assets/backend9.png, id=2443, 284.56313pt x 258.9675pt>
 File: assets/backend9.png Graphic file (type png)
 <use assets/backend9.png>
 Package pdftex.def Info: assets/backend9.png  used on input line 475.
@@ -4851,22 +4852,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Warning: Reference `fig:greeting_' on page 138 undefined on input line 50
 6.
 
-<assets/backend10.png, id=2455, 463.185pt x 219.7665pt>
+<assets/backend10.png, id=2456, 463.185pt x 219.7665pt>
 File: assets/backend10.png Graphic file (type png)
 <use assets/backend10.png>
 Package pdftex.def Info: assets/backend10.png  used on input line 510.
 (pdftex.def)             Requested size: 430.31812pt x 204.18286pt.
-<assets/backend11.png, id=2456, 469.755pt x 148.1535pt>
+<assets/backend11.png, id=2457, 469.755pt x 148.1535pt>
 File: assets/backend11.png Graphic file (type png)
 <use assets/backend11.png>
 Package pdftex.def Info: assets/backend11.png  used on input line 517.
 (pdftex.def)             Requested size: 430.31812pt x 135.7151pt.
-<assets/backend12.png, id=2459, 469.755pt x 238.491pt>
+<assets/backend12.png, id=2460, 469.755pt x 238.491pt>
 File: assets/backend12.png Graphic file (type png)
 <use assets/backend12.png>
 Package pdftex.def Info: assets/backend12.png  used on input line 526.
 (pdftex.def)             Requested size: 430.31812pt x 218.4682pt.
-<assets/backend13.png, id=2460, 469.755pt x 237.88875pt>
+<assets/backend13.png, id=2461, 469.755pt x 237.88875pt>
 File: assets/backend13.png Graphic file (type png)
 <use assets/backend13.png>
 Package pdftex.def Info: assets/backend13.png  used on input line 533.
@@ -4892,12 +4893,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [139 <./assets/backend10.png> <./assets/backend11.png> <./assets/backend12.png>
 ]
-<assets/backend14.jpg, id=2474, 466.74374pt x 236.38312pt>
+<assets/backend14.jpg, id=2475, 466.74374pt x 236.38312pt>
 File: assets/backend14.jpg Graphic file (type jpg)
 <use assets/backend14.jpg>
 Package pdftex.def Info: assets/backend14.jpg  used on input line 542.
 (pdftex.def)             Requested size: 430.31812pt x 217.944pt.
-<assets/backend15.jpg, id=2475, 469.755pt x 232.61906pt>
+<assets/backend15.jpg, id=2476, 469.755pt x 232.61906pt>
 File: assets/backend15.jpg Graphic file (type jpg)
 <use assets/backend15.jpg>
 Package pdftex.def Info: assets/backend15.jpg  used on input line 549.
@@ -4911,7 +4912,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [140 <./assets/backend13.png> <./assets/backend14.jpg>]
-<assets/backend16.png, id=2481, 199.49532pt x 359.84438pt>
+<assets/backend16.png, id=2482, 199.49532pt x 359.84438pt>
 File: assets/backend16.png Graphic file (type png)
 <use assets/backend16.png>
 Package pdftex.def Info: assets/backend16.png  used on input line 563.
@@ -4994,7 +4995,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [145]
-<assets/backend17.png, id=2513, 489.32813pt x 296.60812pt>
+<assets/backend17.png, id=2514, 489.32813pt x 296.60812pt>
 File: assets/backend17.png Graphic file (type png)
 <use assets/backend17.png>
 Package pdftex.def Info: assets/backend17.png  used on input line 696.
@@ -5019,11 +5020,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [147]
-<assets/backend18.png, id=2526, 262.143pt x 392.886pt>
-File: assets/backend18.png Graphic file (type png)
-<use assets/backend18.png>
-Package pdftex.def Info: assets/backend18.png  used on input line 771.
-(pdftex.def)             Requested size: 430.31812pt x 644.97865pt.
+<assets/backend18.jpeg, id=2527, 761.84625pt x 1606.0pt>
+File: assets/backend18.jpeg Graphic file (type jpg)
+<use assets/backend18.jpeg>
+Package pdftex.def Info: assets/backend18.jpeg  used on input line 771.
+(pdftex.def)             Requested size: 430.31812pt x 907.12215pt.
+
+
+LaTeX Warning: Float too large for page by 230.21527pt on input line 774.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -5040,7 +5044,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[149 <./assets/backend18.png>]
+[149 <./assets/backend18.jpeg>]
 <assets/backend19.png, id=2548, 207.77625pt x 310.761pt>
 File: assets/backend19.png Graphic file (type png)
 <use assets/backend19.png>
@@ -5914,10 +5918,10 @@ Package logreq Info: Writing requests to 'Thesis_book.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43085 strings out of 474486
- 873443 string characters out of 5744227
+ 43092 strings out of 474486
+ 873610 string characters out of 5744227
  2036542 words of memory out of 5000000
- 63331 multiletter control sequences out of 15000+600000
+ 63338 multiletter control sequences out of 15000+600000
  757577 words of font info for 415 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,16n,120p,1910b,2107s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -5947,9 +5951,9 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Zyad/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Zyad/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Zyad/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on Thesis_book.pdf (226 pages, 12877644 bytes).
+Output written on Thesis_book.pdf (226 pages, 12311581 bytes).
 PDF statistics:
  3308 PDF objects out of 3580 (max. 8388607)
  766 named destinations out of 1000 (max. 500000)
- 120982 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 120987 words of extra memory for PDF output out of 128383 (max. 10000000)
 
