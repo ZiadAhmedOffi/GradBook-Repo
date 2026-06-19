@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  19 JUN 2026 22:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  19 JUN 2026 23:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5462,30 +5462,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [176 <./assets/chest_model/image9.png> <./assets/chest_model/image7.png>]
-
-Package caption Warning: \label without proper reference on input line 477.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:vgg_curves' on page 177 undefined on input line 4
-52.
-
-
-Package caption Warning: \label without proper reference on input line 484.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:vgg-cm' on page 177 undefined on input line 452.
-
-
-Package caption Warning: \label without proper reference on input line 491.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:vgg-report' on page 177 undefined on input line 4
-52.
-
-
 Underfull \vbox (badness 7081) has occurred while \output is active []
 
 
@@ -6009,7 +5985,7 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Zyad/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Zyad/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Zyad/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on Thesis_book.pdf (231 pages, 12917109 bytes).
+Output written on Thesis_book.pdf (231 pages, 12917053 bytes).
 PDF statistics:
  3518 PDF objects out of 3580 (max. 8388607)
  811 named destinations out of 1000 (max. 500000)
