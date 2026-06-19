@@ -165,14 +165,14 @@ Table \ref{tab:side_by_side} and Table \ref{tab:performance_gap} present a side-
 	\centering
 	\caption{Absolute and relative performance gap between optimized centralized and federated models (test set).}
 	\label{tab:performance_gap}
-	\begin{tabular}{lcccc}
+	\begin{tabular}{lcc}
 		\toprule
-		\textbf{Metric} & \textbf{Centralized} & \textbf{Federated} & \textbf{$\Delta$ (Abs.)} & \textbf{$\Delta$ (\%)} \\
+		\textbf{Metric} & \textbf{Centralized} & \textbf{Federated (3 Clients)}\\
 		\midrule
-		Precision       & 0.921 & 0.907 & $-0.014$ & $-1.5\%$ \\
-		Recall          & 0.890 & 0.874 & $-0.016$ & $-1.8\%$ \\
-		$mAP@0.5$       & 0.908 & 0.893 & $-0.015$ & $-1.7\%$ \\
-		$mAP@0.5:0.95$  & 0.651 & 0.619 & $-0.032$ & $-4.9\%$ \\
+		Precision       & 0.921 & 0.871 \\
+		Recall          & 0.890 & 0.842\\
+		$mAP@0.5$       & 0.908 & 0.857\\
+		$mAP@0.5:0.95$  & 0.651 & 0.619\\
 		\bottomrule
 	\end{tabular}
 \end{table}
