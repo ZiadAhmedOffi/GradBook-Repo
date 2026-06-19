@@ -242,47 +242,48 @@
 \contentsline {subsubsection}{\numberline {4.2.2.2}Data Augmentation Strategy}{170}{subsubsection.4.2.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.2.3}Class Weighting}{170}{subsubsection.4.2.2.3}%
 \contentsline {subsubsection}{\numberline {4.2.2.4}Evaluation Metrics}{170}{subsubsection.4.2.2.4}%
-\contentsline {subsection}{\numberline {4.2.3}Single-Label Classification Results (SoftMax Approach)}{170}{subsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.3.1}DenseNet121 (SoftMax, Two-Phase Fine-Tuning)}{171}{subsubsection.4.2.3.1}%
-\contentsline {subsubsection}{\numberline {4.2.3.2}ResNet50V2 (Softmax, Partial Fine-Tuning)}{173}{subsubsection.4.2.3.2}%
-\contentsline {subsubsection}{\numberline {4.2.3.3}EfficientNet (SoftMax)}{175}{subsubsection.4.2.3.3}%
-\contentsline {subsubsection}{\numberline {4.2.3.4}VGG-19 (SoftMax)}{177}{subsubsection.4.2.3.4}%
-\contentsline {subsection}{\numberline {4.2.4}One-vs-Rest Classification Results (OVR / Sigmoid Approach)}{179}{subsection.4.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.4.1}ResNet50 OVR (Sigmoid)}{179}{subsubsection.4.2.4.1}%
-\contentsline {subsubsection}{\numberline {4.2.4.2}DenseNet121 OVR (Sigmoid)}{181}{subsubsection.4.2.4.2}%
-\contentsline {subsection}{\numberline {4.2.5}Federated Learning Results}{183}{subsection.4.2.5}%
-\contentsline {subsubsection}{\numberline {4.2.5.1}Federated Learning Framework and Architecture}{183}{subsubsection.4.2.5.1}%
-\contentsline {subsubsection}{\numberline {4.2.5.2}Federated Learning with 2 Clients}{185}{subsubsection.4.2.5.2}%
-\contentsline {subsubsection}{\numberline {4.2.5.3}Federated Learning with 3 Clients}{187}{subsubsection.4.2.5.3}%
-\contentsline {subsubsection}{\numberline {4.2.5.4}Federated Learning with 4 Clients}{189}{subsubsection.4.2.5.4}%
-\contentsline {section}{\numberline {4.3}Evaluation of the Lung Cancer Detection Model}{192}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Experimental Setup}{192}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Previous Model Experiments}{192}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}Dataset Used}{192}{subsubsection.4.3.2.1}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}Medical Image Preprocessing Pipeline}{193}{subsubsection.4.3.2.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.3}Data Augmentation}{193}{subsubsection.4.3.2.3}%
-\contentsline {subsubsection}{\numberline {4.3.2.4}Model Evaluation and Interpretability Analysis}{193}{subsubsection.4.3.2.4}%
-\contentsline {subsubsection}{\numberline {4.3.2.5}DenseNet121}{194}{subsubsection.4.3.2.5}%
-\contentsline {subsubsection}{\numberline {4.3.2.6}ResNet50}{194}{subsubsection.4.3.2.6}%
-\contentsline {subsubsection}{\numberline {4.3.2.7}EfficientNet-B0}{195}{subsubsection.4.3.2.7}%
-\contentsline {subsection}{\numberline {4.3.3}Centralized Model Results}{195}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Federated Learning Model Results}{196}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Comparative Analysis}{197}{subsection.4.3.5}%
-\contentsline {subsection}{\numberline {4.3.6}Conclusion and Regulatory Advantage}{197}{subsection.4.3.6}%
-\contentsline {section}{\numberline {4.4}Summary}{198}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Conclusion}{201}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Achievement of Project Objectives}{201}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Discussion of the Proposed Framework}{202}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Discussion of Individual System Components}{203}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Routing Model}{203}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Chest Disease Classification Model}{204}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Lung Cancer Detection Model}{204}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Explainable Artificial Intelligence Component}{205}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Federated Learning Component}{205}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Practical and Clinical Significance}{206}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Project Contributions}{206}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Challenges Encountered During Development}{206}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Limitations}{207}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Future Work}{208}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Final Remarks}{209}{section.5.9}%
-\contentsline {chapter}{References}{210}{chapter*.182}%
+\contentsline {subsection}{\numberline {4.2.3}Segmentation Training Results}{170}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Single-Label Classification Results (SoftMax Approach)}{171}{subsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}DenseNet121 (SoftMax, Two-Phase Fine-Tuning)}{171}{subsubsection.4.2.4.1}%
+\contentsline {subsubsection}{\numberline {4.2.4.2}ResNet50V2 (Softmax, Partial Fine-Tuning)}{172}{subsubsection.4.2.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.4.3}EfficientNet (SoftMax)}{175}{subsubsection.4.2.4.3}%
+\contentsline {subsubsection}{\numberline {4.2.4.4}VGG-19 (SoftMax)}{177}{subsubsection.4.2.4.4}%
+\contentsline {subsection}{\numberline {4.2.5}One-vs-Rest Classification Results (OVR / Sigmoid Approach)}{179}{subsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.5.1}ResNet50 OVR (Sigmoid)}{180}{subsubsection.4.2.5.1}%
+\contentsline {subsubsection}{\numberline {4.2.5.2}DenseNet121 OVR (Sigmoid)}{182}{subsubsection.4.2.5.2}%
+\contentsline {subsection}{\numberline {4.2.6}Federated Learning Results}{183}{subsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.6.1}Federated Learning Framework and Architecture}{184}{subsubsection.4.2.6.1}%
+\contentsline {subsubsection}{\numberline {4.2.6.2}Federated Learning with 2 Clients}{185}{subsubsection.4.2.6.2}%
+\contentsline {subsubsection}{\numberline {4.2.6.3}Federated Learning with 3 Clients}{188}{subsubsection.4.2.6.3}%
+\contentsline {subsubsection}{\numberline {4.2.6.4}Federated Learning with 4 Clients}{190}{subsubsection.4.2.6.4}%
+\contentsline {section}{\numberline {4.3}Evaluation of the Lung Cancer Detection Model}{193}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Experimental Setup}{193}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Previous Model Experiments}{193}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Dataset Used}{193}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Medical Image Preprocessing Pipeline}{194}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}Data Augmentation}{194}{subsubsection.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}Model Evaluation and Interpretability Analysis}{194}{subsubsection.4.3.2.4}%
+\contentsline {subsubsection}{\numberline {4.3.2.5}DenseNet121}{195}{subsubsection.4.3.2.5}%
+\contentsline {subsubsection}{\numberline {4.3.2.6}ResNet50}{195}{subsubsection.4.3.2.6}%
+\contentsline {subsubsection}{\numberline {4.3.2.7}EfficientNet-B0}{196}{subsubsection.4.3.2.7}%
+\contentsline {subsection}{\numberline {4.3.3}Centralized Model Results}{196}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Federated Learning Model Results}{197}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Comparative Analysis}{198}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}Conclusion and Regulatory Advantage}{198}{subsection.4.3.6}%
+\contentsline {section}{\numberline {4.4}Summary}{199}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{202}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Achievement of Project Objectives}{202}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Discussion of the Proposed Framework}{203}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Discussion of Individual System Components}{204}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Routing Model}{204}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Chest Disease Classification Model}{205}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Lung Cancer Detection Model}{205}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Explainable Artificial Intelligence Component}{206}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Federated Learning Component}{206}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Practical and Clinical Significance}{207}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Project Contributions}{207}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Challenges Encountered During Development}{207}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Limitations}{208}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Future Work}{209}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Final Remarks}{210}{section.5.9}%
+\contentsline {chapter}{References}{211}{chapter*.183}%

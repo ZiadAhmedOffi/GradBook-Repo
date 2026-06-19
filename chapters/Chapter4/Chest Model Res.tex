@@ -202,6 +202,29 @@ Model performance is evaluated using a comprehensive set of metrics reflecting b
     \item \textbf{Confusion Matrix:} A matrix showing the breakdown of correct and incorrect predictions across all class pairs.
 \end{itemize}
 
+\subsection{Segmentation Training Results}
+
+The segmentation model was trained on a dataset of 6,106 annotated images, with an 85:15 split between training and validation sets. Early stopping was applied, terminating training at epoch 15 out of a maximum of 50 epochs. The model was optimized using the Adam optimizer with a learning rate of $10^{-4}$ and a combined Binary Cross-Entropy (BCE) and Dice loss function.
+
+\begin{table}[h]
+	\centering
+	\caption{Segmentation Model Performance on the Validation Set}
+	\label{tab:segmentation_results}
+	\begin{tabular}{lc}
+		\hline
+		\textbf{Metric} & \textbf{Value} \\
+		\hline
+		Validation Accuracy & 95.86\% \\
+		Training Accuracy & 98.14\% \\
+		Validation Loss & 0.0904 \\
+		Dice Coefficient & 0.9592 \\
+		IoU Score & 0.9756 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+The obtained results demonstrate excellent segmentation performance. The model achieved a validation accuracy of 95.86\% with a low validation loss of 0.0904, indicating good generalization capability. Furthermore, the Dice coefficient of 0.9592 and IoU score of 0.9756 confirm a high degree of overlap between the predicted masks and the ground-truth annotations, highlighting the effectiveness of the proposed segmentation approach.
+
 \subsection{Single-Label Classification Results (SoftMax Approach)}
 
 The SoftMax approach treats the four-class chest disease classification as a standard single-label multi-class problem: each image is assigned exactly one diagnostic class, and the output layer applies the SoftMax function to produce a valid probability distribution over the four classes:
