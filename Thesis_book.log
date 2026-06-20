@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  20 JUN 2026 00:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.6.16)  20 JUN 2026 05:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5906,19 +5906,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [210]
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/12'.
-(microtype)             Ignoring protrusion settings for this character.
- [211
-
-
-
-]
-Overfull \hbox (60.40358pt too wide) in paragraph at lines 231--231
-\T1/lmtt/m/n/12 102470$[]\T1/lmr/m/n/12 (-20) . \T1/lmr/m/sc/12 (-20) url\T1/lm
-r/m/n/12 (-20) : []$\T1/lmtt/m/n/12 https : / / www . sciencedirect . com / sci
-ence / article / pii / S1361841522001177$[]\T1/lmr/m/n/12 (-20) . 
- []
+<assets/qr_code.jpeg, id=3137, 513.92pt x 513.92pt>
+File: assets/qr_code.jpeg Graphic file (type jpg)
+<use assets/qr_code.jpeg>
+Package pdftex.def Info: assets/qr_code.jpeg  used on input line 234.
+(pdftex.def)             Requested size: 452.9679pt x 452.97243pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -5927,7 +5919,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[212]
+[211
+
+
+ <./assets/qr_code.jpeg>]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+ [212
+
+]
+Overfull \hbox (60.40358pt too wide) in paragraph at lines 238--238
+\T1/lmtt/m/n/12 102470$[]\T1/lmr/m/n/12 (-20) . \T1/lmr/m/sc/12 (-20) url\T1/lm
+r/m/n/12 (-20) : []$\T1/lmtt/m/n/12 https : / / www . sciencedirect . com / sci
+ence / article / pii / S1361841522001177$[]\T1/lmr/m/n/12 (-20) . 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -5943,7 +5950,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[214] (Thesis_book.aux (chapters/chapter1.aux) (chapters/chapter2.aux)
+[214]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[215] (Thesis_book.aux (chapters/chapter1.aux) (chapters/chapter2.aux)
 (chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/chapter5.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -5954,16 +5969,16 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Thesis_book.out' has not changed.
-(rerunfilecheck)             Checksum: 0B72364383ECFA42CF46FE54D6C58D30;52716.
+(rerunfilecheck)             Checksum: 1107E29489EEA966E74D6478B4CEF375;52716.
 Package logreq Info: Writing requests to 'Thesis_book.run.xml'.
 \openout1 = `Thesis_book.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43200 strings out of 474486
- 876036 string characters out of 5744227
+ 43209 strings out of 474486
+ 876243 string characters out of 5744227
  2036542 words of memory out of 5000000
- 63402 multiletter control sequences out of 15000+600000
+ 63409 multiletter control sequences out of 15000+600000
  757577 words of font info for 415 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,16n,120p,1910b,2107s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -5993,9 +6008,9 @@ l/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Zyad/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Zyad/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Zyad/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on Thesis_book.pdf (231 pages, 12916606 bytes).
+Output written on Thesis_book.pdf (232 pages, 12951713 bytes).
 PDF statistics:
- 3514 PDF objects out of 3580 (max. 8388607)
- 810 named destinations out of 1000 (max. 500000)
- 121255 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 3521 PDF objects out of 3580 (max. 8388607)
+ 812 named destinations out of 1000 (max. 500000)
+ 121260 words of extra memory for PDF output out of 128383 (max. 10000000)
 
